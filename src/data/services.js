@@ -17,10 +17,10 @@ export const services = [
   },
   {
     id: 3,
-    title: 'Livestock Management',
-    description: 'Professional livestock care and management ensuring optimal health and productivity of our cattle.',
+    title: 'Gaushala & Cow Care',
+    description: 'Cruelty-free gaushala management rooted in Gau Seva — health, nutrition and lifelong shelter for every cow.',
     icon: FaLeaf,
-    features: ['Health Monitoring', 'Nutrition Planning', 'Breeding Program']
+    features: ['Health Monitoring', 'Nutrition Planning', 'Lifelong Shelter']
   },
   {
     id: 4,

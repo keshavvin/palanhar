@@ -209,11 +209,11 @@ export default function InvestorRegisterPage() {
             transition={{ duration: 0.5 }}
             className="mx-auto mb-8 max-w-2xl text-center md:mb-12"
           >
-            <span className="section-eyebrow">Investor Onboarding</span>
+            <span className="section-eyebrow">Join Gau Seva</span>
             <h1 className="mb-3">Registration &amp; KYC</h1>
             <p className="text-gray-600">
-              Eight simple steps to become a registered Palanhar investor — verified, compliant and
-              dividend-ready.
+              Eight simple steps to join Gau Seva as a registered Palanhar investor — verified,
+              compliant and dividend-ready.
             </p>
             {selectedPlan && !submitted && (
               <p className="mt-4 inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-golden/40 bg-white px-4 py-2 text-sm shadow-sm">

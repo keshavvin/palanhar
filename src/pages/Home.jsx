@@ -9,6 +9,7 @@ import Featured from '../components/Featured';
 import Process from '../components/Process';
 import Certifications from '../components/Certifications';
 import InvestTeaser from '../components/InvestTeaser';
+import GauSevaHighlight from '../components/GauSevaHighlight';
 import FinalCTA from '../components/FinalCTA';
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
     <>
       <Hero />
       <QuickStats />
+      <GauSevaHighlight />
       <About />
       <Featured />
       <WhyChooseUs />

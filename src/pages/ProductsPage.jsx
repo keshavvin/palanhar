@@ -12,7 +12,7 @@ export default function ProductsPage() {
       >
         <div className="container-custom text-center">
           <h1 className="text-5xl font-bold text-dark-green mb-4">Our Products</h1>
-          <p className="text-xl text-gray-600">Premium dairy and organic agriculture products delivered fresh</p>
+          <p className="text-xl text-gray-600">A2 dairy, panchgavya and organic farm products — everything our cows give, delivered fresh</p>
         </div>
       </motion.section>
       <Products />

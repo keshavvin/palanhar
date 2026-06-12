@@ -1,18 +1,21 @@
+// "एक गाय – अनेक उत्पाद – अनंत संभावनाएं" — one cow, many products.
+// Categories: Dairy, Panchgavya (gau-based), Agriculture.
+
 export const dairyProducts = [
   {
     id: 1,
     name: 'A2 Cow Milk',
     category: 'Dairy',
-    description: 'Pure A2 milk from our indigenous Desi Gir cows, delivered fresh daily.',
+    description: 'Pure A2 milk from our indigenous Desi cows, delivered fresh daily.',
     price: '₹90/L',
     image: '🥛',
-    features: ['A2 Protein', 'Desi Gir Cow', 'Fresh Daily']
+    features: ['A2 Protein', 'Desi Cow', 'Fresh Daily']
   },
   {
     id: 2,
     name: 'A2 Desi Ghee (Bilona)',
     category: 'Dairy',
-    description: 'Traditional bilona-method ghee hand-churned from A2 Gir cow milk curd.',
+    description: 'Traditional bilona-method ghee hand-churned from A2 cow milk curd.',
     price: '₹2,400/L',
     image: '🧈',
     features: ['Bilona Method', 'A2 Cow Milk', 'Clay-Pot Churned']
@@ -55,38 +58,47 @@ export const dairyProducts = [
   }
 ];
 
-export const agricultureProducts = [
+export const panchgavyaProducts = [
+  {
+    id: 7,
+    name: 'Gobar Khad (Cow Dung Manure)',
+    category: 'Panchgavya',
+    description: 'Well-decomposed desi cow dung manure — the traditional foundation of fertile, living soil.',
+    price: '₹10/kg',
+    image: '🌱',
+    features: ['100% Natural', 'Soil Revival', 'Chemical Free']
+  },
   {
     id: 8,
     name: 'Vermi Compost',
-    category: 'Agriculture',
-    description: 'Nutrient-rich organic compost from gobar and biogas slurry for healthy soil.',
+    category: 'Panchgavya',
+    description: 'Nutrient-rich compost from gobar and biogas slurry, processed by earthworms.',
     price: '₹15/kg',
-    image: '🌱',
-    features: ['Gobar Based', 'Soil Health', 'Chemical Free']
+    image: '🪱',
+    features: ['Gobar Based', 'Nutrient Rich', 'Organic Certified']
   },
   {
     id: 9,
-    name: 'Organic Fertilizer & Pesticide',
-    category: 'Agriculture',
-    description: 'Natural crop care made from cow dung, gomutra and herbal extracts.',
-    price: '₹60-150/kg',
-    image: '🧪',
-    features: ['Gomutra Based', 'Herbal', 'Crop Safe']
-  },
-  {
-    id: 10,
     name: 'Gomutra Ark',
-    category: 'Agriculture',
-    description: 'Distilled cow urine ark prepared under hygienic ayurvedic processes.',
+    category: 'Panchgavya',
+    description: 'Distilled desi cow urine ark prepared under hygienic ayurvedic processes.',
     price: '₹120/L',
     image: '🫙',
     features: ['Ayurvedic', 'Distilled', 'Traditional']
   },
   {
+    id: 10,
+    name: 'Jaivik Keetnashak (Organic Pesticide)',
+    category: 'Panchgavya',
+    description: 'Gomutra and herbal-extract based crop protection — safe for soil, crops and farmers.',
+    price: '₹150/L',
+    image: '🧪',
+    features: ['Gomutra Based', 'Herbal', 'Crop Safe']
+  },
+  {
     id: 11,
     name: 'Panchgavya Dhoopbatti',
-    category: 'Agriculture',
+    category: 'Panchgavya',
     description: 'Natural incense handmade from cow dung, ghee and herbal ingredients.',
     price: '₹80/pack',
     image: '🪔',
@@ -94,22 +106,52 @@ export const agricultureProducts = [
   },
   {
     id: 12,
+    name: 'Panchgavya Ayurvedic Products',
+    category: 'Panchgavya',
+    description: 'Traditional wellness range prepared from the five gifts of the cow — milk, dahi, ghee, gomutra and gobar.',
+    price: '₹100-500',
+    image: '🌿',
+    features: ['Traditional', 'Ayurvedic', 'Natural']
+  },
+  {
+    id: 13,
+    name: 'Compressed Biogas (CBG)',
+    category: 'Panchgavya',
+    description: 'Clean renewable energy generated from gobar through our integrated biogas plant.',
+    price: 'On Request',
+    image: '🔋',
+    features: ['Clean Energy', 'Gobar Based', 'Sustainable']
+  },
+  {
+    id: 14,
+    name: 'Bio Paint',
+    category: 'Panchgavya',
+    description: 'Eco-friendly, gobar-based natural paint — breathable, non-toxic and gentle on homes.',
+    price: 'On Request',
+    image: '🎨',
+    features: ['Gobar Based', 'Non-Toxic', 'Eco Friendly']
+  }
+];
+
+export const agricultureProducts = [
+  {
+    id: 15,
     name: 'Fresh Organic Vegetables',
     category: 'Agriculture',
-    description: 'Seasonal vegetables grown with our own organic fertilizers.',
+    description: 'Seasonal vegetables grown with our own gobar khad and organic fertilizers.',
     price: '₹40-100/kg',
     image: '🥬',
     features: ['Seasonal', 'Fresh', 'Pesticide Free']
   },
   {
-    id: 13,
-    name: 'Compressed Biogas (CBG)',
+    id: 16,
+    name: 'Organic Grains & Pulses',
     category: 'Agriculture',
-    description: 'Clean energy generated from gobar through our integrated biogas plant.',
-    price: 'On Request',
-    image: '🔋',
-    features: ['Clean Energy', 'Gobar Based', 'Sustainable']
+    description: 'Wholesome grains and pulses cultivated through natural, chemical-free farming.',
+    price: '₹80-150/kg',
+    image: '🌾',
+    features: ['Natural Farming', 'Protein Rich', 'Chemical Free']
   }
 ];
 
-export const allProducts = [...dairyProducts, ...agricultureProducts];
+export const allProducts = [...dairyProducts, ...panchgavyaProducts, ...agricultureProducts];

@@ -2,9 +2,9 @@ import { motion } from 'framer-motion';
 
 export default function Process() {
   const steps = [
-    { number: '1', title: 'Organic Farming', desc: 'We follow sustainable and organic farming practices', icon: '🌱' },
-    { number: '2', title: 'Quality Care', desc: 'Animals are cared for with utmost attention', icon: '💚' },
-    { number: '3', title: 'Fresh Production', desc: 'Products are made fresh daily', icon: '⚡' },
+    { number: '1', title: 'Gau Seva', desc: 'Loving care, natural feed and clean shelter for our Gir cows', icon: '🐄' },
+    { number: '2', title: 'Organic Farming', desc: 'Gobar and gomutra power our chemical-free farming', icon: '🌱' },
+    { number: '3', title: 'Fresh Production', desc: 'A2 dairy and panchgavya products made fresh daily', icon: '⚡' },
     { number: '4', title: 'Quick Delivery', desc: 'Fast delivery to your doorstep', icon: '🚚' },
   ];
 
@@ -19,7 +19,7 @@ export default function Process() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">Our Process</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">From farm to your table, we ensure quality at every step</p>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">From gaushala to your table, we ensure quality and care at every step</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

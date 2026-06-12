@@ -31,10 +31,10 @@ export default function InvestPage() {
             transition={{ duration: 0.6 }}
             className="mx-auto max-w-2xl text-center"
           >
-            <h2 className="mb-4 !text-white">Ready to Grow with Palanhar?</h2>
+            <h2 className="mb-4 !text-white">Ready to Join Gau Seva?</h2>
             <p className="mb-8 text-lg text-white/85">
-              Complete your registration and KYC in minutes — your share
-              certificate and investor dashboard are waiting.
+              Complete your registration and KYC in minutes — your seva supports
+              the herd, and your share certificate and dashboard are waiting.
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Link to="/investor/register" className="btn btn-golden">

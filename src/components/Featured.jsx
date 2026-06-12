@@ -5,29 +5,29 @@ export default function Featured() {
   const featured = [
     {
       icon: '🥛',
-      name: 'Fresh Milk',
-      desc: '100% Pure & Fresh Daily',
+      name: 'A2 Cow Milk',
+      desc: 'From Our Desi Gir Cows',
       borderClass: 'border-t-light-green',
       btnClass: 'bg-light-green hover:bg-primary-green',
     },
     {
       icon: '🧈',
-      name: 'Organic Ghee',
-      desc: 'Traditional Method',
+      name: 'A2 Desi Ghee',
+      desc: 'Traditional Bilona Method',
       borderClass: 'border-t-primary-green',
       btnClass: 'bg-primary-green hover:bg-dark-green',
     },
     {
-      icon: '🧀',
-      name: 'Paneer',
-      desc: 'Soft & Delicious',
+      icon: '🌱',
+      name: 'Gobar Khad',
+      desc: 'Natural Soil Revival',
       borderClass: 'border-t-dark-green',
       btnClass: 'bg-dark-green hover:bg-primary-green',
     },
     {
-      icon: '🌾',
-      name: 'Organic Grains',
-      desc: 'Chemical Free Farming',
+      icon: '🌿',
+      name: 'Panchgavya Products',
+      desc: 'Five Gifts of the Cow',
       borderClass: 'border-t-golden',
       btnClass: 'bg-golden hover:bg-amber-500',
     },
@@ -57,7 +57,7 @@ export default function Featured() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">Featured Products</h2>
-          <p className="text-xl text-gray-600">Our most popular items loved by customers</p>
+          <p className="text-xl text-gray-600">Pure products from our gaushala, loved by customers</p>
         </motion.div>
 
         <motion.div

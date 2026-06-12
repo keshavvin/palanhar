@@ -4,6 +4,10 @@ import { FaChevronDown } from 'react-icons/fa';
 
 const faqs = [
   {
+    q: 'How does my investment support Gau Seva?',
+    a: 'Your funds go directly into the care of our Gir cows and the gaushala — feed, clean shelters, veterinary care — and into the farm operations they power. The same well-cared-for herd produces the A2 dairy, panchgavya and organic products that generate the returns you share in.',
+  },
+  {
     q: 'How are dividends calculated?',
     a: 'Each year the Board approves a dividend rate on the company’s net profit, creating a dividend pool. Your dividend = (your shareholding ÷ total shareholding) × dividend pool. For example, a ₹1,00,000 holding in a ₹1 crore pool receives 1% of a ₹15 lakh pool — ₹15,000.',
   },

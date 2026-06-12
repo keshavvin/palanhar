@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Palanhar Website — Feature &amp; Change Documentation</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; color: #2d2d2d; font-size: 11.5px; line-height: 1.55; padding: 36px 44px; }
+  h1 { font-size: 24px; color: #1B5E20; margin-bottom: 4px; }
+  h2 { font-size: 16px; color: #1B5E20; border-bottom: 2px solid #2E7D32; padding-bottom: 4px; margin: 26px 0 10px; }
+  h3 { font-size: 13px; color: #2E7D32; margin: 14px 0 6px; }
+  p { margin-bottom: 8px; }
+  .subtitle { color: #F9A825; font-weight: 700; letter-spacing: 1px; font-size: 11px; text-transform: uppercase; }
+  .meta { color: #777; font-size: 10.5px; margin-bottom: 10px; }
+  table { width: 100%; border-collapse: collapse; margin: 8px 0 14px; }
+  th { background: #2E7D32; color: #fff; text-align: left; padding: 6px 8px; font-size: 10.5px; }
+  td { border: 1px solid #d8e5d8; padding: 5px 8px; vertical-align: top; }
+  tr:nth-child(even) td { background: #f6faf6; }
+  code { background: #eef5ee; color: #1B5E20; padding: 1px 4px; border-radius: 3px; font-family: Consolas, monospace; font-size: 10.5px; }
+  ul { margin: 4px 0 10px 18px; }
+  li { margin-bottom: 3px; }
+  .badge { display: inline-block; background: #F9A825; color: #1B5E20; font-weight: 700; font-size: 9.5px; padding: 1px 7px; border-radius: 8px; margin-left: 6px; vertical-align: middle; }
+  .ok { color: #2E7D32; font-weight: 700; }
+  .pagebreak { page-break-before: always; }
+  .box { border: 1px solid #d8e5d8; border-left: 4px solid #F9A825; background: #fffdf5; padding: 8px 12px; margin: 10px 0; }
+</style>
+</head>
+<body>
+
+<p class="subtitle">Palanhar Dairy &amp; Agricultural Farm Pvt. Ltd.</p>
+<h1>Website — Feature &amp; Change Documentation</h1>
+<p class="meta">Repository: github.com/keshavvin/palanhar &nbsp;|&nbsp; Stack: React 19 + Vite + Tailwind CSS v4 + Framer Motion + Recharts &nbsp;|&nbsp; Document date: 12 June 2026</p>
+
+<h2>1. Overview</h2>
+<p>The website was rebuilt from a basic marketing site into an <strong>investor-pitch demo</strong> implementing the
+"Investor Management &amp; Dividend Distribution System" SRS, plus a repaired and polished marketing shell, a brand
+loading experience, and a Cow Seva awareness page. All investor features are <strong>frontend demos</strong> driven by
+one mock-data file — no backend is required to present the site.</p>
+
+<h2>2. New Features &amp; Their Routes</h2>
+<table>
+<tr><th>Feature</th><th>Route</th><th>What it does</th></tr>
+<tr><td>Investment Plans ("ecommerce")</td><td><code>/invest</code></td><td>Plan cards (Option A ₹10,000 / B ₹50,000 / C ₹1,00,000+), live dividend calculator using the SRS formula, Growth Roadmap (₹2 Cr → ₹80 Cr, DSCR 2.36), 7-step money-flow visual, sample share certificate, FAQ.</td></tr>
+<tr><td>Investor Registration + KYC</td><td><code>/investor/register</code></td><td>8-step wizard: mobile OTP (demo: any 6 digits) → email → profile → PAN upload → Aadhaar upload → bank → nominee → review &amp; submit. Generates Investor ID, has a "Simulate Admin Approval" demo button.</td></tr>
+<tr><td>Investor Dashboard</td><td><code>/investor/dashboard</code></td><td>Portfolio stat cards, growth chart, dividend wallet (Transfer to Bank / Reinvest modals), downloadable certificate, dividend history, transactions, documents repository, notifications.</td></tr>
+<tr><td>Admin / CMD Dashboard</td><td><code>/admin</code></td><td>KPIs, funds-raised &amp; plan-mix charts, dividend declaration console with live pool math, investor approval queue (working Approve/Reject), share register, audit trail, export buttons.</td></tr>
+<tr><td>Cow Seva article page <span class="badge">NEW</span></td><td><code>/gau-seva</code> (old <code>/cow-seva</code> redirects)</td><td>Full Gau Seva article: values it builds, social/cultural/environmental/agricultural/economic contributions, four duties of care, six practical ways to participate, farm-visit CTA. Linked in header &amp; footer.</td></tr>
+<tr><td>Brand splash loader <span class="badge">NEW</span></td><td>all pages</td><td>3-second full-page splash on every load/refresh showing the cow-and-calf logo with rotating green/golden arcs; also shown during page-to-page lazy loads. Honours reduced-motion.</td></tr>
+<tr><td>Logo in header &amp; footer <span class="badge">NEW</span></td><td>all pages</td><td>The cow-and-calf logo (<code>public/cow-loader.png</code>) replaces the 🌾 emoji in the Navbar and in the Footer (inside a cream circle).</td></tr>
+<tr><td>Marketing shell repair</td><td><code>/ /about /products /services /gallery /contact</code></td><td>Theme fixed (brand colors now actually render), junk inline styles removed, real contact details, A2/Gir/panchgavya product catalog, Home investment teaser, 404 page, page transitions, scroll restoration.</td></tr>
+</table>
+
+<h2>3. Where to Change What — Edit Guide</h2>
+<p>Most content lives in <strong>data files</strong>; edit these without touching component code.</p>
+<table>
+<tr><th>To change…</th><th>Edit this file</th><th>Look for</th></tr>
+<tr><td>Phone numbers, email, address</td><td><code>src/components/Footer.jsx</code>, <code>src/components/Contact.jsx</code>, <code>src/components/FinalCTA.jsx</code></td><td>tel:/mailto: links and the address block</td></tr>
+<tr><td>Investment plan names / minimum amounts</td><td><code>src/data/investorData.js</code></td><td><code>investmentPlans</code></td></tr>
+<tr><td>Dividend example (net profit, rate, pool)</td><td><code>src/data/investorData.js</code></td><td><code>dividendExample</code>, <code>calculateDividend</code></td></tr>
+<tr><td>Demo investor (name, ID, portfolio, wallet)</td><td><code>src/data/investorData.js</code></td><td><code>currentInvestor</code>, <code>dividendHistory</code>, <code>walletSummary</code>, <code>walletTransactions</code>, <code>investorDocuments</code>, <code>investorNotifications</code></td></tr>
+<tr><td>Admin numbers (investors, funds, queue, register, audit log)</td><td><code>src/data/investorData.js</code></td><td><code>adminStats</code>, <code>fundsRaisedMonthly</code>, <code>investorDistribution</code>, <code>pendingInvestorQueue</code>, <code>shareRegister</code>, <code>auditTrail</code></td></tr>
+<tr><td>Growth projections / ₹80 Cr target / DSCR</td><td><code>src/data/investorData.js</code></td><td><code>growthProjections</code>, <code>financialTargets</code></td></tr>
+<tr><td>Products (names, prices, features)</td><td><code>src/data/products.js</code></td><td><code>dairyProducts</code>, <code>panchgavyaProducts</code>, <code>agricultureProducts</code></td></tr>
+<tr><td>Homepage hero banner images (3-image slideshow)</td><td><code>public/hero-banner-1.jpg / -2.jpg / -3.jpg</code></td><td>Replace files (keep names); interval in <code>src/components/Hero.jsx</code> <code>SLIDE_INTERVAL_MS</code></td></tr>
+<tr><td>Services</td><td><code>src/data/services.js</code></td><td><code>services</code></td></tr>
+<tr><td>Testimonials</td><td><code>src/data/testimonials.js</code></td><td><code>testimonials</code></td></tr>
+<tr><td>Splash screen duration (currently 3s)</td><td><code>src/App.jsx</code></td><td><code>SPLASH_DURATION_MS = 3000</code></td></tr>
+<tr><td>Logo image (loader + header + footer)</td><td><code>public/cow-loader.png</code></td><td>Replace the file, keep the same name</td></tr>
+<tr><td>Brand colors / fonts</td><td><code>src/index.css</code></td><td><code>@theme</code> block (Tailwind v4 — do NOT add a tailwind.config.js)</td></tr>
+<tr><td>Cow Seva article text / sections</td><td><code>src/pages/CowSevaPage.jsx</code></td><td><code>values</code>, <code>careStandards</code>, <code>participation</code>, <code>contributions</code> arrays + JSX prose</td></tr>
+<tr><td>Header menu links</td><td><code>src/components/Navbar.jsx</code></td><td><code>navLinks</code></td></tr>
+<tr><td>Footer link columns</td><td><code>src/components/Footer.jsx</code></td><td><code>linkColumns</code></td></tr>
+<tr><td>Browser tab title, SEO description</td><td><code>index.html</code></td><td><code>&lt;title&gt;</code>, meta description/og tags</td></tr>
+<tr><td>Homepage section order</td><td><code>src/pages/Home.jsx</code></td><td>Component order in JSX</td></tr>
+<tr><td>Routes (add/remove pages)</td><td><code>src/App.jsx</code></td><td><code>lazy()</code> imports + <code>&lt;Route&gt;</code> list</td></tr>
+</table>
+
+<div class="box"><strong>Rule of thumb:</strong> never use inline <code>style=&#123;&#123;…&#125;&#125;</code> props for spacing/colors in this codebase —
+use Tailwind utility classes. The registered brand utilities are <code>primary-green</code>, <code>dark-green</code>,
+<code>light-green</code>, <code>cream-white</code>, <code>golden</code> (e.g. <code>bg-primary-green</code>, <code>text-golden</code>).</div>
+
+<h2 class="pagebreak">4. New Files Created</h2>
+<h3>Pages (src/pages/)</h3>
+<ul>
+<li><code>InvestPage.jsx</code>, <code>InvestorRegisterPage.jsx</code>, <code>InvestorDashboardPage.jsx</code>, <code>AdminDashboardPage.jsx</code>, <code>CowSevaPage.jsx</code>, <code>NotFoundPage.jsx</code></li>
+</ul>
+<h3>Investor components (src/components/invest/)</h3>
+<ul>
+<li><code>InvestHero</code>, <code>InvestPlans</code>, <code>PlanCard</code>, <code>DividendCalculator</code>, <code>GrowthRoadmap</code>, <code>FinancialFlow</code>, <code>TrustCompliance</code>, <code>CertificatePreview</code>, <code>InvestFAQ</code>, <code>useCountUp</code></li>
+<li><code>registration/</code>: <code>Stepper</code>, <code>FormFields</code>, <code>OtpInput</code>, <code>StepMobile</code>, <code>StepEmail</code>, <code>StepProfile</code>, <code>StepDocuments</code>, <code>StepBank</code>, <code>StepNominee</code>, <code>StepReview</code>, <code>SuccessPanel</code></li>
+</ul>
+<h3>Dashboard components (src/components/dashboard/)</h3>
+<ul>
+<li><code>DashboardHeader</code>, <code>DashboardModal</code>, <code>PortfolioStats</code>, <code>PortfolioGrowthChart</code>, <code>DividendWallet</code>, <code>ShareCertificate</code>, <code>DividendHistoryTable</code>, <code>WalletTransactions</code>, <code>DocumentsRepository</code>, <code>Spinner</code></li>
+</ul>
+<h3>Admin components (src/components/admin/)</h3>
+<ul>
+<li><code>AdminHeader</code>, <code>AdminKpiGrid</code>, <code>AdminCharts</code>, <code>DividendConsole</code>, <code>AdminApprovalQueue</code>, <code>AdminShareRegister</code>, <code>AdminAuditTrail</code></li>
+</ul>
+<h3>Shared (src/components/)</h3>
+<ul>
+<li><code>BrandLoader.jsx</code> (logo loader with spinner ring + SVG fallback), <code>ScrollToTop.jsx</code>, <code>InvestTeaser.jsx</code> (homepage investment band)</li>
+</ul>
+<h3>Data &amp; assets</h3>
+<ul>
+<li><code>src/data/investorData.js</code> — single source of truth for ALL investor-module demo data and INR formatting helpers</li>
+<li><code>public/cow-loader.png</code> — brand logo used by splash, route loader, header and footer</li>
+</ul>
+
+<h2>5. Verification Status</h2>
+<table>
+<tr><th>Check</th><th>Result</th></tr>
+<tr><td>Production build (<code>npm run build</code>)</td><td class="ok">PASS — route-split bundles per page</td></tr>
+<tr><td>Lint (<code>npm run lint</code>)</td><td class="ok">PASS — zero errors</td></tr>
+<tr><td>Responsiveness matrix — 10 viewports (320→1920px) × 11 routes = 110 automated browser checks</td><td class="ok">PASS — no horizontal scroll, no console errors</td></tr>
+<tr><td>Visual inspection — full-page screenshots of all key pages at mobile/tablet/desktop</td><td class="ok">PASS</td></tr>
+<tr><td>Content validated against company marketing collateral (address, phones, A2/Gir positioning, 200 cows / 2,000 L/day, ₹80 Cr roadmap, DSCR 2.36)</td><td class="ok">PASS</td></tr>
+</table>
+
+<h2>6. How to Run</h2>
+<ul>
+<li>Install once: <code>npm install</code></li>
+<li>Development: <code>npm run dev</code> → http://localhost:5173</li>
+<li>Production build: <code>npm run build</code> → output in <code>dist/</code> (deploy to any static host)</li>
+</ul>
+<p class="meta">Demo notes: OTP accepts any 6 digits; approvals, transfers, downloads and exports are simulated in the browser.
+All money figures are illustrative. Dividends in the live product depend on company performance and Board approval.</p>
+
+</body>
+</html>

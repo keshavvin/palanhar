@@ -9,6 +9,7 @@ const navLinks = [
   { name: 'Products', path: '/products' },
   { name: 'Services', path: '/services' },
   { name: 'Gallery', path: '/gallery' },
+  { name: 'Cow Seva', path: '/gau-seva' },
   { name: 'Contact', path: '/contact' },
 ];
 
@@ -40,12 +41,12 @@ export default function Navbar() {
         <div className="flex h-20 items-center justify-between gap-4">
           {/* Brand */}
           <Link to="/" className="group flex shrink-0 items-center gap-2.5">
-            <span
-              aria-hidden="true"
-              className="text-3xl sm:text-4xl transition-transform duration-300 group-hover:scale-110"
-            >
-              🌾
-            </span>
+            <img
+              src="/cow-loader.png"
+              alt=""
+              className="h-10 w-10 sm:h-12 sm:w-12 object-contain transition-transform duration-300 group-hover:scale-110"
+              draggable="false"
+            />
             <span className="leading-tight">
               <span className="block font-display text-xl sm:text-2xl font-bold text-dark-green">
                 Palanhar

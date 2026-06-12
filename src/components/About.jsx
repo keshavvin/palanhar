@@ -23,7 +23,7 @@ export default function About() {
   };
 
   const timeline = [
-    { year: 'Foundation', event: 'Began with a desi Gir cow gaushala and traditional bilona dairy' },
+    { year: 'Foundation', event: 'Began with a cow gaushala and traditional bilona dairy' },
     { year: 'Growth', event: 'Scaled to 200 Gir cows producing 2,000 litres of A2 milk daily' },
     { year: 'Integration', event: 'Added CNG biogas, biofertilizer and panchgavya product lines' },
     { year: 'Today', event: '1000+ natural products and a transparent investor platform' },
@@ -65,7 +65,8 @@ export default function About() {
         >
           <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">About Palanhar Farms</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Building a sustainable future through pure dairy and organic agriculture
+            Gau Seva is our identity — building a sustainable future through pure
+            dairy and organic agriculture
           </p>
         </motion.div>
 
@@ -80,7 +81,9 @@ export default function About() {
           <motion.div variants={itemVariants} className="card bg-gradient-to-br from-primary-green/10 to-light-green/10 p-8">
             <h3 className="text-2xl font-bold text-primary-green mb-4">Our Mission</h3>
             <p className="text-gray-700 leading-relaxed">
-              Providing healthy dairy products and sustainable agriculture solutions that nourish families and protect our environment. We believe in delivering pure, organic produce that supports a healthier lifestyle.
+              Gau seva, gau samvardhan, gau samriddhi — serving and protecting our cows
+              first, and from that care providing healthy dairy products and sustainable
+              agriculture solutions that nourish families and protect our environment.
             </p>
           </motion.div>
 
@@ -106,7 +109,7 @@ export default function About() {
               <p className="text-gray-700 leading-relaxed mb-4">
                 Palanhar was founded on the principle of &ldquo;one cow, many products, infinite
                 possibilities&rdquo;. From our farm on NH-48 near Rajokri Village, New Delhi, we
-                built a modern gaushala of indigenous desi Gir cows cared for with natural feed
+                built a modern gaushala of indigenous cows cared for with natural feed
                 and cruelty-free practices.
               </p>
               <p className="text-gray-700 leading-relaxed">

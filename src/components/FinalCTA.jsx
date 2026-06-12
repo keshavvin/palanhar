@@ -37,7 +37,7 @@ export default function FinalCTA() {
             viewport={{ once: true }}
             className="mb-6 !text-white text-4xl md:text-6xl"
           >
-            Ready to Experience<br />Pure Dairy &amp; Organic Agriculture?
+            Ready to Experience<br />the Goodness of Gau Seva?
           </motion.h2>
 
           <motion.p
@@ -47,8 +47,8 @@ export default function FinalCTA() {
             viewport={{ once: true }}
             className="mb-12 text-xl text-white/90 md:text-2xl"
           >
-            Join thousands of satisfied customers and investors who trust
-            Palanhar Farms for quality, freshness and transparency
+            Join thousands of families and investors who trust Palanhar —
+            where every product begins with the loving care of our cows
           </motion.p>
 
           <motion.div

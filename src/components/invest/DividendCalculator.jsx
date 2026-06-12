@@ -53,10 +53,11 @@ export default function DividendCalculator() {
           className="mb-12 text-center md:mb-16"
         >
           <span className="section-eyebrow">Dividend Calculator</span>
-          <h2 className="mb-4">See What Your Money Could Earn</h2>
+          <h2 className="mb-4">Seva That Also Gives Back</h2>
           <p className="mx-auto max-w-2xl text-lg text-gray-600 md:text-xl">
-            Move the slider and watch your projected annual dividend update live,
-            using the same formula our system applies on payout day.
+            Your contribution cares for the cows — and earns you a share of the
+            gaushala&rsquo;s success. Move the slider to see your projected annual
+            dividend, using the same formula our system applies on payout day.
           </p>
         </motion.div>
 

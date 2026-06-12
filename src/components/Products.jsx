@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { allProducts, dairyProducts, agricultureProducts } from '../data/products';
+import { allProducts, dairyProducts, panchgavyaProducts, agricultureProducts } from '../data/products';
 import { FaEnvelope, FaArrowRight } from 'react-icons/fa';
 
 export default function Products() {
@@ -11,6 +11,8 @@ export default function Products() {
     switch (filter) {
       case 'dairy':
         return dairyProducts;
+      case 'panchgavya':
+        return panchgavyaProducts;
       case 'agriculture':
         return agricultureProducts;
       default:
@@ -62,8 +64,12 @@ export default function Products() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">Our Products</h2>
-          <p className="text-xl text-gray-600">Premium dairy and organic agriculture products</p>
+          <span className="section-eyebrow">एक गाय – अनेक उत्पाद – अनंत संभावनाएं</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">Our Gau Seva Products</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Everything the cow gives, with gratitude — pure A2 dairy, panchgavya
+            and gau-based natural products, and organic farm produce
+          </p>
         </motion.div>
 
         {/* Filter Buttons */}
@@ -76,8 +82,9 @@ export default function Products() {
         >
           {[
             { id: 'all', label: 'All Products' },
-            { id: 'dairy', label: 'Dairy Products' },
-            { id: 'agriculture', label: 'Agriculture' },
+            { id: 'dairy', label: 'A2 Dairy' },
+            { id: 'panchgavya', label: 'Panchgavya & Gau-Based' },
+            { id: 'agriculture', label: 'Organic Agriculture' },
           ].map((btn) => (
             <motion.button
               key={btn.id}
@@ -92,12 +99,13 @@ export default function Products() {
           ))}
         </motion.div>
 
-        {/* Products Grid */}
+        {/* Products Grid — keyed by filter so the reveal re-runs on every tab switch */}
         <motion.div
+          key={filter}
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.05 }}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
         >
           {products.map((product) => (

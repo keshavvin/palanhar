@@ -1,8 +1,22 @@
-import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 
+const bannerImages = ['/hero-banner-1.jpg', '/hero-banner-2.jpg', '/hero-banner-3.jpg'];
+const SLIDE_INTERVAL_MS = 5000;
+
 export default function Hero() {
+  const [slide, setSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(
+      () => setSlide((s) => (s + 1) % bannerImages.length),
+      SLIDE_INTERVAL_MS
+    );
+    return () => clearInterval(timer);
+  }, []);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -24,23 +38,27 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-[calc(100vh-5rem)] bg-gradient-to-br from-cream-white via-white to-light-green/20 overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          animate={{ y: [0, -20, 0] }}
-          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-          className="absolute top-10 right-10 text-9xl opacity-20"
-        >
-          🌾
-        </motion.div>
-        <motion.div
-          animate={{ y: [0, 20, 0] }}
-          transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-          className="absolute bottom-20 left-10 text-8xl opacity-20"
-        >
-          🐄
-        </motion.div>
+    <section className="relative min-h-[calc(100vh-5rem)] bg-cream-white overflow-hidden">
+      {/* Gau Seva banner slideshow */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+        <AnimatePresence>
+          <motion.img
+            key={slide}
+            src={bannerImages[slide]}
+            alt=""
+            initial={{ opacity: 0, scale: 1 }}
+            animate={{ opacity: 1, scale: 1.08 }}
+            exit={{ opacity: 0 }}
+            transition={{
+              opacity: { duration: 1.2, ease: 'easeInOut' },
+              scale: { duration: SLIDE_INTERVAL_MS / 1000 + 1.5, ease: 'linear' },
+            }}
+            className="absolute inset-0 h-full w-full object-cover"
+            draggable="false"
+          />
+        </AnimatePresence>
+        {/* Readability overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-cream-white/90 via-cream-white/75 to-white/90" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center min-h-[calc(100vh-5rem)] relative z-10 py-12">
@@ -52,8 +70,8 @@ export default function Hero() {
         >
           {/* Main Heading */}
           <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl font-bold text-dark-green mb-4">
-            Pure Dairy & Organic Agriculture
-            <span className="block text-primary-green">From Nature</span>
+            Gau Seva, Pure Dairy &amp; Organic Agriculture
+            <span className="block text-primary-green">One Cow. Many Blessings.</span>
           </motion.h1>
 
           {/* Subheading */}
@@ -61,15 +79,16 @@ export default function Hero() {
             variants={itemVariants}
             className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed"
           >
-            Welcome to Palanhar Farms – Delivering Fresh Milk, Organic Produce and Sustainable Farming Solutions.
+            Welcome to Palanhar Farms — where serving our desi cows comes first,
+            and pure A2 dairy, panchgavya products and sustainable farming flow from that care.
           </motion.p>
 
           {/* Feature Cards */}
           <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
             {[
+              { label: 'Gau Seva First', icon: '🐄' },
               { label: '100% A2 Desi Milk', icon: '🥛' },
               { label: 'Bilona Desi Ghee', icon: '🧈' },
-              { label: 'Desi Gir Cows', icon: '🐄' },
               { label: 'Panchgavya Products', icon: '🌿' },
             ].map((feature, i) => (
               <div
@@ -95,7 +114,7 @@ export default function Hero() {
               to="/invest"
               className="btn btn-golden group flex items-center justify-center gap-2 text-lg"
             >
-              Become an Investor
+              Join Gau Seva
               <FaArrowRight className="group-hover:translate-x-2 transition-transform" />
             </Link>
           </motion.div>

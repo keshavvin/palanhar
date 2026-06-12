@@ -17,6 +17,7 @@ const linkColumns = [
     links: [
       { label: 'Home', to: '/' },
       { label: 'About', to: '/about' },
+      { label: 'Cow Seva', to: '/gau-seva' },
       { label: 'Gallery', to: '/gallery' },
       { label: 'Contact', to: '/contact' },
     ],
@@ -77,7 +78,14 @@ export default function Footer() {
           {/* Brand column */}
           <motion.div variants={itemVariants} className="col-span-2 sm:col-span-3 lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <span className="text-4xl" aria-hidden="true">🌾</span>
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-cream-white p-1">
+                <img
+                  src="/cow-loader.png"
+                  alt=""
+                  className="h-10 w-10 object-contain"
+                  draggable="false"
+                />
+              </span>
               <div className="leading-tight">
                 <p className="font-display text-2xl font-bold text-white">Palanhar</p>
                 <p className="text-xs font-semibold text-golden">
@@ -86,7 +94,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-sm leading-relaxed text-white/70 mb-6 max-w-sm">
-              Desi Gir cow dairy, panchgavya products and organic agriculture —
+              Desi cow dairy, panchgavya products and organic agriculture —
               now welcoming investors to grow with us.
             </p>
             <div className="space-y-2">

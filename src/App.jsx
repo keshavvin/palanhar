@@ -1,9 +1,10 @@
-import { lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { lazy, Suspense, useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import BrandLoader from './components/BrandLoader';
 import Home from './pages/Home';
 import './App.css';
 
@@ -16,13 +17,54 @@ const InvestPage = lazy(() => import('./pages/InvestPage'));
 const InvestorRegisterPage = lazy(() => import('./pages/InvestorRegisterPage'));
 const InvestorDashboardPage = lazy(() => import('./pages/InvestorDashboardPage'));
 const AdminDashboardPage = lazy(() => import('./pages/AdminDashboardPage'));
+const CowSevaPage = lazy(() => import('./pages/CowSevaPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
 function PageLoader() {
   return (
-    <div className="min-h-[50vh] flex items-center justify-center" role="status" aria-label="Loading page">
-      <div className="w-10 h-10 border-4 border-light-green border-t-primary-green rounded-full animate-spin"></div>
+    <div className="min-h-[50vh] flex items-center justify-center">
+      <BrandLoader size={110} label="Loading page" showWordmark />
     </div>
+  );
+}
+
+const SPLASH_DURATION_MS = 3000;
+
+function SplashScreen() {
+  const [done, setDone] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    const timer = setTimeout(() => {
+      setDone(true);
+      document.body.style.overflow = '';
+    }, SPLASH_DURATION_MS);
+    return () => {
+      clearTimeout(timer);
+      document.body.style.overflow = '';
+    };
+  }, []);
+
+  return (
+    <AnimatePresence>
+      {!done && (
+        <motion.div
+          key="splash"
+          initial={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-cream-white"
+        >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.92 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+          >
+            <BrandLoader size={180} label="Loading Palanhar" showWordmark />
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 }
 
@@ -46,6 +88,8 @@ function AnimatedRoutes() {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/gau-seva" element={<CowSevaPage />} />
+            <Route path="/cow-seva" element={<Navigate to="/gau-seva" replace />} />
             <Route path="/invest" element={<InvestPage />} />
             <Route path="/investor/register" element={<InvestorRegisterPage />} />
             <Route path="/investor/dashboard" element={<InvestorDashboardPage />} />
@@ -62,6 +106,7 @@ function App() {
   return (
     <Router>
       <ScrollToTop />
+      <SplashScreen />
       <div className="flex flex-col min-h-screen bg-white">
         <Navbar />
         <main className="flex-grow">

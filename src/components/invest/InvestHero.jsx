@@ -32,12 +32,11 @@ export default function InvestHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="section-eyebrow">Investor Module</span>
-            <h1 className="mb-5">Invest in Real Farming. Earn Real Dividends.</h1>
+            <span className="section-eyebrow">Gau Seva Investment</span>
+            <h1 className="mb-5">Invest in Gau Seva. Create Positive Change.</h1>
             <p className="mb-8 max-w-xl text-lg text-gray-600 md:text-xl">
-              Transparent investment tracking and structured dividend distribution from
-              Palanhar&rsquo;s dairy &amp; agricultural profit — from your first rupee to
-              your yearly payout, everything is recorded and visible.
+              Every contribution supports animal welfare, rural development, and
+              environmental sustainability.
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="#plans" className="btn btn-outline">View Plans</a>
@@ -76,7 +75,7 @@ export default function InvestHero() {
               className="relative mx-auto max-w-sm rounded-2xl border border-primary-green/10 bg-white p-6 shadow-2xl"
             >
               <div className="mb-5 flex items-center justify-between">
-                <p className="font-bold text-dark-green">Palanhar Investor Pool</p>
+                <p className="font-bold text-dark-green">Palanhar Gau Seva Pool</p>
                 <span className="badge-status bg-green-100 text-primary-green">
                   <span className="h-2 w-2 animate-pulse rounded-full bg-primary-green" aria-hidden="true" />
                   Live Snapshot

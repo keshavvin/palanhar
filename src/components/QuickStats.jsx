@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function QuickStats() {
   const stats = [
-    { icon: '🐄', number: '200', label: 'Desi Gir Cows' },
+    { icon: '🐄', number: '200', label: 'Desi Cows' },
     { icon: '🥛', number: '2,000 L', label: 'Milk Production / Day' },
     { icon: '🌿', number: '1000+', label: 'Panchgavya & Natural Products' },
     { icon: '📈', number: '₹80 Cr', label: '5-Year Revenue Target' },
@@ -11,6 +11,15 @@ export default function QuickStats() {
   return (
     <section className="py-12 md:py-16 bg-gradient-to-r from-primary-green via-primary-green to-dark-green text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-8 text-center font-display text-xl font-bold tracking-wide text-golden md:text-2xl"
+        >
+          गो सेवा &bull; गो संवर्धन &bull; गो समृद्धि
+        </motion.p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
           {stats.map((stat, i) => (
             <motion.div

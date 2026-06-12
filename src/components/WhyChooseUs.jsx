@@ -23,9 +23,9 @@ export default function WhyChooseUs() {
       description: '20+ years of expertise in dairy farming and sustainable agriculture'
     },
     {
-      icon: '🔬',
-      title: 'Modern Technology',
-      description: 'Latest farming equipment and methods for optimal quality production'
+      icon: '🐄',
+      title: 'Gau Seva First',
+      description: 'Cruelty-free care, natural feed and lifelong shelter for every cow in our gaushala'
     },
     {
       icon: '✓',
@@ -67,7 +67,8 @@ export default function WhyChooseUs() {
         >
           <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">Why Choose Palanhar Farms</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            We're committed to delivering the highest quality dairy and agricultural products
+            Everything begins with Gau Seva — happy, well-cared-for cows make the
+            purest dairy and agricultural products
           </p>
         </motion.div>
 

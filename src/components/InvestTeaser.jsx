@@ -36,12 +36,12 @@ export default function InvestTeaser() {
           transition={{ duration: 0.6 }}
           className="mx-auto max-w-3xl text-center text-white"
         >
-          <span className="section-eyebrow">Investment Opportunity</span>
-          <h2 className="mb-4 !text-white">Own a Share of Palanhar&rsquo;s Growth</h2>
+          <span className="section-eyebrow">Gau Seva Investment</span>
+          <h2 className="mb-4 !text-white">Invest in Gau Seva. Create Positive Change.</h2>
           <p className="mb-8 text-lg text-white/85 md:text-xl">
-            Invest in real dairy &amp; agricultural assets with numbered share
-            certificates, board-declared dividends and a fully transparent
-            investor dashboard.
+            Every contribution supports animal welfare, rural development and
+            environmental sustainability — with numbered share certificates,
+            board-declared dividends and a fully transparent dashboard.
           </p>
 
           <div className="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
@@ -61,13 +61,13 @@ export default function InvestTeaser() {
           </div>
 
           <p className="mb-8 flex flex-wrap items-center justify-center gap-2 text-sm font-semibold text-white/90">
-            <span>Invest</span>
+            <span>Invest in Seva</span>
             <FaArrowRight aria-hidden="true" className="text-golden" />
-            <span>Get Shares</span>
+            <span>Cows Are Cared For</span>
             <FaArrowRight aria-hidden="true" className="text-golden" />
             <span>Earn Dividends</span>
             <FaArrowRight aria-hidden="true" className="text-golden" />
-            <span>Withdraw or Reinvest</span>
+            <span>Reinvest or Withdraw</span>
           </p>
 
           <div className="flex flex-col justify-center gap-4 sm:flex-row">

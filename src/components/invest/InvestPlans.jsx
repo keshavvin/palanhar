@@ -18,11 +18,12 @@ export default function InvestPlans() {
           transition={{ duration: 0.6 }}
           className="mb-12 text-center md:mb-16"
         >
-          <span className="section-eyebrow">Investment Plans</span>
-          <h2 className="mb-4">Choose Your Plan</h2>
+          <span className="section-eyebrow">Seva Plans</span>
+          <h2 className="mb-4">Choose Your Seva Plan</h2>
           <p className="mx-auto max-w-2xl text-lg text-gray-600 md:text-xl">
-            Three simple options modelled on real shareholding. Every plan earns a
-            numbered share certificate and annual dividend eligibility.
+            Three simple ways to join Gau Seva — every plan directly supports cow
+            welfare and earns a numbered share certificate with annual dividend
+            eligibility.
           </p>
         </motion.div>
 
