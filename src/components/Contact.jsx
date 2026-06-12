@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaUser, FaPaperPlane } from 'react-icons/fa';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -34,7 +34,7 @@ export default function Contact() {
     {
       icon: FaPhone,
       title: 'Phone',
-      value: '+91 XXXXX XXXXX',
+      value: '+91 919876543210',
       link: 'tel:+919876543210'
     },
     {
@@ -80,7 +80,7 @@ export default function Contact() {
 
   return (
     <section className="py-16 md:py-24 bg-gradient-to-b from-white to-cream-white/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{margin:'50px auto'}}>
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -93,7 +93,7 @@ export default function Contact() {
           <p className="text-xl text-gray-600">Have questions? We'd love to hear from you!</p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-8 mb-12" style={{margin:'50px auto',padding:'40px 0px'}}>
           {/* Contact Information */}
           {contactInfo.map((info, i) => {
             const Icon = info.icon;
@@ -106,7 +106,7 @@ export default function Contact() {
                 transition={{ delay: i * 0.1, duration: 0.6 }}
                 viewport={{ once: true }}
                 className="card bg-white p-8 text-center hover:shadow-xl transition-all group"
-              >
+              style={{padding:'40px 0px'}} >
                 <div className="flex justify-center mb-4">
                   <div className="bg-gradient-to-br from-primary-green to-dark-green rounded-full p-4 text-white group-hover:scale-110 transition-transform duration-300">
                     <Icon size={32} />
@@ -127,84 +127,108 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="card bg-white p-8 shadow-lg"
+            className="card bg-white p-10 shadow-xl rounded-2xl" style={{padding:'30px 30px'}}
           >
-            <h3 className="text-2xl font-bold text-dark-green mb-6">Send us a Message</h3>
+            <div className="mb-8">
+              <h3 className="text-3xl font-bold text-dark-green mb-2">Send us a Message</h3>
+              <div className="h-1 w-16 bg-gradient-to-r from-primary-green to-dark-green rounded"></div>
+            </div>
 
             {submitted ? (
               <motion.div
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                className="text-center py-8"
-              >
-                <div className="text-5xl mb-4">✓</div>
+                className="text-center py-12"
+               style={{padding:'30px 30px'}}
+>
+                <motion.div
+                  animate={{ scale: [1, 1.1, 1] }}
+                  transition={{ duration: 0.5 }}
+                  className="text-6xl mb-4 inline-block"
+                style={{padding:'30px 30px'}}
+ >
+                  ✓
+                </motion.div>
                 <h4 className="text-2xl font-bold text-primary-green mb-2">Thank you!</h4>
                 <p className="text-gray-600">We'll get back to you soon.</p>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name */}
-                <div>
-                  <label className="block text-gray-700 font-semibold mb-2">Full Name</label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border-2 border-light-green rounded-lg focus:outline-none focus:border-primary-green transition-colors"
-                    placeholder="Your name"
-                    required
-                  />
-                </div>
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.1 }}>
+                  <label className="block text-gray-700 font-semibold mb-3" style={{padding:'10px 10px'}}>Full Name</label>
+                  <div className="relative">
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="w-full px-5 py-4 pl-12 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary-green focus:shadow-lg transition-all duration-300 bg-gray-50 hover:bg-white"
+                      placeholder="John Doe"
+                      required
+                    style={{padding:'10px 10px'}}/>
+                    {/* <FaUser className="absolute left-4 top-4 text-primary-green text-lg" /> */}
+                  </div>
+                </motion.div>
 
                 {/* Email */}
-                <div>
-                  <label className="block text-gray-700 font-semibold mb-2">Email Address</label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border-2 border-light-green rounded-lg focus:outline-none focus:border-primary-green transition-colors"
-                    placeholder="your@email.com"
-                    required
-                  />
-                </div>
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.15 }}>
+                  <label className="block text-gray-700 font-semibold mb-3" style={{padding:'10px 10px'}}>Email Address</label>
+                  <div className="relative">
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full px-5 py-4 pl-12 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary-green focus:shadow-lg transition-all duration-300 bg-gray-50 hover:bg-white"
+                      placeholder="john@example.com"
+                      required
+                    style={{padding:'10px 10px'}}/>
+                    {/* <FaEnvelope className="absolute left-4 top-4 text-primary-green text-lg" /> */}
+                  </div>
+                </motion.div>
 
                 {/* Phone */}
-                <div>
-                  <label className="block text-gray-700 font-semibold mb-2">Phone Number</label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border-2 border-light-green rounded-lg focus:outline-none focus:border-primary-green transition-colors"
-                    placeholder="+91 XXXXX XXXXX"
-                  />
-                </div>
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
+                  <label className="block text-gray-700 font-semibold mb-3" style={{padding:'10px 10px'}}>Phone Number</label>
+                  <div className="relative">
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="w-full px-5 py-4 pl-12 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary-green focus:shadow-lg transition-all duration-300 bg-gray-50 hover:bg-white"
+                      placeholder="+91 9876543210"
+                   style={{padding:'10px 10px'}} />
+                    {/* <FaPhone className="absolute left-4 top-4 text-primary-green text-lg" /> */}
+                  </div>
+                </motion.div>
 
                 {/* Message */}
-                <div>
-                  <label className="block text-gray-700 font-semibold mb-2">Message</label>
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.25 }} style={{padding:'10px 10px'}}>
+                  <label className="block text-gray-700 font-semibold mb-3" style={{padding:'10px 10px'}}>Message</label>
                   <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border-2 border-light-green rounded-lg focus:outline-none focus:border-primary-green transition-colors resize-none"
-                    placeholder="Your message here..."
+                    className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary-green focus:shadow-lg transition-all duration-300 resize-none bg-gray-50 hover:bg-white"
+                    placeholder="Tell us what's on your mind..."
                     rows="5"
                     required
                   ></textarea>
-                </div>
+                </motion.div>
 
                 {/* Submit Button */}
                 <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.3 }}
+                  whileHover={{ scale: 1.03, boxShadow: "0 20px 40px rgba(34, 139, 34, 0.3)" }}
+                  whileTap={{ scale: 0.97 }}
                   type="submit"
-                  className="w-full btn btn-primary text-lg font-semibold"
-                >
+                  className="w-full bg-gradient-to-r from-primary-green to-dark-green text-red font-bold py-4 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg hover:shadow-2xl"
+                style={{padding:'10px 10px'}}>
+                  <FaPaperPlane size={20} />
                   Send Message
                 </motion.button>
               </form>
@@ -228,8 +252,8 @@ export default function Contact() {
             </div>
 
             {/* Social Links */}
-            <div className="card bg-white p-8">
-              <h3 className="text-2xl font-bold text-dark-green mb-6">Follow Us</h3>
+            <div className="card bg-white p-8" style={{padding:'30px 30px'}}>
+              <h3 className="text-2xl font-bold text-dark-green mb-6" >Follow Us</h3>
               <p className="text-gray-600 mb-6">
                 Connect with us on social media for updates, tips, and stories from our farm.
               </p>
@@ -252,7 +276,7 @@ export default function Contact() {
             </div>
 
             {/* Business Hours */}
-            <div className="card bg-cream-white/80 p-8 border-l-4 border-primary-green">
+            <div className="card bg-cream-white/80 p-8 border-l-4 border-primary-green"  style={{padding:'30px 30px',margin:'20px'}}>
               <h3 className="text-xl font-bold text-dark-green mb-4">Business Hours</h3>
               <ul className="space-y-2 text-gray-700">
                 <li><span className="font-semibold">Monday - Friday:</span> 8:00 AM - 6:00 PM</li>
