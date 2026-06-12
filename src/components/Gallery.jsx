@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { FaExpand, FaTimes } from 'react-icons/fa';
 
 export default function Gallery() {
@@ -149,17 +150,18 @@ export default function Gallery() {
                 initial={{ scale: 0.8, y: 20 }}
                 animate={{ scale: 1, y: 0 }}
                 exit={{ scale: 0.8, y: 20 }}
-                className="bg-white rounded-xl shadow-2xl p-8 max-w-2xl w-full"
+                className="relative bg-white rounded-xl shadow-2xl p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto"
                 onClick={(e) => e.stopPropagation()}
               >
                 <button
                   onClick={() => setSelectedImage(null)}
+                  aria-label="Close lightbox"
                   className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl"
                 >
                   <FaTimes />
                 </button>
 
-                <div className="bg-gradient-to-br from-light-green/20 to-primary-green/20 rounded-lg h-96 flex items-center justify-center mb-6">
+                <div className="bg-gradient-to-br from-light-green/20 to-primary-green/20 rounded-lg h-96 max-h-[60vh] flex items-center justify-center mb-6">
                   <div className="text-9xl">{selectedImage.icon}</div>
                 </div>
 
@@ -185,13 +187,9 @@ export default function Gallery() {
           <p className="text-gray-600 mb-6 text-lg">
             Experience the beauty of sustainable farming firsthand
           </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="btn btn-primary"
-          >
+          <Link to="/contact" className="btn btn-primary hover:scale-105">
             Schedule a Farm Visit
-          </motion.button>
+          </Link>
         </motion.div>
       </div>
     </section>

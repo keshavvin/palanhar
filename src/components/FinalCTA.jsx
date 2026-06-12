@@ -3,41 +3,41 @@ import { Link } from 'react-router-dom';
 
 export default function FinalCTA() {
   return (
-    <section className="py-20 md:py-32 bg-gradient-to-br from-dark-green via-primary-green to-dark-green relative overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 opacity-10 pointer-events-none">
+    <section className="relative overflow-hidden bg-gradient-to-br from-dark-green via-primary-green to-dark-green py-20 md:py-32">
+      {/* Animated background elements */}
+      <div className="pointer-events-none absolute inset-0 opacity-10" aria-hidden="true">
         <motion.div
-          animate={{ float: [0, 20, 0] }}
-          transition={{ duration: 6, repeat: Infinity }}
-          className="absolute top-10 left-10 text-8xl"
+          animate={{ y: [0, 20, 0] }}
+          transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+          className="absolute left-10 top-10 text-8xl"
         >
           🌾
         </motion.div>
         <motion.div
-          animate={{ float: [0, -20, 0] }}
-          transition={{ duration: 8, repeat: Infinity, delay: 1 }}
+          animate={{ y: [0, -20, 0] }}
+          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
           className="absolute bottom-10 right-10 text-8xl"
         >
           🐄
         </motion.div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container-custom relative z-10 max-w-4xl">
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="text-center text-white"
-         style={{margin:'0 auto',display:'block',width:'80%',textAlign:'center'}}>
+        >
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-6xl font-bold mb-6"
+            className="mb-6 !text-white text-4xl md:text-6xl"
           >
-            Ready to Experience<br />Pure Dairy & Organic Agriculture?
+            Ready to Experience<br />Pure Dairy &amp; Organic Agriculture?
           </motion.h2>
 
           <motion.p
@@ -45,70 +45,62 @@ export default function FinalCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-xl md:text-2xl opacity-90 mb-12"
+            className="mb-12 text-xl text-white/90 md:text-2xl"
           >
-            Join thousands of satisfied customers who trust Palanhar Farms for quality and freshness
+            Join thousands of satisfied customers and investors who trust
+            Palanhar Farms for quality, freshness and transparency
           </motion.p>
 
-          {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
+            className="mb-12 flex flex-col justify-center gap-4 sm:flex-row"
           >
-            <Link
-              to="/products"
-              className="px-8 py-4 rounded-lg font-bold text-dark-green transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105"
-              style={{backgroundColor: '#F9A825'}}
-            >
-              Shop Now
+            <Link to="/invest" className="btn btn-golden px-8 py-4">
+              Invest Now
             </Link>
             <Link
               to="/contact"
-              className="px-8 py-4 rounded-lg font-bold text-white border-2 border-white transition-all duration-300 hover:bg-white hover:text-primary-green transform hover:scale-105"
+              className="btn border-2 border-white bg-transparent px-8 py-4 text-white hover:bg-white hover:text-primary-green"
             >
               Contact Us
             </Link>
           </motion.div>
 
-          {/* Trust Indicators */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
-            className="grid grid-cols-3 gap-4 text-center text-white opacity-90"
+            className="grid grid-cols-3 gap-4 text-center text-white/90"
           >
             <div>
-              <div className="text-2xl mb-1">✓</div>
+              <div className="mb-1 text-2xl" aria-hidden="true">✓</div>
               <p className="text-sm font-semibold">100% Fresh</p>
             </div>
             <div>
-              <div className="text-2xl mb-1">🚚</div>
+              <div className="mb-1 text-2xl" aria-hidden="true">🚚</div>
               <p className="text-sm font-semibold">Free Delivery</p>
             </div>
             <div>
-              <div className="text-2xl mb-1">💚</div>
+              <div className="mb-1 text-2xl" aria-hidden="true">💚</div>
               <p className="text-sm font-semibold">Money-back Guarantee</p>
             </div>
           </motion.div>
         </motion.div>
 
-        {/* Bottom Message */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mt-16 text-center text-white/80 text-sm"
+          className="mt-16 text-center text-sm text-white/80"
         >
-          <p>
-            Palanhar Farms • Delivering Fresh Milk, Organic Produce & Sustainable Farming Solutions
-          </p>
+          <p>Palanhar Farms • Delivering Fresh Milk, Organic Produce &amp; Sustainable Farming Solutions</p>
           <p className="mt-2">
-            📍 Village, District, State | 📞 +919876543210 | 📧 info@palanharfarms.com
+            📍 Rajokri Village, NH-48, New Delhi – 110038 | 📞 +91 92115 57678 | 📧 palanharcompany@gmail.com
           </p>
         </motion.div>
       </div>

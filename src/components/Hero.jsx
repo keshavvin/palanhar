@@ -24,7 +24,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-cream-white via-white to-light-green/20 overflow-hidden">
+    <section className="relative min-h-[calc(100vh-5rem)] bg-gradient-to-br from-cream-white via-white to-light-green/20 overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -43,7 +43,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      <div className="max-w-12xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center min-h-screen relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center min-h-[calc(100vh-5rem)] relative z-10 py-12">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -65,17 +65,17 @@ export default function Hero() {
           </motion.p>
 
           {/* Feature Cards */}
-          <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8" style={{ padding: '20px' ,margin:'20px 0px'}}>
+          <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
             {[
-              { label: '100% Pure Milk', icon: '🥛' },
-              { label: 'Organic Farming', icon: '🌾' },
-              { label: 'Healthy Livestock', icon: '🐄' },
-              { label: 'Fresh Daily', icon: '📦' },
+              { label: '100% A2 Desi Milk', icon: '🥛' },
+              { label: 'Bilona Desi Ghee', icon: '🧈' },
+              { label: 'Desi Gir Cows', icon: '🐄' },
+              { label: 'Panchgavya Products', icon: '🌿' },
             ].map((feature, i) => (
               <div
                 key={i}
                 className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
-               style={{ padding: '20px' }}>
+              >
                 <div className="text-3xl mb-2">{feature.icon}</div>
                 <p className="text-sm font-semibold text-dark-green">{feature.label}</p>
               </div>
@@ -86,16 +86,16 @@ export default function Hero() {
           <motion.div variants={itemVariants} className="flex flex-col md:flex-row gap-4 justify-center">
             <Link
               to="/products"
-              className="btn btn-primary group flex items-center justify-center gap-2 text-lg" style={{ padding: '10px 20px' }}
+              className="btn btn-primary group flex items-center justify-center gap-2 text-lg"
             >
               Explore Products
               <FaArrowRight className="group-hover:translate-x-2 transition-transform" />
             </Link>
             <Link
-              to="/contact"
-              className="btn btn-outline group flex items-center justify-center gap-2 text-lg" style={{ padding: '10px 20px' }}
+              to="/invest"
+              className="btn btn-golden group flex items-center justify-center gap-2 text-lg"
             >
-              Contact Us
+              Become an Investor
               <FaArrowRight className="group-hover:translate-x-2 transition-transform" />
             </Link>
           </motion.div>

@@ -22,7 +22,7 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically send the data to a server
+    // Demo only — no backend call
     setSubmitted(true);
     setTimeout(() => {
       setFormData({ name: '', email: '', phone: '', message: '' });
@@ -34,53 +34,33 @@ export default function Contact() {
     {
       icon: FaPhone,
       title: 'Phone',
-      value: '+91 919876543210',
-      link: 'tel:+919876543210'
+      value: '+91 92115 57678 · Customer Care: +91 11 4996 7299',
+      link: 'tel:+919211557678'
     },
     {
       icon: FaEnvelope,
       title: 'Email',
-      value: 'info@palanharfarms.com',
-      link: 'mailto:info@palanharfarms.com'
+      value: 'palanharcompany@gmail.com',
+      link: 'mailto:palanharcompany@gmail.com'
     },
     {
       icon: FaMapMarkerAlt,
       title: 'Address',
-      value: 'Palanhar Farms, Village, District, State',
-      link: '#'
+      value: 'Rajokri Village, NH-48 (Delhi–Gurugram Road), New Delhi – 110038',
+      link: 'https://maps.google.com/?q=Rajokri+Village+NH-48+New+Delhi+110038'
     },
   ];
 
   const socialLinks = [
-    { icon: FaFacebook, link: '#' },
-    { icon: FaTwitter, link: '#' },
-    { icon: FaInstagram, link: '#' },
-    { icon: FaLinkedin, link: '#' },
+    { icon: FaFacebook, link: '#', label: 'Facebook' },
+    { icon: FaTwitter, link: '#', label: 'Twitter' },
+    { icon: FaInstagram, link: '#', label: 'Instagram' },
+    { icon: FaLinkedin, link: '#', label: 'LinkedIn' },
   ];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 },
-    },
-  };
 
   return (
     <section className="py-16 md:py-24 bg-gradient-to-b from-white to-cream-white/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{margin:'50px auto'}}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -93,7 +73,7 @@ export default function Contact() {
           <p className="text-xl text-gray-600">Have questions? We'd love to hear from you!</p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-12" style={{margin:'50px auto',padding:'40px 0px'}}>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {/* Contact Information */}
           {contactInfo.map((info, i) => {
             const Icon = info.icon;
@@ -106,7 +86,7 @@ export default function Contact() {
                 transition={{ delay: i * 0.1, duration: 0.6 }}
                 viewport={{ once: true }}
                 className="card bg-white p-8 text-center hover:shadow-xl transition-all group"
-              style={{padding:'40px 0px'}} >
+              >
                 <div className="flex justify-center mb-4">
                   <div className="bg-gradient-to-br from-primary-green to-dark-green rounded-full p-4 text-white group-hover:scale-110 transition-transform duration-300">
                     <Icon size={32} />
@@ -120,14 +100,14 @@ export default function Contact() {
         </div>
 
         {/* Contact Form and Map */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="card bg-white p-10 shadow-xl rounded-2xl" style={{padding:'30px 30px'}}
+            className="card bg-white p-8 md:p-10 shadow-xl rounded-2xl"
           >
             <div className="mb-8">
               <h3 className="text-3xl font-bold text-dark-green mb-2">Send us a Message</h3>
@@ -139,14 +119,12 @@ export default function Contact() {
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 className="text-center py-12"
-               style={{padding:'30px 30px'}}
->
+              >
                 <motion.div
                   animate={{ scale: [1, 1.1, 1] }}
                   transition={{ duration: 0.5 }}
                   className="text-6xl mb-4 inline-block"
-                style={{padding:'30px 30px'}}
- >
+                >
                   ✓
                 </motion.div>
                 <h4 className="text-2xl font-bold text-primary-green mb-2">Thank you!</h4>
@@ -156,9 +134,10 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name */}
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.1 }}>
-                  <label className="block text-gray-700 font-semibold mb-3" style={{padding:'10px 10px'}}>Full Name</label>
+                  <label htmlFor="contact-name" className="block text-gray-700 font-semibold mb-3">Full Name</label>
                   <div className="relative">
                     <input
+                      id="contact-name"
                       type="text"
                       name="name"
                       value={formData.name}
@@ -166,16 +145,17 @@ export default function Contact() {
                       className="w-full px-5 py-4 pl-12 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary-green focus:shadow-lg transition-all duration-300 bg-gray-50 hover:bg-white"
                       placeholder="John Doe"
                       required
-                    style={{padding:'10px 10px'}}/>
-                    {/* <FaUser className="absolute left-4 top-4 text-primary-green text-lg" /> */}
+                    />
+                    <FaUser className="absolute left-4 top-1/2 -translate-y-1/2 text-primary-green text-lg" />
                   </div>
                 </motion.div>
 
                 {/* Email */}
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.15 }}>
-                  <label className="block text-gray-700 font-semibold mb-3" style={{padding:'10px 10px'}}>Email Address</label>
+                  <label htmlFor="contact-email" className="block text-gray-700 font-semibold mb-3">Email Address</label>
                   <div className="relative">
                     <input
+                      id="contact-email"
                       type="email"
                       name="email"
                       value={formData.email}
@@ -183,31 +163,33 @@ export default function Contact() {
                       className="w-full px-5 py-4 pl-12 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary-green focus:shadow-lg transition-all duration-300 bg-gray-50 hover:bg-white"
                       placeholder="john@example.com"
                       required
-                    style={{padding:'10px 10px'}}/>
-                    {/* <FaEnvelope className="absolute left-4 top-4 text-primary-green text-lg" /> */}
+                    />
+                    <FaEnvelope className="absolute left-4 top-1/2 -translate-y-1/2 text-primary-green text-lg" />
                   </div>
                 </motion.div>
 
                 {/* Phone */}
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
-                  <label className="block text-gray-700 font-semibold mb-3" style={{padding:'10px 10px'}}>Phone Number</label>
+                  <label htmlFor="contact-phone" className="block text-gray-700 font-semibold mb-3">Phone Number</label>
                   <div className="relative">
                     <input
+                      id="contact-phone"
                       type="tel"
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-5 py-4 pl-12 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary-green focus:shadow-lg transition-all duration-300 bg-gray-50 hover:bg-white"
-                      placeholder="+91 9876543210"
-                   style={{padding:'10px 10px'}} />
-                    {/* <FaPhone className="absolute left-4 top-4 text-primary-green text-lg" /> */}
+                      placeholder="+91 98765 43210"
+                    />
+                    <FaPhone className="absolute left-4 top-1/2 -translate-y-1/2 text-primary-green text-lg" />
                   </div>
                 </motion.div>
 
                 {/* Message */}
-                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.25 }} style={{padding:'10px 10px'}}>
-                  <label className="block text-gray-700 font-semibold mb-3" style={{padding:'10px 10px'}}>Message</label>
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.25 }}>
+                  <label htmlFor="contact-message" className="block text-gray-700 font-semibold mb-3">Message</label>
                   <textarea
+                    id="contact-message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
@@ -223,11 +205,11 @@ export default function Contact() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.3 }}
-                  whileHover={{ scale: 1.03, boxShadow: "0 20px 40px rgba(34, 139, 34, 0.3)" }}
+                  whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.97 }}
                   type="submit"
-                  className="w-full bg-gradient-to-r from-primary-green to-dark-green text-red font-bold py-4 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg hover:shadow-2xl"
-                style={{padding:'10px 10px'}}>
+                  className="w-full bg-gradient-to-r from-primary-green to-dark-green text-white font-bold py-4 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg shadow-lg hover:shadow-2xl"
+                >
                   <FaPaperPlane size={20} />
                   Send Message
                 </motion.button>
@@ -252,8 +234,8 @@ export default function Contact() {
             </div>
 
             {/* Social Links */}
-            <div className="card bg-white p-8" style={{padding:'30px 30px'}}>
-              <h3 className="text-2xl font-bold text-dark-green mb-6" >Follow Us</h3>
+            <div className="card bg-white p-8">
+              <h3 className="text-2xl font-bold text-dark-green mb-6">Follow Us</h3>
               <p className="text-gray-600 mb-6">
                 Connect with us on social media for updates, tips, and stories from our farm.
               </p>
@@ -264,6 +246,7 @@ export default function Contact() {
                     <motion.a
                       key={i}
                       href={social.link}
+                      aria-label={`Follow us on ${social.label}`}
                       whileHover={{ scale: 1.2 }}
                       whileTap={{ scale: 0.9 }}
                       className="w-12 h-12 bg-gradient-to-br from-primary-green to-dark-green rounded-full flex items-center justify-center text-white hover:shadow-lg transition-shadow"
@@ -276,7 +259,7 @@ export default function Contact() {
             </div>
 
             {/* Business Hours */}
-            <div className="card bg-cream-white/80 p-8 border-l-4 border-primary-green"  style={{padding:'30px 30px',margin:'20px'}}>
+            <div className="card bg-cream-white/80 p-8 border-l-4 border-primary-green">
               <h3 className="text-xl font-bold text-dark-green mb-4">Business Hours</h3>
               <ul className="space-y-2 text-gray-700">
                 <li><span className="font-semibold">Monday - Friday:</span> 8:00 AM - 6:00 PM</li>

@@ -9,8 +9,8 @@ export default function Process() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-white" style={{margin:'0 auto',display:'block',width:'80%',textAlign:'center'}}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"  style={{margin:'0 auto',display:'block',width:'100%',textAlign:'center'}}>
+    <section className="py-16 md:py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -19,10 +19,10 @@ export default function Process() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">Our Process</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto"style={{margin:'0 auto',padding:'20px 20px'}}>From farm to your table, we ensure quality at every step</p>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">From farm to your table, we ensure quality at every step</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"  style={{margin:'0 auto', textAlign:'center',padding:'30px 30px'}}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step, i) => (
             <motion.div
               key={i}
@@ -38,12 +38,9 @@ export default function Process() {
               )}
 
               {/* Card */}
-              <div className="bg-gradient-to-br from-cream-white to-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center h-full border-t-4" style={{borderColor: '#2E7D32', margin:'0 auto', textAlign:'center',padding:'20px 20px'}}>
+              <div className="bg-gradient-to-br from-cream-white to-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center h-full border-t-4 border-primary-green">
                 {/* Step Number */}
-                <div
-                  className="w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4 shadow-lg"
-                  style={{backgroundColor: '#2E7D32'}}
-                >
+                <div className="w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold text-white mx-auto mb-4 shadow-lg bg-primary-green">
                   {step.number}
                 </div>
 
@@ -64,7 +61,7 @@ export default function Process() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="mt-16 p-8 bg-gradient-to-r from-primary-green/10 to-light-green/10 rounded-xl border-l-4" style={{borderColor: '#2E7D32'}}
+          className="mt-16 p-8 bg-gradient-to-r from-primary-green/10 to-light-green/10 rounded-xl border-l-4 border-primary-green"
         >
           <p className="text-center text-gray-700 text-lg font-semibold">
             Every product goes through rigorous quality checks to ensure you receive the best

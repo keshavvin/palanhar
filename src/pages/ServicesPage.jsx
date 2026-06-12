@@ -8,11 +8,14 @@ export default function ServicesPage() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
-        className="pt-20 pb-10 bg-gradient-to-b from-light-green/20 to-transparent"
+        className="bg-gradient-to-b from-light-green/20 to-transparent pb-10 pt-16 md:pt-20"
       >
         <div className="container-custom text-center">
-          {/* <h1 className="text-5xl font-bold text-dark-green mb-4">Our Services</h1> */}
-          {/* <p className="text-xl text-gray-600">Comprehensive solutions for dairy farming and sustainable agriculture</p> */}
+          <span className="section-eyebrow">What We Do</span>
+          <h1 className="mb-4">Our Services</h1>
+          <p className="mx-auto max-w-2xl text-lg text-gray-600 md:text-xl">
+            Comprehensive solutions for dairy farming and sustainable agriculture
+          </p>
         </div>
       </motion.section>
       <Services />

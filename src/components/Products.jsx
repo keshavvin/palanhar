@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { allProducts, dairyProducts, agricultureProducts } from '../data/products';
-import { FaShoppingCart, FaArrowRight } from 'react-icons/fa';
+import { FaEnvelope, FaArrowRight } from 'react-icons/fa';
 
 export default function Products() {
   const [filter, setFilter] = useState('all');
@@ -51,7 +52,7 @@ export default function Products() {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-white to-cream-white/50"  style={{width:'80%',margin:'30px auto', textAlign:'center',padding:'20px 0px'}}>
+    <section className="py-16 md:py-24 bg-gradient-to-b from-white to-cream-white/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -72,7 +73,7 @@ export default function Products() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className="flex flex-wrap justify-center gap-4 mb-12"
-        style={{width:'80%',margin:'30px auto', textAlign:'center',padding:'20px 20px'}}>
+        >
           {[
             { id: 'all', label: 'All Products' },
             { id: 'dairy', label: 'Dairy Products' },
@@ -83,6 +84,7 @@ export default function Products() {
               animate={filter === btn.id ? 'active' : 'inactive'}
               variants={filterVariants}
               onClick={() => setFilter(btn.id)}
+              aria-pressed={filter === btn.id}
               className="px-6 py-3 rounded-lg border-2 border-primary-green font-semibold transition-all duration-300"
             >
               {btn.label}
@@ -103,16 +105,12 @@ export default function Products() {
               key={product.id}
               variants={itemVariants}
               className="card bg-white group overflow-hidden"
-            style={{ padding:'20px 30px'}}>
+            >
               {/* Product Image */}
               <div className="bg-gradient-to-br from-light-green/20 to-primary-green/20 h-32 flex items-center justify-center overflow-hidden relative">
-                <motion.div
-                  animate={{ scale: [1, 1.1, 1] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                  className="text-8xl group-hover:scale-125 transition-transform duration-300"
-                >
+                <div className="text-8xl group-hover:scale-110 transition-transform duration-300">
                   {product.image}
-                </motion.div>
+                </div>
               </div>
 
               {/* Product Content */}
@@ -138,14 +136,14 @@ export default function Products() {
                 {/* Price and CTA */}
                 <div className="flex items-center justify-between pt-4 border-t border-light-green/30">
                   <p className="text-lg font-bold text-primary-green">{product.price}</p>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="bg-primary-green text-white p-2 rounded-lg hover:bg-dark-green transition-colors flex items-center gap-2"
+                  <Link
+                    to="/contact"
+                    aria-label={`Enquire about ${product.name}`}
+                    className="bg-primary-green text-white px-3 py-2 rounded-lg hover:bg-dark-green hover:scale-105 transition-all flex items-center gap-2"
                   >
-                    <FaShoppingCart size={16} />
-                    <span className="hidden sm:inline text-sm">Add</span>
-                  </motion.button>
+                    <FaEnvelope size={16} />
+                    <span className="hidden sm:inline text-sm">Enquire</span>
+                  </Link>
                 </div>
               </div>
             </motion.div>
@@ -164,14 +162,13 @@ export default function Products() {
           <p className="text-lg mb-6 opacity-90">
             Get fresh, organic products delivered to your doorstep. Fast, reliable delivery guaranteed!
           </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="btn btn-outline border-white text-white hover:bg-white hover:text-primary-green flex items-center gap-2 justify-center mx-auto"
+          <Link
+            to="/contact"
+            className="btn btn-golden inline-flex items-center gap-2 justify-center hover:scale-105"
           >
             Order Now
             <FaArrowRight />
-          </motion.button>
+          </Link>
         </motion.div>
       </div>
     </section>

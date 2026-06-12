@@ -1,5 +1,14 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap');
+
+@theme {
+  --color-primary-green: #2E7D32;
+  --color-dark-green: #1B5E20;
+  --color-light-green: #81C784;
+  --color-cream-white: #FFFDF5;
+  --color-golden: #F9A825;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Playfair Display', serif;
+}
 
 :root {
   --primary-green: #2E7D32;
@@ -7,12 +16,6 @@
   --cream-white: #FFFDF5;
   --dark-green: #1B5E20;
   --golden: #F9A825;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 body {
@@ -23,6 +26,19 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -77,55 +93,6 @@ h3 {
   background: linear-gradient(135deg, #F9A825 0%, #ff9800 100%);
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-20px); }
@@ -142,31 +109,19 @@ h3 {
   }
 
   .btn-primary {
-    @apply text-white shadow-lg hover:shadow-xl;
-    background-color: #2E7D32;
-  }
-
-  .btn-primary:hover {
-    background-color: #1B5E20;
+    @apply text-white shadow-lg hover:shadow-xl bg-primary-green hover:bg-dark-green;
   }
 
   .btn-secondary {
-    @apply text-white hover:text-white;
-    background-color: #81C784;
-  }
-
-  .btn-secondary:hover {
-    background-color: #2E7D32;
+    @apply text-white bg-light-green hover:bg-primary-green;
   }
 
   .btn-outline {
-    @apply border-2 text-white;
-    border-color: #2E7D32;
-    background-color: #2E7D32;
+    @apply border-2 border-primary-green text-primary-green bg-transparent hover:bg-primary-green hover:text-white;
   }
 
-  .btn-outline:hover {
-    background-color: #1B5E20;
+  .btn-golden {
+    @apply text-dark-green font-bold shadow-lg hover:shadow-xl bg-golden hover:bg-amber-500;
   }
 
   .card {
@@ -184,10 +139,21 @@ h3 {
   .section {
     @apply py-12 md:py-20 lg:py-24;
   }
-}
 
-@media (max-width: 768px) {
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.5rem; }
-  h3 { font-size: 1.2rem; }
+  .section-eyebrow {
+    @apply text-sm font-bold uppercase tracking-widest text-golden mb-2 block;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  .stat-card {
+    @apply bg-white rounded-xl shadow-lg p-5 sm:p-6 border-t-4 border-primary-green;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary-green transition-colors duration-300 bg-gray-50 focus:bg-white;
+  }
+
+  .badge-status {
+    @apply inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold;
+  }
 }

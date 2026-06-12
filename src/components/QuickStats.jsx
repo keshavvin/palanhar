@@ -2,15 +2,15 @@ import { motion } from 'framer-motion';
 
 export default function QuickStats() {
   const stats = [
-    { icon: '🌾', number: '500+', label: 'Acres of Farmland', color: '#2E7D32' },
-    { icon: '🐄', number: '500+', label: 'Healthy Cattle', color: '#81C784' },
-    { icon: '👨‍🌾', number: '1000+', label: 'Happy Customers', color: '#1B5E20' },
-    { icon: '⭐', number: '4.9/5', label: 'Customer Rating', color: '#F9A825' },
+    { icon: '🐄', number: '200', label: 'Desi Gir Cows' },
+    { icon: '🥛', number: '2,000 L', label: 'Milk Production / Day' },
+    { icon: '🌿', number: '1000+', label: 'Panchgavya & Natural Products' },
+    { icon: '📈', number: '₹80 Cr', label: '5-Year Revenue Target' },
   ];
 
   return (
-    <section className="py-12 md:py-16 bg-gradient-to-r from-primary-green via-green-600 to-dark-green text-white" style={{ padding: '20px' ,margin:'20px 0px'}}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{     margin: '0 auto',padding: '20px'}}>
+    <section className="py-12 md:py-16 bg-gradient-to-r from-primary-green via-primary-green to-dark-green text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
           {stats.map((stat, i) => (
             <motion.div

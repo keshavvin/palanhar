@@ -3,10 +3,34 @@ import { Link } from 'react-router-dom';
 
 export default function Featured() {
   const featured = [
-    { icon: '🥛', name: 'Fresh Milk', desc: '100% Pure & Fresh Daily', color: '#81C784' },
-    { icon: '🧈', name: 'Organic Ghee', desc: 'Traditional Method', color: '#2E7D32' },
-    { icon: '🧀', name: 'Paneer', desc: 'Soft & Delicious', color: '#1B5E20' },
-    { icon: '🌾', name: 'Organic Grains', desc: 'Chemical Free Farming', color: '#F9A825' },
+    {
+      icon: '🥛',
+      name: 'Fresh Milk',
+      desc: '100% Pure & Fresh Daily',
+      borderClass: 'border-t-light-green',
+      btnClass: 'bg-light-green hover:bg-primary-green',
+    },
+    {
+      icon: '🧈',
+      name: 'Organic Ghee',
+      desc: 'Traditional Method',
+      borderClass: 'border-t-primary-green',
+      btnClass: 'bg-primary-green hover:bg-dark-green',
+    },
+    {
+      icon: '🧀',
+      name: 'Paneer',
+      desc: 'Soft & Delicious',
+      borderClass: 'border-t-dark-green',
+      btnClass: 'bg-dark-green hover:bg-primary-green',
+    },
+    {
+      icon: '🌾',
+      name: 'Organic Grains',
+      desc: 'Chemical Free Farming',
+      borderClass: 'border-t-golden',
+      btnClass: 'bg-golden hover:bg-amber-500',
+    },
   ];
 
   const containerVariants = {
@@ -23,7 +47,7 @@ export default function Featured() {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-cream-white to-white" style={{width: '80%',margin: '0 auto'}}>
+    <section className="py-16 md:py-24 bg-gradient-to-b from-cream-white to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -32,7 +56,7 @@ export default function Featured() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4" style={{padding: '35px 0px'}}>Featured Products</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">Featured Products</h2>
           <p className="text-xl text-gray-600">Our most popular items loved by customers</p>
         </motion.div>
 
@@ -42,25 +66,22 @@ export default function Featured() {
           whileInView="visible"
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
-        style={{padding: '35px 0px'}}>
+        >
           {featured.map((item, i) => (
             <motion.div
               key={i}
               variants={itemVariants}
-              className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-t-4"
-              style={{borderColor: item.color}} style={{padding: '35px 0px'}}
+              className={`bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 ${item.borderClass}`}
             >
               <div className="text-5xl mb-4">{item.icon}</div>
               <h3 className="text-xl font-bold text-dark-green mb-2">{item.name}</h3>
               <p className="text-gray-600 text-sm mb-4">{item.desc}</p>
-              <button
-                className="px-4 py-2 rounded-lg font-semibold text-white transition-all duration-300"
-                style={{backgroundColor: item.color,padding: '5px 10px',margin:'15px 0px'}}
-                onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-                onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
+              <Link
+                to="/products"
+                className={`inline-block px-4 py-2 rounded-lg font-semibold text-white transition-all duration-300 hover:scale-105 ${item.btnClass}`}
               >
                 Learn More
-              </button>
+              </Link>
             </motion.div>
           ))}
         </motion.div>
@@ -72,19 +93,7 @@ export default function Featured() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <Link
-            to="/products"
-            className="px-8 py-4 rounded-lg font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300 inline-block"
-            style={{backgroundColor: '#2E7D32'}}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = '#1B5E20';
-              e.currentTarget.style.transform = 'scale(1.05)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = '#2E7D32';
-              e.currentTarget.style.transform = 'scale(1)';
-            }}
-          style={{    padding: '10px 15px'}}>
+          <Link to="/products" className="btn btn-primary hover:scale-105">
             View All Products →
           </Link>
         </motion.div>

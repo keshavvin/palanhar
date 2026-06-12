@@ -1,4 +1,4 @@
-import { FaLeaf, FaHandshake, FaTruck, FaBook, FaGraduationCap } from 'react-icons/fa';
+import { FaLeaf, FaHandshake, FaTruck, FaGraduationCap } from 'react-icons/fa';
 
 export const services = [
   {

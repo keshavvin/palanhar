@@ -56,7 +56,7 @@ export default function WhyChooseUs() {
 
   return (
     <section className="py-16 md:py-24 bg-gradient-to-b from-white to-cream-white/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{margin:'0 auto',display:'block',width:'80%',textAlign:'center'}}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -66,7 +66,7 @@ export default function WhyChooseUs() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">Why Choose Palanhar Farms</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto"  style={{margin:'0 auto',display:'block',width:'80%',textAlign:'center'}}>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             We're committed to delivering the highest quality dairy and agricultural products
           </p>
         </motion.div>
@@ -77,14 +77,14 @@ export default function WhyChooseUs() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
-         style={{margin:'0 auto',width:'80%',textAlign:'center',padding:'20px 0px'}}>
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
+        >
           {features.map((feature, i) => (
             <motion.div
               key={i}
               variants={itemVariants}
               className="card bg-white p-8 group hover:shadow-2xl hover:border-l-4 hover:border-l-primary-green transition-all duration-300"
-            style={{padding:'30px 30px'}}>
+            >
               <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
                 {feature.icon}
               </div>
@@ -101,9 +101,9 @@ export default function WhyChooseUs() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="card bg-gradient-to-r from-primary-green/10 to-light-green/10 p-8 md:p-12"
-       style={{margin:'30px auto', textAlign:'center',padding:'20px 0px'}} >
+        >
           <h3 className="text-3xl font-bold text-dark-green mb-8 text-center">Our Certifications & Awards</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6"  style={{margin:'30px auto', textAlign:'center',padding:'20px 0px'}}>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { icon: '🥇', label: 'ISO 9001 Certified' },
               { icon: '🌱', label: 'Organic Certified' },

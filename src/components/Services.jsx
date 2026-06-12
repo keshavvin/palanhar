@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { services } from '../data/services';
 
 export default function Services() {
@@ -23,8 +24,8 @@ export default function Services() {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-white to-cream-white/50" >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{width: '80%',margin: '0 auto'}}>
+    <section className="py-16 md:py-24 bg-gradient-to-b from-white to-cream-white/50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -34,7 +35,7 @@ export default function Services() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">Our Services</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto" style={{width: '80%',margin: '0 auto'}}>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Comprehensive solutions for dairy farming and sustainable agriculture
           </p>
         </motion.div>
@@ -45,16 +46,16 @@ export default function Services() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
-        style={{padding: '10px 30px'}} >
-          {services.map((service, i) => {
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          {services.map((service) => {
             const Icon = service.icon;
             return (
               <motion.div
                 key={service.id}
                 variants={itemVariants}
                 className="card bg-white p-8 group hover:shadow-2xl"
-              style={{padding: '10px 30px'}} >
+              >
                 {/* Icon */}
                 <motion.div
                   initial={{ scale: 1, rotate: 0 }}
@@ -78,15 +79,14 @@ export default function Services() {
                   ))}
                 </ul>
 
-                {/* Learn More Link */}
-                <motion.a
-                  whileHover={{ x: 5 }}
-                  href="#"
-                  className="text-primary-green font-semibold mt-6 inline-flex items-center group/link"
+                {/* Enquire Link */}
+                <Link
+                  to="/contact"
+                  className="text-primary-green font-semibold mt-6 inline-flex items-center group/link hover:text-dark-green transition-colors"
                 >
-                  Learn More
+                  Enquire
                   <span className="ml-2 group-hover/link:translate-x-2 transition-transform">→</span>
-                </motion.a>
+                </Link>
               </motion.div>
             );
           })}
@@ -99,8 +99,8 @@ export default function Services() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="mt-20 card bg-gradient-to-r from-primary-green/10 to-light-green/10 p-8 md:p-12"
-         style={{width: '80%',margin: '20px auto',padding:'40px'}}>
-          <h3 className="text-3xl font-bold text-dark-green mb-8 text-center"style={{ margin: '40 auto',padding:'40px'}}>Why Choose Palanhar Farms?</h3>
+        >
+          <h3 className="text-3xl font-bold text-dark-green mb-8 text-center">Why Choose Palanhar Farms?</h3>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {

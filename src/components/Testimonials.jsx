@@ -25,17 +25,15 @@ export default function Testimonials() {
     setAutoplay(false);
   };
 
-  const getVisibleTestimonials = () => {
-    const visible = [current];
-    if (window.innerWidth >= 768) {
-      visible.push((current + 1) % testimonials.length);
-      visible.push((current + 2) % testimonials.length);
-    }
-    return visible.map(i => testimonials[i]);
-  };
+  // First card always visible; cards 2-3 only on md+ (CSS, no JS resize logic)
+  const visibleTestimonials = [
+    testimonials[current],
+    testimonials[(current + 1) % testimonials.length],
+    testimonials[(current + 2) % testimonials.length],
+  ];
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-cream-white/50 to-white"  style={{margin:'0 auto',display:'block',width:'80%',textAlign:'center'}}>
+    <section className="py-16 md:py-24 bg-gradient-to-b from-cream-white/50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -54,7 +52,7 @@ export default function Testimonials() {
           className="relative"
           onMouseEnter={() => setAutoplay(false)}
           onMouseLeave={() => setAutoplay(true)}
-        style={{margin:'40px auto',padding:'20px 20px'}}>
+        >
           <AnimatePresence mode="wait">
             <motion.div
               key={current}
@@ -64,18 +62,20 @@ export default function Testimonials() {
               transition={{ duration: 0.5 }}
               className="grid grid-cols-1 md:grid-cols-3 gap-6"
             >
-              {getVisibleTestimonials().map((testimonial, i) => (
+              {visibleTestimonials.map((testimonial, i) => (
                 <motion.div
                   key={testimonial.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
-                  className="card bg-white p-8 shadow-lg hover:shadow-xl transition-all"
-                style={{margin:'40 auto',padding:'20px 20px'}}>
+                  className={`card bg-white p-8 shadow-lg hover:shadow-xl transition-all ${
+                    i > 0 ? 'hidden md:block' : ''
+                  }`}
+                >
                   {/* Rating Stars */}
                   <div className="flex gap-2 mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <FaStar key={i} className="text-golden" size={18} />
+                    {[...Array(testimonial.rating)].map((_, j) => (
+                      <FaStar key={j} className="text-golden" size={18} />
                     ))}
                   </div>
 
@@ -100,14 +100,14 @@ export default function Testimonials() {
           {/* Navigation Buttons */}
           <button
             onClick={prev}
-            className="absolute -left-6 md:-left-12 top-1/3 transform -translate-y-1/2 bg-primary-green text-white p-3 rounded-full hover:bg-dark-green transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="absolute left-2 lg:-left-12 top-1/3 transform -translate-y-1/2 bg-primary-green text-white p-3 rounded-full hover:bg-dark-green transition-all duration-300 shadow-lg hover:shadow-xl"
             aria-label="Previous testimonial"
           >
             <FaChevronLeft size={20} />
           </button>
           <button
             onClick={next}
-            className="absolute -right-6 md:-right-12 top-1/3 transform -translate-y-1/2 bg-primary-green text-white p-3 rounded-full hover:bg-dark-green transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="absolute right-2 lg:-right-12 top-1/3 transform -translate-y-1/2 bg-primary-green text-white p-3 rounded-full hover:bg-dark-green transition-all duration-300 shadow-lg hover:shadow-xl"
             aria-label="Next testimonial"
           >
             <FaChevronRight size={20} />
@@ -126,38 +126,12 @@ export default function Testimonials() {
                   setCurrent(i);
                   setAutoplay(false);
                 }}
+                aria-label={`Go to testimonial ${i + 1}`}
                 className="w-3 h-3 rounded-full transition-all duration-300"
               />
             ))}
           </div>
         </div>
-
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="grid grid-cols-3 gap-4 md:gap-8 mt-16 pt-8 border-t border-light-green/30"
-        >
-          {[
-            { number: '1000+', label: 'Happy Customers' },
-            { number: '5/5', label: 'Average Rating' },
-            { number: '99%', label: 'Satisfaction Rate' },
-          ].map((stat, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: i * 0.1, duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              {/* <p className="text-3xl md:text-4xl font-bold text-primary-green mb-2">{stat.number}</p>
-              <p className="text-gray-600 font-semibold">{stat.label}</p> */}
-            </motion.div>
-          ))}
-        </motion.div>
       </div>
     </section>
   );

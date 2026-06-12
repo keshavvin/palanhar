@@ -1,107 +1,115 @@
 export const dairyProducts = [
   {
     id: 1,
-    name: 'Fresh Milk',
+    name: 'A2 Cow Milk',
     category: 'Dairy',
-    description: 'Pure and fresh cow milk, delivered daily from our healthy cattle.',
-    price: '₹50/L',
+    description: 'Pure A2 milk from our indigenous Desi Gir cows, delivered fresh daily.',
+    price: '₹90/L',
     image: '🥛',
-    features: ['100% Pure', 'No Preservatives', 'Fresh Daily']
+    features: ['A2 Protein', 'Desi Gir Cow', 'Fresh Daily']
   },
   {
     id: 2,
-    name: 'Buffalo Milk',
+    name: 'A2 Desi Ghee (Bilona)',
     category: 'Dairy',
-    description: 'Rich and creamy buffalo milk with high nutritional value.',
-    price: '₹60/L',
-    image: '🥛',
-    features: ['High Protein', 'Creamier', 'Calcium Rich']
+    description: 'Traditional bilona-method ghee hand-churned from A2 Gir cow milk curd.',
+    price: '₹2,400/L',
+    image: '🧈',
+    features: ['Bilona Method', 'A2 Cow Milk', 'Clay-Pot Churned']
   },
   {
     id: 3,
-    name: 'Organic Ghee',
+    name: 'Fresh Makkhan (White Butter)',
     category: 'Dairy',
-    description: 'Pure clarified butter made from organic milk using traditional methods.',
-    price: '₹800/kg',
+    description: 'Creamy white butter churned fresh from A2 cow milk cream.',
+    price: '₹600/kg',
     image: '🧈',
-    features: ['Grass-fed', 'Traditional', 'Pure Ghee']
+    features: ['A2 Cream', 'Hand Churned', 'No Additives']
   },
   {
     id: 4,
-    name: 'Fresh Butter',
-    category: 'Dairy',
-    description: 'Creamy butter churned from fresh dairy milk.',
-    price: '₹400/kg',
-    image: '🧈',
-    features: ['Fresh', 'Pure Cream', 'No Additives']
-  },
-  {
-    id: 5,
     name: 'Paneer',
     category: 'Dairy',
-    description: 'Soft and delicious cottage cheese made from fresh milk.',
-    price: '₹300/kg',
+    description: 'Soft and delicious cottage cheese made from fresh A2 cow milk.',
+    price: '₹400/kg',
     image: '🧀',
     features: ['Soft', 'Fresh', 'High Protein']
   },
   {
-    id: 6,
-    name: 'Fresh Curd',
+    id: 5,
+    name: 'Fresh Dahi (Curd)',
     category: 'Dairy',
-    description: 'Creamy yogurt made with traditional fermentation process.',
-    price: '₹80/kg',
+    description: 'Creamy curd set with traditional fermentation in earthen pots.',
+    price: '₹120/kg',
     image: '🥣',
-    features: ['Probiotic', 'Fresh', 'Creamy']
+    features: ['Probiotic', 'A2 Milk', 'Earthen-Pot Set']
+  },
+  {
+    id: 6,
+    name: 'Chhachh (Buttermilk)',
+    category: 'Dairy',
+    description: 'Light, refreshing buttermilk — a natural byproduct of bilona churning.',
+    price: '₹40/L',
+    image: '🥛',
+    features: ['Digestive', 'Natural', 'Fresh Daily']
   }
 ];
 
 export const agricultureProducts = [
-  
   {
     id: 8,
-    name: 'Organic Rice',
+    name: 'Vermi Compost',
     category: 'Agriculture',
-    description: 'Premium basmati rice cultivated using organic farming methods.',
-    price: '₹80/kg',
-    image: '🌾',
-    features: ['Basmati', 'Organic', 'Long Grain']
+    description: 'Nutrient-rich organic compost from gobar and biogas slurry for healthy soil.',
+    price: '₹15/kg',
+    image: '🌱',
+    features: ['Gobar Based', 'Soil Health', 'Chemical Free']
   },
   {
     id: 9,
-    name: 'Fresh Vegetables',
+    name: 'Organic Fertilizer & Pesticide',
     category: 'Agriculture',
-    description: 'Seasonal fresh vegetables picked daily from our organic farms.',
+    description: 'Natural crop care made from cow dung, gomutra and herbal extracts.',
+    price: '₹60-150/kg',
+    image: '🧪',
+    features: ['Gomutra Based', 'Herbal', 'Crop Safe']
+  },
+  {
+    id: 10,
+    name: 'Gomutra Ark',
+    category: 'Agriculture',
+    description: 'Distilled cow urine ark prepared under hygienic ayurvedic processes.',
+    price: '₹120/L',
+    image: '🫙',
+    features: ['Ayurvedic', 'Distilled', 'Traditional']
+  },
+  {
+    id: 11,
+    name: 'Panchgavya Dhoopbatti',
+    category: 'Agriculture',
+    description: 'Natural incense handmade from cow dung, ghee and herbal ingredients.',
+    price: '₹80/pack',
+    image: '🪔',
+    features: ['Panchgavya', 'Handmade', 'Natural Aroma']
+  },
+  {
+    id: 12,
+    name: 'Fresh Organic Vegetables',
+    category: 'Agriculture',
+    description: 'Seasonal vegetables grown with our own organic fertilizers.',
     price: '₹40-100/kg',
     image: '🥬',
     features: ['Seasonal', 'Fresh', 'Pesticide Free']
   },
   {
-    id: 10,
-    name: 'Organic Fruits',
+    id: 13,
+    name: 'Compressed Biogas (CBG)',
     category: 'Agriculture',
-    description: 'Healthy organic fruits grown without harmful chemicals.',
-    price: '₹60-120/kg',
-    image: '🍎',
-    features: ['Natural', 'Organic', 'Sweet & Juicy']
-  },
-  {
-    id: 11,
-    name: 'Pulses & Lentils',
-    category: 'Agriculture',
-    description: 'Pure pulses and lentils rich in protein and nutrition.',
-    price: '₹80-150/kg',
-    image: '🫘',
-    features: ['Protein Rich', 'Organic', 'Natural']
-  },
-  {
-    id: 12,
-    name: 'Organic Honey',
-    category: 'Agriculture',
-    description: 'Pure raw honey harvested from our organic bee farms.',
-    price: '₹400-600/kg',
-    image: '🍯',
-    features: ['Raw Honey', 'Natural', 'Antibiotic']
+    description: 'Clean energy generated from gobar through our integrated biogas plant.',
+    price: 'On Request',
+    image: '🔋',
+    features: ['Clean Energy', 'Gobar Based', 'Sustainable']
   }
 ];
 
-export const allProducts = [...dairyProducts];
+export const allProducts = [...dairyProducts, ...agricultureProducts];

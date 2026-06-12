@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# local audit artifacts
+.audit-shots
+audit-live.mjs
+*.png.local
+.verify-shots
