@@ -11,8 +11,8 @@ export default function ServicesPage() {
         className="pt-20 pb-10 bg-gradient-to-b from-light-green/20 to-transparent"
       >
         <div className="container-custom text-center">
-          <h1 className="text-5xl font-bold text-dark-green mb-4">Our Services</h1>
-          <p className="text-xl text-gray-600">Comprehensive solutions for dairy farming and sustainable agriculture</p>
+          {/* <h1 className="text-5xl font-bold text-dark-green mb-4">Our Services</h1> */}
+          {/* <p className="text-xl text-gray-600">Comprehensive solutions for dairy farming and sustainable agriculture</p> */}
         </div>
       </motion.section>
       <Services />

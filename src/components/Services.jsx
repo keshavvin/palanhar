@@ -99,7 +99,7 @@ export default function Services() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="mt-20 card bg-gradient-to-r from-primary-green/10 to-light-green/10 p-8 md:p-12"
-         style={{width: '80%',margin: '0 auto',padding:'40px'}}>
+         style={{width: '80%',margin: '20px auto',padding:'40px'}}>
           <h3 className="text-3xl font-bold text-dark-green mb-8 text-center"style={{ margin: '40 auto',padding:'40px'}}>Why Choose Palanhar Farms?</h3>
           <div className="grid md:grid-cols-3 gap-8">
             {[
