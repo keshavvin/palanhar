@@ -17,7 +17,7 @@ const linkColumns = [
     links: [
       { label: 'Home', to: '/' },
       { label: 'About', to: '/about' },
-      { label: 'Cow Seva', to: '/gau-seva' },
+      { label: 'Gau Seva', to: '/gau-seva' },
       { label: 'Gallery', to: '/gallery' },
       { label: 'Contact', to: '/contact' },
     ],

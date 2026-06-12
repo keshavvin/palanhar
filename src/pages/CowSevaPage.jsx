@@ -94,7 +94,7 @@ const participation = [
     desc: 'Buying A2 milk, bilona ghee, vermi compost, dhoopbatti and other cow-based products keeps gaushalas economically self-reliant.',
   },
   {
-    title: 'Bring Cow Seva into family life',
+    title: 'Bring Gau Seva into family life',
     desc: 'Involve children in feeding visits, celebrate festivals like Gopashtami and Govardhan Puja together, and let the next generation learn kindness by doing.',
   },
   {
@@ -150,7 +150,7 @@ export default function CowSevaPage() {
       >
         <div className="container-custom text-center">
           <span className="section-eyebrow">गौ सेवा</span>
-          <h1 className="mb-4">Cow Seva — Serving the Gentle Giver</h1>
+          <h1 className="mb-4">Gau Seva — Serving the Gentle Giver</h1>
           <p className="mx-auto max-w-3xl text-lg text-gray-600 md:text-xl">
             Caring for cows is one of humanity&rsquo;s oldest acts of kindness — a practice
             that nurtures character, strengthens communities, enriches the soil and
@@ -159,20 +159,20 @@ export default function CowSevaPage() {
         </div>
       </motion.section>
 
-      {/* What is Cow Seva */}
+      {/* What is Gau Seva */}
       <section className="section bg-white">
         <div className="container-custom max-w-3xl">
           <motion.div {...fadeUp} className="space-y-5 text-lg leading-relaxed text-gray-700">
             <p>
-              <strong className="text-dark-green">Cow Seva</strong> simply means serving and
+              <strong className="text-dark-green">Gau Seva</strong> simply means serving and
               caring for cows — feeding them, keeping their shelters clean, attending to their
               health, and treating them with the gentleness they show us. In Indian tradition
               the cow is revered as <em>Gau Mata</em>, the mother who nourishes; but the value
-              of Cow Seva is universal. Anyone, of any background, who has spent a morning
+              of Gau Seva is universal. Anyone, of any background, who has spent a morning
               feeding a calf or grooming a gentle Gir cow knows the calm it brings.
             </p>
             <p>
-              At its heart, Cow Seva is a relationship. A cow gives milk, fertile manure,
+              At its heart, Gau Seva is a relationship. A cow gives milk, fertile manure,
               and companionship; in return she asks only for food, cleanliness, safety and
               kindness. Practising this exchange daily transforms not just the animal&rsquo;s
               life — it transforms ours.
@@ -314,7 +314,7 @@ export default function CowSevaPage() {
         <div className="container-custom max-w-4xl">
           <motion.div {...fadeUp} className="mb-12 text-center">
             <span className="section-eyebrow">Start Today</span>
-            <h2 className="mb-4">Six Ways You Can Practise Cow Seva</h2>
+            <h2 className="mb-4">Six Ways You Can Practise Gau Seva</h2>
             <p className="mx-auto max-w-2xl text-lg text-gray-600">
               Seva does not require a farm of your own. Here are practical ways anyone —
               in a village or a city — can begin.

@@ -69,7 +69,7 @@ export default function GauSevaHighlight() {
           className="flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
           <Link to="/gau-seva" className="btn btn-primary group flex items-center gap-2">
-            Discover Cow Seva
+            Discover Gau Seva
             <FaArrowRight className="transition-transform group-hover:translate-x-2" aria-hidden="true" />
           </Link>
           <Link to="/contact" className="btn btn-outline">

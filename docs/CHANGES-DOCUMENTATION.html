@@ -34,7 +34,7 @@
 <h2>1. Overview</h2>
 <p>The website was rebuilt from a basic marketing site into an <strong>investor-pitch demo</strong> implementing the
 "Investor Management &amp; Dividend Distribution System" SRS, plus a repaired and polished marketing shell, a brand
-loading experience, and a Cow Seva awareness page. All investor features are <strong>frontend demos</strong> driven by
+loading experience, and a Gau Seva awareness page. All investor features are <strong>frontend demos</strong> driven by
 one mock-data file — no backend is required to present the site.</p>
 
 <h2>2. New Features &amp; Their Routes</h2>
@@ -44,7 +44,7 @@ one mock-data file — no backend is required to present the site.</p>
 <tr><td>Investor Registration + KYC</td><td><code>/investor/register</code></td><td>8-step wizard: mobile OTP (demo: any 6 digits) → email → profile → PAN upload → Aadhaar upload → bank → nominee → review &amp; submit. Generates Investor ID, has a "Simulate Admin Approval" demo button.</td></tr>
 <tr><td>Investor Dashboard</td><td><code>/investor/dashboard</code></td><td>Portfolio stat cards, growth chart, dividend wallet (Transfer to Bank / Reinvest modals), downloadable certificate, dividend history, transactions, documents repository, notifications.</td></tr>
 <tr><td>Admin / CMD Dashboard</td><td><code>/admin</code></td><td>KPIs, funds-raised &amp; plan-mix charts, dividend declaration console with live pool math, investor approval queue (working Approve/Reject), share register, audit trail, export buttons.</td></tr>
-<tr><td>Cow Seva article page <span class="badge">NEW</span></td><td><code>/gau-seva</code> (old <code>/cow-seva</code> redirects)</td><td>Full Gau Seva article: values it builds, social/cultural/environmental/agricultural/economic contributions, four duties of care, six practical ways to participate, farm-visit CTA. Linked in header &amp; footer.</td></tr>
+<tr><td>Gau Seva article page <span class="badge">NEW</span></td><td><code>/gau-seva</code> (old <code>/cow-seva</code> redirects)</td><td>Full Gau Seva article: values it builds, social/cultural/environmental/agricultural/economic contributions, four duties of care, six practical ways to participate, farm-visit CTA. Linked in header &amp; footer.</td></tr>
 <tr><td>Brand splash loader <span class="badge">NEW</span></td><td>all pages</td><td>3-second full-page splash on every load/refresh showing the cow-and-calf logo with rotating green/golden arcs; also shown during page-to-page lazy loads. Honours reduced-motion.</td></tr>
 <tr><td>Logo in header &amp; footer <span class="badge">NEW</span></td><td>all pages</td><td>The cow-and-calf logo (<code>public/cow-loader.png</code>) replaces the 🌾 emoji in the Navbar and in the Footer (inside a cream circle).</td></tr>
 <tr><td>Marketing shell repair</td><td><code>/ /about /products /services /gallery /contact</code></td><td>Theme fixed (brand colors now actually render), junk inline styles removed, real contact details, A2/Gir/panchgavya product catalog, Home investment teaser, 404 page, page transitions, scroll restoration.</td></tr>
@@ -67,7 +67,7 @@ one mock-data file — no backend is required to present the site.</p>
 <tr><td>Splash screen duration (currently 3s)</td><td><code>src/App.jsx</code></td><td><code>SPLASH_DURATION_MS = 3000</code></td></tr>
 <tr><td>Logo image (loader + header + footer)</td><td><code>public/cow-loader.png</code></td><td>Replace the file, keep the same name</td></tr>
 <tr><td>Brand colors / fonts</td><td><code>src/index.css</code></td><td><code>@theme</code> block (Tailwind v4 — do NOT add a tailwind.config.js)</td></tr>
-<tr><td>Cow Seva article text / sections</td><td><code>src/pages/CowSevaPage.jsx</code></td><td><code>values</code>, <code>careStandards</code>, <code>participation</code>, <code>contributions</code> arrays + JSX prose</td></tr>
+<tr><td>Gau Seva article text / sections</td><td><code>src/pages/CowSevaPage.jsx</code></td><td><code>values</code>, <code>careStandards</code>, <code>participation</code>, <code>contributions</code> arrays + JSX prose</td></tr>
 <tr><td>Header menu links</td><td><code>src/components/Navbar.jsx</code></td><td><code>navLinks</code></td></tr>
 <tr><td>Footer link columns</td><td><code>src/components/Footer.jsx</code></td><td><code>linkColumns</code></td></tr>
 <tr><td>Browser tab title, SEO description</td><td><code>index.html</code></td><td><code>&lt;title&gt;</code>, meta description/og tags</td></tr>
