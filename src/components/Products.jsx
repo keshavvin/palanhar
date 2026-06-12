@@ -61,8 +61,8 @@ export default function Products() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          {/* <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">Our Products</h2>
-          <p className="text-xl text-gray-600">Premium dairy and organic agriculture products</p> */}
+          <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">Our Products</h2>
+          <p className="text-xl text-gray-600">Premium dairy and organic agriculture products</p>
         </motion.div>
 
         {/* Filter Buttons */}
