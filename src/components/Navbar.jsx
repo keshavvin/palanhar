@@ -106,7 +106,7 @@ export default function Navbar() {
               style={{color: '#2E7D32'}}
             >
               <FaPhone size={14} />
-              <span>+91 XXXXX XXXXX</span>
+              <span>919876543210</span>
               <span
                 className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-primary-green to-golden rounded-full"
                 style={{
@@ -210,7 +210,7 @@ export default function Navbar() {
                 whileTap={{ scale: 0.95 }}
               >
                 <FaPhone size={16} />
-                <span className="text-sm">+91 XXXXX XXXXX</span>
+                <span className="text-sm">919876543210</span>
               </motion.a>
               <motion.div
                 whileHover={{ scale: 1.02 }}

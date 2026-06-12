@@ -108,7 +108,7 @@ export default function FinalCTA() {
             Palanhar Farms • Delivering Fresh Milk, Organic Produce & Sustainable Farming Solutions
           </p>
           <p className="mt-2">
-            📍 Village, District, State | 📞 +91 XXXXX XXXXX | 📧 info@palanharfarms.com
+            📍 Village, District, State | 📞 +919876543210 | 📧 info@palanharfarms.com
           </p>
         </motion.div>
       </div>

@@ -11,8 +11,7 @@ export default function ContactPage() {
         className="pt-20 pb-10 bg-gradient-to-b from-light-green/20 to-transparent"
       >
         <div className="container-custom text-center">
-          <h1 className="text-5xl font-bold text-dark-green mb-4">Contact Us</h1>
-          <p className="text-xl text-gray-600">Get in touch with Palanhar Farms</p>
+           
         </div>
       </motion.section>
       <Contact />

@@ -56,15 +56,7 @@ export const dairyProducts = [
 ];
 
 export const agricultureProducts = [
-  {
-    id: 7,
-    name: 'Organic Wheat',
-    category: 'Agriculture',
-    description: 'Pure organic wheat grown without chemical pesticides.',
-    price: '₹25/kg',
-    image: '🌾',
-    features: ['Organic', 'High Fiber', 'Nutrient Rich']
-  },
+  
   {
     id: 8,
     name: 'Organic Rice',
@@ -112,4 +104,4 @@ export const agricultureProducts = [
   }
 ];
 
-export const allProducts = [...dairyProducts, ...agricultureProducts];
+export const allProducts = [...dairyProducts];

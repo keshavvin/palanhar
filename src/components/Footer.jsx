@@ -96,7 +96,7 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-white/80 hover:text-golden transition-colors cursor-pointer">
                 <FaPhone size={16} />
-                <span className="text-sm">+91 XXXXX XXXXX</span>
+                <span className="text-sm">919876543210</span>
               </div>
               <div className="flex items-center gap-3 text-white/80 hover:text-golden transition-colors cursor-pointer">
                 <FaEnvelope size={16} />
