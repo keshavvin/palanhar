@@ -1,4 +1,3 @@
-import DeckCover from '../components/home/DeckCover';
 import Hero from '../components/Hero';
 import HomeProducts from '../components/home/HomeProducts';
 import CategorySlider from '../components/home/CategorySlider';
@@ -13,7 +12,6 @@ import AppDownload from '../components/home/AppDownload';
 export default function Home() {
   return (
     <>
-      <DeckCover />
       <Hero />
       <HomeProducts />
       <CategorySlider />

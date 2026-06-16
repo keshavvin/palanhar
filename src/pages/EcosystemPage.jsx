@@ -36,44 +36,44 @@ const fadeUp = {
 const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.08 } } };
 
 const pillars = [
-  { icon: FaCow, title: 'डेयरी फार्मिंग', desc: 'हाई क्वालिटी मिल्क प्रोडक्शन विद बेस्ट एनिमल केयर, मॉडर्न इन्फ्रास्ट्रक्चर एंड हाइजीनिक प्रोसेसिंग।' },
-  { icon: FaSeedling, title: 'स्मार्ट एग्रीकल्चर', desc: 'ऑर्गेनिक & नेचुरल फार्मिंग विद मॉडर्न टेक्नोलॉजी, इरिगेशन सोल्यूशन्स एंड वैल्यू चेन डेवलपमेंट।' },
-  { icon: FaVenus, title: 'वीमेन एम्पावरमेंट', desc: 'एम्पावरिंग वीमेन थ्रू ट्रेनिंग, सेल्फ हेल्प ग्रुप्स, माइक्रो-एंटरप्राइज़ेज़ एंड लीडरशिप अपॉर्चुनिटीज़।' },
-  { icon: FaHandHoldingHeart, title: 'एल्डर केयर', desc: 'रिस्पेक्ट, केयर एंड सपोर्ट फॉर अवर एल्डर्स विद हेल्थ, न्यूट्रिशन एंड डिग्निटी इन अ लविंग एनवायरनमेंट।' },
-  { icon: FaUsers, title: 'रूरल एम्प्लॉयमेंट', desc: 'क्रिएटिंग सस्टेनेबल जॉब्स इन विलेजेस अक्रॉस डेयरी, एग्रीकल्चर, लॉजिस्टिक्स, प्रोसेसिंग, सेल्स एंड सर्विसेज।' },
-  { icon: FaHeartbeat, title: 'न्यूट्रिशन & हेल्थ', desc: 'न्यूट्रिशस डेयरी प्रोडक्ट्स एंड हेल्दी फूड ऑप्शन्स फॉर अ स्ट्रॉन्गर एंड हेल्दियर भारत।' },
-  { icon: FaMobileAlt, title: 'टेक्नोलॉजी & ऐप', desc: 'डिजिटल प्लेटफॉर्म फॉर फार्मर्स, रियल टाइम सपोर्ट, मार्केट एक्सेस, ट्रांसपेरेंट ऑपरेशन्स एंड डेटा ड्रिवन ग्रोथ।' },
-  { icon: FaSolarPanel, title: 'सस्टेनेबल ग्रोथ', desc: 'इको-फ्रेंडली प्रैक्टिसेज़, रिन्यूएबल एनर्जी, वॉटर कंज़र्वेशन एंड कंट्रिब्यूटिंग टू अ सेल्फ-रिलायंट एंड डेवलप्ड भारत।' },
+  { icon: FaCow, title: 'डेयरी फार्मिंग', desc: 'बेहतरीन पशु देखभाल, आधुनिक बुनियादी ढाँचे और स्वच्छ प्रसंस्करण के साथ उच्च गुणवत्ता वाले दूध का उत्पादन।' },
+  { icon: FaSeedling, title: 'स्मार्ट कृषि', desc: 'आधुनिक तकनीक, सिंचाई समाधान और मूल्य श्रृंखला विकास के साथ जैविक व प्राकृतिक खेती।' },
+  { icon: FaVenus, title: 'नारी सशक्तिकरण', desc: 'प्रशिक्षण, स्वयं सहायता समूहों, सूक्ष्म उद्यमों और नेतृत्व के अवसरों के माध्यम से महिलाओं का सशक्तिकरण।' },
+  { icon: FaHandHoldingHeart, title: 'वृद्ध देखभाल', desc: 'एक स्नेहपूर्ण वातावरण में स्वास्थ्य, पोषण और सम्मान के साथ हमारे बुज़ुर्गों के लिए आदर, देखभाल और सहारा।' },
+  { icon: FaUsers, title: 'ग्रामीण रोज़गार', desc: 'डेयरी, कृषि, लॉजिस्टिक्स, प्रसंस्करण, बिक्री और सेवाओं में गाँवों में स्थायी रोज़गार का सृजन।' },
+  { icon: FaHeartbeat, title: 'पोषण व स्वास्थ्य', desc: 'एक मज़बूत और स्वस्थ भारत के लिए पौष्टिक डेयरी उत्पाद और स्वास्थ्यवर्धक भोजन के विकल्प।' },
+  { icon: FaMobileAlt, title: 'तकनीक व ऐप', desc: 'किसानों के लिए डिजिटल प्लेटफॉर्म, रियल-टाइम सहायता, बाज़ार तक पहुँच, पारदर्शी संचालन और डेटा-आधारित विकास।' },
+  { icon: FaSolarPanel, title: 'टिकाऊ विकास', desc: 'पर्यावरण-अनुकूल तौर-तरीके, नवीकरणीय ऊर्जा, जल संरक्षण और एक आत्मनिर्भर व विकसित भारत में योगदान।' },
 ];
 
 const highlights = [
-  { icon: FaIndustry, label: 'मॉडर्न इन्फ्रास्ट्रक्चर' },
-  { icon: FaShieldAlt, label: 'क्वालिटी & प्योरिटी एश्योर्ड' },
-  { icon: FaTractor, label: 'फार्मर फर्स्ट अप्रोच' },
-  { icon: FaLeaf, label: 'एनवायरनमेंट फ्रेंडली' },
-  { icon: FaUsers, label: 'कम्युनिटी डेवलपमेंट' },
-  { icon: FaFlag, label: 'नेशन बिल्डिंग' },
+  { icon: FaIndustry, label: 'आधुनिक बुनियादी ढाँचा' },
+  { icon: FaShieldAlt, label: 'गुणवत्ता व शुद्धता की गारंटी' },
+  { icon: FaTractor, label: 'किसान सबसे पहले' },
+  { icon: FaLeaf, label: 'पर्यावरण के अनुकूल' },
+  { icon: FaUsers, label: 'सामुदायिक विकास' },
+  { icon: FaFlag, label: 'राष्ट्र निर्माण' },
 ];
 
 const appFeatures = [
-  { icon: FaTractor, label: 'फार्मर सपोर्ट' },
-  { icon: FaStore, label: 'मार्केट लिंकेज' },
-  { icon: FaCow, label: 'डेयरी मैनेजमेंट' },
-  { icon: FaHeartbeat, label: 'हेल्थ & न्यूट्रिशन' },
-  { icon: FaBook, label: 'लर्निंग & ट्रेनिंग' },
-  { icon: FaGift, label: 'स्कीम्स & बेनिफिट्स' },
+  { icon: FaTractor, label: 'किसान सहायता' },
+  { icon: FaStore, label: 'बाज़ार संपर्क' },
+  { icon: FaCow, label: 'डेयरी प्रबंधन' },
+  { icon: FaHeartbeat, label: 'स्वास्थ्य व पोषण' },
+  { icon: FaBook, label: 'शिक्षण व प्रशिक्षण' },
+  { icon: FaGift, label: 'योजनाएँ व लाभ' },
 ];
 
 const partners = [
-  { icon: FaTractor, label: 'फॉर फार्मर्स' },
-  { icon: FaUsers, label: 'फॉर कम्युनिटीज़' },
-  { icon: FaChartLine, label: 'फॉर इन्वेस्टर्स' },
-  { icon: FaFlag, label: 'फॉर भारत' },
+  { icon: FaTractor, label: 'किसानों के लिए' },
+  { icon: FaUsers, label: 'समुदायों के लिए' },
+  { icon: FaChartLine, label: 'निवेशकों के लिए' },
+  { icon: FaFlag, label: 'भारत के लिए' },
 ];
 
 const contactRows = [
-  { icon: FaMapMarkerAlt, label: 'रजिस्टर्ड ऑफिस / हेड ऑफिस', value: 'C-773, Flat No-C2, 2nd Floor, Kh. No. 932/2, C-Block, JJVTS Garden, Chhatarpur Ext, New Delhi – 110074' },
-  { icon: FaMapMarkerAlt, label: 'विलेज & P.O. ऑफिस', value: 'Aogram, Dist. Purba Bardhaman, West Bengal – 713121' },
+  { icon: FaMapMarkerAlt, label: 'पंजीकृत कार्यालय / मुख्य कार्यालय', value: 'C-773, Flat No-C2, 2nd Floor, Kh. No. 932/2, C-Block, JJVTS Garden, Chhatarpur Ext, New Delhi – 110074' },
+  { icon: FaMapMarkerAlt, label: 'ग्राम व डाकघर कार्यालय', value: 'Aogram, Dist. Purba Bardhaman, West Bengal – 713121' },
   { icon: FaPhoneAlt, label: 'टेलीफोन / मोबाइल', value: '+91 74289 40883 · +91 90648 86175 · +91 77680 62289' },
   { icon: FaGlobe, label: 'वेबसाइट', value: 'www.palanhar.com' },
   { icon: FaEnvelope, label: 'ईमेल', value: 'info@palanhar.com' },
@@ -100,13 +100,13 @@ export default function EcosystemPage() {
               पालनहार
             </motion.h1>
             <motion.p variants={fadeUp} className="mt-3 font-display text-2xl font-bold text-golden sm:text-3xl">
-              कम्प्लीट रूरल लाइफ इकोसिस्टम फॉर भारत
+              भारत के लिए संपूर्ण ग्रामीण जीवन इकोसिस्टम
             </motion.p>
             <motion.p variants={fadeUp} className="mt-3 text-lg text-white/85">
-              वन विज़न। वन इकोसिस्टम। लिमिटलेस इम्पैक्ट।
+              एक दृष्टि। एक इकोसिस्टम। असीम प्रभाव।
             </motion.p>
             <motion.p variants={fadeUp} className="mt-2 text-sm font-semibold uppercase tracking-widest text-light-green">
-              बिल्डिंग अ सस्टेनेबल टुमॉरो — फॉर जेनरेशन्स टू कम
+              आने वाली पीढ़ियों के लिए एक टिकाऊ कल का निर्माण
             </motion.p>
           </motion.div>
         </div>
@@ -116,7 +116,7 @@ export default function EcosystemPage() {
       <section className="section bg-white">
         <div className="container-custom">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-12 text-center">
-            <span className="section-eyebrow">अवर कम्प्लीट इकोसिस्टम</span>
+            <span className="section-eyebrow">हमारा संपूर्ण इकोसिस्टम</span>
             <h2 className="mb-3">एक एकीकृत ग्रामीण जीवन मॉडल</h2>
             <p className="mx-auto max-w-2xl text-lg text-gray-600">
               डेयरी से लेकर टेक्नोलॉजी तक — आठ स्तंभ जो मिलकर एक आत्मनिर्भर, समृद्ध भारत बनाते हैं।
@@ -144,24 +144,24 @@ export default function EcosystemPage() {
               <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-green/10 text-primary-green">
                 <FaEye size={22} aria-hidden="true" />
               </span>
-              <h3 className="mt-4 text-xl">अवर विज़न</h3>
+              <h3 className="mt-4 text-xl">हमारी दृष्टि</h3>
               <p className="mt-2 leading-relaxed text-gray-600">
-                टू बिल्ड अ सेल्फ-रिलायंट, एम्पावर्ड एंड प्रॉस्परस रूरल भारत थ्रू इनोवेशन, कम्पैशन एंड सस्टेनेबल डेवलपमेंट।
+                नवाचार, करुणा और टिकाऊ विकास के माध्यम से एक आत्मनिर्भर, सशक्त और समृद्ध ग्रामीण भारत का निर्माण करना।
               </p>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }} className="rounded-2xl border border-primary-green/10 bg-white p-6 shadow-sm sm:p-8">
               <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-golden/15 text-golden">
                 <FaBullseye size={22} aria-hidden="true" />
               </span>
-              <h3 className="mt-4 text-xl">अवर मिशन</h3>
+              <h3 className="mt-4 text-xl">हमारा मिशन</h3>
               <p className="mt-2 leading-relaxed text-gray-600">
-                टू क्रिएट वैल्यू फॉर फार्मर्स, कम्युनिटीज़ एंड स्टेकहोल्डर्स बाय डिलिवरिंग क्वालिटी प्रोडक्ट्स, अपॉर्चुनिटीज़ एंड केयर विद इंटीग्रिटी एंड एक्सिलेंस।
+                ईमानदारी और उत्कृष्टता के साथ गुणवत्तापूर्ण उत्पाद, अवसर और देखभाल प्रदान करके किसानों, समुदायों और हितधारकों के लिए मूल्य बनाना।
               </p>
             </motion.div>
           </div>
 
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-10">
-            <h3 className="mb-5 text-center text-xl">की हाइलाइट्स</h3>
+            <h3 className="mb-5 text-center text-xl">मुख्य विशेषताएँ</h3>
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
               {highlights.map((h) => (
                 <motion.div key={h.label} variants={fadeUp} className="flex flex-col items-center gap-2 rounded-xl border border-primary-green/10 bg-white p-4 text-center shadow-sm">
@@ -181,9 +181,9 @@ export default function EcosystemPage() {
         <div className="container-custom grid items-center gap-10 lg:grid-cols-2">
           <div>
             <span className="section-eyebrow">पालनहार ऐप</span>
-            <h2 className="mb-4">पालनहार ऐप फीचर्स</h2>
+            <h2 className="mb-4">पालनहार ऐप की विशेषताएँ</h2>
             <p className="mb-6 text-gray-600">
-              फार्मर्स एंड कम्युनिटीज़ के लिए एक डिजिटल प्लेटफॉर्म — सपोर्ट, मार्केट एक्सेस एंड ट्रांसपेरेंसी, सब एक जगह।
+              किसानों और समुदायों के लिए एक डिजिटल प्लेटफॉर्म — सहायता, बाज़ार तक पहुँच और पारदर्शिता, सब एक जगह।
             </p>
             <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 gap-3 sm:grid-cols-2">
               {appFeatures.map((f) => (
@@ -217,7 +217,7 @@ export default function EcosystemPage() {
                 </div>
                 <div className="px-4 pb-4">
                   <div className="rounded-xl bg-golden/15 px-3 py-2 text-center text-[11px] font-bold text-amber-700">
-                    पालनहार फ्रेश & नेचुरल
+                    पालनहार ताज़ा व प्राकृतिक
                   </div>
                 </div>
               </div>
@@ -230,9 +230,9 @@ export default function EcosystemPage() {
       <section className="relative overflow-hidden bg-gradient-to-br from-primary-green to-dark-green py-16 text-white md:py-20">
         <div className="container-custom text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <h2 className="!text-white">पार्टनर विद पालनहार</h2>
+            <h2 className="!text-white">पालनहार के साथ साझेदारी करें</h2>
             <p className="mx-auto mt-3 max-w-2xl text-lg text-white/85">
-              टुगेदर, लेट्स बिल्ड अ स्ट्रॉन्गर, हेल्दियर एंड मोर प्रॉस्परस रूरल इंडिया।
+              आइए, मिलकर एक मज़बूत, स्वस्थ और अधिक समृद्ध ग्रामीण भारत बनाएँ।
             </p>
           </motion.div>
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mx-auto mt-10 grid max-w-3xl grid-cols-2 gap-4 sm:grid-cols-4">
@@ -248,7 +248,7 @@ export default function EcosystemPage() {
               निवेश करें <FaArrowRight aria-hidden="true" />
             </Link>
             <Link to="/contact" className="btn border-2 border-white bg-transparent text-white hover:bg-white hover:text-primary-green">
-              कॉन्टैक्ट करें
+              संपर्क करें
             </Link>
           </motion.div>
         </div>
@@ -258,8 +258,8 @@ export default function EcosystemPage() {
       <section className="section bg-cream-white/60">
         <div className="container-custom">
           <div className="mb-10 text-center">
-            <span className="section-eyebrow">कनेक्ट विद अस</span>
-            <h2 className="mb-3">एम्पावरिंग विलेजेस, एनरिचिंग लाइव्स</h2>
+            <span className="section-eyebrow">हमसे जुड़ें</span>
+            <h2 className="mb-3">गाँवों को सशक्त बनाना, जीवन को समृद्ध करना</h2>
           </div>
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mx-auto grid max-w-4xl gap-4 sm:grid-cols-2">
             {contactRows.map((c) => (

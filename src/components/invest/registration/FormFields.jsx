@@ -25,7 +25,7 @@ export function TextField({ id, label, error, hint, optional = false, className 
     <div className={className}>
       <label htmlFor={id} className="mb-1.5 block text-sm font-semibold text-gray-700">
         {label}
-        {optional && <span className="ml-1 font-normal text-gray-400">(ऑप्शनल)</span>}
+        {optional && <span className="ml-1 font-normal text-gray-400">(वैकल्पिक)</span>}
       </label>
       <input
         id={id}
@@ -100,12 +100,12 @@ export function UploadBox({ id, label, fileName, onFile, error }) {
           {fileName ? (
             <>
               <span className="block truncate text-sm font-semibold text-dark-green">{fileName}</span>
-              <span className="block text-xs text-gray-500">अपलोडेड — क्लिक टू रिप्लेस</span>
+              <span className="block text-xs text-gray-500">अपलोड हो गया — बदलने के लिए क्लिक करें</span>
             </>
           ) : (
             <>
-              <span className="block text-sm font-semibold text-gray-700">क्लिक टू अपलोड अ क्लियर कॉपी</span>
-              <span className="block text-xs text-gray-400">PDF, JPG or PNG · डेमो: एनी फाइल वर्क्स</span>
+              <span className="block text-sm font-semibold text-gray-700">स्पष्ट प्रति अपलोड करने के लिए क्लिक करें</span>
+              <span className="block text-xs text-gray-400">PDF, JPG या PNG · डेमो: कोई भी फ़ाइल चलेगी</span>
             </>
           )}
         </span>

@@ -34,7 +34,7 @@ export default function Stepper({ step, maxStep, onSelect }) {
       <div className="lg:hidden">
         <div className="mb-2 flex items-end justify-between gap-3">
           <p className="text-sm font-semibold text-dark-green">
-            स्टेप {step} ऑफ {total}
+            चरण {step} / {total}
             <span className="text-gray-500"> — {current.title}</span>
           </p>
           <p className="text-xs font-bold text-golden">{progressPct}%</p>
@@ -44,7 +44,7 @@ export default function Stepper({ step, maxStep, onSelect }) {
             className={`h-full rounded-full bg-gradient-to-r from-primary-green to-golden transition-all duration-500 ${PROGRESS_WIDTHS[step - 1]}`}
           />
         </div>
-        <nav aria-label="रजिस्ट्रेशन स्टेप्स" className="-mx-1 mt-3 overflow-x-auto px-1 pb-1">
+        <nav aria-label="पंजीकरण चरण" className="-mx-1 mt-3 overflow-x-auto px-1 pb-1">
           <ol className="flex w-max gap-2">
             {registrationSteps.map((s) => {
               const state = stateOf(s.id);
@@ -55,7 +55,7 @@ export default function Stepper({ step, maxStep, onSelect }) {
                     onClick={() => canJump(s.id) && onSelect(s.id)}
                     disabled={!canJump(s.id)}
                     aria-current={s.id === step ? 'step' : undefined}
-                    aria-label={`स्टेप ${s.id}: ${s.title}${state === 'done' ? ' (कम्प्लीटेड)' : ''}`}
+                    aria-label={`चरण ${s.id}: ${s.title}${state === 'done' ? ' (पूर्ण)' : ''}`}
                     className={`flex h-11 w-11 items-center justify-center rounded-full text-sm font-bold transition-colors duration-200 ${nodeClasses(state)} ${
                       canJump(s.id) ? 'cursor-pointer' : 'cursor-default'
                     }`}
@@ -70,10 +70,10 @@ export default function Stepper({ step, maxStep, onSelect }) {
       </div>
 
       {/* ---- Desktop: vertical sidebar ---- */}
-      <nav aria-label="रजिस्ट्रेशन स्टेप्स" className="hidden lg:block">
+      <nav aria-label="पंजीकरण चरण" className="hidden lg:block">
         <div className="rounded-2xl border border-primary-green/10 bg-white p-6 shadow-sm">
           <div className="mb-1 flex items-center justify-between">
-            <p className="text-xs font-bold uppercase tracking-widest text-gray-400">योर प्रोग्रेस</p>
+            <p className="text-xs font-bold uppercase tracking-widest text-gray-400">आपकी प्रगति</p>
             <p className="text-sm font-bold text-golden">{progressPct}%</p>
           </div>
           <div className="mb-6 h-1.5 overflow-hidden rounded-full bg-primary-green/10" aria-hidden="true">

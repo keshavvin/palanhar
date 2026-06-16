@@ -8,10 +8,10 @@ import {
 } from 'react-icons/fa';
 import { useLocalStorage, uid } from './useLocalStorage';
 
-const CATEGORIES = ['डेयरी', 'एग्रीकल्चर', 'पेमेंट', 'टेक्निकल', 'अन्य'];
+const CATEGORIES = ['डेयरी', 'कृषि', 'भुगतान', 'तकनीकी', 'अन्य'];
 
 const STATUS_STYLES = {
-  'ओपन': 'bg-golden/15 text-amber-700',
+  'खुला': 'bg-golden/15 text-amber-700',
   'हल हो गया': 'bg-primary-green/10 text-primary-green',
 };
 
@@ -21,7 +21,7 @@ export default function FarmerSupport() {
   const [category, setCategory] = useState(CATEGORIES[0]);
   const [message, setMessage] = useState('');
 
-  const openCount = tickets.filter((t) => t.status === 'ओपन').length;
+  const openCount = tickets.filter((t) => t.status === 'खुला').length;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -34,7 +34,7 @@ export default function FarmerSupport() {
       subject: trimmedSubject,
       category,
       message: trimmedMessage,
-      status: 'ओपन',
+      status: 'खुला',
       date: new Date().toLocaleDateString('en-IN'),
     };
     setTickets([ticket, ...tickets]);
@@ -56,8 +56,8 @@ export default function FarmerSupport() {
   };
 
   return (
-    <section aria-label="फार्मर सपोर्ट">
-      <h2 className="text-2xl md:text-3xl">फार्मर सपोर्ट</h2>
+    <section aria-label="किसान सहायता">
+      <h2 className="text-2xl md:text-3xl">किसान सहायता</h2>
       <p className="text-sm text-gray-500 mt-1 mb-6">
         अपना सवाल या समस्या यहाँ दर्ज करें — हमारी टीम जल्द जवाब देगी।
       </p>
@@ -70,7 +70,7 @@ export default function FarmerSupport() {
       >
         <div className="flex items-center gap-2 text-dark-green mb-4">
           <FaHeadset aria-hidden="true" className="text-golden" />
-          <h3 className="text-lg font-semibold">नया टिकट बनाएँ</h3>
+          <h3 className="text-lg font-semibold">नया अनुरोध बनाएँ</h3>
         </div>
 
         <div className="grid gap-4 md:grid-cols-2">
@@ -97,7 +97,7 @@ export default function FarmerSupport() {
               htmlFor="ticket-category"
               className="block text-sm font-medium text-dark-green mb-1.5"
             >
-              कैटेगरी
+              श्रेणी
             </label>
             <select
               id="ticket-category"
@@ -118,7 +118,7 @@ export default function FarmerSupport() {
               htmlFor="ticket-message"
               className="block text-sm font-medium text-dark-green mb-1.5"
             >
-              मैसेज <span className="text-amber-700">*</span>
+              संदेश <span className="text-amber-700">*</span>
             </label>
             <textarea
               id="ticket-message"
@@ -133,11 +133,11 @@ export default function FarmerSupport() {
 
         <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
           <span className="badge-status bg-primary-green/10 text-primary-green">
-            {openCount} ओपन टिकट
+            {openCount} खुले अनुरोध
           </span>
           <button type="submit" className="btn btn-primary inline-flex items-center gap-2">
             <FaPaperPlane aria-hidden="true" />
-            टिकट भेजें
+            अनुरोध भेजें
           </button>
         </div>
       </form>
@@ -145,7 +145,7 @@ export default function FarmerSupport() {
       {/* टिकट लिस्ट */}
       {tickets.length === 0 ? (
         <div className="card bg-cream-white border border-primary-green/10 p-8 text-center text-gray-500">
-          अभी कोई टिकट नहीं — ऊपर से अपना पहला सवाल भेजें।
+          अभी कोई अनुरोध नहीं — ऊपर से अपना पहला सवाल भेजें।
         </div>
       ) : (
         <ul className="grid gap-4">
@@ -192,7 +192,7 @@ export default function FarmerSupport() {
                       onClick={() => resolveTicket(ticket.id)}
                     >
                       <FaCheckCircle aria-hidden="true" />
-                      हल हो गया मार्क करें
+                      हल हुआ चिह्नित करें
                     </button>
                   )}
                   <button

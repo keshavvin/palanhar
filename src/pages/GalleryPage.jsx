@@ -12,7 +12,7 @@ export default function GalleryPage() {
       >
         <div className="container-custom text-center">
           <h1 className="text-5xl font-bold text-dark-green mb-4">गैलरी</h1>
-          <p className="text-xl text-gray-600">मोमेंट्स ऑफ गौ सेवा, केयर एंड फार्म लाइफ एट पालनहार</p>
+          <p className="text-xl text-gray-600">पालनहार में गौ सेवा, देखभाल और फार्म जीवन के पल</p>
         </div>
       </motion.section>
       <Gallery />

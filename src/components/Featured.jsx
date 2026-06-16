@@ -5,29 +5,29 @@ export default function Featured() {
   const featured = [
     {
       icon: '🥛',
-      name: 'A2 Cow Milk',
-      desc: 'From Our Desi Gir Cows',
+      name: 'A2 गाय का दूध',
+      desc: 'हमारी देसी गिर गायों से',
       borderClass: 'border-t-light-green',
       btnClass: 'bg-light-green hover:bg-primary-green',
     },
     {
       icon: '🧈',
-      name: 'A2 Desi Ghee',
-      desc: 'Traditional Bilona Method',
+      name: 'A2 देसी घी',
+      desc: 'पारंपरिक बिलोना विधि',
       borderClass: 'border-t-primary-green',
       btnClass: 'bg-primary-green hover:bg-dark-green',
     },
     {
       icon: '🌱',
-      name: 'Gobar Khad',
-      desc: 'Natural Soil Revival',
+      name: 'गोबर खाद',
+      desc: 'मिट्टी का प्राकृतिक पुनरुद्धार',
       borderClass: 'border-t-dark-green',
       btnClass: 'bg-dark-green hover:bg-primary-green',
     },
     {
       icon: '🌿',
-      name: 'Panchgavya Products',
-      desc: 'Five Gifts of the Cow',
+      name: 'पंचगव्य उत्पाद',
+      desc: 'गाय के पाँच उपहार',
       borderClass: 'border-t-golden',
       btnClass: 'bg-golden hover:bg-amber-500',
     },
@@ -56,8 +56,8 @@ export default function Featured() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">Featured Products</h2>
-          <p className="text-xl text-gray-600">Pure products from our gaushala, loved by customers</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">प्रमुख उत्पाद</h2>
+          <p className="text-xl text-gray-600">हमारी गौशाला के शुद्ध उत्पाद, ग्राहकों के पसंदीदा</p>
         </motion.div>
 
         <motion.div
@@ -80,7 +80,7 @@ export default function Featured() {
                 to="/products"
                 className={`inline-block px-4 py-2 rounded-lg font-semibold text-white transition-all duration-300 hover:scale-105 ${item.btnClass}`}
               >
-                Learn More
+                और जानें
               </Link>
             </motion.div>
           ))}
@@ -94,7 +94,7 @@ export default function Featured() {
           className="text-center"
         >
           <Link to="/products" className="btn btn-primary hover:scale-105">
-            View All Products →
+            सभी उत्पाद देखें →
           </Link>
         </motion.div>
       </div>

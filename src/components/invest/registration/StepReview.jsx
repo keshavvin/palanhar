@@ -19,16 +19,16 @@ export default function StepReview({ data, update, errors, onEdit }) {
     {
       title: 'ईमेल',
       step: 2,
-      rows: [['एड्रेस', data.email, true]],
+      rows: [['पता', data.email, true]],
     },
     {
-      title: 'प्रोफाइल',
+      title: 'प्रोफ़ाइल',
       step: 3,
       rows: [
-        ['फुल नेम', data.fullName],
-        ['डेट ऑफ बर्थ', formatDob(data.dob)],
-        ['एड्रेस', `${data.address}, ${data.city}`],
-        ['स्टेट / PIN', `${data.state} — ${data.pin}`],
+        ['पूरा नाम', data.fullName],
+        ['जन्म तिथि', formatDob(data.dob)],
+        ['पता', `${data.address}, ${data.city}`],
+        ['राज्य / PIN', `${data.state} — ${data.pin}`],
       ],
     },
     {
@@ -36,7 +36,7 @@ export default function StepReview({ data, update, errors, onEdit }) {
       step: 4,
       rows: [
         ['नंबर', data.pan],
-        ['डॉक्यूमेंट', data.panFile, true],
+        ['दस्तावेज़', data.panFile, true],
       ],
     },
     {
@@ -44,25 +44,25 @@ export default function StepReview({ data, update, errors, onEdit }) {
       step: 5,
       rows: [
         ['नंबर', data.aadhaar],
-        ['डॉक्यूमेंट', data.aadhaarFile, true],
+        ['दस्तावेज़', data.aadhaarFile, true],
       ],
     },
     {
-      title: 'बैंक अकाउंट',
+      title: 'बैंक खाता',
       step: 6,
       rows: [
-        ['होल्डर', data.accountHolder],
-        ['अकाउंट नं.', data.accountNumber],
+        ['खाताधारक', data.accountHolder],
+        ['खाता संख्या', data.accountNumber],
         ['IFSC', data.ifsc],
         ['बैंक', data.bankName],
       ],
     },
     {
-      title: 'नॉमिनी',
+      title: 'नामांकित व्यक्ति',
       step: 7,
       rows: [
-        ['नेम', data.nomineeName],
-        ['रिलेशन', data.nomineeRelation],
+        ['नाम', data.nomineeName],
+        ['रिश्ता', data.nomineeRelation],
         ['मोबाइल', `+91 ${data.nomineeMobile}`],
       ],
     },
@@ -71,8 +71,8 @@ export default function StepReview({ data, update, errors, onEdit }) {
   return (
     <div className="space-y-6">
       <p className="text-sm text-gray-500">
-        प्लीज़ रिव्यू योर डिटेल्स केयरफुली. यूज़ <span className="font-semibold text-primary-green">एडिट</span> टू
-        जंप बैक टू एनी सेक्शन बिफोर सबमिटिंग फॉर KYC अप्रूवल.
+        कृपया अपने विवरण ध्यानपूर्वक जाँच लें। KYC स्वीकृति के लिए जमा करने से पहले किसी भी अनुभाग में
+        वापस जाने के लिए <span className="font-semibold text-primary-green">संपादित करें</span> का उपयोग करें।
       </p>
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -86,11 +86,11 @@ export default function StepReview({ data, update, errors, onEdit }) {
               <button
                 type="button"
                 onClick={() => onEdit(group.step)}
-                aria-label={`एडिट ${group.title}`}
+                aria-label={`${group.title} संपादित करें`}
                 className="inline-flex min-h-11 items-center gap-1.5 px-2 text-sm font-semibold text-primary-green underline-offset-2 hover:text-dark-green hover:underline"
               >
                 <FaPen className="text-xs" aria-hidden="true" />
-                एडिट
+                संपादित करें
               </button>
             </div>
             <dl className="space-y-1.5">
@@ -100,7 +100,7 @@ export default function StepReview({ data, update, errors, onEdit }) {
                   <dd className="flex min-w-0 items-center gap-1.5 text-right font-semibold text-gray-800">
                     <span className="truncate">{value || '—'}</span>
                     {verified && value && (
-                      <FaCheckCircle className="shrink-0 text-primary-green" aria-hidden="true" title="वेरिफाइड" />
+                      <FaCheckCircle className="shrink-0 text-primary-green" aria-hidden="true" title="सत्यापित" />
                     )}
                   </dd>
                 </div>
@@ -124,9 +124,9 @@ export default function StepReview({ data, update, errors, onEdit }) {
             className="mt-0.5 h-5 w-5 shrink-0 cursor-pointer accent-primary-green"
           />
           <span className="text-sm text-gray-700">
-            आई कन्फर्म द अबव डिटेल्स आर ट्रू एंड करेक्ट, एंड आई ऑथराइज़ पालनहार डेयरी &amp;
-            ऐग्रिकल्चरल फार्म Pvt. Ltd. टू वेरिफाई माय KYC डॉक्यूमेंट्स एंड अलॉट शेयर्स अगेंस्ट माय
-            इन्वेस्टमेंट ऐज़ पर द कंपनी&rsquo;ज़ इन्वेस्टर पॉलिसी.
+            मैं पुष्टि करता हूँ कि उपरोक्त विवरण सत्य और सही हैं, और मैं पालनहार डेयरी &amp;
+            ऐग्रिकल्चरल फार्म Pvt. Ltd. को मेरे KYC दस्तावेज़ों को सत्यापित करने और कंपनी की निवेशक
+            नीति के अनुसार मेरे निवेश के बदले शेयर आवंटित करने के लिए अधिकृत करता हूँ।
           </span>
         </label>
         <FieldError id="reg-consent-error">{errors.consent}</FieldError>

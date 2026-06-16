@@ -4,33 +4,33 @@ export default function WhyChooseUs() {
   const features = [
     {
       icon: '🌿',
-      title: 'Organic Certified',
-      description: 'Fully certified organic farming practices without harmful pesticides'
+      title: 'जैविक प्रमाणित',
+      description: 'हानिकारक कीटनाशकों के बिना पूर्ण रूप से प्रमाणित जैविक खेती'
     },
     {
       icon: '📦',
-      title: 'Fresh Daily Supply',
-      description: 'Fresh products harvested and delivered the same day for maximum nutrition'
+      title: 'रोज़ाना ताज़ी आपूर्ति',
+      description: 'अधिकतम पोषण के लिए उसी दिन तोड़े और पहुँचाए गए ताज़ा उत्पाद'
     },
     {
       icon: '🌍',
-      title: 'Sustainable Practices',
-      description: 'Eco-friendly farming methods that protect our environment and soil'
+      title: 'सतत पद्धतियाँ',
+      description: 'पर्यावरण और मिट्टी की रक्षा करने वाली पर्यावरण-अनुकूल खेती के तरीके'
     },
     {
       icon: '👥',
-      title: 'Experienced Team',
-      description: '20+ years of expertise in dairy farming and sustainable agriculture'
+      title: 'अनुभवी टीम',
+      description: 'डेयरी फार्मिंग और सतत कृषि में 20+ वर्षों की विशेषज्ञता'
     },
     {
       icon: '🐄',
-      title: 'Gau Seva First',
-      description: 'Cruelty-free care, natural feed and lifelong shelter for every cow in our gaushala'
+      title: 'पहले गौ सेवा',
+      description: 'हमारी गौशाला की हर गाय के लिए बिना क्रूरता की देखभाल, प्राकृतिक चारा और आजीवन आश्रय'
     },
     {
       icon: '✓',
-      title: 'Quality Assurance',
-      description: 'Rigorous testing and quality control at every stage of production'
+      title: 'गुणवत्ता आश्वासन',
+      description: 'उत्पादन के हर चरण पर कठोर परीक्षण और गुणवत्ता नियंत्रण'
     },
   ];
 
@@ -65,10 +65,10 @@ export default function WhyChooseUs() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">Why Choose Palanhar Farms</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">पालनहार फार्म्स को क्यों चुनें</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Everything begins with Gau Seva — happy, well-cared-for cows make the
-            purest dairy and agricultural products
+            सब कुछ गौ सेवा से शुरू होता है — खुश और भली-भाँति देखभाल की गई गायें
+            सबसे शुद्ध डेयरी और कृषि उत्पाद देती हैं
           </p>
         </motion.div>
 
@@ -103,13 +103,13 @@ export default function WhyChooseUs() {
           viewport={{ once: true }}
           className="card bg-gradient-to-r from-primary-green/10 to-light-green/10 p-8 md:p-12"
         >
-          <h3 className="text-3xl font-bold text-dark-green mb-8 text-center">Our Certifications & Awards</h3>
+          <h3 className="text-3xl font-bold text-dark-green mb-8 text-center">हमारे प्रमाणन और पुरस्कार</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { icon: '🥇', label: 'ISO 9001 Certified' },
-              { icon: '🌱', label: 'Organic Certified' },
-              { icon: '🏆', label: 'Best Farm Award' },
-              { icon: '⭐', label: '5-Star Rated' },
+              { icon: '🥇', label: 'ISO 9001 प्रमाणित' },
+              { icon: '🌱', label: 'जैविक प्रमाणित' },
+              { icon: '🏆', label: 'सर्वश्रेष्ठ फार्म पुरस्कार' },
+              { icon: '⭐', label: '5-स्टार रेटेड' },
             ].map((cert, i) => (
               <motion.div
                 key={i}

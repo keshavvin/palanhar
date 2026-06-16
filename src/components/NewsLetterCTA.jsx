@@ -24,9 +24,9 @@ export default function NewsLetterCTA() {
           viewport={{ once: true }}
           className="text-center text-white"
         >
-          <h2 className="mb-4 !text-white">Stay Updated</h2>
+          <h2 className="mb-4 !text-white">अपडेट पाते रहें</h2>
           <p className="mb-8 text-xl text-white/90">
-            Get latest news, offers, and farming tips delivered to your inbox
+            नवीनतम समाचार, ऑफ़र और खेती के सुझाव सीधे अपने इनबॉक्स में पाएँ
           </p>
 
           <motion.form
@@ -38,12 +38,12 @@ export default function NewsLetterCTA() {
             className="mx-auto flex max-w-md flex-col gap-3 sm:flex-row"
           >
             <label htmlFor="newsletter-email" className="sr-only">
-              Email address
+              ईमेल पता
             </label>
             <input
               id="newsletter-email"
               type="email"
-              placeholder="Enter your email"
+              placeholder="अपना ईमेल दर्ज करें"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="flex-1 rounded-lg bg-white px-6 py-4 text-gray-700 focus:outline-none focus:ring-2 focus:ring-golden"
@@ -55,7 +55,7 @@ export default function NewsLetterCTA() {
               whileTap={{ scale: 0.95 }}
               className="btn btn-golden px-8 py-4"
             >
-              Subscribe
+              सदस्यता लें
             </motion.button>
           </motion.form>
 
@@ -67,13 +67,13 @@ export default function NewsLetterCTA() {
                 exit={{ opacity: 0, y: -10 }}
                 className="mt-4 font-semibold text-green-100"
               >
-                ✓ Thanks for subscribing! Check your email.
+                ✓ सदस्यता लेने के लिए धन्यवाद! अपना ईमेल देखें।
               </motion.p>
             )}
           </AnimatePresence>
 
           <p className="mt-6 text-sm text-white/75">
-            📧 We respect your privacy. Unsubscribe anytime.
+            📧 हम आपकी निजता का सम्मान करते हैं। कभी भी सदस्यता समाप्त करें।
           </p>
         </motion.div>
 
@@ -86,18 +86,18 @@ export default function NewsLetterCTA() {
         >
           <div>
             <div className="mb-2 text-3xl" aria-hidden="true">🎁</div>
-            <p className="font-semibold">Special Offers</p>
-            <p className="text-sm text-white/75">Exclusive discounts for subscribers</p>
+            <p className="font-semibold">विशेष ऑफ़र</p>
+            <p className="text-sm text-white/75">सदस्यों के लिए विशेष छूट</p>
           </div>
           <div>
             <div className="mb-2 text-3xl" aria-hidden="true">📰</div>
-            <p className="font-semibold">Latest News</p>
-            <p className="text-sm text-white/75">Farm updates and new products</p>
+            <p className="font-semibold">नवीनतम समाचार</p>
+            <p className="text-sm text-white/75">फार्म अपडेट और नए उत्पाद</p>
           </div>
           <div>
             <div className="mb-2 text-3xl" aria-hidden="true">💡</div>
-            <p className="font-semibold">Tips &amp; Advice</p>
-            <p className="text-sm text-white/75">Farming and health tips</p>
+            <p className="font-semibold">सुझाव और सलाह</p>
+            <p className="text-sm text-white/75">खेती और स्वास्थ्य संबंधी सुझाव</p>
           </div>
         </motion.div>
       </div>

@@ -34,9 +34,9 @@ export default function Services() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">अवर सर्विसेज</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">हमारी सेवाएँ</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            कॉम्प्रिहेन्सिव सॉल्यूशंस फॉर डेयरी फार्मिंग एंड सस्टेनेबल एग्रीकल्चर
+            डेयरी फार्मिंग और टिकाऊ कृषि के लिए व्यापक समाधान
           </p>
         </motion.div>
 
@@ -84,7 +84,7 @@ export default function Services() {
                   to="/contact"
                   className="text-primary-green font-semibold mt-6 inline-flex items-center group/link hover:text-dark-green transition-colors"
                 >
-                  एन्क्वायर
+                  पूछताछ करें
                   <span className="ml-2 group-hover/link:translate-x-2 transition-transform">→</span>
                 </Link>
               </motion.div>
@@ -100,37 +100,37 @@ export default function Services() {
           viewport={{ once: true }}
           className="mt-20 card bg-gradient-to-r from-primary-green/10 to-light-green/10 p-8 md:p-12"
         >
-          <h3 className="text-3xl font-bold text-dark-green mb-8 text-center">व्हाई चूज़ पालनहार फार्म्स?</h3>
+          <h3 className="text-3xl font-bold text-dark-green mb-8 text-center">पालनहार फार्म्स को क्यों चुनें?</h3>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: 'एक्सपर्ट टीम',
-                description: '20+ इयर्स ऑफ कम्बाइंड फार्मिंग एक्सपीरियंस एंड एक्सपर्टीज़',
+                title: 'विशेषज्ञ टीम',
+                description: '20+ वर्षों का सम्मिलित कृषि अनुभव और विशेषज्ञता',
                 icon: '👥'
               },
               {
-                title: 'मॉडर्न टेक्नोलॉजी',
-                description: 'लेटेस्ट फार्मिंग इक्विपमेंट एंड सस्टेनेबल प्रैक्टिसेज',
+                title: 'आधुनिक तकनीक',
+                description: 'नवीनतम कृषि उपकरण और टिकाऊ कार्य-पद्धतियाँ',
                 icon: '🔬'
               },
               {
-                title: 'सर्टिफाइड ऑर्गेनिक',
-                description: 'ऑफिशियल ऑर्गेनिक सर्टिफिकेशन एंड क्वालिटी अश्योरेंस',
+                title: 'प्रमाणित जैविक',
+                description: 'आधिकारिक जैविक प्रमाणन और गुणवत्ता आश्वासन',
                 icon: '✅'
               },
               {
-                title: 'रिलायबल सर्विस',
-                description: 'ऑन-टाइम डिलीवरी विद 100% क्वालिटी गारंटी',
+                title: 'भरोसेमंद सेवा',
+                description: '100% गुणवत्ता गारंटी के साथ समय पर डिलीवरी',
                 icon: '🚚'
               },
               {
-                title: 'फेयर प्राइसिंग',
-                description: 'कॉम्पिटिटिव प्राइसेज विदाउट कॉम्प्रोमाइज़िंग क्वालिटी',
+                title: 'उचित मूल्य',
+                description: 'गुणवत्ता से समझौता किए बिना प्रतिस्पर्धी मूल्य',
                 icon: '💰'
               },
               {
-                title: '24/7 सपोर्ट',
-                description: 'ऑलवेज़ अवेलेबल टू असिस्ट विद योर नीड्स',
+                title: '24/7 सहायता',
+                description: 'आपकी ज़रूरतों में मदद के लिए हमेशा उपलब्ध',
                 icon: '☎️'
               },
             ].map((reason, i) => (

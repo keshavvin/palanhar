@@ -21,7 +21,7 @@ export default function ShareCertificate() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      aria-label="शेयर सर्टिफिकेट"
+      aria-label="शेयर प्रमाणपत्र"
     >
       <div className="max-w-3xl mx-auto">
         <div className="bg-white rounded-xl shadow-lg p-2.5 sm:p-3 border-2 border-golden">
@@ -37,39 +37,39 @@ export default function ShareCertificate() {
               <span className="section-eyebrow">
                 पालनहार डेयरी &amp; एग्रीकल्चरल फार्म प्रा. लि.
               </span>
-              <h2 className="text-2xl md:text-3xl">इन्वेस्टमेंट सर्टिफिकेट</h2>
+              <h2 className="text-2xl md:text-3xl">निवेश प्रमाणपत्र</h2>
               <p className="text-xs uppercase tracking-widest text-gray-500 mt-2">
-                सर्टिफिकेट No. {certificate.certificateNo}
+                प्रमाणपत्र क्रमांक {certificate.certificateNo}
               </p>
 
               <div className="w-24 h-px bg-golden mx-auto my-5" />
 
-              <p className="text-sm text-gray-600">दिस इज़ टू सर्टिफाई दैट</p>
+              <p className="text-sm text-gray-600">यह प्रमाणित किया जाता है कि</p>
               <p className="font-display text-xl md:text-2xl font-bold text-dark-green mt-1">
                 {currentInvestor.name}
               </p>
               <p className="text-sm text-gray-500 mt-0.5">
-                इन्वेस्टर आईडी: {currentInvestor.investorId}
+                निवेशक आईडी: {currentInvestor.investorId}
               </p>
               <p className="text-sm text-gray-600 mt-3">
-                इज़ द रजिस्टर्ड होल्डर ऑफ{' '}
-                <span className="font-bold text-dark-green">
-                  {certificate.shares.toLocaleString('en-IN')} इक्विटी शेयर्स
-                </span>{' '}
-                ऑफ एग्रीगेट वैल्यू{' '}
+                कुल मूल्य{' '}
                 <span className="font-bold text-dark-green">{formatINR(certificate.amount)}</span>{' '}
-                अंडर {certificate.plan}.
+                के{' '}
+                <span className="font-bold text-dark-green">
+                  {certificate.shares.toLocaleString('en-IN')} इक्विटी शेयरों
+                </span>{' '}
+                के पंजीकृत धारक हैं, {certificate.plan} के अंतर्गत.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-8 pt-5 border-t border-primary-green/20">
                 <div className="text-center sm:text-left">
-                  <p className="text-xs uppercase tracking-wide text-gray-500">डेट ऑफ इश्यू</p>
+                  <p className="text-xs uppercase tracking-wide text-gray-500">जारी करने की तिथि</p>
                   <p className="text-sm font-semibold text-gray-800">{certificate.issuedOn}</p>
                 </div>
                 <div className="text-center sm:text-right">
                   <p className="font-display italic text-dark-green text-lg">पालनहार</p>
                   <p className="text-xs uppercase tracking-wide text-gray-500 border-t border-gray-300 pt-1 mt-1">
-                    ऑथराइज़्ड सिग्नेटरी
+                    अधिकृत हस्ताक्षरकर्ता
                   </p>
                 </div>
               </div>
@@ -86,15 +86,15 @@ export default function ShareCertificate() {
           >
             {downloadState === 'idle' && (
               <>
-                <FaDownload aria-hidden="true" /> डाउनलोड सर्टिफिकेट
+                <FaDownload aria-hidden="true" /> प्रमाणपत्र डाउनलोड करें
               </>
             )}
             {downloadState === 'loading' && (
               <>
-                <Spinner light /> प्रिपेयरिंग PDF…
+                <Spinner light /> PDF तैयार हो रहा है…
               </>
             )}
-            {downloadState === 'done' && 'डाउनलोडेड ✓'}
+            {downloadState === 'done' && 'डाउनलोड हो गया ✓'}
           </button>
         </div>
       </div>

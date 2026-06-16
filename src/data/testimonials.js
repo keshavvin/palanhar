@@ -2,48 +2,48 @@ export const testimonials = [
   {
     id: 1,
     name: 'Raj Kumar',
-    title: 'Restaurant Owner',
-    review: 'Palanhar Farms provides the freshest milk and organic produce. Our customers love the quality and taste. Highly recommended!',
+    title: 'रेस्तराँ मालिक',
+    review: 'पालनहार फार्म्स सबसे ताज़ा दूध और जैविक उपज देता है। हमारे ग्राहक गुणवत्ता और स्वाद को बहुत पसंद करते हैं। अत्यधिक अनुशंसित!',
     rating: 5,
     image: '👨‍🍳'
   },
   {
     id: 2,
     name: 'Priya Singh',
-    title: 'Health Coach',
-    review: 'I trust Palanhar Farms completely. Their organic products are genuine and the delivery service is incredibly reliable.',
+    title: 'स्वास्थ्य प्रशिक्षक',
+    review: 'मुझे पालनहार फार्म्स पर पूरा भरोसा है। उनके जैविक उत्पाद असली हैं और डिलीवरी सेवा बेहद भरोसेमंद है।',
     rating: 5,
     image: '👩‍⚕️'
   },
   {
     id: 3,
     name: 'Arun Patel',
-    title: 'Business Owner',
-    review: 'Best dairy supplier we have worked with. Consistent quality, fair pricing, and excellent customer service.',
+    title: 'व्यवसाय मालिक',
+    review: 'हमने जिन डेयरी आपूर्तिकर्ताओं के साथ काम किया, उनमें ये सबसे बेहतरीन हैं। एक-सी गुणवत्ता, उचित मूल्य और शानदार ग्राहक सेवा।',
     rating: 5,
     image: '👨‍💼'
   },
   {
     id: 4,
     name: 'Divya Sharma',
-    title: 'Homemaker',
-    review: 'My family switched to Palanhar Farms products and we feel the difference. Pure, fresh, and healthy!',
+    title: 'गृहिणी',
+    review: 'मेरे परिवार ने पालनहार फार्म्स के उत्पाद अपनाए और हमें फर्क साफ महसूस होता है। शुद्ध, ताज़ा और सेहतमंद!',
     rating: 5,
     image: '👩‍🌾'
   },
   {
     id: 5,
     name: 'Vikram Desai',
-    title: 'Farmer',
-    review: 'Great partnership experience. They buy our organic produce at fair prices and help us improve farming practices.',
+    title: 'किसान',
+    review: 'साझेदारी का बहुत अच्छा अनुभव रहा। वे हमारी जैविक उपज उचित दामों पर खरीदते हैं और खेती की पद्धतियाँ सुधारने में मदद करते हैं।',
     rating: 5,
     image: '👨‍🌾'
   },
   {
     id: 6,
     name: 'Anjali Reddy',
-    title: 'Nutritionist',
-    review: 'I recommend Palanhar Farms to all my clients. Their products are truly organic and nutritionally superior.',
+    title: 'पोषण विशेषज्ञ',
+    review: 'मैं अपने सभी ग्राहकों को पालनहार फार्म्स की सलाह देती हूँ। उनके उत्पाद सचमुच जैविक और पोषण में श्रेष्ठ हैं।',
     rating: 5,
     image: '👩‍⚕️'
   }

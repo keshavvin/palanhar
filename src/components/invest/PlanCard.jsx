@@ -22,7 +22,7 @@ export default function PlanCard({ plan }) {
               className="absolute top-6 -right-12 rotate-45 bg-golden px-12 py-1.5 text-xs font-bold uppercase tracking-wider text-dark-green shadow-md"
               aria-hidden="true"
             >
-              मोस्ट पॉपुलर
+              सबसे लोकप्रिय
             </div>
           )}
 
@@ -32,10 +32,10 @@ export default function PlanCard({ plan }) {
 
           {/* Price tag */}
           <div className="mb-6 rounded-xl bg-cream-white px-4 py-3">
-            <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">Min. इन्वेस्टमेंट</p>
+            <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">न्यूनतम निवेश</p>
             <p className="text-3xl font-extrabold text-dark-green">
               {formatINR(plan.minAmount)}
-              {plan.popular && <span className="sr-only"> — मोस्ट पॉपुलर प्लान</span>}
+              {plan.popular && <span className="sr-only"> — सबसे लोकप्रिय योजना</span>}
             </p>
           </div>
 
@@ -52,7 +52,7 @@ export default function PlanCard({ plan }) {
             to={`/investor/register?plan=${plan.id}`}
             className={`btn mt-auto w-full text-center ${plan.popular ? 'btn-golden' : 'btn-primary'}`}
           >
-            इन्वेस्ट नाउ
+            अभी निवेश करें
           </Link>
         </article>
       </motion.div>

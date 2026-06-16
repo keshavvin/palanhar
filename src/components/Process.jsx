@@ -2,10 +2,10 @@ import { motion } from 'framer-motion';
 
 export default function Process() {
   const steps = [
-    { number: '1', title: 'Gau Seva', desc: 'Loving care, natural feed and clean shelter for our Gir cows', icon: '🐄' },
-    { number: '2', title: 'Organic Farming', desc: 'Gobar and gomutra power our chemical-free farming', icon: '🌱' },
-    { number: '3', title: 'Fresh Production', desc: 'A2 dairy and panchgavya products made fresh daily', icon: '⚡' },
-    { number: '4', title: 'Quick Delivery', desc: 'Fast delivery to your doorstep', icon: '🚚' },
+    { number: '1', title: 'गौ सेवा', desc: 'हमारी गिर गायों के लिए स्नेहपूर्ण देखभाल, प्राकृतिक चारा और स्वच्छ आश्रय', icon: '🐄' },
+    { number: '2', title: 'जैविक खेती', desc: 'गोबर और गोमूत्र हमारी रसायन-मुक्त खेती को शक्ति देते हैं', icon: '🌱' },
+    { number: '3', title: 'ताज़ा उत्पादन', desc: 'A2 डेयरी और पंचगव्य उत्पाद रोज़ ताज़ा बनाए जाते हैं', icon: '⚡' },
+    { number: '4', title: 'त्वरित डिलीवरी', desc: 'आपके दरवाज़े तक तेज़ डिलीवरी', icon: '🚚' },
   ];
 
   return (
@@ -18,8 +18,8 @@ export default function Process() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">Our Process</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">From gaushala to your table, we ensure quality and care at every step</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">हमारी प्रक्रिया</h2>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">गौशाला से आपकी मेज़ तक, हम हर चरण पर गुणवत्ता और देखभाल सुनिश्चित करते हैं</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -64,7 +64,7 @@ export default function Process() {
           className="mt-16 p-8 bg-gradient-to-r from-primary-green/10 to-light-green/10 rounded-xl border-l-4 border-primary-green"
         >
           <p className="text-center text-gray-700 text-lg font-semibold">
-            Every product goes through rigorous quality checks to ensure you receive the best
+            हर उत्पाद कठोर गुणवत्ता जाँच से गुज़रता है ताकि आपको सर्वश्रेष्ठ ही मिले
           </p>
         </motion.div>
       </div>

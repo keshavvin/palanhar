@@ -16,8 +16,8 @@ import { useLocalStorage } from './useLocalStorage';
 const SCHEMES = [
   {
     id: 's1',
-    title: 'डेयरी विकास लोन',
-    desc: 'गाय खरीद व शेड के लिए सब्सिडी-युक्त लोन।',
+    title: 'डेयरी विकास ऋण',
+    desc: 'गाय खरीद व शेड के लिए सब्सिडी-युक्त ऋण।',
     eligibility: 'पंजीकृत डेयरी किसान',
     icon: FaHandHoldingUsd,
   },
@@ -37,14 +37,14 @@ const SCHEMES = [
   },
   {
     id: 's4',
-    title: 'महिला स्वयं-सहायता ग्रांट',
-    desc: 'महिला समूहों के लिए माइक्रो-एंटरप्राइज़ ग्रांट।',
+    title: 'महिला स्वयं-सहायता अनुदान',
+    desc: 'महिला समूहों के लिए लघु-उद्यम अनुदान।',
     eligibility: 'महिला SHG सदस्य',
     icon: FaFemale,
   },
   {
     id: 's5',
-    title: 'किसान प्रशिक्षण स्कॉलरशिप',
+    title: 'किसान प्रशिक्षण छात्रवृत्ति',
     desc: 'प्रशिक्षण व कौशल विकास के लिए सहायता।',
     eligibility: '18+ ग्रामीण युवा',
     icon: FaGraduationCap,
@@ -76,8 +76,8 @@ export default function SchemesBenefits() {
   }, {});
 
   return (
-    <section aria-label="स्कीम्स और बेनिफिट्स">
-      <h2 className="text-2xl md:text-3xl">स्कीम्स & बेनिफिट्स</h2>
+    <section aria-label="योजनाएँ एवं लाभ">
+      <h2 className="text-2xl md:text-3xl">योजनाएँ एवं लाभ</h2>
       <p className="text-sm text-gray-500 mt-1">
         सरकारी योजनाओं के लिए आवेदन करें — एक टैप में
       </p>
@@ -86,7 +86,7 @@ export default function SchemesBenefits() {
       <div className="card bg-golden/15 p-4 mt-6 border border-primary-green/10 inline-flex items-center gap-3">
         <FaFileSignature className="text-golden text-xl" aria-hidden="true" />
         <span className="text-dark-green font-semibold">
-          {applications.length} आवेदन सबमिटेड
+          {applications.length} आवेदन जमा किए गए
         </span>
       </div>
 
@@ -124,7 +124,7 @@ export default function SchemesBenefits() {
                 {application ? (
                   <span className="badge-status bg-primary-green/10 text-primary-green">
                     <FaCheckCircle aria-hidden="true" />
-                    सबमिटेड · {application.date}
+                    जमा · {application.date}
                   </span>
                 ) : (
                   <button
@@ -133,7 +133,7 @@ export default function SchemesBenefits() {
                     className="btn btn-primary inline-flex items-center gap-2"
                   >
                     <FaFileSignature aria-hidden="true" />
-                    अप्लाई करें
+                    आवेदन करें
                   </button>
                 )}
               </div>
@@ -148,7 +148,7 @@ export default function SchemesBenefits() {
         <div className="card bg-cream-white p-8 mt-4 border border-primary-green/10 text-center">
           <FaInbox className="mx-auto text-3xl text-primary-green/40" aria-hidden="true" />
           <p className="text-gray-500 mt-3">
-            अभी तक कोई आवेदन नहीं किया। ऊपर किसी योजना के लिए अप्लाई करें।
+            अभी तक कोई आवेदन नहीं किया। ऊपर किसी योजना के लिए आवेदन करें।
           </p>
         </div>
       ) : (
@@ -168,7 +168,7 @@ export default function SchemesBenefits() {
                 </div>
                 <span className="badge-status bg-primary-green/10 text-primary-green shrink-0">
                   <FaCheckCircle aria-hidden="true" />
-                  सबमिटेड
+                  जमा
                 </span>
               </li>
             );

@@ -2,10 +2,10 @@ import { motion } from 'framer-motion';
 
 export default function QuickStats() {
   const stats = [
-    { icon: '🐄', number: '200', label: 'Desi Cows' },
-    { icon: '🥛', number: '2,000 L', label: 'Milk Production / Day' },
-    { icon: '🌿', number: '1000+', label: 'Panchgavya & Natural Products' },
-    { icon: '📈', number: '₹80 Cr', label: '5-Year Revenue Target' },
+    { icon: '🐄', number: '200', label: 'देसी गायें' },
+    { icon: '🥛', number: '2,000 L', label: 'दूध उत्पादन / प्रतिदिन' },
+    { icon: '🌿', number: '1000+', label: 'पंचगव्य और प्राकृतिक उत्पाद' },
+    { icon: '📈', number: '₹80 Cr', label: '5-वर्षीय राजस्व लक्ष्य' },
   ];
 
   return (

@@ -22,11 +22,11 @@ export default function FinancialFlow() {
           transition={{ duration: 0.6 }}
           className="mb-12 text-center md:mb-16"
         >
-          <span className="section-eyebrow">ट्रांसपेरेंट बाय डिज़ाइन</span>
-          <h2 className="mb-4">हाउ योर मनी फ्लोज़</h2>
+          <span className="section-eyebrow">डिज़ाइन से ही पारदर्शी</span>
+          <h2 className="mb-4">आपका धन कैसे प्रवाहित होता है</h2>
           <p className="mx-auto max-w-2xl text-lg text-gray-600 md:text-xl">
-            फ्रॉम रजिस्ट्रेशन टू पेआउट, एवरी रुपी इज़ ट्रैक्ड, सर्टिफाइड एंड
-            विज़िबल — ऐट एवरी स्टेप।
+            पंजीकरण से भुगतान तक, हर रुपया ट्रैक किया जाता है, प्रमाणित होता है और
+            दिखता है — हर चरण पर।
           </p>
         </motion.div>
 
@@ -48,7 +48,7 @@ export default function FinancialFlow() {
                 <span aria-hidden="true">{item.icon}</span>
               </div>
               <span className="mb-1 block text-xs font-bold uppercase tracking-wider text-golden">
-                स्टेप {item.step}
+                चरण {item.step}
               </span>
               <h3 className="mb-1.5 text-sm font-bold leading-snug">{item.title}</h3>
               <p className="text-xs leading-relaxed text-gray-600">{item.desc}</p>
@@ -75,7 +75,7 @@ export default function FinancialFlow() {
               </div>
               <div className="pt-1">
                 <span className="mb-0.5 block text-xs font-bold uppercase tracking-wider text-golden">
-                  स्टेप {item.step}
+                  चरण {item.step}
                 </span>
                 <h3 className="mb-1 text-base font-bold">{item.title}</h3>
                 <p className="text-sm leading-relaxed text-gray-600">{item.desc}</p>

@@ -8,9 +8,9 @@ const TIMELINE = KYC_STATUSES.slice(0, 3); // Pending -> Under Review -> Approve
 
 // Devanagari display labels keyed off the (Latin) KYC status enum.
 const STATUS_LABELS = {
-  Pending: 'पेंडिंग',
-  'Under Review': 'अंडर रिव्यू',
-  Approved: 'अप्रूव्ड',
+  Pending: 'लंबित',
+  'Under Review': 'समीक्षाधीन',
+  Approved: 'स्वीकृत',
 };
 
 function TimelineNode({ label, index, stage }) {
@@ -36,7 +36,7 @@ function TimelineNode({ label, index, stage }) {
         }`}
       >
         {STATUS_LABELS[label] ?? label}
-        {active && !done && <span className="sr-only"> (करेंट स्टेटस)</span>}
+        {active && !done && <span className="sr-only"> (वर्तमान स्थिति)</span>}
       </span>
     </li>
   );
@@ -62,24 +62,24 @@ export default function SuccessPanel({ investorId, certificateNo, stage, approvi
           <FaCheck className="text-3xl text-white" aria-hidden="true" />
         </motion.div>
 
-        <span className="section-eyebrow">KYC सबमिटेड</span>
-        <h2 className="mb-2 text-2xl sm:text-3xl">वेलकम टू द पालनहार फैमिली</h2>
+        <span className="section-eyebrow">KYC जमा हो गया</span>
+        <h2 className="mb-2 text-2xl sm:text-3xl">पालनहार परिवार में आपका स्वागत है</h2>
         <p className="mx-auto mb-6 max-w-md text-sm text-gray-500 sm:text-base">
-          योर रजिस्ट्रेशन हैज़ बीन रिसीव्ड. आवर कम्प्लायंस टीम टिपिकली रिव्यूज़ KYC
-          ऐप्लिकेशन्स विदिन 24–48 आवर्स.
+          आपका पंजीकरण प्राप्त हो गया है। हमारी अनुपालन टीम आमतौर पर 24–48 घंटों के
+          भीतर KYC आवेदनों की समीक्षा करती है।
         </p>
 
         <div className="mx-auto mb-8 inline-flex flex-wrap items-center justify-center gap-3 rounded-xl border border-golden/40 bg-cream-white px-5 py-3">
-          <span className="text-sm font-semibold text-gray-500">योर इन्वेस्टर आईडी</span>
+          <span className="text-sm font-semibold text-gray-500">आपकी निवेशक आईडी</span>
           <span className="font-mono text-lg font-bold tracking-wider text-dark-green">{investorId}</span>
         </div>
 
         {/* Status timeline */}
         <div className="mb-8">
           <p className="mb-4 text-xs font-bold uppercase tracking-widest text-gray-400">
-            ऐप्लिकेशन स्टेटस
+            आवेदन की स्थिति
           </p>
-          <ol className="relative flex items-start" aria-label="KYC अप्रूवल टाइमलाइन">
+          <ol className="relative flex items-start" aria-label="KYC स्वीकृति समयरेखा">
             <span
               className="absolute top-5 right-[16.6%] left-[16.6%] h-0.5 bg-gray-200"
               aria-hidden="true"
@@ -106,16 +106,16 @@ export default function SuccessPanel({ investorId, certificateNo, stage, approvi
               >
                 {approving ? (
                   <>
-                    <Spinner light={false} /> अप्रूविंग…
+                    <Spinner light={false} /> स्वीकृत किया जा रहा है…
                   </>
                 ) : (
                   <>
-                    <FaUserShield aria-hidden="true" /> सिम्युलेट एडमिन अप्रूवल
+                    <FaUserShield aria-hidden="true" /> एडमिन स्वीकृति का अनुकरण करें
                   </>
                 )}
               </button>
               <p className="mt-3 text-xs text-gray-400">
-                डेमो ओनली — इन प्रोडक्शन दिस स्टेप इज़ कम्प्लीटेड बाय द पालनहार कम्प्लायंस टीम.
+                केवल डेमो — वास्तविक उपयोग में यह चरण पालनहार अनुपालन टीम द्वारा पूरा किया जाता है।
               </p>
             </motion.div>
           ) : (
@@ -128,20 +128,20 @@ export default function SuccessPanel({ investorId, certificateNo, stage, approvi
               <div className="mb-6 rounded-2xl border-2 border-golden/50 bg-gradient-to-br from-cream-white to-golden/10 p-5 sm:p-6">
                 <FaAward className="mx-auto mb-2 text-3xl text-golden" aria-hidden="true" />
                 <p className="text-sm font-semibold text-gray-600">
-                  KYC अप्रूव्ड — योर डिजिटल शेयर सर्टिफिकेट हैज़ बीन जेनरेटेड
+                  KYC स्वीकृत — आपका डिजिटल शेयर प्रमाणपत्र तैयार हो गया है
                 </p>
                 <p className="mt-1 font-mono text-lg font-bold tracking-wider text-dark-green sm:text-xl">
                   {certificateNo}
                 </p>
                 <p className="mt-1 text-xs text-gray-400">
-                  रिकॉर्डेड इन द पालनहार शेयर रजिस्टर · डाउनलोडेबल फ्रॉम योर डैशबोर्ड
+                  पालनहार शेयर रजिस्टर में दर्ज · आपके डैशबोर्ड से डाउनलोड किया जा सकता है
                 </p>
               </div>
               <Link
                 to="/investor/dashboard"
                 className="btn btn-primary inline-flex min-h-11 items-center justify-center gap-2"
               >
-                गो टू डैशबोर्ड <FaArrowRight aria-hidden="true" />
+                डैशबोर्ड पर जाएँ <FaArrowRight aria-hidden="true" />
               </Link>
             </motion.div>
           )}

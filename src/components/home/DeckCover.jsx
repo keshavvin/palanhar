@@ -58,7 +58,7 @@ export default function DeckCover() {
           {/* Ecosystem badge */}
           <motion.div variants={itemVariants} className="mt-6">
             <span className="inline-block max-w-xl rounded-2xl bg-primary-green px-5 py-2.5 text-sm font-bold leading-snug text-white shadow-md sm:rounded-full sm:text-base">
-              इंडियाज़ फर्स्ट इंटीग्रेटेड एग्री + डेयरी + इन्वेस्टमेंट इकोसिस्टम
+              भारत का पहला एकीकृत कृषि + डेयरी + निवेश इकोसिस्टम
             </span>
           </motion.div>
 

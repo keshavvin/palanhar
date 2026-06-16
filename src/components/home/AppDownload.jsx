@@ -29,8 +29,8 @@ export default function AppDownload() {
           transition={{ duration: 0.5 }}
           className="flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
-          <StoreBadge icon={FaGooglePlay} line1="गेट इट ऑन" line2="गूगल प्ले" />
-          <StoreBadge icon={FaApple} line1="डाउनलोड ऑन द" line2="ऐप स्टोर" />
+          <StoreBadge icon={FaGooglePlay} line1="यहाँ से पाएँ" line2="गूगल प्ले" />
+          <StoreBadge icon={FaApple} line1="यहाँ से डाउनलोड करें" line2="ऐप स्टोर" />
         </motion.div>
       </div>
     </section>

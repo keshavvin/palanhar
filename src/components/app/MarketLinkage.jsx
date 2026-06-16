@@ -11,7 +11,7 @@ const UNITS = ['किलो', 'लीटर', 'क्विंटल', 'पी�
 
 // Seeded marketplace listings (mine:false → cannot be removed by the demo user).
 const SEED = [
-  { id: 's1', type: SELL, product: 'ऑर्गेनिक गेहूं', qty: 5, unit: 'क्विंटल', price: 2400, date: '01/06/2026', mine: false },
+  { id: 's1', type: SELL, product: 'जैविक गेहूं', qty: 5, unit: 'क्विंटल', price: 2400, date: '01/06/2026', mine: false },
   { id: 's2', type: SELL, product: 'A2 दूध', qty: 50, unit: 'लीटर', price: 90, date: '03/06/2026', mine: false },
   { id: 's3', type: BUY, product: 'गोबर खाद', qty: 200, unit: 'किलो', price: 10, date: '05/06/2026', mine: false },
   { id: 's4', type: SELL, product: 'ताज़ी सब्ज़ियाँ', qty: 30, unit: 'किलो', price: 40, date: '07/06/2026', mine: false },
@@ -69,8 +69,8 @@ export default function MarketLinkage() {
   const visible = listings.filter(activeFilter.match);
 
   return (
-    <section aria-label="मार्केट लिंकेज">
-      <h2 className="text-2xl md:text-3xl">मार्केट लिंकेज</h2>
+    <section aria-label="बाज़ार संपर्क">
+      <h2 className="text-2xl md:text-3xl">बाज़ार संपर्क</h2>
       <p className="text-sm text-gray-500 mt-1">
         अपनी उपज खरीदें या बेचें — सीधे किसानों के साथ
       </p>
@@ -83,7 +83,7 @@ export default function MarketLinkage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label htmlFor="ml-type" className="block text-sm font-semibold text-dark-green mb-1">
-              टाइप
+              प्रकार
             </label>
             <select
               id="ml-type"
@@ -98,7 +98,7 @@ export default function MarketLinkage() {
 
           <div>
             <label htmlFor="ml-product" className="block text-sm font-semibold text-dark-green mb-1">
-              प्रोडक्ट
+              उत्पाद
             </label>
             <input
               id="ml-product"
@@ -106,7 +106,7 @@ export default function MarketLinkage() {
               required
               value={product}
               onChange={(e) => setProduct(e.target.value)}
-              placeholder="जैसे: ऑर्गेनिक गेहूं"
+              placeholder="जैसे: जैविक गेहूं"
               className="input-field"
             />
           </div>
@@ -128,7 +128,7 @@ export default function MarketLinkage() {
 
           <div>
             <label htmlFor="ml-unit" className="block text-sm font-semibold text-dark-green mb-1">
-              यूनिट
+              इकाई
             </label>
             <select
               id="ml-unit"
@@ -162,12 +162,12 @@ export default function MarketLinkage() {
 
         <button type="submit" className="btn btn-primary mt-5 inline-flex items-center gap-2">
           <FaPlusCircle aria-hidden="true" />
-          लिस्टिंग पोस्ट करें
+          सूची जोड़ें
         </button>
       </form>
 
       {/* Filter pills */}
-      <div className="flex flex-wrap gap-2 mt-8" role="group" aria-label="लिस्टिंग फ़िल्टर">
+      <div className="flex flex-wrap gap-2 mt-8" role="group" aria-label="सूची फ़िल्टर">
         {FILTERS.map((f) => {
           const active = f.key === filter;
           return (
@@ -192,7 +192,7 @@ export default function MarketLinkage() {
       {visible.length === 0 ? (
         <div className="card bg-cream-white p-8 mt-4 border border-primary-green/10 text-center">
           <FaBoxOpen className="mx-auto text-3xl text-primary-green/40" aria-hidden="true" />
-          <p className="text-gray-500 mt-3">अभी कोई लिस्टिंग नहीं है। पहली लिस्टिंग पोस्ट करें।</p>
+          <p className="text-gray-500 mt-3">अभी कोई सूची नहीं है। पहली सूची जोड़ें।</p>
         </div>
       ) : (
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">

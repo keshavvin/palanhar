@@ -9,7 +9,7 @@ export default function StepMobile({ data, update, errors, setErrors }) {
 
   const sendOtp = (isResend = false) => {
     if (!/^\d{10}$/.test(data.mobile)) {
-      setErrors({ mobile: 'एंटर अ वैलिड 10-डिजिट मोबाइल नंबर.' });
+      setErrors({ mobile: 'कृपया एक मान्य 10 अंकों का मोबाइल नंबर दर्ज करें।' });
       return;
     }
     const setBusy = isResend ? setResending : setSending;
@@ -68,7 +68,7 @@ export default function StepMobile({ data, update, errors, setErrors }) {
               className="btn btn-primary inline-flex min-h-11 items-center justify-center gap-2"
             >
               {sending && <Spinner />}
-              {sending ? 'सेंडिंग…' : 'सेंड OTP'}
+              {sending ? 'भेजा जा रहा है…' : 'OTP भेजें'}
             </button>
           )}
         </div>
@@ -78,17 +78,17 @@ export default function StepMobile({ data, update, errors, setErrors }) {
       {data.otpSent && (
         <div className="rounded-xl border border-primary-green/15 bg-cream-white p-4 sm:p-5">
           <p className="mb-3 text-sm font-semibold text-gray-700">
-            एंटर द 6-डिजिट OTP सेंट टू <span className="text-dark-green">+91 {data.mobile}</span>
+            <span className="text-dark-green">+91 {data.mobile}</span> पर भेजा गया 6 अंकों का OTP दर्ज करें
           </p>
           <OtpInput value={data.otp} onChange={handleOtp} />
-          <p className="mt-2 text-xs text-gray-400">डेमो: एंटर एनी 6 डिजिट्स</p>
+          <p className="mt-2 text-xs text-gray-400">डेमो: कोई भी 6 अंक दर्ज करें</p>
           <FieldError id="reg-otp-error">{errors.otp}</FieldError>
 
           <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2">
             {data.mobileVerified ? (
               <span className="badge-status min-h-7 bg-green-100 text-primary-green">
                 <FaCheckCircle aria-hidden="true" />
-                मोबाइल नंबर वेरिफाइड
+                मोबाइल नंबर सत्यापित
               </span>
             ) : (
               <button
@@ -97,7 +97,7 @@ export default function StepMobile({ data, update, errors, setErrors }) {
                 className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-primary-green underline-offset-2 hover:text-dark-green hover:underline"
               >
                 {resending && <Spinner light={false} />}
-                {resending ? 'रिसेंडिंग…' : 'रिसेंड OTP'}
+                {resending ? 'पुनः भेजा जा रहा है…' : 'OTP पुनः भेजें'}
               </button>
             )}
           </div>

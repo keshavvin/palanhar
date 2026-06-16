@@ -66,7 +66,7 @@ function SplashScreen() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
           >
-            <BrandLoader size={180} label="लोडिंग पालनहार" showWordmark />
+            <BrandLoader size={120} label="लोडिंग पालनहार" showWordmark />
           </motion.div>
         </motion.div>
       )}

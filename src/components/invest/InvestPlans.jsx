@@ -18,12 +18,12 @@ export default function InvestPlans() {
           transition={{ duration: 0.6 }}
           className="mb-12 text-center md:mb-16"
         >
-          <span className="section-eyebrow">सेवा प्लान्स</span>
-          <h2 className="mb-4">चूज़ योर सेवा प्लान</h2>
+          <span className="section-eyebrow">सेवा योजनाएँ</span>
+          <h2 className="mb-4">अपनी सेवा योजना चुनें</h2>
           <p className="mx-auto max-w-2xl text-lg text-gray-600 md:text-xl">
-            थ्री सिंपल वेज़ टू जॉइन गौ सेवा — एवरी प्लान डायरेक्टली सपोर्ट्स काउ
-            वेलफेयर एंड अर्न्स अ नंबर्ड शेयर सर्टिफिकेट विद एनुअल डिविडेंड
-            एलिजिबिलिटी।
+            गौ सेवा से जुड़ने के तीन सरल तरीके — हर योजना सीधे गौ
+            कल्याण को सहारा देती है और वार्षिक लाभांश पात्रता के साथ एक क्रमांकित
+            शेयर प्रमाणपत्र दिलाती है।
           </p>
         </motion.div>
 

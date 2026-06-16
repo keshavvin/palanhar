@@ -23,32 +23,32 @@ export default function About() {
   };
 
   const timeline = [
-    { year: 'फाउंडेशन', event: 'बिगन विद अ काउ गौशाला एंड ट्रेडिशनल बिलोना डेयरी' },
-    { year: 'ग्रोथ', event: 'स्केल्ड टू 200 गिर काउज़ प्रोड्यूसिंग 2,000 लीटर्स ऑफ A2 मिल्क डेली' },
-    { year: 'इंटीग्रेशन', event: 'ऐडेड CNG बायोगैस, बायोफर्टिलाइज़र एंड पंचगव्य प्रोडक्ट लाइन्स' },
-    { year: 'टुडे', event: '1000+ नैचुरल प्रोडक्ट्स एंड अ ट्रांसपेरेंट इन्वेस्टर प्लेटफॉर्म' },
+    { year: 'स्थापना', event: 'एक गौशाला और पारंपरिक बिलोना डेयरी से शुरुआत' },
+    { year: 'विकास', event: '200 गिर गायों तक विस्तार, प्रतिदिन 2,000 लीटर A2 दूध का उत्पादन' },
+    { year: 'एकीकरण', event: 'CNG बायोगैस, जैव-उर्वरक और पंचगव्य उत्पाद श्रृंखला जोड़ी' },
+    { year: 'आज', event: '1000+ प्राकृतिक उत्पाद और एक पारदर्शी निवेशक मंच' },
   ];
 
   const values = [
     {
       icon: FaLeaf,
-      title: 'सस्टेनेबिलिटी',
-      description: 'कमिटेड टू इको-फ्रेंडली फार्मिंग प्रैक्टिसेज'
+      title: 'सततता',
+      description: 'पर्यावरण-अनुकूल खेती की प्रथाओं के प्रति प्रतिबद्ध'
     },
     {
       icon: FaAward,
-      title: 'क्वालिटी',
-      description: 'प्रीमियम प्रोडक्ट्स मीटिंग हाइएस्ट स्टैंडर्ड्स'
+      title: 'गुणवत्ता',
+      description: 'उच्चतम मानकों पर खरे उतरते प्रीमियम उत्पाद'
     },
     {
       icon: FaUsers,
-      title: 'कम्युनिटी',
-      description: 'सपोर्टिंग लोकल फार्मर्स एंड फैमिलीज़'
+      title: 'समुदाय',
+      description: 'स्थानीय किसानों और परिवारों का सहयोग'
     },
     {
       icon: FaLightbulb,
-      title: 'इनोवेशन',
-      description: 'मॉडर्न टेक्नीक्स फॉर बेटर फार्मिंग'
+      title: 'नवाचार',
+      description: 'बेहतर खेती के लिए आधुनिक तकनीकें'
     },
   ];
 
@@ -63,10 +63,10 @@ export default function About() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">अबाउट पालनहार फार्म्स</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">पालनहार फार्म्स के बारे में</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            गौ सेवा इज़ अवर आइडेंटिटी — बिल्डिंग अ सस्टेनेबल फ्यूचर थ्रू प्योर
-            डेयरी एंड ऑर्गेनिक एग्रीकल्चर
+            गौ सेवा हमारी पहचान है — शुद्ध डेयरी और जैविक कृषि के माध्यम से
+            एक टिकाऊ भविष्य का निर्माण
           </p>
         </motion.div>
 
@@ -79,18 +79,18 @@ export default function About() {
           className="grid md:grid-cols-2 gap-8 mb-16"
         >
           <motion.div variants={itemVariants} className="card bg-gradient-to-br from-primary-green/10 to-light-green/10 p-8">
-            <h3 className="text-2xl font-bold text-primary-green mb-4">अवर मिशन</h3>
+            <h3 className="text-2xl font-bold text-primary-green mb-4">हमारा मिशन</h3>
             <p className="text-gray-700 leading-relaxed">
-              गौ सेवा, गौ संवर्धन, गौ समृद्धि — सर्विंग एंड प्रोटेक्टिंग अवर काउज़
-              फर्स्ट, एंड फ्रॉम दैट केयर प्रोवाइडिंग हेल्दी डेयरी प्रोडक्ट्स एंड सस्टेनेबल
-              एग्रीकल्चर सॉल्यूशंस दैट नरिश फैमिलीज़ एंड प्रोटेक्ट अवर एनवायरनमेंट.
+              गौ सेवा, गौ संवर्धन, गौ समृद्धि — सबसे पहले अपनी गायों की सेवा और
+              रक्षा करना, और उसी देखभाल से ऐसे स्वस्थ डेयरी उत्पाद और टिकाऊ कृषि
+              समाधान प्रदान करना जो परिवारों का पोषण करें और हमारे पर्यावरण की रक्षा करें.
             </p>
           </motion.div>
 
           <motion.div variants={itemVariants} className="card bg-gradient-to-br from-golden/10 to-orange-100/10 p-8">
-            <h3 className="text-2xl font-bold text-dark-green mb-4">अवर विज़न</h3>
+            <h3 className="text-2xl font-bold text-dark-green mb-4">हमारा विज़न</h3>
             <p className="text-gray-700 leading-relaxed">
-              बिल्डिंग अ ग्रीनर एंड हेल्दियर फ्यूचर बाय एडवांसिंग सस्टेनेबल फार्मिंग प्रैक्टिसेज. वी एनविज़न अ वर्ल्ड वेयर एवरी फैमिली हैज़ एक्सेस टू प्योर, ऑर्गेनिक फूड वाइल प्रोटेक्टिंग अवर प्लैनेट फॉर फ्यूचर जेनरेशन्स.
+              टिकाऊ खेती की प्रथाओं को आगे बढ़ाकर एक हरित और स्वस्थ भविष्य का निर्माण. हम एक ऐसी दुनिया की कल्पना करते हैं जहाँ हर परिवार को शुद्ध, जैविक भोजन उपलब्ध हो और साथ ही हम आने वाली पीढ़ियों के लिए अपनी धरती की रक्षा करें.
             </p>
           </motion.div>
         </motion.div>
@@ -103,29 +103,29 @@ export default function About() {
           viewport={{ once: true }}
           className="card bg-white p-8 md:p-12 mb-16 shadow-xl"
         >
-          <h3 className="text-3xl font-bold text-dark-green mb-6">अवर जर्नी</h3>
+          <h3 className="text-3xl font-bold text-dark-green mb-6">हमारी यात्रा</h3>
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                पालनहार वाज़ फाउंडेड ऑन द प्रिंसिपल ऑफ &ldquo;वन काउ, मेनी प्रोडक्ट्स, इनफिनिट
-                पॉसिबिलिटीज़&rdquo;. फ्रॉम अवर फार्म ऑन NH-48 नियर राजोकरी विलेज, न्यू दिल्ली, वी
-                बिल्ट अ मॉडर्न गौशाला ऑफ इंडिजिनस काउज़ केयर्ड फॉर विद नैचुरल फीड
-                एंड क्रुएल्टी-फ्री प्रैक्टिसेज.
+                पालनहार की स्थापना &ldquo;एक गाय, अनेक उत्पाद, असीम
+                संभावनाएँ&rdquo; के सिद्धांत पर हुई थी. NH-48 पर राजोकरी गाँव के पास, नई दिल्ली में स्थित अपने फार्म में, हमने
+                देसी गायों की एक आधुनिक गौशाला बनाई, जिनकी देखभाल प्राकृतिक आहार
+                और क्रूरता-रहित प्रथाओं के साथ की जाती है.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                टुडे अवर 200 गिर काउज़ प्रोड्यूस अराउंड 2,000 लीटर्स ऑफ A2 मिल्क एवरी डे —
-                चर्न्ड इनटू बिलोना घी, मक्खन, पनीर एंड दही द ट्रेडिशनल वे, एंड
-                ट्रस्टेड बाय हेल्थ-कॉन्शियस फैमिलीज़ अक्रॉस दिल्ली NCR.
+                आज हमारी 200 गिर गायें प्रतिदिन लगभग 2,000 लीटर A2 दूध देती हैं —
+                जिससे पारंपरिक विधि से बिलोना घी, मक्खन, पनीर और दही बनाया जाता है, और
+                जिस पर दिल्ली NCR भर के स्वास्थ्य के प्रति सजग परिवार भरोसा करते हैं.
               </p>
             </div>
             <div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                अवर इंटीग्रेटेड डेयरी सिस्टम टर्न्स एवरी आउटपुट इनटू वैल्यू: गोबर बिकम्स
-                कम्प्रेस्ड बायोगैस (CBG) एंड वर्मी कम्पोस्ट, गोमूत्र बिकम्स आयुर्वेदिक
-                पंचगव्य प्रोडक्ट्स — ओवर 1000+ नैचुरल प्रोडक्ट्स फ्रॉम अ सिंगल इकोसिस्टम.
+                हमारी एकीकृत डेयरी प्रणाली हर उत्पादन को मूल्य में बदल देती है: गोबर
+                कम्प्रेस्ड बायोगैस (CBG) और वर्मी कम्पोस्ट बनता है, गोमूत्र आयुर्वेदिक
+                पंचगव्य उत्पाद बनता है — एक ही पारिस्थितिकी तंत्र से 1000+ प्राकृतिक उत्पाद.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                अवर जर्नी कंटिन्यूज़ ऐज़ वी एक्सपैंड अवर प्रोडक्ट रेंज, इम्प्रूव अवर फार्मिंग प्रैक्टिसेज, एंड इन्स्पायर अदर फार्मर्स टू एडॉप्ट सस्टेनेबल मेथड्स फॉर अ ग्रीनर प्लैनेट.
+                हमारी यात्रा जारी है — हम अपनी उत्पाद श्रृंखला का विस्तार कर रहे हैं, अपनी खेती की प्रथाओं को बेहतर बना रहे हैं, और एक हरित धरती के लिए अन्य किसानों को टिकाऊ तरीके अपनाने के लिए प्रेरित कर रहे हैं.
               </p>
             </div>
           </div>
@@ -139,7 +139,7 @@ export default function About() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h3 className="text-3xl font-bold text-dark-green mb-8 text-center">अवर टाइमलाइन</h3>
+          <h3 className="text-3xl font-bold text-dark-green mb-8 text-center">हमारी समय-यात्रा</h3>
           <div className="grid md:grid-cols-4 gap-4">
             {timeline.map((item, i) => (
               <motion.div
@@ -164,7 +164,7 @@ export default function About() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-3xl font-bold text-dark-green mb-8 text-center">अवर कोर वैल्यूज़</h3>
+          <h3 className="text-3xl font-bold text-dark-green mb-8 text-center">हमारे मूल मूल्य</h3>
           <div className="grid md:grid-cols-4 gap-6">
             {values.map((value, i) => {
               const Icon = value.icon;

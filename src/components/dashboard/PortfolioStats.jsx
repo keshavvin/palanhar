@@ -34,32 +34,32 @@ const growthPct = (
 
 const STATS = [
   {
-    label: 'टोटल इन्वेस्टमेंट',
+    label: 'कुल निवेश',
     value: currentInvestor.totalInvestment,
     Icon: FaPiggyBank,
     iconClasses: 'bg-primary-green/10 text-primary-green',
   },
   {
-    label: 'करंट वैल्यू',
+    label: 'वर्तमान मूल्य',
     value: currentInvestor.currentValue,
     Icon: FaChartLine,
     iconClasses: 'bg-primary-green/10 text-primary-green',
     delta: `+${growthPct}%`,
   },
   {
-    label: 'डिविडेंड अर्न्ड',
+    label: 'अर्जित लाभांश',
     value: currentInvestor.dividendEarned,
     Icon: FaCoins,
     iconClasses: 'bg-light-green/25 text-primary-green',
   },
   {
-    label: 'डिविडेंड पेड',
+    label: 'भुगतान किया लाभांश',
     value: currentInvestor.dividendPaid,
     Icon: FaHandHoldingUsd,
     iconClasses: 'bg-dark-green/10 text-dark-green',
   },
   {
-    label: 'पेंडिंग डिविडेंड',
+    label: 'लंबित लाभांश',
     value: currentInvestor.dividendPending,
     Icon: FaHourglassHalf,
     iconClasses: 'bg-golden/15 text-amber-600',
@@ -69,7 +69,7 @@ const STATS = [
 
 export default function PortfolioStats() {
   return (
-    <section aria-label="पोर्टफोलियो समरी">
+    <section aria-label="पोर्टफ़ोलियो सारांश">
       <div className="grid grid-cols-2 lg:grid-cols-5 gap-4">
         {STATS.map(({ label, value, Icon, iconClasses, delta, wide }, index) => (
           <motion.div

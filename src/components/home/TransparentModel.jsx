@@ -10,13 +10,13 @@ const productionFlow = [
   { label: 'जैविक खाद', icon: '🌱' },
   { label: 'बायोपेस्टिसाइड', icon: '🧪' },
   { label: 'बायोपेंट', icon: '🪣' },
-  { label: 'CBG', sub: '(कंप्रेस्ड बायोगैस)', icon: '🛢️' },
+  { label: 'CBG', sub: '(संपीड़ित जैव गैस)', icon: '🛢️' },
 ];
 
 // Stage 2 — processing reaches the customer.
 const deliveryFlow = [
-  { label: 'प्रोसेसिंग एवं मैन्युफैक्चरिंग', icon: '🏭' },
-  { label: 'ई-कॉमर्स वेबसाइट & मोबाइल ऐप', icon: '💻' },
+  { label: 'प्रसंस्करण एवं निर्माण', icon: '🏭' },
+  { label: 'ई-कॉमर्स वेबसाइट एवं मोबाइल ऐप', icon: '💻' },
   { label: 'ग्राहक एवं व्यवसायिक संस्थान', icon: '👥' },
 ];
 

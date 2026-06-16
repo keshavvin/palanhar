@@ -11,12 +11,12 @@ import LearningTraining from '../components/app/LearningTraining';
 import SchemesBenefits from '../components/app/SchemesBenefits';
 
 const FEATURES = [
-  { key: 'support', label: 'फार्मर सपोर्ट', desc: 'सवाल पूछें, टिकट बनाएँ', icon: FaHeadset, Component: FarmerSupport },
-  { key: 'market', label: 'मार्केट लिंकेज', desc: 'खरीदें / बेचें', icon: FaStore, Component: MarketLinkage },
-  { key: 'dairy', label: 'डेयरी मैनेजमेंट', desc: 'गाय व दूध रिकॉर्ड', icon: FaCow, Component: DairyManagement },
-  { key: 'health', label: 'हेल्थ & न्यूट्रिशन', desc: 'प्रोडक्ट्स व ऑर्डर', icon: FaHeartbeat, Component: HealthNutrition },
-  { key: 'learning', label: 'लर्निंग & ट्रेनिंग', desc: 'कोर्स व प्रोग्रेस', icon: FaBook, Component: LearningTraining },
-  { key: 'schemes', label: 'स्कीम्स & बेनिफिट्स', desc: 'योजनाएँ व आवेदन', icon: FaGift, Component: SchemesBenefits },
+  { key: 'support', label: 'किसान सहायता', desc: 'सवाल पूछें, टिकट बनाएँ', icon: FaHeadset, Component: FarmerSupport },
+  { key: 'market', label: 'बाज़ार संपर्क', desc: 'खरीदें / बेचें', icon: FaStore, Component: MarketLinkage },
+  { key: 'dairy', label: 'डेयरी प्रबंधन', desc: 'गाय व दूध रिकॉर्ड', icon: FaCow, Component: DairyManagement },
+  { key: 'health', label: 'स्वास्थ्य व पोषण', desc: 'उत्पाद व ऑर्डर', icon: FaHeartbeat, Component: HealthNutrition },
+  { key: 'learning', label: 'शिक्षण व प्रशिक्षण', desc: 'कोर्स व प्रगति', icon: FaBook, Component: LearningTraining },
+  { key: 'schemes', label: 'योजनाएँ व लाभ', desc: 'योजनाएँ व आवेदन', icon: FaGift, Component: SchemesBenefits },
 ];
 
 function HomeOverview({ onOpen }) {

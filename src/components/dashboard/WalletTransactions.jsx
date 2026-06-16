@@ -16,15 +16,15 @@ const STATUS_STYLES = {
 
 // Devanagari display labels keyed off the (Latin) type/status enums.
 const TYPE_LABELS = {
-  'Dividend Credit': 'डिविडेंड क्रेडिट',
-  'Transfer to Bank': 'ट्रांसफर टू बैंक',
-  Reinvested: 'रीइन्वेस्टेड',
-  'Dividend Declared': 'डिविडेंड डिक्लेयर्ड',
+  'Dividend Credit': 'लाभांश जमा',
+  'Transfer to Bank': 'बैंक में स्थानांतरण',
+  Reinvested: 'पुनर्निवेशित',
+  'Dividend Declared': 'लाभांश घोषित',
 };
 
 const STATUS_LABELS = {
-  Completed: 'कंप्लीटेड',
-  'Pending Payout': 'पेंडिंग पेआउट',
+  Completed: 'पूर्ण',
+  'Pending Payout': 'भुगतान लंबित',
 };
 
 export default function WalletTransactions() {
@@ -35,11 +35,11 @@ export default function WalletTransactions() {
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
       className="bg-white rounded-xl shadow-md border border-gray-100 p-5 sm:p-6 h-full"
-      aria-label="वॉलेट ट्रांज़ैक्शन्स"
+      aria-label="वॉलेट लेन-देन"
     >
-      <h2 className="text-xl md:text-2xl">वॉलेट ट्रांज़ैक्शन्स</h2>
+      <h2 className="text-xl md:text-2xl">वॉलेट लेन-देन</h2>
       <p className="text-sm text-gray-500 mt-1 mb-2">
-        एवरी क्रेडिट, पेआउट एंड रीइन्वेस्टमेंट इन वन प्लेस
+        हर जमा, भुगतान और पुनर्निवेश एक ही जगह
       </p>
       <ul className="divide-y divide-gray-100">
         {walletTransactions.map((tx, index) => {

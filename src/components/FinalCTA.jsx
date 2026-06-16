@@ -37,7 +37,7 @@ export default function FinalCTA() {
             viewport={{ once: true }}
             className="mb-6 !text-white text-4xl md:text-6xl"
           >
-            Ready to Experience<br />the Goodness of Gau Seva?
+क्या आप गौ सेवा की<br />अच्छाई का अनुभव करने को तैयार हैं?
           </motion.h2>
 
           <motion.p
@@ -47,8 +47,8 @@ export default function FinalCTA() {
             viewport={{ once: true }}
             className="mb-12 text-xl text-white/90 md:text-2xl"
           >
-            Join thousands of families and investors who trust Palanhar —
-            where every product begins with the loving care of our cows
+हज़ारों परिवारों और निवेशकों से जुड़ें जो पालनहार पर भरोसा करते हैं —
+            जहाँ हर उत्पाद हमारी गायों की स्नेहपूर्ण देखभाल से शुरू होता है
           </motion.p>
 
           <motion.div
@@ -59,13 +59,13 @@ export default function FinalCTA() {
             className="mb-12 flex flex-col justify-center gap-4 sm:flex-row"
           >
             <Link to="/invest" className="btn btn-golden px-8 py-4">
-              Invest Now
+              अभी निवेश करें
             </Link>
             <Link
               to="/contact"
               className="btn border-2 border-white bg-transparent px-8 py-4 text-white hover:bg-white hover:text-primary-green"
             >
-              Contact Us
+              संपर्क करें
             </Link>
           </motion.div>
 
@@ -78,15 +78,15 @@ export default function FinalCTA() {
           >
             <div>
               <div className="mb-1 text-2xl" aria-hidden="true">✓</div>
-              <p className="text-sm font-semibold">100% Fresh</p>
+              <p className="text-sm font-semibold">100% ताज़ा</p>
             </div>
             <div>
               <div className="mb-1 text-2xl" aria-hidden="true">🚚</div>
-              <p className="text-sm font-semibold">Free Delivery</p>
+              <p className="text-sm font-semibold">मुफ़्त डिलीवरी</p>
             </div>
             <div>
               <div className="mb-1 text-2xl" aria-hidden="true">💚</div>
-              <p className="text-sm font-semibold">Money-back Guarantee</p>
+              <p className="text-sm font-semibold">पैसे वापसी की गारंटी</p>
             </div>
           </motion.div>
         </motion.div>
@@ -98,7 +98,7 @@ export default function FinalCTA() {
           viewport={{ once: true }}
           className="mt-16 text-center text-sm text-white/80"
         >
-          <p>Palanhar Farms • Delivering Fresh Milk, Organic Produce &amp; Sustainable Farming Solutions</p>
+          <p>पालनहार फार्म्स • ताज़ा दूध, जैविक उपज और सतत खेती समाधान प्रदान करते हुए</p>
           <p className="mt-2">
             📍 Rajokri Village, NH-48, New Delhi – 110038 | 📞 +91 92115 57678 | 📧 palanharcompany@gmail.com
           </p>

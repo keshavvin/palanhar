@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FaUserPlus, FaCartShopping, FaCow } from 'react-icons/fa6';
@@ -22,6 +23,26 @@ const itemVariants = {
 };
 
 export default function Hero() {
+  const [bannerOk, setBannerOk] = useState(true);
+
+  // Pitch banner — artwork lives at public/banner-image1.png and shows full-width
+  // here; if it ever fails to load we gracefully fall back to the built layout below.
+  if (bannerOk) {
+    return (
+      <section className="bg-cream-white">
+        <Link to="/invest" className="block" aria-label="गौ निवेश योजना — अभी निवेश करें">
+          <img
+            src="/banner-image1.png"
+            alt="पालनहार गौ निवेश योजना — पारदर्शी, तकनीक-संचालित मंच"
+            onError={() => setBannerOk(false)}
+            className="h-auto w-full"
+            draggable="false"
+          />
+        </Link>
+      </section>
+    );
+  }
+
   return (
     <section className="relative overflow-hidden bg-cream-white">
       {/* Soft cow banner wash behind the content */}

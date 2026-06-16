@@ -28,12 +28,12 @@ export default function PortfolioGrowthChart() {
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
       className="bg-white rounded-xl shadow-md border border-gray-100 p-5 sm:p-6 h-full"
-      aria-label="पोर्टफोलियो ग्रोथ चार्ट"
+      aria-label="पोर्टफ़ोलियो विकास चार्ट"
     >
       <div className="mb-4">
-        <h2 className="text-xl md:text-2xl">पोर्टफोलियो ग्रोथ</h2>
+        <h2 className="text-xl md:text-2xl">पोर्टफ़ोलियो विकास</h2>
         <p className="text-sm text-gray-500 mt-1">
-          एस्टिमेटेड वैल्यू ऑफ योर होल्डिंग सिंस अलॉटमेंट
+          आवंटन के बाद से आपकी धारिता का अनुमानित मूल्य
         </p>
       </div>
       <ResponsiveContainer width="100%" height={280}>

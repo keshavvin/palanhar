@@ -71,7 +71,7 @@ export default function HealthNutrition() {
       date: new Date().toLocaleDateString('en-IN'),
       total,
       count: totalCount,
-      status: 'कन्फर्म्ड',
+      status: 'पुष्ट',
     };
     setOrders([order, ...orders]);
     setCart({});
@@ -79,17 +79,17 @@ export default function HealthNutrition() {
   };
 
   return (
-    <section aria-label="हेल्थ & न्यूट्रिशन">
-      <h2 className="text-2xl md:text-3xl">हेल्थ & न्यूट्रिशन</h2>
+    <section aria-label="स्वास्थ्य एवं पोषण">
+      <h2 className="text-2xl md:text-3xl">स्वास्थ्य एवं पोषण</h2>
       <p className="text-sm text-gray-500 mt-1 mb-6">
-        ताज़ा A2 डेयरी प्रोडक्ट ऑर्डर करें और सेहत का ख्याल रखें।
+        ताज़ा A2 डेयरी उत्पाद ऑर्डर करें और सेहत का ख्याल रखें।
       </p>
 
       <div className="grid gap-8 lg:grid-cols-3">
         {/* प्रोडक्ट ग्रिड */}
         <div className="lg:col-span-2">
           <h3 className="text-lg font-semibold text-dark-green mb-4">
-            प्रोडक्ट्स
+            उत्पाद
           </h3>
           <ul className="grid gap-4 sm:grid-cols-2">
             {PRODUCTS.map((product) => {
@@ -159,7 +159,7 @@ export default function HealthNutrition() {
           <div className="card bg-golden/15 border border-primary-green/10 p-5 sm:p-6 mt-8">
             <div className="flex items-center gap-2 text-dark-green mb-3">
               <FaLeaf aria-hidden="true" className="text-primary-green" />
-              <h3 className="text-lg font-semibold">न्यूट्रिशन टिप्स</h3>
+              <h3 className="text-lg font-semibold">पोषण संबंधी सुझाव</h3>
             </div>
             <ul className="space-y-2.5">
               {TIPS.map((tip) => (
@@ -184,7 +184,7 @@ export default function HealthNutrition() {
           <div className="card bg-cream-white border border-primary-green/10 p-5">
             <div className="flex items-center gap-2 text-dark-green mb-4">
               <FaShoppingBasket aria-hidden="true" className="text-golden" />
-              <h3 className="text-lg font-semibold">कार्ट समरी</h3>
+              <h3 className="text-lg font-semibold">टोकरी का सारांश</h3>
             </div>
 
             {placed && (
@@ -193,13 +193,13 @@ export default function HealthNutrition() {
                 role="status"
               >
                 <FaCheckCircle aria-hidden="true" />
-                ऑर्डर प्लेस हो गया ✓
+                ऑर्डर सफलतापूर्वक दर्ज हुआ ✓
               </p>
             )}
 
             {isEmpty ? (
               <p className="text-sm text-gray-500 py-2">
-                आपका कार्ट खाली है — प्रोडक्ट जोड़ें।
+                आपकी टोकरी खाली है — उत्पाद जोड़ें।
               </p>
             ) : (
               <>
@@ -242,7 +242,7 @@ export default function HealthNutrition() {
                 disabled={isEmpty}
               >
                 <FaCheckCircle aria-hidden="true" />
-                ऑर्डर प्लेस करें
+                ऑर्डर दर्ज करें
               </button>
               <button
                 type="button"
@@ -259,7 +259,7 @@ export default function HealthNutrition() {
           {/* ऑर्डर हिस्ट्री */}
           <div>
             <h3 className="text-lg font-semibold text-dark-green mb-4">
-              ऑर्डर हिस्ट्री
+              ऑर्डर इतिहास
             </h3>
             {orders.length === 0 ? (
               <div className="card bg-white border border-primary-green/10 p-6 text-center text-sm text-gray-500">
@@ -278,7 +278,7 @@ export default function HealthNutrition() {
                     <div className="flex items-center justify-between gap-3">
                       <div>
                         <p className="text-sm font-semibold text-dark-green">
-                          {order.count} आइटम
+                          {order.count} वस्तुएँ
                         </p>
                         <p className="text-xs text-gray-400">{order.date}</p>
                       </div>

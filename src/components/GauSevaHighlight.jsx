@@ -5,20 +5,20 @@ import { FaArrowRight } from 'react-icons/fa';
 const pillars = [
   {
     hindi: 'गो सेवा',
-    title: 'Serve',
-    desc: 'Daily care, natural feed, clean shelters and veterinary attention for every cow in our gaushala.',
+    title: 'सेवा',
+    desc: 'हमारी गौशाला की हर गाय के लिए प्रतिदिन देखभाल, प्राकृतिक चारा, स्वच्छ आश्रय और पशु-चिकित्सा सुविधा।',
     icon: '🙏',
   },
   {
     hindi: 'गो संवर्धन',
-    title: 'Nurture',
-    desc: 'Protecting and growing our indigenous Gir herd — cruelty-free breeding and lifelong shelter, even after milking years.',
+    title: 'पालन-पोषण',
+    desc: 'हमारी देसी गिर नस्ल का संरक्षण और संवर्धन — क्रूरता-रहित प्रजनन और दूध देने के वर्षों के बाद भी आजीवन आश्रय।',
     icon: '🐄',
   },
   {
     hindi: 'गो समृद्धि',
-    title: 'Prosper',
-    desc: 'Well-cared-for cows give pure A2 dairy, panchgavya and fertile soil — prosperity for farmers, families and investors.',
+    title: 'समृद्धि',
+    desc: 'भली-भाँति देखभाल की गई गायें शुद्ध A2 डेयरी, पंचगव्य और उपजाऊ मिट्टी देती हैं — किसानों, परिवारों और निवेशकों के लिए समृद्धि।',
     icon: '🌾',
   },
 ];
@@ -35,11 +35,11 @@ export default function GauSevaHighlight() {
           className="mb-12 text-center"
         >
           <span className="section-eyebrow">गौ सेवा</span>
-          <h2 className="mb-4">Seva First. Everything Else Follows.</h2>
+          <h2 className="mb-4">पहले सेवा। बाकी सब उसके बाद।</h2>
           <p className="mx-auto max-w-2xl text-lg text-gray-600 md:text-xl">
-            One cow, our identity — our resolve, everyone&rsquo;s welfare. Every
-            Palanhar product and every investment begins with the loving service
-            of our cows.
+            एक गाय, हमारी पहचान — हमारा संकल्प, सबका कल्याण। पालनहार
+            का हर उत्पाद और हर निवेश हमारी गायों की स्नेहपूर्ण सेवा
+            से ही आरंभ होता है।
           </p>
         </motion.div>
 
@@ -69,11 +69,11 @@ export default function GauSevaHighlight() {
           className="flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
           <Link to="/gau-seva" className="btn btn-primary group flex items-center gap-2">
-            Discover Gau Seva
+            गौ सेवा को जानें
             <FaArrowRight className="transition-transform group-hover:translate-x-2" aria-hidden="true" />
           </Link>
           <Link to="/contact" className="btn btn-outline">
-            Plan a Farm Visit
+            फार्म भ्रमण की योजना बनाएँ
           </Link>
         </motion.div>
       </div>

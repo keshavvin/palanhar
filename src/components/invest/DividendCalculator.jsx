@@ -52,12 +52,12 @@ export default function DividendCalculator() {
           transition={{ duration: 0.6 }}
           className="mb-12 text-center md:mb-16"
         >
-          <span className="section-eyebrow">डिविडेंड कैलकुलेटर</span>
-          <h2 className="mb-4">सेवा दैट ऑल्सो गिव्स बैक</h2>
+          <span className="section-eyebrow">लाभांश कैलकुलेटर</span>
+          <h2 className="mb-4">वह सेवा जो लौटाती भी है</h2>
           <p className="mx-auto max-w-2xl text-lg text-gray-600 md:text-xl">
-            योर कंट्रिब्यूशन केयर्स फॉर द काउज़ — एंड अर्न्स यू अ शेयर ऑफ द
-            गौशाला&rsquo;ज़ सक्सेस। मूव द स्लाइडर टू सी योर प्रोजेक्टेड एनुअल
-            डिविडेंड, यूज़िंग द सेम फॉर्मूला अवर सिस्टम अप्लाइज़ ऑन पेआउट डे।
+            आपका योगदान गायों की देखभाल करता है — और आपको गौशाला की
+            सफलता में हिस्सा दिलाता है। स्लाइडर को घुमाकर अपना अनुमानित वार्षिक
+            लाभांश देखें, उसी फॉर्मूले से जो हमारा सिस्टम भुगतान के दिन लागू करता है।
           </p>
         </motion.div>
 
@@ -72,7 +72,7 @@ export default function DividendCalculator() {
             {/* Inputs */}
             <div className="p-6 sm:p-8 lg:p-10">
               <label htmlFor="calc-amount" className="mb-2 block font-semibold text-dark-green">
-                योर इन्वेस्टमेंट अमाउंट
+                आपकी निवेश राशि
               </label>
               <div className="relative mb-5">
                 <span className="absolute top-1/2 left-4 -translate-y-1/2 font-semibold text-gray-500" aria-hidden="true">
@@ -93,7 +93,7 @@ export default function DividendCalculator() {
               </div>
 
               <label htmlFor="calc-amount-slider" className="sr-only">
-                इन्वेस्टमेंट अमाउंट स्लाइडर
+                निवेश राशि स्लाइडर
               </label>
               <input
                 id="calc-amount-slider"
@@ -130,7 +130,7 @@ export default function DividendCalculator() {
               <div className="rounded-xl border border-gray-100 bg-gray-50 p-4 text-sm">
                 <p className="mb-1 font-bold text-dark-green">SRS फॉर्मूला</p>
                 <p className="font-medium text-gray-700">
-                  डिविडेंड = (योर होल्डिंग ÷ टोटल पूल) × डिविडेंड पूल
+                  लाभांश = (आपकी धारिता ÷ कुल कोष) × लाभांश कोष
                 </p>
                 <p className="mt-2 text-gray-500">
                   = ({formatINRCompact(amount)} ÷ {formatINRCompact(dividendExample.totalInvestmentPool)}) ×{' '}
@@ -143,25 +143,25 @@ export default function DividendCalculator() {
             <div className="bg-gradient-to-br from-primary-green to-dark-green p-6 text-white sm:p-8 lg:p-10">
               <div className="mb-6 flex items-center justify-between gap-4 border-b border-white/20 pb-4">
                 <div>
-                  <p className="text-sm text-green-100">योर शेयरहोल्डिंग</p>
+                  <p className="text-sm text-green-100">आपकी शेयरधारिता</p>
                   <p className="text-2xl font-bold tabular-nums">{result.sharePct.toFixed(2)}%</p>
                 </div>
                 <p className="max-w-[10rem] text-right text-xs text-green-100">
-                  ऑफ द {formatINRCompact(dividendExample.totalInvestmentPool)} डेमो इन्वेस्टमेंट पूल
+                  {formatINRCompact(dividendExample.totalInvestmentPool)} के डेमो निवेश कोष में से
                 </p>
               </div>
 
               <div className="mb-6 flex items-center justify-between gap-4 border-b border-white/20 pb-4">
                 <div>
-                  <p className="text-sm text-green-100">डिविडेंड पूल ({dividendExample.financialYear})</p>
+                  <p className="text-sm text-green-100">लाभांश कोष ({dividendExample.financialYear})</p>
                   <p className="text-2xl font-bold tabular-nums">{formatINRCompact(result.dividendPool)}</p>
                 </div>
                 <p className="max-w-[10rem] text-right text-xs text-green-100">
-                  {dividendExample.boardApprovedRatePct}% ऑफ {formatINRCompact(dividendExample.netProfit)} नेट प्रॉफिट
+                  {formatINRCompact(dividendExample.netProfit)} शुद्ध लाभ का {dividendExample.boardApprovedRatePct}%
                 </p>
               </div>
 
-              <p className="text-sm uppercase tracking-wide text-green-100">योर प्रोजेक्टेड एनुअल डिविडेंड</p>
+              <p className="text-sm uppercase tracking-wide text-green-100">आपका अनुमानित वार्षिक लाभांश</p>
               <motion.p
                 key={result.dividend}
                 initial={{ opacity: 0, y: 10 }}
@@ -172,7 +172,7 @@ export default function DividendCalculator() {
                 {formatINR(result.dividend)}
               </motion.p>
               <p className="mt-2 text-sm text-green-100">
-                ऑन ऐन इन्वेस्टमेंट ऑफ {formatINR(amount)}
+                {formatINR(amount)} के निवेश पर
               </p>
             </div>
           </div>
@@ -180,15 +180,15 @@ export default function DividendCalculator() {
           {/* Worked example + disclaimer */}
           <div className="border-t border-gray-100 bg-cream-white px-6 py-4 sm:px-8">
             <p className="text-sm text-gray-700">
-              <strong className="text-dark-green">वर्क्ड एग्ज़ांपल:</strong>{' '}
-              {formatINR(1_00_000)} इन्वेस्टेड → {example.sharePct.toFixed(0)}% ऑफ द{' '}
-              {formatINRCompact(dividendExample.totalInvestmentPool)} पूल →{' '}
+              <strong className="text-dark-green">हल किया गया उदाहरण:</strong>{' '}
+              {formatINR(1_00_000)} निवेश → {formatINRCompact(dividendExample.totalInvestmentPool)} कोष का{' '}
+              {example.sharePct.toFixed(0)}% →{' '}
               {example.sharePct.toFixed(0)}% × {formatINRCompact(example.dividendPool)} ={' '}
-              <strong className="text-primary-green">{formatINR(example.dividend)}</strong> एनुअल डिविडेंड।
+              <strong className="text-primary-green">{formatINR(example.dividend)}</strong> वार्षिक लाभांश।
             </p>
             <p className="mt-1 text-xs text-gray-500 italic">
-              इलस्ट्रेटिव कैलकुलेशन बेस्ड ऑन FY 2025-26 बोर्ड-अप्रूव्ड रेट। एक्चुअल डिविडेंड्स
-              डिपेंड ऑन कंपनी परफॉर्मेंस।
+              FY 2025-26 की बोर्ड-अनुमोदित दर पर आधारित उदाहरणात्मक गणना। वास्तविक लाभांश
+              कंपनी के प्रदर्शन पर निर्भर करता है।
             </p>
           </div>
         </motion.div>

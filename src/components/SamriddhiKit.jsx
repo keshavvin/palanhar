@@ -89,7 +89,7 @@ export default function SamriddhiKit() {
             <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
               <h3 className="text-2xl font-bold text-dark-green">🐄 परिवार समृद्धि किट</h3>
               <span className="rounded-full bg-light-green/20 px-4 py-1 text-sm font-semibold text-primary-green">
-                Unique Version
+                विशेष संस्करण
               </span>
             </div>
             <div className="grid gap-6 sm:grid-cols-2">
@@ -123,7 +123,7 @@ export default function SamriddhiKit() {
             <div className="mb-2 flex items-center gap-2">
               <span className="text-2xl" aria-hidden="true">💎</span>
               <span className="rounded-full bg-golden/90 px-3 py-1 text-xs font-bold uppercase tracking-wide text-dark-green">
-                Premium
+                प्रीमियम
               </span>
             </div>
             <h3 className="mb-1 text-2xl font-bold">"एक गाय – एक परिवार" प्रीमियम किट</h3>

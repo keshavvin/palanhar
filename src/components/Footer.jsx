@@ -15,7 +15,7 @@ import {
 
 const quickLinks = [
   { label: 'हमारे बारे में', to: '/about' },
-  { label: 'इकोसिस्टम', to: '/ecosystem' },
+  { label: 'परितंत्र', to: '/ecosystem' },
   { label: 'पालनहार ऐप', to: '/app' },
   { label: 'गौ निवेश योजना', to: '/invest' },
   { label: 'पिच डेक', to: '/deck' },

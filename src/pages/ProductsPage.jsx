@@ -12,8 +12,8 @@ export default function ProductsPage() {
         className="pt-20 pb-10 bg-gradient-to-b from-light-green/20 to-transparent"
       >
         <div className="container-custom text-center">
-          <h1 className="text-5xl font-bold text-dark-green mb-4">अवर प्रोडक्ट्स</h1>
-          <p className="text-xl text-gray-600">A2 डेयरी, पंचगव्य एंड ऑर्गेनिक फार्म प्रोडक्ट्स — एव्रीथिंग अवर काउज़ गिव, डिलिवर्ड फ्रेश</p>
+          <h1 className="text-5xl font-bold text-dark-green mb-4">हमारे उत्पाद</h1>
+          <p className="text-xl text-gray-600">A2 डेयरी, पंचगव्य और जैविक फार्म उत्पाद — हमारी गायों से मिलने वाला सब कुछ, ताज़ा पहुँचाया गया</p>
         </div>
       </motion.section>
       <Products />

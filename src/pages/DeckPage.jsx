@@ -120,62 +120,62 @@ function IconCard({ icon: Icon, title, desc, tone = 'text-primary-green' }) {
 // ---------------------------------------------------------------------------
 
 const problems = [
-  { icon: FaWineBottle, title: 'मिल्क ट्रस्ट गैप', desc: 'एडल्टरेशन & क्वालिटी कंसर्न्स कंज़्यूमर ट्रस्ट को कम करते हैं' },
-  { icon: FaLeaf, title: 'लो फार्मर इनकम्स', desc: 'फ्रैगमेंटेड सप्लाई चेन के कारण फार्मर्स कम कमाते हैं' },
-  { icon: FaCoins, title: 'रूरल कैपिटल शॉर्टेज', desc: 'गाँवों में ऑर्गनाइज़्ड इन्वेस्टमेंट & फाइनेंशियल सपोर्ट की कमी' },
-  { icon: FaTruck, title: 'फ्रैगमेंटेड सप्लाई चेन', desc: 'इनएफिशिएंट लॉजिस्टिक्स से वेस्टेज & हायर कॉस्ट' },
-  { icon: FaUsers, title: 'लिमिटेड रूरल एम्प्लॉयमेंट', desc: 'वीमेन & यूथ के पास सस्टेनेबल इनकम अपॉर्चुनिटीज़ नहीं' },
+  { icon: FaWineBottle, title: 'दूध पर भरोसे की कमी', desc: 'मिलावट और गुणवत्ता की चिंताएँ उपभोक्ताओं का भरोसा कम करती हैं' },
+  { icon: FaLeaf, title: 'किसानों की कम आय', desc: 'बिखरी हुई आपूर्ति श्रृंखला के कारण किसान कम कमाते हैं' },
+  { icon: FaCoins, title: 'ग्रामीण पूंजी की कमी', desc: 'गाँवों में संगठित निवेश और वित्तीय सहायता की कमी' },
+  { icon: FaTruck, title: 'बिखरी हुई आपूर्ति श्रृंखला', desc: 'अकुशल लॉजिस्टिक्स से बर्बादी और अधिक लागत' },
+  { icon: FaUsers, title: 'सीमित ग्रामीण रोज़गार', desc: 'महिलाओं और युवाओं के पास स्थायी आय के अवसर नहीं' },
 ];
 
 const solutionSegments = [
-  { icon: FaWineBottle, label: 'डेयरी', desc: 'प्योर मिल्क & हेल्दी प्रोडक्ट्स', color: '#1565C0' },
-  { icon: FaSeedling, label: 'एग्रीकल्चर', desc: 'सस्टेनेबल फार्मिंग', color: '#2E7D32' },
-  { icon: FaTruck, label: 'डिलिवरी', desc: 'डायरेक्ट टू होम्स', color: '#EF6C00' },
-  { icon: FaVenus, label: 'वीमेन एम्पावरमेंट', desc: '', color: '#6A1B9A' },
-  { icon: FaMobileAlt, label: 'टेक्नोलॉजी', desc: 'डिजिटल प्लेटफॉर्म & ट्रांसपेरेंसी', color: '#00897B' },
+  { icon: FaWineBottle, label: 'डेयरी', desc: 'शुद्ध दूध व स्वास्थ्यवर्धक उत्पाद', color: '#1565C0' },
+  { icon: FaSeedling, label: 'कृषि', desc: 'टिकाऊ खेती', color: '#2E7D32' },
+  { icon: FaTruck, label: 'डिलीवरी', desc: 'सीधे घर तक', color: '#EF6C00' },
+  { icon: FaVenus, label: 'नारी सशक्तिकरण', desc: '', color: '#6A1B9A' },
+  { icon: FaMobileAlt, label: 'तकनीक', desc: 'डिजिटल प्लेटफॉर्म व पारदर्शिता', color: '#00897B' },
 ];
 
 const whyNow = [
-  'राइज़िंग डिमांड फॉर हेल्दी & ट्रस्टेड फूड',
-  'रैपिड डिजिटल अडॉप्शन इन भारत',
-  'डेयरी कंज़म्पशन ग्रोइंग ईयर आफ्टर ईयर',
-  'गवर्नमेंट फोकस ऑन रूरल इनकम & एग्री ग्रोथ',
-  'शिफ्ट टुवर्ड्स डायरेक्ट-टू-कंज़्यूमर & फार्म-टू-होम मॉडल्स',
+  'स्वास्थ्यवर्धक व भरोसेमंद भोजन की बढ़ती माँग',
+  'भारत में तेज़ डिजिटल अपनाव',
+  'डेयरी की खपत साल-दर-साल बढ़ रही है',
+  'ग्रामीण आय व कृषि विकास पर सरकार का ध्यान',
+  'सीधे उपभोक्ता तक व खेत-से-घर मॉडल की ओर बदलाव',
 ];
 
 const markets = [
-  { icon: FaCow, title: 'डेयरी मार्केट', desc: 'स्ट्रॉन्ग ग्रोथ & हाई डिमांड', tone: 'text-[#1565C0]' },
-  { icon: FaSeedling, title: 'एग्रीकल्चर वैल्यू चेन', desc: 'लार्ज & एक्सपैंडिंग', tone: 'text-primary-green' },
-  { icon: FaShoppingCart, title: 'ग्रोसरी & डिलिवरी', desc: 'बूमिंग सेगमेंट', tone: 'text-[#EF6C00]' },
-  { icon: FaHeart, title: 'केयर इकोनॉमी', desc: 'इमर्जिंग अपॉर्चुनिटी', tone: 'text-[#6A1B9A]' },
+  { icon: FaCow, title: 'डेयरी बाज़ार', desc: 'मज़बूत विकास व ऊँची माँग', tone: 'text-[#1565C0]' },
+  { icon: FaSeedling, title: 'कृषि मूल्य श्रृंखला', desc: 'विशाल व विस्तृत होता हुआ', tone: 'text-primary-green' },
+  { icon: FaShoppingCart, title: 'किराना व डिलीवरी', desc: 'तेज़ी से बढ़ता क्षेत्र', tone: 'text-[#EF6C00]' },
+  { icon: FaHeart, title: 'केयर इकोनॉमी', desc: 'उभरता हुआ अवसर', tone: 'text-[#6A1B9A]' },
 ];
 
 const revenueStreams = [
-  { icon: FaWineBottle, label: 'मिल्क सब्सक्रिप्शन्स' },
-  { icon: FaLeaf, label: 'डेयरी प्रोडक्ट्स (घी, पनीर, कर्ड)' },
-  { icon: FaSeedling, label: 'फार्म प्रोड्यूस सेल्स' },
-  { icon: FaShoppingCart, label: 'ग्रोसरी मार्जिन्स' },
-  { icon: FaHandshake, label: 'सर्विस कमीशन्स' },
-  { icon: FaStore, label: 'फ्रैंचाइज़ फीस' },
-  { icon: FaUsers, label: 'मेंबरशिप प्लान्स' },
-  { icon: FaMobileAlt, label: 'टेक्नोलॉजी प्लेटफॉर्म इनकम' },
+  { icon: FaWineBottle, label: 'दूध सदस्यता' },
+  { icon: FaLeaf, label: 'डेयरी उत्पाद (घी, पनीर, दही)' },
+  { icon: FaSeedling, label: 'खेत की उपज की बिक्री' },
+  { icon: FaShoppingCart, label: 'किराना मार्जिन' },
+  { icon: FaHandshake, label: 'सेवा कमीशन' },
+  { icon: FaStore, label: 'फ्रेंचाइज़ी शुल्क' },
+  { icon: FaUsers, label: 'सदस्यता योजनाएँ' },
+  { icon: FaMobileAlt, label: 'तकनीकी प्लेटफॉर्म से आय' },
 ];
 
 const advantages = [
-  'रियल एसेट-बैक्ड ऑपरेशन्स',
-  'डेली रिकरिंग डिमांड',
-  'ट्रस्टेड भारत ब्रांड',
-  'स्ट्रॉन्ग रूरल सोर्सिंग एडवांटेज',
-  'मल्टिपल इनकम स्ट्रीम्स',
-  'स्केलेबल ऐप + ऑफलाइन नेटवर्क',
-  'हाई सोशल इम्पैक्ट & ESG वैल्यू',
+  'वास्तविक संपत्ति-आधारित संचालन',
+  'रोज़ाना दोहराई जाने वाली माँग',
+  'भरोसेमंद भारतीय ब्रांड',
+  'मज़बूत ग्रामीण सोर्सिंग लाभ',
+  'अनेक आय स्रोत',
+  'विस्तार योग्य ऐप + ऑफलाइन नेटवर्क',
+  'उच्च सामाजिक प्रभाव व ESG मूल्य',
 ];
 
 const roadmap = [
-  { phase: 'फेज़ 1 (0–12 मंथ्स)', points: ['वेस्ट बंगाल & दिल्ली पायलट ऑपरेशन्स', 'प्लेटफॉर्म डेवलपमेंट & मार्केट वैलिडेशन'], shade: 'bg-light-green/30' },
-  { phase: 'फेज़ 2 (ईयर 2)', points: ['5 स्टेट एक्सपेंशन', 'फ्रैंचाइज़ नेटवर्क लॉन्च'], shade: 'bg-light-green/50' },
-  { phase: 'फेज़ 3 (ईयर 3–5)', points: ['पैन इंडिया स्केलिंग', 'इंटीग्रेटेड ऐप इकोसिस्टम'], shade: 'bg-primary-green/20' },
-  { phase: 'फेज़ 4 (फ्यूचर)', points: ['एक्सपर्ट अपॉर्चुनिटीज़', 'IPO रेडीनेस'], shade: 'bg-primary-green/35' },
+  { phase: 'चरण 1 (0–12 महीने)', points: ['पश्चिम बंगाल व दिल्ली में पायलट संचालन', 'प्लेटफॉर्म विकास व बाज़ार सत्यापन'], shade: 'bg-light-green/30' },
+  { phase: 'चरण 2 (वर्ष 2)', points: ['5 राज्यों में विस्तार', 'फ्रेंचाइज़ी नेटवर्क की शुरुआत'], shade: 'bg-light-green/50' },
+  { phase: 'चरण 3 (वर्ष 3–5)', points: ['पूरे भारत में विस्तार', 'एकीकृत ऐप इकोसिस्टम'], shade: 'bg-primary-green/20' },
+  { phase: 'चरण 4 (भविष्य)', points: ['विशेषज्ञ अवसर', 'IPO के लिए तैयारी'], shade: 'bg-primary-green/35' },
 ];
 
 const financials = [
@@ -186,38 +186,38 @@ const financials = [
 ];
 
 const useOfFunds = [
-  { name: 'ऑपरेशन्स & इन्फ्रास्ट्रक्चर', value: 40, color: '#1B5E20' },
-  { name: 'टेक्नोलॉजी & प्लेटफॉर्म', value: 25, color: '#2E7D32' },
-  { name: 'मार्केटिंग & एक्सपेंशन', value: 20, color: '#43A047' },
-  { name: 'वर्किंग कैपिटल', value: 10, color: '#66BB6A' },
-  { name: 'कंप्लायंस, टीम & ESG', value: 5, color: '#F9A825' },
+  { name: 'संचालन व बुनियादी ढाँचा', value: 40, color: '#1B5E20' },
+  { name: 'तकनीक व प्लेटफॉर्म', value: 25, color: '#2E7D32' },
+  { name: 'मार्केटिंग व विस्तार', value: 20, color: '#43A047' },
+  { name: 'कार्यशील पूंजी', value: 10, color: '#66BB6A' },
+  { name: 'अनुपालन, टीम व ESG', value: 5, color: '#F9A825' },
 ];
 
 const leaders = [
-  { name: 'डॉ. मृणाल कांति घोष — डायरेक्टर', exp: '35+ ईयर्स एक्सपीरियंस इन रिसर्च, टेक्नोलॉजी कमर्शियलाइज़ेशन & बिज़नेस मैनेजमेंट' },
-  { name: 'श्री रामरक्षा जायसवाल — डायरेक्टर', exp: '20+ ईयर्स एक्सपीरियंस इन बिज़नेस & ऑपरेशन्स लीडरशिप' },
+  { name: 'डॉ. मृणाल कांति घोष — निदेशक', exp: 'अनुसंधान, तकनीक व्यावसायीकरण व व्यवसाय प्रबंधन में 35+ वर्षों का अनुभव' },
+  { name: 'श्री रामरक्षा जायसवाल — निदेशक', exp: 'व्यवसाय व संचालन नेतृत्व में 20+ वर्षों का अनुभव' },
 ];
 
 const socialImpact = [
-  'वीमेन एम्प्लॉयमेंट & एंटरप्रेन्योरशिप',
-  'बेटर इनकम फॉर फार्मर्स',
-  'रूरल प्रॉस्पेरिटी & जॉब क्रिएशन',
-  'सस्टेनेबल & रिस्पॉन्सिबल ग्रोथ',
+  'महिला रोज़गार व उद्यमिता',
+  'किसानों के लिए बेहतर आय',
+  'ग्रामीण समृद्धि व रोज़गार सृजन',
+  'टिकाऊ व ज़िम्मेदार विकास',
 ];
 
 const contacts = [
-  { icon: FaMapMarkerAlt, text: 'हेड ऑफिस: विलेज & पोस्ट-आओग्राम, पूर्बा बर्धमान, वेस्ट बंगाल – 713121' },
-  { icon: FaMapMarkerAlt, text: 'ब्रांच ऑफिस: छतरपुर पहाड़ी, साउथ दिल्ली – 110074' },
+  { icon: FaMapMarkerAlt, text: 'मुख्य कार्यालय: ग्राम व डाकघर आओग्राम, पूर्बा बर्धमान, पश्चिम बंगाल – 713121' },
+  { icon: FaMapMarkerAlt, text: 'शाखा कार्यालय: छतरपुर पहाड़ी, दक्षिण दिल्ली – 110074' },
   { icon: FaPhoneAlt, text: '+91 7428940883' },
   { icon: FaEnvelope, text: 'support@palanhar.com' },
   { icon: FaGlobe, text: 'www.palanhar.com' },
 ];
 
 const closingValues = [
-  { icon: FaHandshake, label: 'ट्रस्ट — अवर फाउंडेशन' },
-  { icon: FaLeaf, label: 'नेचर — अवर स्ट्रेंथ' },
-  { icon: FaBullseye, label: 'इम्पैक्ट — अवर कमिटमेंट' },
-  { icon: FaUsers, label: 'टुगेदर — अवर जर्नी' },
+  { icon: FaHandshake, label: 'भरोसा — हमारी नींव' },
+  { icon: FaLeaf, label: 'प्रकृति — हमारी शक्ति' },
+  { icon: FaBullseye, label: 'प्रभाव — हमारी प्रतिबद्धता' },
+  { icon: FaUsers, label: 'साथ — हमारी यात्रा' },
 ];
 
 function ChartTooltip({ active, payload, label, suffix = '' }) {
@@ -261,7 +261,7 @@ export default function DeckPage() {
             </motion.p>
             <motion.div variants={fadeUp} className="mt-6">
               <span className="inline-block max-w-xl rounded-2xl bg-primary-green px-5 py-2.5 text-sm font-bold leading-snug text-white shadow-md sm:rounded-full sm:text-base">
-                इंडियाज़ फर्स्ट इंटीग्रेटेड एग्री + डेयरी + इन्वेस्टमेंट इकोसिस्टम
+                भारत का पहला एकीकृत कृषि + डेयरी + निवेश इकोसिस्टम
               </span>
             </motion.div>
             <motion.div variants={fadeUp} className="mt-10 flex items-center gap-4">
@@ -281,12 +281,12 @@ export default function DeckPage() {
 
       {/* SLIDE 2 — ABOUT COMPANY */}
       <Slide>
-        <SlideHead num="01" title="अबाउट कंपनी" />
+        <SlideHead num="01" title="कंपनी के बारे में" />
         <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid gap-5 lg:grid-cols-3">
           {[
-            'पालनहार डेयरी एंड एग्रीकल्चरल फार्म Pvt. Ltd. इज़ अ प्रोफेशनली मैनेज्ड एंटरप्राइज़ दैट इंटीग्रेट्स एग्रीकल्चर, डेयरी फार्मिंग, एंड डिजिटल इन्वेस्टमेंट मैनेजमेंट इनटू अ यूनिफाइड, ट्रांसपेरेंट प्लेटफॉर्म।',
-            'द कंपनी इज़ बिल्ट ऑन रियल, रेवेन्यू-जेनरेटिंग फार्म ऑपरेशन्स एंड ऑफर्स एग्रीकल्चर-बैक्ड इन्वेस्टमेंट अपॉर्चुनिटीज़ विद स्ट्रक्चर्ड इनकम मॉडल्स लिंक्ड डायरेक्टली टू टैंजिबल प्रोडक्शन आउटपुट्स।',
-            'थ्रू अ टेक्नोलॉजी-इनेबल्ड सिस्टम, पालनहार प्रोवाइड्स इन्वेस्टर्स विद रियल-टाइम ट्रैकिंग, सिक्योर KYC ऑनबोर्डिंग, एंड डिटेल्ड परफॉरमेंस रिपोर्ट्स। विद अ स्ट्रॉन्ग फोकस ऑन एथिकल फार्मिंग, कंप्लायंस, एंड फाइनेंशियल ट्रांसपेरेंसी, द कंपनी एम्स टू बिल्ड ट्रस्ट व्हाइल क्रिएटिंग अ स्केलेबल इकोसिस्टम दैट सपोर्ट्स रूरल प्रोडक्टिविटी एंड डिलिवर्स सस्टेनेबल इन्वेस्टर वैल्यू।',
+            'पालनहार डेयरी एंड एग्रीकल्चरल फार्म Pvt. Ltd. एक पेशेवर रूप से संचालित उद्यम है जो कृषि, डेयरी फार्मिंग और डिजिटल निवेश प्रबंधन को एक एकीकृत, पारदर्शी प्लेटफॉर्म में जोड़ता है।',
+            'कंपनी वास्तविक, आय अर्जित करने वाले फार्म संचालन पर आधारित है और कृषि-समर्थित निवेश के अवसर प्रदान करती है, जिनमें संरचित आय मॉडल सीधे ठोस उत्पादन परिणामों से जुड़े होते हैं।',
+            'तकनीक-सक्षम प्रणाली के माध्यम से पालनहार निवेशकों को रियल-टाइम ट्रैकिंग, सुरक्षित KYC ऑनबोर्डिंग और विस्तृत प्रदर्शन रिपोर्ट प्रदान करता है। नैतिक खेती, अनुपालन और वित्तीय पारदर्शिता पर मज़बूत ध्यान के साथ, कंपनी भरोसा बनाने का लक्ष्य रखती है और साथ ही एक ऐसा विस्तार योग्य इकोसिस्टम बनाती है जो ग्रामीण उत्पादकता को सहारा देता है और निवेशकों को टिकाऊ मूल्य प्रदान करता है।',
           ].map((para, i) => (
             <motion.p key={i} variants={fadeUp} className="rounded-2xl border border-primary-green/10 bg-[#E8F5E9]/50 p-6 text-justify text-sm leading-relaxed text-gray-700">
               {para}
@@ -300,7 +300,7 @@ export default function DeckPage() {
 
       {/* SLIDE 3 — THE PROBLEM */}
       <Slide mint>
-        <SlideHead num="02" title="द प्रॉब्लम" subtitle="इंडियाज़ रूरल & डेयरी इकोसिस्टम फेसेस क्रिटिकल गैप्स" />
+        <SlideHead num="02" title="समस्या" subtitle="भारत के ग्रामीण व डेयरी इकोसिस्टम में गंभीर कमियाँ हैं" />
         <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {problems.map((p) => (
             <IconCard key={p.title} icon={p.icon} title={p.title} desc={p.desc} />
@@ -310,14 +310,14 @@ export default function DeckPage() {
 
       {/* SLIDE 4 — OUR SOLUTION */}
       <Slide>
-        <SlideHead num="03" title="अवर सोल्यूशन" subtitle="पालनहार इकोसिस्टम — एन इंटीग्रेटेड & स्केलेबल मॉडल" />
+        <SlideHead num="03" title="हमारा समाधान" subtitle="पालनहार इकोसिस्टम — एक एकीकृत व विस्तार योग्य मॉडल" />
         <div className="grid items-center gap-8 lg:grid-cols-[auto_1fr]">
           {/* Hub */}
           <div className="mx-auto flex h-48 w-48 flex-col items-center justify-center rounded-full bg-gradient-to-br from-primary-green to-dark-green text-center text-white shadow-xl sm:h-56 sm:w-56">
             <FaLeaf className="mb-2 text-3xl text-golden" aria-hidden="true" />
             <p className="font-display text-2xl font-bold">पालनहार</p>
             <p className="mt-1 px-4 text-[11px] font-semibold tracking-wide text-white/80">
-              ट्रस्टेड · नेचुरल · इम्पैक्टफुल
+              भरोसेमंद · प्राकृतिक · प्रभावशाली
             </p>
           </div>
           {/* Segments */}
@@ -339,7 +339,7 @@ export default function DeckPage() {
 
       {/* SLIDE 5 — WHY NOW */}
       <Slide mint>
-        <SlideHead num="04" title="व्हाई नाउ?" subtitle="मेगा ट्रेंड्स क्रिएटिंग अ बिग अपॉर्चुनिटी" />
+        <SlideHead num="04" title="अभी क्यों?" subtitle="बड़े रुझान एक विशाल अवसर पैदा कर रहे हैं" />
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <motion.ul variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="space-y-4">
             {whyNow.map((w) => (
@@ -355,7 +355,7 @@ export default function DeckPage() {
                   <span className="font-display text-sm font-bold text-white">पालनहार</span>
                 </div>
                 <div className="grid grid-cols-2 gap-2 p-3">
-                  {['मिल्क', 'ऑर्डर्स', 'ट्रैकिंग', 'रिपोर्ट्स'].map((t) => (
+                  {['दूध', 'ऑर्डर', 'ट्रैकिंग', 'रिपोर्ट'].map((t) => (
                     <div key={t} className="rounded-lg bg-[#E8F5E9] px-2 py-3 text-center text-xs font-semibold text-dark-green">
                       {t}
                     </div>
@@ -363,7 +363,7 @@ export default function DeckPage() {
                 </div>
                 <div className="px-3 pb-3">
                   <div className="rounded-lg bg-golden/15 px-2 py-1.5 text-center text-[11px] font-bold text-amber-700">
-                    पालनहार फ्रेश & नेचुरल
+                    पालनहार ताज़ा व प्राकृतिक
                   </div>
                 </div>
               </div>
@@ -379,14 +379,14 @@ export default function DeckPage() {
 
       {/* SLIDE 6 — MARKET OPPORTUNITY */}
       <Slide>
-        <SlideHead num="05" title="मार्केट अपॉर्चुनिटी" subtitle="मैसिव मल्टी-सेक्टर पोटेंशियल" />
+        <SlideHead num="05" title="बाज़ार का अवसर" subtitle="विशाल बहु-क्षेत्रीय संभावना" />
         <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {markets.map((m) => (
             <IconCard key={m.title} icon={m.icon} title={m.title} desc={m.desc} tone={m.tone} />
           ))}
         </motion.div>
         <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-8 rounded-2xl bg-gradient-to-r from-primary-green to-dark-green px-6 py-5 text-center text-lg font-bold text-white shadow-lg sm:text-xl">
-          कम्बाइंड पोटेंशियल — ₹10+ लाख करोड़ — लॉन्ग-टर्म अपॉर्चुनिटी
+          संयुक्त संभावना — ₹10+ लाख करोड़ — दीर्घकालिक अवसर
         </motion.div>
       </Slide>
 
@@ -396,7 +396,7 @@ export default function DeckPage() {
           <SlideHead num="06" title="बिज़नेस मॉडल" />
         </div>
         <span className="mb-8 -mt-6 inline-block rounded-full bg-golden/20 px-4 py-1.5 text-sm font-bold uppercase tracking-wide text-amber-700">
-          मल्टी रेवेन्यू इंजन
+          अनेक आय स्रोत
         </span>
         <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {revenueStreams.map((r) => (
@@ -412,7 +412,7 @@ export default function DeckPage() {
 
       {/* SLIDE 8 — WHY PALANHAR WINS */}
       <Slide>
-        <SlideHead num="07" title="व्हाई पालनहार विन्स" />
+        <SlideHead num="07" title="पालनहार क्यों आगे है" />
         <div className="grid items-center gap-10 lg:grid-cols-2">
           <motion.ul variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="space-y-4">
             {advantages.map((a) => (
@@ -426,18 +426,18 @@ export default function DeckPage() {
               <span className="text-6xl" aria-hidden="true">🧈</span>
             </div>
             <p className="mt-2 text-center text-xs font-semibold uppercase tracking-wide text-gray-500">
-              पालनहार ग्लास मिल्क बॉटल्स · पनीर · गोल्डन घी
+              पालनहार काँच की दूध की बोतलें · पनीर · सुनहरा घी
             </p>
           </motion.div>
         </div>
         <motion.blockquote variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="mt-10 rounded-2xl bg-dark-green px-6 py-6 text-center text-lg font-bold text-white shadow-lg sm:text-xl">
-          &ldquo;वी आर नॉट बिल्डिंग अ कंपनी, वी आर बिल्डिंग रूरल इंडियाज़ इकोनॉमिक इंजन।&rdquo;
+          &ldquo;हम सिर्फ़ एक कंपनी नहीं बना रहे, हम ग्रामीण भारत का आर्थिक इंजन बना रहे हैं।&rdquo;
         </motion.blockquote>
       </Slide>
 
       {/* SLIDE 9 — GROWTH ROADMAP */}
       <Slide mint>
-        <SlideHead num="08" title="ग्रोथ रोडमैप" />
+        <SlideHead num="08" title="विकास का रोडमैप" />
         <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {roadmap.map((r, i) => (
             <motion.div key={r.phase} variants={fadeUp} className={`relative rounded-2xl border border-primary-green/10 p-5 shadow-sm ${r.shade}`}>
@@ -460,14 +460,14 @@ export default function DeckPage() {
 
       {/* SLIDE 10 — FINANCIAL PROJECTIONS */}
       <Slide>
-        <SlideHead num="09" title="फाइनेंशियल प्रोजेक्शन्स" />
+        <SlideHead num="09" title="वित्तीय अनुमान" />
         <div className="grid items-center gap-8 lg:grid-cols-2">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="overflow-x-auto">
             <table className="w-full min-w-[420px] overflow-hidden rounded-xl text-left text-sm shadow-sm">
               <thead>
                 <tr className="bg-primary-green text-white">
-                  <th className="px-4 py-3 font-semibold">ईयर</th>
-                  <th className="px-4 py-3 font-semibold">रेवेन्यू (₹ Cr)</th>
+                  <th className="px-4 py-3 font-semibold">वर्ष</th>
+                  <th className="px-4 py-3 font-semibold">राजस्व (₹ Cr)</th>
                   <th className="px-4 py-3 font-semibold">EBITDA (₹ Cr)</th>
                   <th className="px-4 py-3 font-semibold">EBITDA मार्जिन</th>
                 </tr>
@@ -486,7 +486,7 @@ export default function DeckPage() {
           </motion.div>
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <p className="mb-3 flex items-center gap-2 text-sm font-bold text-dark-green">
-              <FaChartLine className="text-primary-green" aria-hidden="true" /> रेवेन्यू ग्रोथ (₹ करोड़)
+              <FaChartLine className="text-primary-green" aria-hidden="true" /> राजस्व वृद्धि (₹ करोड़)
             </p>
             <ResponsiveContainer width="100%" height={240}>
               <BarChart data={financials} margin={{ top: 10, right: 10, left: -10, bottom: 0 }}>
@@ -507,15 +507,15 @@ export default function DeckPage() {
 
       {/* SLIDE 11 — FUND RAISE ASK */}
       <Slide mint>
-        <SlideHead num="10" title="फंड रेज़ आस्क" subtitle="सीकिंग स्ट्रैटेजिक इन्वेस्टमेंट टू एक्सेलरेट ग्रोथ" />
+        <SlideHead num="10" title="फंड की माँग" subtitle="विकास को गति देने के लिए रणनीतिक निवेश की तलाश" />
         <div className="grid items-center gap-8 lg:grid-cols-2">
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="rounded-2xl bg-gradient-to-br from-primary-green to-dark-green p-8 text-center text-white shadow-xl">
-            <p className="text-sm font-semibold uppercase tracking-widest text-golden">करंट राउंड</p>
+            <p className="text-sm font-semibold uppercase tracking-widest text-golden">वर्तमान राउंड</p>
             <p className="mt-2 font-display text-5xl font-extrabold">₹5 करोड़</p>
             <p className="mt-3 text-white/85">सीड / ग्रोथ राउंड</p>
           </motion.div>
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            <p className="mb-3 text-center text-sm font-bold uppercase tracking-wide text-dark-green">यूज़ ऑफ फंड्स</p>
+            <p className="mb-3 text-center text-sm font-bold uppercase tracking-wide text-dark-green">फंड का उपयोग</p>
             <div className="flex flex-col items-center gap-4 sm:flex-row">
               <ResponsiveContainer width="100%" height={200} className="max-w-[200px]">
                 <PieChart>
@@ -542,7 +542,7 @@ export default function DeckPage() {
 
       {/* SLIDE 12 — LEADERSHIP */}
       <Slide>
-        <SlideHead num="11" title="लीडरशिप" />
+        <SlideHead num="11" title="नेतृत्व" />
         <div className="grid gap-8 lg:grid-cols-2">
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="space-y-5">
             {leaders.map((l) => (
@@ -558,7 +558,7 @@ export default function DeckPage() {
             ))}
           </motion.div>
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="rounded-2xl bg-[#E8F5E9] p-6 sm:p-8">
-            <h3 className="!text-dark-green mb-4 text-xl">सोशल इम्पैक्ट वी क्रिएट</h3>
+            <h3 className="!text-dark-green mb-4 text-xl">हम जो सामाजिक प्रभाव पैदा करते हैं</h3>
             <ul className="space-y-3">
               {socialImpact.map((s) => (
                 <li key={s} className="flex items-start gap-3">
@@ -573,7 +573,7 @@ export default function DeckPage() {
 
       {/* SLIDE 13 — CONTACT DETAILS */}
       <Slide mint>
-        <SlideHead num="12" title="कॉन्टैक्ट डिटेल्स" />
+        <SlideHead num="12" title="संपर्क विवरण" />
         <div className="grid items-center gap-8 lg:grid-cols-2">
           <motion.ul variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }} className="space-y-4">
             {contacts.map((c) => (
@@ -600,7 +600,7 @@ export default function DeckPage() {
         <div className="container-custom relative z-10 grid items-center gap-10 py-16 lg:grid-cols-[1.4fr_1fr]">
           <motion.div variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <motion.h2 variants={fadeUp} className="!text-dark-green text-3xl uppercase leading-tight sm:text-4xl md:text-5xl">
-              टुगेदर, लेट्स बिल्ड अ स्ट्रॉन्गर, ग्रीनर एंड प्रॉस्परस भारत
+              आइए, मिलकर एक मज़बूत, हरित और समृद्ध भारत बनाएँ
             </motion.h2>
             <motion.div variants={stagger} className="mt-8 grid grid-cols-2 gap-4">
               {closingValues.map((v) => (
@@ -622,7 +622,7 @@ export default function DeckPage() {
               हर घर पालनहार · हर गाँव समृद्ध भारत
             </p>
             <span className="mt-5 inline-block rounded-full bg-primary-green px-6 py-2.5 text-base font-bold text-white shadow-md">
-              प्रॉफिट विद पर्पस
+              उद्देश्य के साथ मुनाफ़ा
             </span>
             <div className="mt-6">
               <Link to="/invest" className="btn btn-golden inline-flex items-center gap-2">

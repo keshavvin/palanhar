@@ -110,7 +110,7 @@ function FallbackMark() {
   );
 }
 
-export default function BrandLoader({ size = 120, label = 'लोडिंग…', showWordmark = false }) {
+export default function BrandLoader({ size = 120, label = 'लोड हो रहा है…', showWordmark = false }) {
   const [imageFailed, setImageFailed] = useState(false);
 
   return (

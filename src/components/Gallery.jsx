@@ -8,43 +8,43 @@ const galleryImages = [
     id: 1,
     category: 'seva',
     src: '/gallery-seva.jpg',
-    title: 'कम्युनिटी गौ सेवा — फीडिंग टाइम',
-    desc: 'फैमिलीज़ एंड वॉलंटियर्स ऑफरिंग फ्रेश ग्रीन फॉडर टू अवर गिर काउज़ — सेवा दैट ब्रिंग्स द होल कम्युनिटी टुगेदर.',
+    title: 'सामुदायिक गौ सेवा — चारा खिलाने का समय',
+    desc: 'परिवार और स्वयंसेवक हमारी गिर गायों को ताज़ा हरा चारा खिलाते हुए — ऐसी सेवा जो पूरे समुदाय को एक साथ लाती है.',
   },
   {
     id: 2,
     category: 'care',
     src: '/gallery-care.jpg',
-    title: 'डेली केयर & ग्रूमिंग',
-    desc: 'एवरी काउ इज़ बेथ्ड, ब्रश्ड एंड केयर्ड फॉर डेली — क्लीनलीनेस एंड कम्फर्ट आर द फर्स्ट ड्यूटीज़ ऑफ अवर गौशाला.',
+    title: 'दैनिक देखभाल और साज-संभाल',
+    desc: 'हर गाय को रोज़ नहलाया, ब्रश किया और देखभाल की जाती है — स्वच्छता और आराम हमारी गौशाला के पहले कर्तव्य हैं.',
   },
   {
     id: 3,
     category: 'herd',
     src: '/gallery-herd.jpg',
-    title: 'ईवनिंग रिटर्न टू द गौशाला',
-    desc: 'अवर हर्ड वॉकिंग होम एट सनसेट विद देयर केयरटेकर्स — द टाइमलेस रिदम ऑफ फार्म लाइफ ऑन NH-48.',
+    title: 'शाम को गौशाला की वापसी',
+    desc: 'सूर्यास्त के समय अपने देखभालकर्ताओं के साथ घर लौटता हमारा झुंड — NH-48 पर फार्म जीवन की शाश्वत लय.',
   },
   {
     id: 4,
     category: 'seva',
     src: '/hero-banner-1.jpg',
-    title: 'गौ पूजा विद द फैमिली',
-    desc: 'गार्लैंडेड काउज़, स्माइलिंग फेसेज़ — जेनरेशन्स ऑनरिंग गौ माता टुगेदर.',
+    title: 'परिवार के साथ गौ पूजा',
+    desc: 'मालाओं से सजी गायें, मुस्कुराते चेहरे — पीढ़ियाँ मिलकर गौ माता का सम्मान करती हुईं.',
   },
   {
     id: 5,
     category: 'seva',
     src: '/hero-banner-2.jpg',
-    title: 'जेनरेशन्स टुगेदर इन सेवा',
-    desc: 'पेरेंट्स एंड चिल्ड्रन केयरिंग फॉर काउज़ एंड काव्स साइड बाय साइड — वैल्यूज़ पास्ड ऑन बाय डूइंग.',
+    title: 'सेवा में साथ पीढ़ियाँ',
+    desc: 'माता-पिता और बच्चे साथ-साथ गायों और बछड़ों की देखभाल करते हुए — संस्कार जो करके सिखाए जाते हैं.',
   },
   {
     id: 6,
     category: 'care',
     src: '/hero-banner-3.jpg',
-    title: 'लव फॉर गौ माता',
-    desc: 'अ जेंटल एम्ब्रेस एट गोल्डन आवर — द बॉन्ड एट द हार्ट ऑफ एवरीथिंग पालनहार डज़.',
+    title: 'गौ माता के लिए प्रेम',
+    desc: 'सुनहरी शाम में एक स्नेहपूर्ण आलिंगन — वह बंधन जो पालनहार के हर काम के मूल में है.',
   },
   {
     id: 7,
@@ -84,10 +84,10 @@ const galleryImages = [
 ];
 
 const categories = [
-  { id: 'all', label: 'ऑल मोमेंट्स' },
+  { id: 'all', label: 'सभी पल' },
   { id: 'seva', label: 'गौ सेवा' },
-  { id: 'care', label: 'केयर & लव' },
-  { id: 'herd', label: 'हर्ड & फार्म' },
+  { id: 'care', label: 'देखभाल और प्रेम' },
+  { id: 'herd', label: 'झुंड और फार्म' },
   { id: 'naari', label: 'नारी शक्ति' },
 ];
 
@@ -130,7 +130,7 @@ export default function Gallery() {
           <span className="section-eyebrow">गौ सेवा के पल</span>
           <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">गैलरी</h2>
           <p className="text-xl text-gray-600">
-            मोमेंट्स ऑफ सेवा, केयर एंड टुगेदरनेस फ्रॉम पालनहार फार्म्स
+            पालनहार फार्म्स से सेवा, देखभाल और एकजुटता के पल
           </p>
         </motion.div>
 
@@ -178,7 +178,7 @@ export default function Gallery() {
                 exit={{ opacity: 0, scale: 0.92 }}
                 transition={{ duration: 0.3 }}
                 onClick={() => setSelectedImage(image)}
-                aria-label={`व्यू ${image.title}`}
+                aria-label={`${image.title} देखें`}
                 className={`card group relative cursor-pointer overflow-hidden bg-white text-left ${
                   i === 0 ? 'sm:col-span-2 sm:row-span-2' : ''
                 }`}
@@ -233,7 +233,7 @@ export default function Gallery() {
                 <button
                   type="button"
                   onClick={() => setSelectedImage(null)}
-                  aria-label="क्लोज़ इमेज"
+                  aria-label="छवि बंद करें"
                   className="absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-black/50 text-white transition-colors hover:bg-black/70"
                 >
                   <FaTimes aria-hidden="true" />
@@ -265,12 +265,12 @@ export default function Gallery() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h3 className="text-3xl font-bold text-dark-green mb-4">विज़िट अवर गौशाला</h3>
+          <h3 className="text-3xl font-bold text-dark-green mb-4">हमारी गौशाला देखने आएँ</h3>
           <p className="text-gray-600 mb-6 text-lg">
-            एक्सपीरियंस गौ सेवा फर्स्ट-हैंड — स्पेंड अ मॉर्निंग विद अवर काउज़ एंड देयर केयरटेकर्स
+            गौ सेवा को प्रत्यक्ष अनुभव करें — हमारी गायों और उनके देखभालकर्ताओं के साथ एक सुबह बिताएँ
           </p>
           <Link to="/contact" className="btn btn-primary inline-block">
-            शेड्यूल अ फार्म विज़िट
+            फार्म भ्रमण निर्धारित करें
           </Link>
         </motion.div>
       </div>

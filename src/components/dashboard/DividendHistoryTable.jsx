@@ -8,8 +8,8 @@ const STATUS_STYLES = {
 
 // Devanagari display labels keyed off the (Latin) status enum.
 const STATUS_LABELS = {
-  Paid: 'पेड',
-  Declared: 'डिक्लेयर्ड',
+  Paid: 'भुगतान किया',
+  Declared: 'घोषित',
 };
 
 export default function DividendHistoryTable() {
@@ -20,33 +20,33 @@ export default function DividendHistoryTable() {
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
       className="bg-white rounded-xl shadow-md border border-gray-100 p-5 sm:p-6"
-      aria-label="डिविडेंड हिस्ट्री"
+      aria-label="लाभांश इतिहास"
     >
-      <h2 className="text-xl md:text-2xl">डिविडेंड हिस्ट्री</h2>
+      <h2 className="text-xl md:text-2xl">लाभांश इतिहास</h2>
       <p className="text-sm text-gray-500 mt-1 mb-4">
-        योर डिविडेंड = (योर शेयरहोल्डिंग ÷ टोटल पूल) × बोर्ड-अप्रूव्ड डिविडेंड पूल
+        आपका लाभांश = (आपकी शेयरधारिता ÷ कुल पूल) × बोर्ड द्वारा स्वीकृत लाभांश पूल
       </p>
       <div className="overflow-x-auto">
         <table className="w-full min-w-[640px] text-left text-sm">
           <thead>
             <tr className="border-b-2 border-primary-green/20 text-xs uppercase tracking-wider text-gray-500">
               <th scope="col" className="py-3 pr-4 font-semibold">
-                फाइनेंशियल ईयर
+                वित्तीय वर्ष
               </th>
               <th scope="col" className="py-3 pr-4 font-semibold">
-                नेट प्रॉफिट
+                शुद्ध लाभ
               </th>
               <th scope="col" className="py-3 pr-4 font-semibold">
-                रेट
+                दर
               </th>
               <th scope="col" className="py-3 pr-4 font-semibold">
-                योर डिविडेंड
+                आपका लाभांश
               </th>
               <th scope="col" className="py-3 pr-4 font-semibold">
-                स्टेटस
+                स्थिति
               </th>
               <th scope="col" className="py-3 font-semibold">
-                पेड ऑन
+                भुगतान तिथि
               </th>
             </tr>
           </thead>

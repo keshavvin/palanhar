@@ -8,7 +8,7 @@ const products = [
   { name: 'जैविक खाद', icon: '🌱', tint: 'from-green-50 to-white' },
   { name: 'बायोपेस्टिसाइड', icon: '🧴', tint: 'from-lime-50 to-white' },
   { name: 'बायोपेंट', icon: '🪣', tint: 'from-sky-50 to-white' },
-  { name: 'CBG', sub: '(कंप्रेस्ड बायोगैस)', icon: '🛢️', tint: 'from-emerald-50 to-white' },
+  { name: 'CBG', sub: '(संपीड़ित जैव गैस)', icon: '🛢️', tint: 'from-emerald-50 to-white' },
 ];
 
 const containerVariants = {

@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 
 const stats = [
-  { value: '₹4.25 Cr', label: 'Funds Raised' },
-  { value: '1,248', label: 'Registered Investors' },
-  { value: '15%', label: 'FY 2025-26 Dividend' },
+  { value: '₹4.25 करोड़', label: 'जुटाई गई राशि' },
+  { value: '1,248', label: 'पंजीकृत निवेशक' },
+  { value: '15%', label: 'FY 2025-26 लाभांश' },
 ];
 
 export default function InvestTeaser() {
@@ -36,12 +36,12 @@ export default function InvestTeaser() {
           transition={{ duration: 0.6 }}
           className="mx-auto max-w-3xl text-center text-white"
         >
-          <span className="section-eyebrow">Gau Seva Investment</span>
-          <h2 className="mb-4 !text-white">Invest in Gau Seva. Create Positive Change.</h2>
+          <span className="section-eyebrow">गौ सेवा निवेश</span>
+          <h2 className="mb-4 !text-white">गौ सेवा में निवेश करें। सकारात्मक बदलाव लाएँ।</h2>
           <p className="mb-8 text-lg text-white/85 md:text-xl">
-            Every contribution supports animal welfare, rural development and
-            environmental sustainability — with numbered share certificates,
-            board-declared dividends and a fully transparent dashboard.
+            आपका हर योगदान पशु कल्याण, ग्रामीण विकास और पर्यावरणीय
+            स्थिरता को सहारा देता है — क्रमांकित शेयर प्रमाणपत्र,
+            बोर्ड द्वारा घोषित लाभांश और पूरी तरह पारदर्शी डैशबोर्ड के साथ।
           </p>
 
           <div className="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-3">
@@ -61,24 +61,24 @@ export default function InvestTeaser() {
           </div>
 
           <p className="mb-8 flex flex-wrap items-center justify-center gap-2 text-sm font-semibold text-white/90">
-            <span>Invest in Seva</span>
+            <span>सेवा में निवेश करें</span>
             <FaArrowRight aria-hidden="true" className="text-golden" />
-            <span>Cows Are Cared For</span>
+            <span>गायों की देखभाल होती है</span>
             <FaArrowRight aria-hidden="true" className="text-golden" />
-            <span>Earn Dividends</span>
+            <span>लाभांश कमाएँ</span>
             <FaArrowRight aria-hidden="true" className="text-golden" />
-            <span>Reinvest or Withdraw</span>
+            <span>पुनर्निवेश करें या निकासी करें</span>
           </p>
 
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <Link to="/invest" className="btn btn-golden">
-              View Investment Plans
+              निवेश योजनाएँ देखें
             </Link>
             <Link
               to="/investor/dashboard"
               className="btn border-2 border-white bg-transparent text-white hover:bg-white hover:text-primary-green"
             >
-              Investor Login
+              निवेशक लॉगिन
             </Link>
           </div>
         </motion.div>

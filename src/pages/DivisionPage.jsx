@@ -116,7 +116,7 @@ export default function DivisionPage() {
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <Link to="/contact" className="btn btn-golden">संपर्क करें</Link>
             <Link to="/ecosystem" className="btn border-2 border-white bg-transparent text-white hover:bg-white hover:text-primary-green">
-              पूरा इकोसिस्टम देखें
+              पूरा परितंत्र देखें
             </Link>
           </div>
         </div>

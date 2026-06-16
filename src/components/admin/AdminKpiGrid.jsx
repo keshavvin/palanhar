@@ -36,16 +36,16 @@ function CountUp({ value, format = formatCount, duration = 1200 }) {
 }
 
 const primaryKpis = [
-  { label: 'टोटल इन्वेस्टर्स', value: adminStats.totalInvestors, icon: FaUsers },
-  { label: 'एक्टिव इन्वेस्टर्स', value: adminStats.activeInvestors, icon: FaUserCheck },
-  { label: 'टोटल फंड्स रेज़्ड', value: adminStats.totalFundsRaised, icon: FaCoins, format: formatINRCompact },
-  { label: 'पेंडिंग अप्रूवल्स', value: adminStats.pendingApprovals, icon: FaUserClock },
+  { label: 'कुल निवेशक', value: adminStats.totalInvestors, icon: FaUsers },
+  { label: 'सक्रिय निवेशक', value: adminStats.activeInvestors, icon: FaUserCheck },
+  { label: 'कुल जुटाई गई पूंजी', value: adminStats.totalFundsRaised, icon: FaCoins, format: formatINRCompact },
+  { label: 'लंबित स्वीकृतियाँ', value: adminStats.pendingApprovals, icon: FaUserClock },
 ];
 
 const dividendKpis = [
-  { label: 'डिविडेंड लायबिलिटी', value: adminStats.dividendLiability, icon: FaBalanceScale, format: formatINRCompact },
-  { label: 'डिविडेंड पेड', value: adminStats.dividendPaid, icon: FaCheckCircle, format: formatINRCompact },
-  { label: 'पेंडिंग पेमेंट्स', value: adminStats.pendingPayments, icon: FaHourglassHalf, format: formatINRCompact },
+  { label: 'लाभांश देयता', value: adminStats.dividendLiability, icon: FaBalanceScale, format: formatINRCompact },
+  { label: 'भुगतान किया गया लाभांश', value: adminStats.dividendPaid, icon: FaCheckCircle, format: formatINRCompact },
+  { label: 'लंबित भुगतान', value: adminStats.pendingPayments, icon: FaHourglassHalf, format: formatINRCompact },
 ];
 
 const containerVariants = {
@@ -86,7 +86,7 @@ function KpiCard({ kpi, golden = false }) {
 export default function AdminKpiGrid() {
   return (
     <div className="space-y-4 sm:space-y-6">
-      <h2 className="sr-only">की मेट्रिक्स</h2>
+      <h2 className="sr-only">मुख्य मेट्रिक्स</h2>
       <motion.dl
         variants={containerVariants}
         initial="hidden"

@@ -1,19 +1,19 @@
 import { SelectField, TextField } from './FormFields';
 
-const RELATIONS = ['स्पाउस', 'सन', 'डॉटर', 'पैरेंट', 'अदर'];
+const RELATIONS = ['जीवनसाथी', 'पुत्र', 'पुत्री', 'माता-पिता', 'अन्य'];
 
 export default function StepNominee({ data, update, errors }) {
   return (
     <div className="space-y-6">
       <p className="text-sm text-gray-500">
-        योर नॉमिनी विल बी एंटाइटल्ड टू योर शेयरहोल्डिंग एंड एनी अनपेड डिविडेंड्स इन द इवेंट ऑफ
-        ऐन अनफोरसीन सर्कमस्टांस.
+        किसी अप्रत्याशित परिस्थिति की स्थिति में आपका नामांकित व्यक्ति आपके शेयरों और किसी भी बकाया
+        लाभांश का हकदार होगा।
       </p>
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <TextField
           id="reg-nominee-name"
-          label="नॉमिनी फुल नेम"
-          placeholder="e.g. सुनीता शर्मा"
+          label="नामांकित व्यक्ति का पूरा नाम"
+          placeholder="जैसे सुनीता शर्मा"
           autoComplete="off"
           value={data.nomineeName}
           error={errors.nomineeName}
@@ -21,8 +21,8 @@ export default function StepNominee({ data, update, errors }) {
         />
         <SelectField
           id="reg-nominee-relation"
-          label="रिलेशन"
-          placeholder="सेलेक्ट रिलेशन"
+          label="रिश्ता"
+          placeholder="रिश्ता चुनें"
           options={RELATIONS}
           value={data.nomineeRelation}
           error={errors.nomineeRelation}
@@ -30,10 +30,10 @@ export default function StepNominee({ data, update, errors }) {
         />
         <TextField
           id="reg-nominee-mobile"
-          label="नॉमिनी मोबाइल नंबर"
+          label="नामांकित व्यक्ति का मोबाइल नंबर"
           type="tel"
           inputMode="numeric"
-          placeholder="10-डिजिट मोबाइल नंबर"
+          placeholder="10 अंकों का मोबाइल नंबर"
           autoComplete="off"
           value={data.nomineeMobile}
           error={errors.nomineeMobile}

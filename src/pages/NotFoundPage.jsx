@@ -11,13 +11,13 @@ export default function NotFoundPage() {
         className="text-center max-w-md"
       >
         <div className="text-7xl mb-6">🌾</div>
-        <h1 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">पेज नॉट फाउंड</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">पेज नहीं मिला</h1>
         <p className="text-gray-600 mb-8">
-          द पेज यू आर लुकिंग फॉर डज़न&apos;ट एग्ज़िस्ट ऑर हैज़ बीन मूव्ड.
+          आप जिस पेज को खोज रहे हैं वह मौजूद नहीं है या हटा दिया गया है।
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <Link to="/" className="btn btn-primary">बैक टू होम</Link>
-          <Link to="/invest" className="btn btn-outline">एक्सप्लोर इन्वेस्टमेंट प्लान्स</Link>
+          <Link to="/" className="btn btn-primary">होम पर लौटें</Link>
+          <Link to="/invest" className="btn btn-outline">निवेश योजनाएँ देखें</Link>
         </div>
       </motion.div>
     </section>

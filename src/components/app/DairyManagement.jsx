@@ -73,9 +73,9 @@ export default function DairyManagement() {
     setMilk((prev) => prev.filter((entry) => entry.id !== id));
 
   return (
-    <section aria-label="डेयरी मैनेजमेंट" className="space-y-8">
+    <section aria-label="डेयरी प्रबंधन" className="space-y-8">
       <header>
-        <h2 className="text-2xl md:text-3xl">डेयरी मैनेजमेंट</h2>
+        <h2 className="text-2xl md:text-3xl">डेयरी प्रबंधन</h2>
         <p className="text-sm text-gray-500 mt-1">
           अपनी गायों और रोज़ के दूध रिकॉर्ड को एक जगह संभालें
         </p>
@@ -231,11 +231,11 @@ export default function DairyManagement() {
           )}
         </section>
 
-        {/* SECTION: दूध लॉग */}
-        <section aria-label="दूध लॉग" className="space-y-5">
+        {/* SECTION: दूध रिकॉर्ड */}
+        <section aria-label="दूध रिकॉर्ड" className="space-y-5">
           <h3 className="text-xl text-dark-green flex items-center gap-2">
             <FaTint className="text-golden" aria-hidden="true" />
-            दूध लॉग
+            दूध रिकॉर्ड
           </h3>
 
           <motion.form

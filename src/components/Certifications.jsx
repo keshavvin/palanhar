@@ -2,12 +2,12 @@ import { motion } from 'framer-motion';
 
 export default function Certifications() {
   const certs = [
-    { icon: '🏆', title: 'ISO 9001', subtitle: 'Quality Management' },
-    { icon: '🌱', title: 'Organic Certified', subtitle: 'Govt. Approved' },
-    { icon: '⭐', title: 'Award Winner', subtitle: '2023 Best Farm' },
-    { icon: '✓', title: 'Food Safety', subtitle: 'Standards Met' },
-    { icon: '📜', title: 'Licensed', subtitle: 'Fully Registered' },
-    { icon: '🛡️', title: 'Assured', subtitle: 'Quality Guarantee' },
+    { icon: '🏆', title: 'ISO 9001', subtitle: 'गुणवत्ता प्रबंधन' },
+    { icon: '🌱', title: 'जैविक प्रमाणित', subtitle: 'सरकार द्वारा अनुमोदित' },
+    { icon: '⭐', title: 'पुरस्कार विजेता', subtitle: '2023 सर्वश्रेष्ठ फार्म' },
+    { icon: '✓', title: 'खाद्य सुरक्षा', subtitle: 'मानक पूरे किए' },
+    { icon: '📜', title: 'लाइसेंस प्राप्त', subtitle: 'पूर्ण रूप से पंजीकृत' },
+    { icon: '🛡️', title: 'आश्वस्त', subtitle: 'गुणवत्ता की गारंटी' },
   ];
 
   return (
@@ -20,8 +20,8 @@ export default function Certifications() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">Certifications & Awards</h2>
-          <p className="text-xl text-gray-600">Trusted by thousands, certified by authorities</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">प्रमाणन और पुरस्कार</h2>
+          <p className="text-xl text-gray-600">हज़ारों लोगों का भरोसा, प्राधिकरणों द्वारा प्रमाणित</p>
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
@@ -50,8 +50,8 @@ export default function Certifications() {
           className="mt-16 text-center"
         >
           <div className="inline-block bg-gradient-to-r from-primary-green to-dark-green text-white px-8 py-6 rounded-xl shadow-lg">
-            <p className="text-lg font-semibold mb-2">🤝 Your Trusted Partner</p>
-            <p className="text-sm opacity-90">Serving thousands of families with integrity and quality for over 10 years</p>
+            <p className="text-lg font-semibold mb-2">🤝 आपका विश्वसनीय साथी</p>
+            <p className="text-sm opacity-90">10 वर्षों से अधिक समय से हज़ारों परिवारों की ईमानदारी और गुणवत्ता के साथ सेवा</p>
           </div>
         </motion.div>
       </div>

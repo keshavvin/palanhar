@@ -21,48 +21,48 @@ export const formatINRCompact = (amount) => {
 export const investmentPlans = [
   {
     id: 'A',
-    name: 'ऑप्शन A — गौ मित्र',
+    name: 'विकल्प A — गौ मित्र',
     minAmount: 10_000,
     icon: '🌱',
-    tagline: 'बिगिन योर गौ सेवा जर्नी',
+    tagline: 'अपनी गौ सेवा यात्रा आरंभ करें',
     highlights: [
-      'मिनिमम इन्वेस्टमेंट ₹10,000',
-      'सपोर्ट्स फीड & केयर फॉर अवर गिर काऊज',
-      'डिजिटल शेयर सर्टिफिकेट',
-      'एनुअल डिविडेंड एलिजिबिलिटी',
-      'इन्वेस्टर डैशबोर्ड एक्सेस',
+      'न्यूनतम निवेश ₹10,000',
+      'हमारी गिर गायों के चारे एवं देखभाल में सहयोग',
+      'डिजिटल शेयर प्रमाणपत्र',
+      'वार्षिक लाभांश पात्रता',
+      'निवेशक डैशबोर्ड तक पहुँच',
     ],
     popular: false,
   },
   {
     id: 'B',
-    name: 'ऑप्शन B — गौ पालक',
+    name: 'विकल्प B — गौ पालक',
     minAmount: 50_000,
     icon: '🐄',
-    tagline: 'नर्चर द गौशाला एज़ इट ग्रोज़',
+    tagline: 'बढ़ती हुई गौशाला का पोषण करें',
     highlights: [
-      'मिनिमम इन्वेस्टमेंट ₹50,000',
-      'सपोर्ट्स काऊ केयर, शेल्टर & वेटरनरी नीड्स',
-      'डिजिटल शेयर सर्टिफिकेट',
-      'एनुअल डिविडेंड एलिजिबिलिटी',
-      'प्रायोरिटी सपोर्ट डेस्क',
-      'क्वार्टरली गौशाला रिपोर्ट्स',
+      'न्यूनतम निवेश ₹50,000',
+      'गौ देखभाल, आश्रय एवं पशु-चिकित्सा आवश्यकताओं में सहयोग',
+      'डिजिटल शेयर प्रमाणपत्र',
+      'वार्षिक लाभांश पात्रता',
+      'प्राथमिकता सहायता डेस्क',
+      'त्रैमासिक गौशाला रिपोर्ट',
     ],
     popular: true,
   },
   {
     id: 'C',
-    name: 'ऑप्शन C — गौ रक्षक',
+    name: 'विकल्प C — गौ रक्षक',
     minAmount: 1_00_000,
     icon: '🏆',
-    tagline: 'बिकम अ गार्डियन ऑफ द हर्ड',
+    tagline: 'गौवंश के संरक्षक बनें',
     highlights: [
-      'इन्वेस्टमेंट ₹1,00,000 एंड अबव',
-      'सपोर्ट्स द फुल सर्कल — काऊज, फार्म & पंचगव्य',
-      'डिजिटल शेयर सर्टिफिकेट',
-      'एनुअल डिविडेंड एलिजिबिलिटी',
-      'डेडिकेटेड रिलेशनशिप मैनेजर',
-      'इनविटेशन टू एनुअल गौशाला विज़िट',
+      'निवेश ₹1,00,000 एवं उससे अधिक',
+      'पूरे चक्र में सहयोग — गायें, खेत एवं पंचगव्य',
+      'डिजिटल शेयर प्रमाणपत्र',
+      'वार्षिक लाभांश पात्रता',
+      'समर्पित संबंध प्रबंधक',
+      'वार्षिक गौशाला भ्रमण का निमंत्रण',
     ],
     popular: false,
   },
@@ -108,7 +108,7 @@ export const currentInvestor = {
   pan: 'ABCDE••••F',
   aadhaar: '•••• •••• 4321',
   bank: { name: 'स्टेट बैंक ऑफ इंडिया', account: '•••• ••• 8842', ifsc: 'SBIN0001234' },
-  nominee: { name: 'सुनीता शर्मा', relation: 'स्पाउस' },
+  nominee: { name: 'सुनीता शर्मा', relation: 'पति/पत्नी' },
   totalInvestment: 1_00_000,
   shares: 1000,
   faceValue: 100,
@@ -122,7 +122,7 @@ export const currentInvestor = {
       issuedOn: '15 Apr 2024',
       amount: 1_00_000,
       shares: 1000,
-      plan: 'ऑप्शन C — लिगेसी',
+      plan: 'विकल्प C — विरासत',
     },
   ],
 };
@@ -189,20 +189,20 @@ export const walletTransactions = [
 export const investorDocuments = [
   { id: 1, name: 'PAN कार्ड', category: 'KYC', status: 'Verified', date: '12 Apr 2024' },
   { id: 2, name: 'आधार कार्ड', category: 'KYC', status: 'Verified', date: '12 Apr 2024' },
-  { id: 3, name: 'बैंक प्रूफ (कैंसिल्ड चेक)', category: 'KYC', status: 'Verified', date: '13 Apr 2024' },
-  { id: 4, name: 'इन्वेस्टमेंट सर्टिफिकेट — PAL-SHARE-2026-0042', category: 'Certificate', status: 'Issued', date: '15 Apr 2024' },
-  { id: 5, name: 'डिविडेंड स्टेटमेंट FY 2024-25', category: 'Statement', status: 'Available', date: '18 Jul 2025' },
-  { id: 6, name: 'अकाउंट स्टेटमेंट 2025-26', category: 'Statement', status: 'Available', date: '01 Apr 2026' },
-  { id: 7, name: 'ऑडिटेड बैलेंस शीट FY 2024-25', category: 'Financial Report', status: 'Available', date: '30 Jun 2025' },
-  { id: 8, name: 'एनुअल रिपोर्ट FY 2024-25', category: 'Financial Report', status: 'Available', date: '30 Jun 2025' },
+  { id: 3, name: 'बैंक प्रमाण (रद्द किया गया चेक)', category: 'KYC', status: 'Verified', date: '13 Apr 2024' },
+  { id: 4, name: 'निवेश प्रमाणपत्र — PAL-SHARE-2026-0042', category: 'Certificate', status: 'Issued', date: '15 Apr 2024' },
+  { id: 5, name: 'लाभांश विवरण FY 2024-25', category: 'Statement', status: 'Available', date: '18 Jul 2025' },
+  { id: 6, name: 'खाता विवरण 2025-26', category: 'Statement', status: 'Available', date: '01 Apr 2026' },
+  { id: 7, name: 'ऑडिट की गई बैलेंस शीट FY 2024-25', category: 'Financial Report', status: 'Available', date: '30 Jun 2025' },
+  { id: 8, name: 'वार्षिक रिपोर्ट FY 2024-25', category: 'Financial Report', status: 'Available', date: '30 Jun 2025' },
 ];
 
 // 12. Notifications
 export const investorNotifications = [
-  { id: 1, date: '30 May 2026', title: 'डिविडेंड डिक्लेयर्ड', text: 'बोर्ड अप्रूव्ड 15% डिविडेंड फॉर FY 2025-26। योर शेयर: ₹5,000।', type: 'dividend' },
-  { id: 2, date: '01 Apr 2026', title: 'स्टेटमेंट रेडी', text: 'योर एनुअल अकाउंट स्टेटमेंट फॉर 2025-26 इज़ अवेलेबल फॉर डाउनलोड।', type: 'document' },
-  { id: 3, date: '18 Jul 2025', title: 'डिविडेंड पेड', text: '₹6,000 क्रेडिटेड टू योर डिविडेंड वॉलेट फॉर FY 2024-25।', type: 'payment' },
-  { id: 4, date: '12 Apr 2024', title: 'KYC अप्रूव्ड', text: 'योर रजिस्ट्रेशन एंड KYC हैव बीन अप्रूव्ड। इन्वेस्टर आईडी: PAL-INV-0042।', type: 'kyc' },
+  { id: 1, date: '30 May 2026', title: 'लाभांश घोषित', text: 'बोर्ड ने FY 2025-26 के लिए 15% लाभांश स्वीकृत किया। आपका हिस्सा: ₹5,000।', type: 'dividend' },
+  { id: 2, date: '01 Apr 2026', title: 'विवरण तैयार', text: '2025-26 का आपका वार्षिक खाता विवरण डाउनलोड के लिए उपलब्ध है।', type: 'document' },
+  { id: 3, date: '18 Jul 2025', title: 'लाभांश भुगतान', text: 'FY 2024-25 के लिए ₹6,000 आपके लाभांश वॉलेट में जमा किए गए।', type: 'payment' },
+  { id: 4, date: '12 Apr 2024', title: 'KYC स्वीकृत', text: 'आपका पंजीकरण एवं KYC स्वीकृत हो गया है। निवेशक आईडी: PAL-INV-0042।', type: 'kyc' },
 ];
 
 // ---------------------------------------------------------------------------
@@ -233,9 +233,9 @@ export const fundsRaisedMonthly = [
 ];
 
 export const investorDistribution = [
-  { name: 'ऑप्शन A (₹10K+)', value: 645, color: '#81C784' },
-  { name: 'ऑप्शन B (₹50K+)', value: 412, color: '#2E7D32' },
-  { name: 'ऑप्शन C (₹1L+)', value: 191, color: '#F9A825' },
+  { name: 'विकल्प A (₹10K+)', value: 645, color: '#81C784' },
+  { name: 'विकल्प B (₹50K+)', value: 412, color: '#2E7D32' },
+  { name: 'विकल्प C (₹1L+)', value: 191, color: '#F9A825' },
 ];
 
 export const KYC_STATUSES = ['Pending', 'Under Review', 'Approved', 'Rejected'];
@@ -258,31 +258,31 @@ export const shareRegister = [
 
 // 11. Compliance — audit trail (every action logged)
 export const auditTrail = [
-  { id: 1, timestamp: '12 Jun 2026, 10:42', actor: 'एडमिन (प्रिया)', action: 'अप्रूव्ड KYC फॉर PAL-INV-1248' },
-  { id: 2, timestamp: '11 Jun 2026, 16:05', actor: 'CMD', action: 'अप्रूव्ड डिविडेंड रेट 15% फॉर FY 2025-26' },
-  { id: 3, timestamp: '11 Jun 2026, 11:30', actor: 'सिस्टम', action: 'जनरेटेड सर्टिफिकेट PAL-SHARE-2026-1247' },
-  { id: 4, timestamp: '10 Jun 2026, 14:12', actor: 'एडमिन (प्रिया)', action: 'वेरिफाइड बैंक अकाउंट फॉर PAL-INV-1245' },
-  { id: 5, timestamp: '10 Jun 2026, 09:55', actor: 'सिस्टम', action: 'डिविडेंड पेआउट बैच #38 प्रोसेस्ड (212 इन्वेस्टर्स)' },
-  { id: 6, timestamp: '09 Jun 2026, 18:20', actor: 'एडमिन (अरुण)', action: 'रिजेक्टेड KYC फॉर PAL-INV-1244 (PAN मिसमैच)' },
+  { id: 1, timestamp: '12 Jun 2026, 10:42', actor: 'एडमिन (प्रिया)', action: 'PAL-INV-1248 का KYC स्वीकृत किया' },
+  { id: 2, timestamp: '11 Jun 2026, 16:05', actor: 'CMD', action: 'FY 2025-26 के लिए 15% लाभांश दर स्वीकृत की' },
+  { id: 3, timestamp: '11 Jun 2026, 11:30', actor: 'प्रणाली', action: 'प्रमाणपत्र PAL-SHARE-2026-1247 जनरेट किया' },
+  { id: 4, timestamp: '10 Jun 2026, 14:12', actor: 'एडमिन (प्रिया)', action: 'PAL-INV-1245 का बैंक खाता सत्यापित किया' },
+  { id: 5, timestamp: '10 Jun 2026, 09:55', actor: 'प्रणाली', action: 'लाभांश भुगतान बैच #38 संसाधित किया (212 निवेशक)' },
+  { id: 6, timestamp: '09 Jun 2026, 18:20', actor: 'एडमिन (अरुण)', action: 'PAL-INV-1244 का KYC अस्वीकृत किया (PAN मेल नहीं खाया)' },
 ];
 
 // 4. Registration flow steps (Investor Registration Flow)
 export const registrationSteps = [
-  { id: 1, key: 'mobile', title: 'मोबाइल वेरिफिकेशन', desc: 'OTP सेंट टू योर मोबाइल नंबर' },
-  { id: 2, key: 'email', title: 'ईमेल वेरिफिकेशन', desc: 'कन्फर्म योर ईमेल एड्रेस' },
-  { id: 3, key: 'profile', title: 'प्रोफाइल क्रिएशन', desc: 'बेसिक पर्सनल डिटेल्स' },
-  { id: 4, key: 'pan', title: 'PAN अपलोड', desc: 'अपलोड PAN कार्ड कॉपी' },
-  { id: 5, key: 'aadhaar', title: 'आधार अपलोड', desc: 'अपलोड आधार कार्ड कॉपी' },
-  { id: 6, key: 'bank', title: 'बैंक डिटेल्स', desc: 'अकाउंट फॉर डिविडेंड पेआउट्स' },
-  { id: 7, key: 'nominee', title: 'नॉमिनी डिटेल्स', desc: 'योर नॉमिनी इन्फॉर्मेशन' },
-  { id: 8, key: 'review', title: 'KYC सबमिशन', desc: 'रिव्यू & सबमिट फॉर अप्रूवल' },
+  { id: 1, key: 'mobile', title: 'मोबाइल सत्यापन', desc: 'आपके मोबाइल नंबर पर OTP भेजा गया' },
+  { id: 2, key: 'email', title: 'ईमेल सत्यापन', desc: 'अपना ईमेल पता सत्यापित करें' },
+  { id: 3, key: 'profile', title: 'प्रोफ़ाइल निर्माण', desc: 'बुनियादी व्यक्तिगत विवरण' },
+  { id: 4, key: 'pan', title: 'PAN अपलोड', desc: 'PAN कार्ड की प्रति अपलोड करें' },
+  { id: 5, key: 'aadhaar', title: 'आधार अपलोड', desc: 'आधार कार्ड की प्रति अपलोड करें' },
+  { id: 6, key: 'bank', title: 'बैंक विवरण', desc: 'लाभांश भुगतान हेतु खाता' },
+  { id: 7, key: 'nominee', title: 'नामांकित विवरण', desc: 'आपके नामांकित व्यक्ति की जानकारी' },
+  { id: 8, key: 'review', title: 'KYC प्रस्तुति', desc: 'स्वीकृति हेतु समीक्षा करें एवं प्रस्तुत करें' },
 ];
 
 // Financial roadmap (from the company business plan)
 export const growthProjections = [
-  { year: 'ईयर 1', revenue: 2_00_00_000, profit: 30_00_000 },
-  { year: 'ईयर 2', revenue: 7_00_00_000, profit: 1_20_00_000 },
-  { year: 'ईयर 3', revenue: 18_00_00_000, profit: 4_00_00_000 },
+  { year: 'वर्ष 1', revenue: 2_00_00_000, profit: 30_00_000 },
+  { year: 'वर्ष 2', revenue: 7_00_00_000, profit: 1_20_00_000 },
+  { year: 'वर्ष 3', revenue: 18_00_00_000, profit: 4_00_00_000 },
 ];
 
 export const financialTargets = {
@@ -294,11 +294,11 @@ export const financialTargets = {
 
 // How the money flows — used on the Invest page journey visual
 export const financialFlow = [
-  { step: 1, icon: '📝', title: 'रजिस्टर & KYC', desc: 'OTP वेरिफिकेशन, PAN, आधार एंड बैंक डिटेल्स — अप्रूव्ड बाय अवर कम्प्लायंस टीम।' },
-  { step: 2, icon: '💰', title: 'इन्वेस्ट इन गौ सेवा', desc: 'चूज़ अ सेवा प्लान। फंड्स गो डायरेक्टली टू काऊ केयर, द गौशाला एंड फार्म ऑपरेशंस।' },
-  { step: 3, icon: '📜', title: 'शेयर्स अलॉटेड', desc: 'सिस्टम इश्यूज़ योर इन्वेस्टर आईडी एंड शेयर सर्टिफिकेट, रिकॉर्डेड इन द शेयर रजिस्टर।' },
-  { step: 4, icon: '🐄', title: 'गौशाला क्रिएट्स वैल्यू', desc: 'A2 डेयरी, पंचगव्य प्रोडक्ट्स एंड ऑर्गेनिक प्रोड्यूस क्रिएट द कंपनीज़ एनुअल नेट प्रॉफिट।' },
-  { step: 5, icon: '🏛️', title: 'बोर्ड डिक्लेयर्स डिविडेंड', desc: 'CMD अप्रूव्स द डिविडेंड रेट ऑन नेट प्रॉफिट, e.g. 15% ऑफ ₹10 Cr = ₹1.5 Cr पूल।' },
-  { step: 6, icon: '👛', title: 'डिविडेंड टू योर वॉलेट', desc: 'योर शेयर = (योर होल्डिंग ÷ टोटल पूल) × डिविडेंड पूल, क्रेडिटेड ऑटोमैटिकली।' },
-  { step: 7, icon: '🏦', title: 'विदड्रॉ ऑर रीइन्वेस्ट', desc: 'ट्रांसफर टू योर वेरिफाइड बैंक अकाउंट ऑर रीइन्वेस्ट टू डीपन योर सेवा।' },
+  { step: 1, icon: '📝', title: 'पंजीकरण & KYC', desc: 'OTP सत्यापन, PAN, आधार एवं बैंक विवरण — हमारी अनुपालन टीम द्वारा स्वीकृत।' },
+  { step: 2, icon: '💰', title: 'गौ सेवा में निवेश करें', desc: 'एक सेवा योजना चुनें। धनराशि सीधे गौ देखभाल, गौशाला एवं खेत संचालन में लगती है।' },
+  { step: 3, icon: '📜', title: 'शेयर आवंटित', desc: 'प्रणाली आपकी निवेशक आईडी एवं शेयर प्रमाणपत्र जारी करती है, जो शेयर रजिस्टर में दर्ज होता है।' },
+  { step: 4, icon: '🐄', title: 'गौशाला मूल्य सृजित करती है', desc: 'A2 डेयरी, पंचगव्य उत्पाद एवं जैविक उपज कंपनी का वार्षिक शुद्ध लाभ बनाते हैं।' },
+  { step: 5, icon: '🏛️', title: 'बोर्ड लाभांश घोषित करता है', desc: 'CMD शुद्ध लाभ पर लाभांश दर स्वीकृत करता है, उदा. ₹10 Cr का 15% = ₹1.5 Cr पूल।' },
+  { step: 6, icon: '👛', title: 'लाभांश आपके वॉलेट में', desc: 'आपका हिस्सा = (आपकी हिस्सेदारी ÷ कुल पूल) × लाभांश पूल, स्वतः जमा किया जाता है।' },
+  { step: 7, icon: '🏦', title: 'निकासी या पुनर्निवेश', desc: 'अपने सत्यापित बैंक खाते में स्थानांतरित करें या अपनी सेवा को गहन करने हेतु पुनर्निवेश करें।' },
 ];

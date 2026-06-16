@@ -13,14 +13,14 @@ import { useLocalStorage } from './useLocalStorage';
 const COURSES = [
   {
     id: 'c1',
-    title: 'डेयरी फार्मिंग बेसिक्स',
+    title: 'डेयरी पालन की मूल बातें',
     desc: 'गाय की देखभाल, चारा व दूध उत्पादन की मूल बातें।',
     mins: 20,
     lessons: 5,
   },
   {
     id: 'c2',
-    title: 'ऑर्गेनिक खेती',
+    title: 'जैविक खेती',
     desc: 'जैविक खाद व प्राकृतिक खेती के तरीके।',
     mins: 25,
     lessons: 6,
@@ -41,15 +41,15 @@ const COURSES = [
   },
   {
     id: 'c5',
-    title: 'फाइनेंशियल लिटरेसी',
-    desc: 'बचत, लोन व निवेश की समझ।',
+    title: 'वित्तीय साक्षरता',
+    desc: 'बचत, ऋण व निवेश की समझ।',
     mins: 30,
     lessons: 7,
   },
   {
     id: 'c6',
     title: 'पालनहार ऐप का उपयोग',
-    desc: 'ऐप के सभी फीचर्स का इस्तेमाल सीखें।',
+    desc: 'ऐप की सभी सुविधाओं का इस्तेमाल सीखें।',
     mins: 12,
     lessons: 3,
   },
@@ -77,8 +77,8 @@ export default function LearningTraining() {
   };
 
   return (
-    <section aria-label="लर्निंग और ट्रेनिंग">
-      <h2 className="text-2xl md:text-3xl">लर्निंग &amp; ट्रेनिंग</h2>
+    <section aria-label="शिक्षा एवं प्रशिक्षण">
+      <h2 className="text-2xl md:text-3xl">शिक्षा &amp; प्रशिक्षण</h2>
       <p className="text-sm text-gray-500 mt-1 mb-6">
         छोटे-छोटे कोर्स पूरे करें और अपनी प्रगति यहीं ट्रैक करें।
       </p>
@@ -89,7 +89,7 @@ export default function LearningTraining() {
           <div className="flex items-center gap-2 text-dark-green">
             <FaGraduationCap aria-hidden="true" className="text-golden" />
             <h3 className="text-lg font-semibold">
-              प्रोग्रेस: {doneCount}/{total} कोर्स पूरे ({pct}%)
+              प्रगति: {doneCount}/{total} कोर्स पूरे ({pct}%)
             </h3>
           </div>
           <span className="badge-status bg-primary-green/10 text-primary-green">
@@ -103,7 +103,7 @@ export default function LearningTraining() {
           aria-valuenow={pct}
           aria-valuemin={0}
           aria-valuemax={100}
-          aria-label="कुल कोर्स प्रोग्रेस"
+          aria-label="कुल कोर्स प्रगति"
         >
           <motion.div
             className="h-full rounded-full bg-primary-green"
@@ -144,7 +144,7 @@ export default function LearningTraining() {
               <div className="mt-3 flex items-center gap-2 text-xs text-gray-500">
                 <FaClock aria-hidden="true" className="text-primary-green" />
                 <span>
-                  {course.mins} मिनट · {course.lessons} लेसन
+                  {course.mins} मिनट · {course.lessons} पाठ
                 </span>
               </div>
 
@@ -165,7 +165,7 @@ export default function LearningTraining() {
                       onClick={() => markIncomplete(course.id)}
                     >
                       <FaUndo aria-hidden="true" />
-                      अधूरा करें
+                      अधूरा चिह्नित करें
                     </button>
                   </>
                 ) : (
@@ -175,7 +175,7 @@ export default function LearningTraining() {
                     onClick={() => markComplete(course.id)}
                   >
                     <FaPlayCircle aria-hidden="true" />
-                    पूरा करें मार्क करें
+                    पूरा हुआ चिह्नित करें
                   </button>
                 )}
               </div>

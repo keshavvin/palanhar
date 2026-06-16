@@ -36,10 +36,10 @@ function ExportButton({ icon: Icon, label }) {
             aria-hidden="true"
             className="h-4 w-4 rounded-full border-2 border-primary-green border-t-transparent animate-spin"
           />
-          एक्सपोर्टिंग…
+          निर्यात हो रहा है…
         </>
       ) : status === 'done' ? (
-        <span className="font-semibold">एक्सपोर्टेड ✓</span>
+        <span className="font-semibold">निर्यात पूर्ण ✓</span>
       ) : (
         <>
           <Icon aria-hidden="true" />
@@ -66,12 +66,12 @@ export default function AdminHeader() {
       className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between"
     >
       <div>
-        <span className="section-eyebrow">गवर्नेंस &amp; फाइनेंशियल कंट्रोल</span>
+        <span className="section-eyebrow">प्रशासन &amp; वित्तीय नियंत्रण</span>
         <h1 className="text-3xl md:text-4xl">एडमिन डैशबोर्ड</h1>
         <div className="mt-3 flex flex-wrap items-center gap-3">
           <span className="badge-status bg-golden/20 text-amber-800 border border-golden/50">
             <FaUserShield aria-hidden="true" />
-            CMD / सुपर एडमिन
+            CMD / सर्वोच्च एडमिन
           </span>
           <span className="inline-flex items-center gap-2 text-sm text-gray-600">
             <FaRegCalendarAlt aria-hidden="true" className="text-primary-green" />
@@ -80,8 +80,8 @@ export default function AdminHeader() {
         </div>
       </div>
       <div className="flex flex-wrap gap-3">
-        <ExportButton icon={FaFilePdf} label="एक्सपोर्ट PDF" />
-        <ExportButton icon={FaFileExcel} label="एक्सपोर्ट एक्सेल" />
+        <ExportButton icon={FaFilePdf} label="PDF निर्यात करें" />
+        <ExportButton icon={FaFileExcel} label="एक्सेल निर्यात करें" />
       </div>
     </motion.div>
   );

@@ -20,7 +20,13 @@ export default function DivisionsPage() {
           </span>
           <h1 className="!text-white">हमारे व्यवसाय क्षेत्र</h1>
           <p className="mx-auto mt-3 max-w-2xl text-lg text-white/85">
-            {divisions.length} विविध क्षेत्र — किसी भी क्षेत्र पर क्लिक करके विस्तार से जानें।
+            {divisions.length} रणनीतिक व्यवसाय इकाइयाँ (SBUs) — किसी भी क्षेत्र पर क्लिक करके विस्तार से जानें।
+          </p>
+          <p className="mx-auto mt-4 max-w-2xl text-base font-semibold text-golden">
+            &ldquo;एक परिवार &ndash; एक प्लेटफॉर्म &ndash; अनेक सेवाएँ&rdquo;
+          </p>
+          <p className="mx-auto mt-2 max-w-3xl text-sm leading-relaxed text-white/75">
+            दूध, कृषि, स्वास्थ्य, शिक्षा, ऊर्जा, तकनीक, आवास एवं सामाजिक कल्याण को एकीकृत कर आत्मनिर्भर एवं समृद्ध भारत का निर्माण।
           </p>
         </div>
       </section>

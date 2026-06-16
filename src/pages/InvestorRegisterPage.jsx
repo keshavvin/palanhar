@@ -64,48 +64,48 @@ function validateStep(step, d) {
   const errors = {};
   switch (step) {
     case 1:
-      if (!/^\d{10}$/.test(d.mobile)) errors.mobile = 'एंटर अ वैलिड 10-डिजिट मोबाइल नंबर.';
-      else if (!d.otpSent) errors.mobile = 'टैप “Send OTP” टू वेरिफाई दिस नंबर.';
-      else if (!d.mobileVerified) errors.otp = 'एंटर ऑल 6 डिजिट्स ऑफ द OTP टू वेरिफाई.';
+      if (!/^\d{10}$/.test(d.mobile)) errors.mobile = 'एक वैध 10-अंकों का मोबाइल नंबर दर्ज करें।';
+      else if (!d.otpSent) errors.mobile = 'इस नंबर को सत्यापित करने के लिए “Send OTP” पर टैप करें।';
+      else if (!d.mobileVerified) errors.otp = 'सत्यापित करने के लिए OTP के सभी 6 अंक दर्ज करें।';
       break;
     case 2:
-      if (!EMAIL_RE.test(d.email)) errors.email = 'एंटर अ वैलिड ईमेल एड्रेस.';
-      else if (!d.emailVerified) errors.email = 'टैप “Verify” टू कन्फर्म योर ईमेल.';
+      if (!EMAIL_RE.test(d.email)) errors.email = 'एक वैध ईमेल पता दर्ज करें।';
+      else if (!d.emailVerified) errors.email = 'अपना ईमेल पुष्ट करने के लिए “Verify” पर टैप करें।';
       break;
     case 3:
-      if (!d.fullName.trim()) errors.fullName = 'फुल नेम इज़ रिक्वायर्ड.';
-      if (!d.dob) errors.dob = 'डेट ऑफ बर्थ इज़ रिक्वायर्ड.';
-      if (!d.address.trim()) errors.address = 'एड्रेस इज़ रिक्वायर्ड.';
-      if (!d.city.trim()) errors.city = 'सिटी / विलेज इज़ रिक्वायर्ड.';
-      if (!d.state) errors.state = 'प्लीज़ सेलेक्ट योर स्टेट.';
-      if (!/^\d{6}$/.test(d.pin)) errors.pin = 'एंटर अ वैलिड 6-डिजिट PIN कोड.';
+      if (!d.fullName.trim()) errors.fullName = 'पूरा नाम आवश्यक है।';
+      if (!d.dob) errors.dob = 'जन्म तिथि आवश्यक है।';
+      if (!d.address.trim()) errors.address = 'पता आवश्यक है।';
+      if (!d.city.trim()) errors.city = 'शहर / गाँव आवश्यक है।';
+      if (!d.state) errors.state = 'कृपया अपना राज्य चुनें।';
+      if (!/^\d{6}$/.test(d.pin)) errors.pin = 'एक वैध 6-अंकों का PIN कोड दर्ज करें।';
       break;
     case 4:
-      if (!PAN_RE.test(d.pan)) errors.pan = 'एंटर अ वैलिड PAN (फॉर्मेट: ABCDE1234F).';
-      if (!d.panFile) errors.panFile = 'प्लीज़ अपलोड अ कॉपी ऑफ योर PAN कार्ड.';
+      if (!PAN_RE.test(d.pan)) errors.pan = 'एक वैध PAN दर्ज करें (प्रारूप: ABCDE1234F)।';
+      if (!d.panFile) errors.panFile = 'कृपया अपने PAN कार्ड की एक प्रति अपलोड करें।';
       break;
     case 5:
       if (d.aadhaar.replace(/\s/g, '').length !== 12)
-        errors.aadhaar = 'एंटर योर 12-डिजिट Aadhaar नंबर.';
-      if (!d.aadhaarFile) errors.aadhaarFile = 'प्लीज़ अपलोड अ कॉपी ऑफ योर Aadhaar कार्ड.';
+        errors.aadhaar = 'अपना 12-अंकों का Aadhaar नंबर दर्ज करें।';
+      if (!d.aadhaarFile) errors.aadhaarFile = 'कृपया अपने Aadhaar कार्ड की एक प्रति अपलोड करें।';
       break;
     case 6:
-      if (!d.accountHolder.trim()) errors.accountHolder = 'अकाउंट होल्डर नेम इज़ रिक्वायर्ड.';
+      if (!d.accountHolder.trim()) errors.accountHolder = 'खाताधारक का नाम आवश्यक है।';
       if (!/^\d{9,18}$/.test(d.accountNumber))
-        errors.accountNumber = 'एंटर अ वैलिड अकाउंट नंबर (9–18 डिजिट्स).';
+        errors.accountNumber = 'एक वैध खाता नंबर दर्ज करें (9–18 अंक)।';
       if (d.confirmAccount !== d.accountNumber || !d.confirmAccount)
-        errors.confirmAccount = 'अकाउंट नंबर्स डू नॉट मैच.';
-      if (!IFSC_RE.test(d.ifsc)) errors.ifsc = 'एंटर अ वैलिड IFSC (e.g. SBIN0001234).';
-      if (!d.bankName.trim()) errors.bankName = 'बैंक नेम इज़ रिक्वायर्ड.';
+        errors.confirmAccount = 'खाता नंबर मेल नहीं खाते।';
+      if (!IFSC_RE.test(d.ifsc)) errors.ifsc = 'एक वैध IFSC दर्ज करें (जैसे SBIN0001234)।';
+      if (!d.bankName.trim()) errors.bankName = 'बैंक का नाम आवश्यक है।';
       break;
     case 7:
-      if (!d.nomineeName.trim()) errors.nomineeName = 'नॉमिनी नेम इज़ रिक्वायर्ड.';
-      if (!d.nomineeRelation) errors.nomineeRelation = 'प्लीज़ सेलेक्ट द रिलेशन.';
+      if (!d.nomineeName.trim()) errors.nomineeName = 'नामांकित व्यक्ति का नाम आवश्यक है।';
+      if (!d.nomineeRelation) errors.nomineeRelation = 'कृपया रिश्ता चुनें।';
       if (!/^\d{10}$/.test(d.nomineeMobile))
-        errors.nomineeMobile = 'एंटर अ वैलिड 10-डिजिट मोबाइल नंबर.';
+        errors.nomineeMobile = 'एक वैध 10-अंकों का मोबाइल नंबर दर्ज करें।';
       break;
     case 8:
-      if (!d.consent) errors.consent = 'प्लीज़ एक्सेप्ट द डिक्लेरेशन टू सबमिट योर KYC.';
+      if (!d.consent) errors.consent = 'अपना KYC जमा करने के लिए कृपया घोषणा स्वीकार करें।';
       break;
     default:
       break;
@@ -209,18 +209,18 @@ export default function InvestorRegisterPage() {
             transition={{ duration: 0.5 }}
             className="mx-auto mb-8 max-w-2xl text-center md:mb-12"
           >
-            <span className="section-eyebrow">जॉइन गौ सेवा</span>
-            <h1 className="mb-3">रजिस्ट्रेशन &amp; KYC</h1>
+            <span className="section-eyebrow">गौ सेवा से जुड़ें</span>
+            <h1 className="mb-3">पंजीकरण &amp; KYC</h1>
             <p className="text-gray-600">
-              एट सिंपल स्टेप्स टू जॉइन गौ सेवा एज़ अ रजिस्टर्ड पालनहार इन्वेस्टर — वेरिफाइड,
-              कंप्लायंट एंड डिविडेंड-रेडी.
+              एक पंजीकृत पालनहार निवेशक के रूप में गौ सेवा से जुड़ने के आठ सरल चरण — सत्यापित,
+              अनुपालन के अनुरूप और लाभांश के लिए तैयार।
             </p>
             {selectedPlan && !submitted && (
               <p className="mt-4 inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-golden/40 bg-white px-4 py-2 text-sm shadow-sm">
                 <span aria-hidden="true">{selectedPlan.icon}</span>
                 <span className="font-semibold text-dark-green">{selectedPlan.name}</span>
                 <span className="text-gray-400">·</span>
-                <span className="text-gray-500">फ्रॉम {formatINR(selectedPlan.minAmount)}</span>
+                <span className="text-gray-500">{formatINR(selectedPlan.minAmount)} से</span>
               </p>
             )}
           </motion.div>
@@ -261,7 +261,7 @@ export default function InvestorRegisterPage() {
                   >
                     <div className="mb-6 border-b border-gray-100 pb-5">
                       <p className="text-xs font-bold uppercase tracking-widest text-golden">
-                        स्टेप {step} ऑफ {TOTAL_STEPS}
+                        चरण {step} / {TOTAL_STEPS}
                       </p>
                       <h2 className="mt-1 text-xl sm:text-2xl">{currentStep.title}</h2>
                       <p className="mt-1 text-sm text-gray-500">{currentStep.desc}</p>
@@ -285,7 +285,7 @@ export default function InvestorRegisterPage() {
                         : 'border-primary-green/30 text-primary-green hover:border-primary-green hover:bg-primary-green/5'
                     }`}
                   >
-                    <FaArrowLeft aria-hidden="true" /> बैक
+                    <FaArrowLeft aria-hidden="true" /> पीछे
                   </button>
                   <button
                     type="button"
@@ -298,16 +298,16 @@ export default function InvestorRegisterPage() {
                     {step === TOTAL_STEPS ? (
                       submitting ? (
                         <>
-                          <Spinner light={false} /> सबमिटिंग…
+                          <Spinner light={false} /> जमा किया जा रहा है…
                         </>
                       ) : (
                         <>
-                          <FaLock aria-hidden="true" /> सबमिट KYC
+                          <FaLock aria-hidden="true" /> KYC जमा करें
                         </>
                       )
                     ) : (
                       <>
-                        कंटिन्यू <FaArrowRight aria-hidden="true" />
+                        आगे बढ़ें <FaArrowRight aria-hidden="true" />
                       </>
                     )}
                   </button>
@@ -318,8 +318,8 @@ export default function InvestorRegisterPage() {
 
           <p className="mx-auto mt-8 flex max-w-md items-center justify-center gap-2 text-center text-xs text-gray-400">
             <FaLock aria-hidden="true" className="shrink-0" />
-            डेमो एनवायरनमेंट — नो रियल डेटा इज़ स्टोर्ड और ट्रांसमिटेड. ऑल वेरिफिकेशन्स आर
-            सिम्युलेटेड.
+            डेमो वातावरण — कोई वास्तविक डेटा संग्रहीत या प्रेषित नहीं किया जाता। सभी सत्यापन
+            अनुकरणित हैं।
           </p>
         </div>
       </section>

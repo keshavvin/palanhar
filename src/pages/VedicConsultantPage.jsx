@@ -62,7 +62,7 @@ export default function VedicConsultantPage() {
             <FaOm size={40} aria-hidden="true" />
           </motion.span>
           <motion.h1 initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="!text-white">
-            वैदिक कंसल्टेंट
+            वैदिक परामर्शदाता
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="mt-3 text-lg text-golden md:text-xl">
             प्राचीन ज्ञान, आधुनिक मार्गदर्शन
@@ -126,7 +126,7 @@ export default function VedicConsultantPage() {
       <section id="vedic-booking" className="section scroll-mt-24 bg-cream-white/40">
         <div className="container-custom">
           <div className="mb-8 text-center">
-            <span className="section-eyebrow">अपॉइंटमेंट</span>
+            <span className="section-eyebrow">समय निर्धारण</span>
             <h2 className="mb-2">परामर्श बुक करें</h2>
             <p className="text-gray-600">फॉर्म भरें — हमारी टीम आपसे जल्द संपर्क करेगी।</p>
           </div>
@@ -141,8 +141,8 @@ export default function VedicConsultantPage() {
             {ref ? (
               <div className="flex flex-col items-center rounded-xl bg-primary-green/10 px-4 py-10 text-center">
                 <FaCheckCircle className="mb-3 text-5xl text-primary-green" aria-hidden="true" />
-                <p className="text-xl font-bold text-dark-green">बुकिंग रिक्वेस्ट प्राप्त हुई!</p>
-                <p className="mt-1 text-gray-600">आपका रेफरेंस नंबर:</p>
+                <p className="text-xl font-bold text-dark-green">आपका अनुरोध प्राप्त हुआ!</p>
+                <p className="mt-1 text-gray-600">आपकी संदर्भ संख्या:</p>
                 <p className="mt-1 font-mono text-lg font-bold tracking-wider text-primary-green">{ref}</p>
                 <button type="button" onClick={() => setRef(null)} className="btn btn-outline mt-5">
                   एक और बुकिंग करें
@@ -179,7 +179,7 @@ export default function VedicConsultantPage() {
                   <textarea id="vc-message" name="message" value={form.message} onChange={change} rows="4" className="input-field resize-none" placeholder="अपनी समस्या या प्रश्न लिखें..." />
                 </div>
                 <button type="submit" className="btn btn-primary inline-flex items-center gap-2">
-                  <FaPaperPlane aria-hidden="true" /> बुकिंग सबमिट करें
+                  <FaPaperPlane aria-hidden="true" /> अनुरोध भेजें
                 </button>
                 <p className="flex items-center gap-2 text-xs text-gray-500">
                   <FaPhoneAlt aria-hidden="true" /> या कॉल करें: +91 74289 40883

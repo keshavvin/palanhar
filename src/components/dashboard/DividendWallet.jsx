@@ -34,31 +34,31 @@ export default function DividendWallet() {
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.1 }}
         className="rounded-xl shadow-lg bg-gradient-to-br from-primary-green to-dark-green text-white p-5 sm:p-8 h-full flex flex-col"
-        aria-label="डिविडेंड वॉलेट"
+        aria-label="लाभांश वॉलेट"
       >
         <div className="flex items-center gap-3">
           <span className="w-11 h-11 shrink-0 rounded-full bg-white/15 flex items-center justify-center">
             <FaWallet aria-hidden="true" />
           </span>
           <div>
-            <h2 className="text-white text-xl md:text-2xl">डिविडेंड वॉलेट</h2>
-            <p className="text-sm text-light-green">FY 2025-26 डिविडेंड डिक्लेयर्ड ऐट 15%</p>
+            <h2 className="text-white text-xl md:text-2xl">लाभांश वॉलेट</h2>
+            <p className="text-sm text-light-green">FY 2025-26 लाभांश 15% पर घोषित</p>
           </div>
         </div>
 
         <dl className="grid grid-cols-3 gap-3 my-6 sm:my-8">
           <div className="rounded-lg bg-white/10 p-3 sm:p-4">
-            <dt className="text-xs uppercase tracking-wide text-light-green">डिक्लेयर्ड</dt>
+            <dt className="text-xs uppercase tracking-wide text-light-green">घोषित</dt>
             <dd className="text-lg sm:text-2xl font-bold mt-1">
               {formatINR(walletSummary.declared)}
             </dd>
           </div>
           <div className="rounded-lg bg-white/10 p-3 sm:p-4">
-            <dt className="text-xs uppercase tracking-wide text-light-green">पेड</dt>
+            <dt className="text-xs uppercase tracking-wide text-light-green">भुगतान किया</dt>
             <dd className="text-lg sm:text-2xl font-bold mt-1">{formatINR(walletSummary.paid)}</dd>
           </div>
           <div className="rounded-lg bg-white/10 p-3 sm:p-4 ring-1 ring-golden/60">
-            <dt className="text-xs uppercase tracking-wide text-golden">पेंडिंग</dt>
+            <dt className="text-xs uppercase tracking-wide text-golden">लंबित</dt>
             <dd className="text-lg sm:text-2xl font-bold mt-1 text-golden">
               {formatINR(walletSummary.pending)}
             </dd>
@@ -66,8 +66,8 @@ export default function DividendWallet() {
         </dl>
 
         <p className="text-sm text-white/80 mb-4">
-          योर पेंडिंग डिविडेंड ऑफ {formatINR(walletSummary.pending)} इज़ रेडी — ट्रांसफर इट टू
-          योर वेरिफाइड बैंक अकाउंट ऑर रीइन्वेस्ट इट इनटू एडिशनल शेयर्स.
+          आपका {formatINR(walletSummary.pending)} का लंबित लाभांश तैयार है — इसे अपने सत्यापित
+          बैंक खाते में स्थानांतरित करें या अतिरिक्त शेयरों में पुनर्निवेश करें.
         </p>
 
         <div className="mt-auto flex flex-col sm:flex-row gap-3">
@@ -76,14 +76,14 @@ export default function DividendWallet() {
             onClick={() => setOpenModal('transfer')}
             className="btn bg-white text-dark-green hover:bg-cream-white shadow-lg flex-1 flex items-center justify-center gap-2"
           >
-            <FaUniversity aria-hidden="true" /> ट्रांसफर टू बैंक
+            <FaUniversity aria-hidden="true" /> बैंक में स्थानांतरित करें
           </button>
           <button
             type="button"
             onClick={() => setOpenModal('reinvest')}
             className="btn btn-golden flex-1 flex items-center justify-center gap-2"
           >
-            <FaSeedling aria-hidden="true" /> रीइन्वेस्ट
+            <FaSeedling aria-hidden="true" /> पुनर्निवेश करें
           </button>
         </div>
       </motion.section>
@@ -92,19 +92,19 @@ export default function DividendWallet() {
       <DashboardModal
         open={openModal === 'transfer'}
         onClose={closeModal}
-        title="ट्रांसफर टू बैंक"
+        title="बैंक में स्थानांतरण"
         titleId="transfer-modal-title"
       >
         {phase === 'success' ? (
           <div className="text-center py-4">
             <FaCheckCircle className="text-primary-green text-5xl mx-auto mb-3" aria-hidden="true" />
-            <p className="text-lg font-bold text-dark-green">ट्रांसफर इनिशिएटेड</p>
+            <p className="text-lg font-bold text-dark-green">स्थानांतरण आरंभ किया गया</p>
             <p className="text-sm text-gray-600 mt-2">
-              {formatINR(amountValue)} इज़ ऑन इट्स वे — रिफ्लेक्ट्स इन योर बैंक अकाउंट इन 2–3
-              वर्किंग डेज़.
+              {formatINR(amountValue)} भेज दिया गया है — आपके बैंक खाते में 2–3 कार्य दिवसों में
+              दिखाई देगा.
             </p>
             <button type="button" onClick={closeModal} className="btn btn-outline mt-6 w-full">
-              डन
+              हो गया
             </button>
           </div>
         ) : (
@@ -120,7 +120,7 @@ export default function DividendWallet() {
                 </p>
               </div>
               <span className="ml-auto badge-status bg-primary-green/10 text-primary-green">
-                वेरिफाइड
+                सत्यापित
               </span>
             </div>
             <div>
@@ -128,7 +128,7 @@ export default function DividendWallet() {
                 htmlFor="transfer-amount"
                 className="block text-sm font-semibold text-gray-700 mb-1"
               >
-                अमाउंट टू ट्रांसफर (₹)
+                स्थानांतरण की राशि (₹)
               </label>
               <input
                 id="transfer-amount"
@@ -140,7 +140,7 @@ export default function DividendWallet() {
                 className="input-field"
               />
               <p className="text-xs text-gray-500 mt-1.5">
-                अवेलेबल पेंडिंग डिविडेंड: {formatINR(walletSummary.pending)}
+                उपलब्ध लंबित लाभांश: {formatINR(walletSummary.pending)}
               </p>
             </div>
             <button
@@ -151,10 +151,10 @@ export default function DividendWallet() {
             >
               {phase === 'processing' ? (
                 <>
-                  <Spinner light /> प्रोसेसिंग…
+                  <Spinner light /> प्रोसेस हो रहा है…
                 </>
               ) : (
-                'कन्फर्म ट्रांसफर'
+                'स्थानांतरण की पुष्टि करें'
               )}
             </button>
           </div>
@@ -165,39 +165,39 @@ export default function DividendWallet() {
       <DashboardModal
         open={openModal === 'reinvest'}
         onClose={closeModal}
-        title="रीइन्वेस्ट डिविडेंड"
+        title="लाभांश पुनर्निवेश करें"
         titleId="reinvest-modal-title"
       >
         {phase === 'success' ? (
           <div className="text-center py-4">
             <FaCheckCircle className="text-primary-green text-5xl mx-auto mb-3" aria-hidden="true" />
-            <p className="text-lg font-bold text-dark-green">रीइन्वेस्टमेंट सक्सेसफुल</p>
+            <p className="text-lg font-bold text-dark-green">पुनर्निवेश सफल रहा</p>
             <p className="text-sm text-gray-600 mt-2">
-              {REINVEST_SHARES} एडिशनल शेयर्स विल बी एडेड टू योर होल्डिंग एंड योर शेयर
-              सर्टिफिकेट विल बी अपडेटेड.
+              {REINVEST_SHARES} अतिरिक्त शेयर आपकी धारिता में जोड़े जाएँगे और आपका शेयर
+              प्रमाणपत्र अपडेट कर दिया जाएगा.
             </p>
             <button type="button" onClick={closeModal} className="btn btn-outline mt-6 w-full">
-              डन
+              हो गया
             </button>
           </div>
         ) : (
           <div className="space-y-4">
             <div className="rounded-xl bg-cream-white border border-gray-200 p-5 text-center">
-              <p className="text-sm text-gray-600">कन्वर्ट</p>
+              <p className="text-sm text-gray-600">बदलें</p>
               <p className="text-3xl font-bold text-dark-green mt-1">
                 {formatINR(walletSummary.pending)}
               </p>
               <p className="text-sm text-gray-600 mt-2">
-                इनटू{' '}
+                में{' '}
                 <span className="font-bold text-primary-green">
-                  {REINVEST_SHARES} एडिशनल शेयर्स
+                  {REINVEST_SHARES} अतिरिक्त शेयर
                 </span>{' '}
-                ऐट फेस वैल्यू {formatINR(currentInvestor.faceValue)} पर शेयर
+                अंकित मूल्य {formatINR(currentInvestor.faceValue)} प्रति शेयर पर
               </p>
             </div>
             <p className="text-xs text-gray-500 text-center">
-              न्यू होल्डिंग आफ्टर रीइन्वेस्टमेंट:{' '}
-              {(currentInvestor.shares + REINVEST_SHARES).toLocaleString('en-IN')} शेयर्स
+              पुनर्निवेश के बाद नई धारिता:{' '}
+              {(currentInvestor.shares + REINVEST_SHARES).toLocaleString('en-IN')} शेयर
             </p>
             <button
               type="button"
@@ -207,10 +207,10 @@ export default function DividendWallet() {
             >
               {phase === 'processing' ? (
                 <>
-                  <Spinner light /> प्रोसेसिंग…
+                  <Spinner light /> प्रोसेस हो रहा है…
                 </>
               ) : (
-                'कन्फर्म रीइन्वेस्टमेंट'
+                'पुनर्निवेश की पुष्टि करें'
               )}
             </button>
           </div>

@@ -14,25 +14,25 @@ export default function CertificatePreview() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <span className="section-eyebrow">शेयर एलोकेशन</span>
-            <h2 className="mb-4">अ नंबर्ड सर्टिफिकेट फॉर एवरी इन्वेस्टमेंट</h2>
+            <span className="section-eyebrow">शेयर आवंटन</span>
+            <h2 className="mb-4">हर निवेश के लिए एक क्रमांकित प्रमाणपत्र</h2>
             <p className="mb-4 text-lg text-gray-600">
-              द मोमेंट योर इन्वेस्टमेंट इज़ अप्रूव्ड, द सिस्टम जेनरेट्स योर
-              इन्वेस्टर आईडी एंड अ यूनीक सर्टिफिकेट नंबर, रिकॉर्डेड परमानेंटली इन
-              द कंपनी शेयर रजिस्टर।
+              जैसे ही आपका निवेश मंज़ूर होता है, सिस्टम आपकी
+              निवेशक आईडी और एक विशिष्ट प्रमाणपत्र क्रमांक तैयार करता है, जो
+              कंपनी शेयर रजिस्टर में स्थायी रूप से दर्ज होता है।
             </p>
             <ul className="space-y-3 text-gray-700">
               <li className="flex items-start gap-3">
                 <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-golden" aria-hidden="true" />
-                इन्वेस्टर आईडी — e.g. <span className="font-mono font-semibold text-dark-green">PAL-INV-0001</span>
+                निवेशक आईडी — जैसे <span className="font-mono font-semibold text-dark-green">PAL-INV-0001</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-golden" aria-hidden="true" />
-                सर्टिफिकेट No. — e.g. <span className="font-mono font-semibold text-dark-green">PAL-SHARE-2026-0001</span>
+                प्रमाणपत्र क्रमांक — जैसे <span className="font-mono font-semibold text-dark-green">PAL-SHARE-2026-0001</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-golden" aria-hidden="true" />
-                डाउनलोडेबल एनीटाइम फ्रॉम योर इन्वेस्टर डैशबोर्ड
+                अपने निवेशक डैशबोर्ड से कभी भी डाउनलोड करने योग्य
               </li>
             </ul>
           </motion.div>
@@ -50,35 +50,35 @@ export default function CertificatePreview() {
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gray-500">
                 पालनहार डेयरी &amp; एग्रीकल्चरल फार्म Pvt. Ltd.
               </p>
-              <h3 className="my-3 text-2xl sm:text-3xl">इन्वेस्टमेंट सर्टिफिकेट</h3>
+              <h3 className="my-3 text-2xl sm:text-3xl">निवेश प्रमाणपत्र</h3>
               <p className="mb-6 font-mono text-sm font-semibold tracking-wider text-golden">
                 {cert.certificateNo}
               </p>
-              <p className="mb-1 text-sm text-gray-600">दिस सर्टिफाइज़ दैट</p>
+              <p className="mb-1 text-sm text-gray-600">यह प्रमाणित करता है कि</p>
               <p className="mb-4 text-lg font-bold text-dark-green">{currentInvestor.name}</p>
               <div className="mx-auto mb-6 grid max-w-xs grid-cols-2 gap-4 text-left">
                 <div>
-                  <p className="text-[11px] uppercase tracking-wide text-gray-500">शेयर्स हेल्ड</p>
+                  <p className="text-[11px] uppercase tracking-wide text-gray-500">धारित शेयर</p>
                   <p className="font-bold text-dark-green">{cert.shares.toLocaleString('en-IN')}</p>
                 </div>
                 <div>
-                  <p className="text-[11px] uppercase tracking-wide text-gray-500">इन्वेस्टमेंट</p>
+                  <p className="text-[11px] uppercase tracking-wide text-gray-500">निवेश</p>
                   <p className="font-bold text-dark-green">{formatINR(cert.amount)}</p>
                 </div>
                 <div>
-                  <p className="text-[11px] uppercase tracking-wide text-gray-500">इन्वेस्टर आईडी</p>
+                  <p className="text-[11px] uppercase tracking-wide text-gray-500">निवेशक आईडी</p>
                   <p className="font-mono text-sm font-bold text-dark-green">{currentInvestor.investorId}</p>
                 </div>
                 <div>
-                  <p className="text-[11px] uppercase tracking-wide text-gray-500">इश्यूड ऑन</p>
+                  <p className="text-[11px] uppercase tracking-wide text-gray-500">जारी दिनांक</p>
                   <p className="text-sm font-bold text-dark-green">{cert.issuedOn}</p>
                 </div>
               </div>
               <div className="flex items-end justify-between border-t border-primary-green/20 pt-4">
-                <p className="text-[11px] text-gray-500">रिकॉर्डेड इन द कंपनी शेयर रजिस्टर</p>
+                <p className="text-[11px] text-gray-500">कंपनी शेयर रजिस्टर में दर्ज</p>
                 <div className="text-right">
                   <p className="font-display text-sm italic text-dark-green">पालनहार</p>
-                  <p className="text-[10px] uppercase tracking-wide text-gray-500">अथराइज़्ड सिग्नेटरी</p>
+                  <p className="text-[10px] uppercase tracking-wide text-gray-500">अधिकृत हस्ताक्षरकर्ता</p>
                 </div>
               </div>
             </div>

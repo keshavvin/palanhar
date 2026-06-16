@@ -43,8 +43,8 @@ export default function Testimonials() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">What Customers Say</h2>
-          <p className="text-xl text-gray-600">Real reviews from our happy customers</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">ग्राहक क्या कहते हैं</h2>
+          <p className="text-xl text-gray-600">हमारे खुश ग्राहकों की असली प्रतिक्रियाएँ</p>
         </motion.div>
 
         {/* Testimonials Carousel */}
@@ -101,14 +101,14 @@ export default function Testimonials() {
           <button
             onClick={prev}
             className="absolute left-2 lg:-left-12 top-1/3 transform -translate-y-1/2 bg-primary-green text-white p-3 rounded-full hover:bg-dark-green transition-all duration-300 shadow-lg hover:shadow-xl"
-            aria-label="Previous testimonial"
+            aria-label="पिछली प्रतिक्रिया"
           >
             <FaChevronLeft size={20} />
           </button>
           <button
             onClick={next}
             className="absolute right-2 lg:-right-12 top-1/3 transform -translate-y-1/2 bg-primary-green text-white p-3 rounded-full hover:bg-dark-green transition-all duration-300 shadow-lg hover:shadow-xl"
-            aria-label="Next testimonial"
+            aria-label="अगली प्रतिक्रिया"
           >
             <FaChevronRight size={20} />
           </button>
@@ -126,7 +126,7 @@ export default function Testimonials() {
                   setCurrent(i);
                   setAutoplay(false);
                 }}
-                aria-label={`Go to testimonial ${i + 1}`}
+                aria-label={`प्रतिक्रिया ${i + 1} पर जाएँ`}
                 className="w-3 h-3 rounded-full transition-all duration-300"
               />
             ))}
