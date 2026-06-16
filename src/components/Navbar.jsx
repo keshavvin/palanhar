@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
-import { FaBars, FaTimes, FaUserCircle, FaSeedling } from 'react-icons/fa';
+import { FaBars, FaTimes, FaUserCircle } from 'react-icons/fa';
 
 // Primary navigation — mirrors the marketing header in the reference design.
 // `hash` items resolve to a section on the home page; the rest are routes.
@@ -74,10 +74,6 @@ export default function Navbar() {
             <span className="leading-tight">
               <span className="block font-display text-xl sm:text-2xl font-bold text-dark-green">
                 पालनहार
-              </span>
-              <span className="hidden sm:flex items-center gap-1 text-[11px] font-semibold tracking-wide text-golden">
-                <FaSeedling aria-hidden="true" className="text-light-green" />
-                गौ सेवा &bull; कृषि समृद्धि &bull; सतत विकास
               </span>
             </span>
           </Link>
