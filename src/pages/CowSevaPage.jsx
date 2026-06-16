@@ -23,117 +23,117 @@ const fadeUp = {
 const values = [
   {
     icon: FaHeart,
-    title: 'Compassion',
-    desc: 'Caring for a gentle animal that depends on you awakens natural empathy — first for cows, then for all living beings.',
+    title: 'कम्पैशन',
+    desc: 'केयरिंग फॉर अ जेंटल एनिमल दैट डिपेंड्स ऑन यू अवेकन्स नैचुरल एम्पैथी — फर्स्ट फॉर काउज़, देन फॉर ऑल लिविंग बीइंग्स.',
   },
   {
     icon: FaHandsHelping,
-    title: 'Responsibility',
-    desc: 'A cow must be fed, cleaned and cared for every single day. Seva teaches commitment that no textbook can.',
+    title: 'रिस्पॉन्सिबिलिटी',
+    desc: 'अ काउ मस्ट बी फेड, क्लीन्ड एंड केयर्ड फॉर एव्री सिंगल डे. सेवा टीचेस कमिटमेंट दैट नो टेक्स्टबुक कैन.',
   },
   {
     icon: FaClock,
-    title: 'Discipline & Patience',
-    desc: 'Cows follow the rhythm of sunrise and sunset. Serving them builds routine, punctuality and calm patience.',
+    title: 'डिसिप्लिन & पेशेंस',
+    desc: 'काउज़ फॉलो द रिदम ऑफ सनराइज़ एंड सनसेट. सर्विंग देम बिल्ड्स रूटीन, पंक्चुअलिटी एंड काम पेशेंस.',
   },
   {
     icon: FaLeaf,
-    title: 'Respect for Nature',
-    desc: 'Through the cow you witness the full cycle of nature — soil, fodder, milk, manure and back to the soil.',
+    title: 'रिस्पेक्ट फॉर नेचर',
+    desc: 'थ्रू द काउ यू विटनेस द फुल साइकल ऑफ नेचर — सॉइल, फॉडर, मिल्क, मेन्योर एंड बैक टू द सॉइल.',
   },
   {
     icon: FaSeedling,
-    title: 'Gratitude',
-    desc: 'When you receive milk, ghee and fertile soil from an animal you serve, thankfulness becomes a daily habit.',
+    title: 'ग्रैटिट्यूड',
+    desc: 'व्हेन यू रिसीव मिल्क, घी एंड फर्टाइल सॉइल फ्रॉम एन एनिमल यू सर्व, थैंकफुलनेस बिकम्स अ डेली हैबिट.',
   },
   {
     icon: FaUsers,
-    title: 'Sense of Purpose',
-    desc: 'Selfless service to a voiceless being gives quiet, lasting satisfaction that material success rarely matches.',
+    title: 'सेंस ऑफ पर्पस',
+    desc: 'सेल्फलेस सर्विस टू अ वॉइसलेस बीइंग गिव्स क्वायट, लास्टिंग सैटिस्फैक्शन दैट मटीरियल सक्सेस रेयरली मैचेस.',
   },
 ];
 
 const careStandards = [
   {
     icon: FaBroom,
-    title: 'Cleanliness',
-    desc: 'Clean sheds, fresh bedding and hygienic milking areas — the first duty of every gaushala and the foundation of healthy cattle.',
+    title: 'क्लीनलिनेस',
+    desc: 'क्लीन शेड्स, फ्रेश बेडिंग एंड हाइजीनिक मिल्किंग एरियाज़ — द फर्स्ट ड्यूटी ऑफ एव्री गौशाला एंड द फाउंडेशन ऑफ हेल्दी कैटल.',
   },
   {
     icon: FaAppleAlt,
-    title: 'Proper Nutrition',
-    desc: 'Green fodder, natural feed, clean water and seasonal supplements keep cows healthy and milk pure.',
+    title: 'प्रॉपर न्यूट्रिशन',
+    desc: 'ग्रीन फॉडर, नैचुरल फीड, क्लीन वॉटर एंड सीज़नल सप्लिमेंट्स कीप काउज़ हेल्दी एंड मिल्क प्योर.',
   },
   {
     icon: FaUserMd,
-    title: 'Veterinary Care',
-    desc: 'Regular health check-ups, vaccination schedules and prompt treatment — every cow deserves professional medical attention.',
+    title: 'वेटेरिनरी केयर',
+    desc: 'रेगुलर हेल्थ चेक-अप्स, वैक्सिनेशन शेड्यूल्स एंड प्रॉम्प्ट ट्रीटमेंट — एव्री काउ डिज़र्व्स प्रोफेशनल मेडिकल अटेंशन.',
   },
   {
     icon: FaShieldAlt,
-    title: 'Humane Treatment',
-    desc: 'No cruelty, no overworking, dignified care for old and non-milking cows. Kindness is non-negotiable.',
+    title: 'ह्यूमेन ट्रीटमेंट',
+    desc: 'नो क्रूएल्टी, नो ओवरवर्किंग, डिग्निफाइड केयर फॉर ओल्ड एंड नॉन-मिल्किंग काउज़. काइंडनेस इज़ नॉन-नेगोशिएबल.',
   },
 ];
 
 const participation = [
   {
-    title: 'Visit or volunteer at a gaushala',
-    desc: 'Spend a weekend morning feeding, grooming or simply spending time with cows. Most cow shelters warmly welcome helping hands — including Palanhar, where farm visits are open to all.',
+    title: 'विज़िट ऑर वॉलंटियर एट अ गौशाला',
+    desc: 'स्पेंड अ वीकेंड मॉर्निंग फीडिंग, ग्रूमिंग ऑर सिम्पली स्पेंडिंग टाइम विद काउज़. मोस्ट काउ शेल्टर्स वार्मली वेलकम हेल्पिंग हैंड्स — इन्क्लूडिंग पालनहार, व्हेयर फार्म विज़िट्स आर ओपन टू ऑल.',
   },
   {
-    title: 'Sponsor fodder or daily feed',
-    desc: 'Even a small monthly contribution covers green fodder, water and care for a cow. It is one of the most direct ways to serve.',
+    title: 'स्पॉन्सर फॉडर ऑर डेली फीड',
+    desc: 'ईवन अ स्मॉल मंथली कॉन्ट्रिब्यूशन कवर्स ग्रीन फॉडर, वॉटर एंड केयर फॉर अ काउ. इट इज़ वन ऑफ द मोस्ट डायरेक्ट वेज़ टू सर्व.',
   },
   {
-    title: 'Adopt or support a cow',
-    desc: 'Many gaushalas let families symbolically adopt a cow and follow her health, milk and well-being — a beautiful tradition for children to grow up with.',
+    title: 'अडॉप्ट ऑर सपोर्ट अ काउ',
+    desc: 'मेनी गौशालाज़ लेट फैमिलीज़ सिम्बॉलिकली अडॉप्ट अ काउ एंड फॉलो हर हेल्थ, मिल्क एंड वेल-बीइंग — अ ब्यूटीफुल ट्रेडिशन फॉर चिल्ड्रन टू ग्रो अप विद.',
   },
   {
-    title: 'Choose panchgavya and natural products',
-    desc: 'Buying A2 milk, bilona ghee, vermi compost, dhoopbatti and other cow-based products keeps gaushalas economically self-reliant.',
+    title: 'चूज़ पंचगव्य एंड नैचुरल प्रोडक्ट्स',
+    desc: 'बाइंग A2 मिल्क, बिलोना घी, वर्मी कम्पोस्ट, धूपबत्ती एंड अदर काउ-बेस्ड प्रोडक्ट्स कीप्स गौशालाज़ इकोनॉमिकली सेल्फ-रिलायंट.',
   },
   {
-    title: 'Bring Gau Seva into family life',
-    desc: 'Involve children in feeding visits, celebrate festivals like Gopashtami and Govardhan Puja together, and let the next generation learn kindness by doing.',
+    title: 'ब्रिंग गौ सेवा इनटू फैमिली लाइफ',
+    desc: 'इन्वॉल्व चिल्ड्रन इन फीडिंग विज़िट्स, सेलिब्रेट फेस्टिवल्स लाइक गोपाष्टमी एंड गोवर्धन पूजा टुगेदर, एंड लेट द नेक्स्ट जेनरेशन लर्न काइंडनेस बाय डूइंग.',
   },
   {
-    title: 'Support ethical dairy farming',
-    desc: 'Encourage and invest in farms that practice cruelty-free, transparent dairy — so that good animal care becomes good economics.',
+    title: 'सपोर्ट एथिकल डेयरी फार्मिंग',
+    desc: 'एनकरेज एंड इन्वेस्ट इन फार्म्स दैट प्रैक्टिस क्रूएल्टी-फ्री, ट्रांसपेरेंट डेयरी — सो दैट गुड एनिमल केयर बिकम्स गुड इकोनॉमिक्स.',
   },
 ];
 
 const contributions = [
   {
-    title: 'Agricultural',
+    title: 'एग्रीकल्चरल',
     points: [
-      'Gobar (cow dung) becomes compost and vermi compost that rebuilds soil health naturally',
-      'Gomutra-based preparations support chemical-free pest management in organic farming',
-      'Bullock power still serves small farms where machinery cannot reach',
+      'गोबर (काउ डंग) बिकम्स कम्पोस्ट एंड वर्मी कम्पोस्ट दैट रीबिल्ड्स सॉइल हेल्थ नैचुरली',
+      'गोमूत्र-बेस्ड प्रिपरेशन्स सपोर्ट केमिकल-फ्री पेस्ट मैनेजमेंट इन ऑर्गेनिक फार्मिंग',
+      'बुलक पावर स्टिल सर्व्स स्मॉल फार्म्स व्हेयर मशीनरी कैननॉट रीच',
     ],
   },
   {
-    title: 'Environmental',
+    title: 'एन्वायरनमेंटल',
     points: [
-      'Dung-based biogas (CBG) offers clean, renewable cooking and vehicle fuel',
-      'Organic manure reduces dependence on synthetic fertilizers and protects groundwater',
-      'Indigenous breeds are well adapted to local climates, needing fewer external inputs',
+      'डंग-बेस्ड बायोगैस (CBG) ऑफर्स क्लीन, रिन्यूएबल कुकिंग एंड व्हीकल फ्यूल',
+      'ऑर्गेनिक मेन्योर रिड्यूसेस डिपेंडेंस ऑन सिंथेटिक फर्टिलाइज़र्स एंड प्रोटेक्ट्स ग्राउंडवॉटर',
+      'इंडिजिनस ब्रीड्स आर वेल अडैप्टेड टू लोकल क्लाइमेट्स, नीडिंग फ्यूअर एक्सटर्नल इनपुट्स',
     ],
   },
   {
-    title: 'Economic & Rural',
+    title: 'इकोनॉमिक & रूरल',
     points: [
-      'Dairy income gives millions of small farming families a steady daily livelihood',
-      'Value-added products — ghee, paneer, panchgavya items — multiply rural income',
-      'Gaushalas create local employment in feeding, care, processing and distribution',
+      'डेयरी इनकम गिव्स मिलियन्स ऑफ स्मॉल फार्मिंग फैमिलीज़ अ स्टेडी डेली लाइवलीहुड',
+      'वैल्यू-ऐडेड प्रोडक्ट्स — घी, पनीर, पंचगव्य आइटम्स — मल्टीप्लाई रूरल इनकम',
+      'गौशालाज़ क्रिएट लोकल एम्प्लॉयमेंट इन फीडिंग, केयर, प्रोसेसिंग एंड डिस्ट्रिब्यूशन',
     ],
   },
   {
-    title: 'Social & Cultural',
+    title: 'सोशल & कल्चरल',
     points: [
-      'The cow has been honoured as Gau Mata in Indian culture for thousands of years',
-      'Festivals, fairs and community feeding traditions bring villages together',
-      'Shared seva builds bonds across generations, families and communities',
+      'द काउ हैज़ बीन ऑनर्ड एज़ गौ माता इन इंडियन कल्चर फॉर थाउज़ंड्स ऑफ इयर्स',
+      'फेस्टिवल्स, फेयर्स एंड कम्युनिटी फीडिंग ट्रेडिशन्स ब्रिंग विलेजेस टुगेदर',
+      'शेयर्ड सेवा बिल्ड्स बॉन्ड्स अक्रॉस जेनरेशन्स, फैमिलीज़ एंड कम्युनिटीज़',
     ],
   },
 ];
@@ -150,11 +150,11 @@ export default function CowSevaPage() {
       >
         <div className="container-custom text-center">
           <span className="section-eyebrow">गौ सेवा</span>
-          <h1 className="mb-4">Gau Seva — Serving the Gentle Giver</h1>
+          <h1 className="mb-4">गौ सेवा — सर्विंग द जेंटल गिवर</h1>
           <p className="mx-auto max-w-3xl text-lg text-gray-600 md:text-xl">
-            Caring for cows is one of humanity&rsquo;s oldest acts of kindness — a practice
-            that nurtures character, strengthens communities, enriches the soil and
-            brings quiet joy to those who serve.
+            केयरिंग फॉर काउज़ इज़ वन ऑफ ह्यूमैनिटी&rsquo;ज़ ओल्डेस्ट एक्ट्स ऑफ काइंडनेस — अ प्रैक्टिस
+            दैट नर्चर्स कैरेक्टर, स्ट्रेंथन्स कम्युनिटीज़, एनरिचेस द सॉइल एंड
+            ब्रिंग्स क्वायट जॉय टू दोज़ हू सर्व.
           </p>
         </div>
       </motion.section>
@@ -164,18 +164,18 @@ export default function CowSevaPage() {
         <div className="container-custom max-w-3xl">
           <motion.div {...fadeUp} className="space-y-5 text-lg leading-relaxed text-gray-700">
             <p>
-              <strong className="text-dark-green">Gau Seva</strong> simply means serving and
-              caring for cows — feeding them, keeping their shelters clean, attending to their
-              health, and treating them with the gentleness they show us. In Indian tradition
-              the cow is revered as <em>Gau Mata</em>, the mother who nourishes; but the value
-              of Gau Seva is universal. Anyone, of any background, who has spent a morning
-              feeding a calf or grooming a gentle Gir cow knows the calm it brings.
+              <strong className="text-dark-green">गौ सेवा</strong> सिम्पली मीन्स सर्विंग एंड
+              केयरिंग फॉर काउज़ — फीडिंग देम, कीपिंग देयर शेल्टर्स क्लीन, अटेंडिंग टू देयर
+              हेल्थ, एंड ट्रीटिंग देम विद द जेंटलनेस दे शो अस. इन इंडियन ट्रेडिशन
+              द काउ इज़ रिवियर्ड एज़ <em>गौ माता</em>, द मदर हू नरिशेस; बट द वैल्यू
+              ऑफ गौ सेवा इज़ युनिवर्सल. एनीवन, ऑफ एनी बैकग्राउंड, हू हैज़ स्पेंट अ मॉर्निंग
+              फीडिंग अ काफ ऑर ग्रूमिंग अ जेंटल गिर काउ नोज़ द काम इट ब्रिंग्स.
             </p>
             <p>
-              At its heart, Gau Seva is a relationship. A cow gives milk, fertile manure,
-              and companionship; in return she asks only for food, cleanliness, safety and
-              kindness. Practising this exchange daily transforms not just the animal&rsquo;s
-              life — it transforms ours.
+              एट इट्स हार्ट, गौ सेवा इज़ अ रिलेशनशिप. अ काउ गिव्स मिल्क, फर्टाइल मेन्योर,
+              एंड कम्पैनियनशिप; इन रिटर्न शी आस्क्स ओनली फॉर फूड, क्लीनलिनेस, सेफ्टी एंड
+              काइंडनेस. प्रैक्टिसिंग दिस एक्सचेंज डेली ट्रांसफॉर्म्स नॉट जस्ट द एनिमल&rsquo;ज़
+              लाइफ — इट ट्रांसफॉर्म्स अवर्स.
             </p>
           </motion.div>
         </div>
@@ -185,11 +185,11 @@ export default function CowSevaPage() {
       <section className="section bg-cream-white/60">
         <div className="container-custom">
           <motion.div {...fadeUp} className="mb-12 text-center">
-            <span className="section-eyebrow">Inner Growth</span>
-            <h2 className="mb-4">What Serving Cows Teaches Us</h2>
+            <span className="section-eyebrow">इनर ग्रोथ</span>
+            <h2 className="mb-4">व्हाट सर्विंग काउज़ टीचेस अस</h2>
             <p className="mx-auto max-w-2xl text-lg text-gray-600">
-              Seva is as much for the giver as for the receiver. These are the qualities
-              people consistently report growing through regular cow care.
+              सेवा इज़ एज़ मच फॉर द गिवर एज़ फॉर द रिसीवर. दीज़ आर द क्वालिटीज़
+              पीपल कन्सिस्टेंटली रिपोर्ट ग्रोइंग थ्रू रेगुलर काउ केयर.
             </p>
           </motion.div>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -218,18 +218,18 @@ export default function CowSevaPage() {
         <div className="container-custom max-w-3xl text-center">
           <motion.blockquote {...fadeUp} className="text-white">
             <p className="font-display text-2xl font-bold leading-relaxed md:text-3xl">
-              &ldquo;Ten quiet minutes beside a cow at sunrise can settle the mind more
-              deeply than an hour of distraction. Seva is meditation in motion.&rdquo;
+              &ldquo;टेन क्वायट मिनट्स बिसाइड अ काउ एट सनराइज़ कैन सेटल द माइंड मोर
+              डीप्ली दैन एन आवर ऑफ डिस्ट्रैक्शन. सेवा इज़ मेडिटेशन इन मोशन.&rdquo;
             </p>
             <footer className="mt-6 text-sm uppercase tracking-widest text-golden">
-              The everyday experience of gaushala volunteers
+              द एव्रीडे एक्सपीरियंस ऑफ गौशाला वॉलंटियर्स
             </footer>
           </motion.blockquote>
           <motion.p {...fadeUp} className="mx-auto mt-8 max-w-2xl text-white/85">
-            Time spent caring for animals is widely associated with lower stress, emotional
-            grounding and a renewed sense of gratitude. Families who serve together speak of
-            stronger bonds; elders find routine and companionship; children learn empathy
-            they carry for life.
+            टाइम स्पेंट केयरिंग फॉर एनिमल्स इज़ वाइडली असोसिएटेड विद लोअर स्ट्रेस, इमोशनल
+            ग्राउंडिंग एंड अ रिन्यूड सेंस ऑफ ग्रैटिट्यूड. फैमिलीज़ हू सर्व टुगेदर स्पीक ऑफ
+            स्ट्रॉन्गर बॉन्ड्स; एल्डर्स फाइंड रूटीन एंड कम्पैनियनशिप; चिल्ड्रन लर्न एम्पैथी
+            दे कैरी फॉर लाइफ.
           </motion.p>
         </div>
       </section>
@@ -238,11 +238,11 @@ export default function CowSevaPage() {
       <section className="section bg-white">
         <div className="container-custom">
           <motion.div {...fadeUp} className="mb-12 text-center">
-            <span className="section-eyebrow">Beyond the Gaushala</span>
-            <h2 className="mb-4">How Cows Serve Society</h2>
+            <span className="section-eyebrow">बियॉन्ड द गौशाला</span>
+            <h2 className="mb-4">हाउ काउज़ सर्व सोसाइटी</h2>
             <p className="mx-auto max-w-2xl text-lg text-gray-600">
-              The cow stands at the centre of a remarkable circular economy — feeding
-              families, restoring farmland and powering rural livelihoods.
+              द काउ स्टैंड्स एट द सेंटर ऑफ अ रिमार्केबल सर्कुलर इकोनॉमी — फीडिंग
+              फैमिलीज़, रिस्टोरिंग फार्मलैंड एंड पावरिंग रूरल लाइवलीहुड्स.
             </p>
           </motion.div>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -268,11 +268,11 @@ export default function CowSevaPage() {
             ))}
           </div>
           <motion.p {...fadeUp} className="mx-auto mt-10 max-w-3xl text-center leading-relaxed text-gray-600">
-            From milk and ghee on the family table, to compost that brings tired soil back to
-            life, to biogas that lights rural kitchens — well-cared-for cows quietly support
-            sustainable farming, organic agriculture and the livelihoods of millions of
-            farmers. Protecting them is not charity alone; it is sound environmental and
-            economic sense.
+            फ्रॉम मिल्क एंड घी ऑन द फैमिली टेबल, टू कम्पोस्ट दैट ब्रिंग्स टायर्ड सॉइल बैक टू
+            लाइफ, टू बायोगैस दैट लाइट्स रूरल किचन्स — वेल-केयर्ड-फॉर काउज़ क्वायटली सपोर्ट
+            सस्टेनेबल फार्मिंग, ऑर्गेनिक एग्रीकल्चर एंड द लाइवलीहुड्स ऑफ मिलियन्स ऑफ
+            फार्मर्स. प्रोटेक्टिंग देम इज़ नॉट चैरिटी अलोन; इट इज़ साउंड एन्वायरनमेंटल एंड
+            इकोनॉमिक सेंस.
           </motion.p>
         </div>
       </section>
@@ -281,11 +281,11 @@ export default function CowSevaPage() {
       <section className="section bg-cream-white/60">
         <div className="container-custom">
           <motion.div {...fadeUp} className="mb-12 text-center">
-            <span className="section-eyebrow">Seva Done Right</span>
-            <h2 className="mb-4">The Four Duties of Cow Care</h2>
+            <span className="section-eyebrow">सेवा डन राइट</span>
+            <h2 className="mb-4">द फोर ड्यूटीज़ ऑफ काउ केयर</h2>
             <p className="mx-auto max-w-2xl text-lg text-gray-600">
-              True seva is responsible seva. These are the standards we hold ourselves to
-              at Palanhar — and encourage every cow shelter to uphold.
+              ट्रू सेवा इज़ रिस्पॉन्सिबल सेवा. दीज़ आर द स्टैंडर्ड्स वी होल्ड अवरसेल्व्स टू
+              एट पालनहार — एंड एनकरेज एव्री काउ शेल्टर टू अपहोल्ड.
             </p>
           </motion.div>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -313,11 +313,11 @@ export default function CowSevaPage() {
       <section className="section bg-white">
         <div className="container-custom max-w-4xl">
           <motion.div {...fadeUp} className="mb-12 text-center">
-            <span className="section-eyebrow">Start Today</span>
-            <h2 className="mb-4">Six Ways You Can Practise Gau Seva</h2>
+            <span className="section-eyebrow">स्टार्ट टुडे</span>
+            <h2 className="mb-4">सिक्स वेज़ यू कैन प्रैक्टिस गौ सेवा</h2>
             <p className="mx-auto max-w-2xl text-lg text-gray-600">
-              Seva does not require a farm of your own. Here are practical ways anyone —
-              in a village or a city — can begin.
+              सेवा डज़ नॉट रिक्वायर अ फार्म ऑफ योर ओन. हियर आर प्रैक्टिकल वेज़ एनीवन —
+              इन अ विलेज ऑर अ सिटी — कैन बिगिन.
             </p>
           </motion.div>
           <ol className="space-y-5">
@@ -356,21 +356,21 @@ export default function CowSevaPage() {
         </div>
         <div className="container-custom relative z-10 max-w-3xl text-center">
           <motion.div {...fadeUp} className="text-white">
-            <h2 className="mb-4 !text-white">Come, Serve With Us</h2>
+            <h2 className="mb-4 !text-white">कम, सर्व विद अस</h2>
             <p className="mb-8 text-lg text-white/85">
-              Visit our gaushala on NH-48, spend a morning with our 200 Gir cows and their
-              calves, and experience Gau Seva first-hand. Every visit, every product you
-              choose and every contribution keeps this circle of care turning.
+              विज़िट अवर गौशाला ऑन NH-48, स्पेंड अ मॉर्निंग विद अवर 200 गिर काउज़ एंड देयर
+              काव्स, एंड एक्सपीरियंस गौ सेवा फर्स्ट-हैंड. एव्री विज़िट, एव्री प्रोडक्ट यू
+              चूज़ एंड एव्री कॉन्ट्रिब्यूशन कीप्स दिस सर्कल ऑफ केयर टर्निंग.
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Link to="/contact" className="btn btn-golden">
-                Plan a Farm Visit
+                प्लान अ फार्म विज़िट
               </Link>
               <Link
                 to="/invest"
                 className="btn border-2 border-white bg-transparent text-white hover:bg-white hover:text-primary-green"
               >
-                Support Ethical Dairy
+                सपोर्ट एथिकल डेयरी
               </Link>
             </div>
           </motion.div>

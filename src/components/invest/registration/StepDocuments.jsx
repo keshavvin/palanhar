@@ -5,9 +5,9 @@ export function StepPan({ data, update, errors }) {
     <div className="space-y-6">
       <TextField
         id="reg-pan"
-        label="PAN Number"
+        label="PAN नंबर"
         placeholder="ABCDE1234F"
-        hint="10 characters — auto-capitalised as you type"
+        hint="10 कैरेक्टर्स — ऑटो-कैपिटलाइज़्ड ऐज़ यू टाइप"
         autoComplete="off"
         value={data.pan}
         error={errors.pan}
@@ -23,13 +23,13 @@ export function StepPan({ data, update, errors }) {
       />
       <UploadBox
         id="reg-pan-file"
-        label="Upload PAN Card Copy"
+        label="अपलोड PAN कार्ड कॉपी"
         fileName={data.panFile}
         error={errors.panFile}
         onFile={(name) => update({ panFile: name })}
       />
       <p className="text-xs text-gray-400">
-        Your PAN is mandatory for share allotment and dividend TDS compliance.
+        योर PAN इज़ मैंडेटरी फॉर शेयर अलॉटमेंट एंड डिविडेंड TDS कम्प्लायंस.
       </p>
     </div>
   );
@@ -40,10 +40,10 @@ export function StepAadhaar({ data, update, errors }) {
     <div className="space-y-6">
       <TextField
         id="reg-aadhaar"
-        label="Aadhaar Number"
+        label="आधार नंबर"
         inputMode="numeric"
         placeholder="0000 0000 0000"
-        hint="12 digits — formatted automatically"
+        hint="12 डिजिट्स — फॉर्मैटेड ऑटोमैटिकली"
         autoComplete="off"
         value={data.aadhaar}
         error={errors.aadhaar}
@@ -55,13 +55,13 @@ export function StepAadhaar({ data, update, errors }) {
       />
       <UploadBox
         id="reg-aadhaar-file"
-        label="Upload Aadhaar Card Copy"
+        label="अपलोड आधार कार्ड कॉपी"
         fileName={data.aadhaarFile}
         error={errors.aadhaarFile}
         onFile={(name) => update({ aadhaarFile: name })}
       />
       <p className="text-xs text-gray-400">
-        Aadhaar is used only for identity verification and is stored securely.
+        आधार इज़ यूज़्ड ओनली फॉर आइडेंटिटी वेरिफिकेशन एंड इज़ स्टोर्ड सिक्योरली.
       </p>
     </div>
   );

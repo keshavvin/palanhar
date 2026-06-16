@@ -37,7 +37,7 @@ export default function OtpInput({ value, onChange }) {
   };
 
   return (
-    <div className="flex gap-2 sm:gap-3" role="group" aria-label="6-digit one-time password">
+    <div className="flex gap-2 sm:gap-3" role="group" aria-label="6-डिजिट वन-टाइम पासवर्ड">
       {value.map((digit, i) => (
         <input
           key={i}
@@ -52,7 +52,7 @@ export default function OtpInput({ value, onChange }) {
           onChange={(e) => setDigits(i, e.target.value)}
           onKeyDown={(e) => handleKeyDown(i, e)}
           onFocus={(e) => e.target.select()}
-          aria-label={`OTP digit ${i + 1}`}
+          aria-label={`OTP डिजिट ${i + 1}`}
           className="h-12 w-10 rounded-xl border-2 border-gray-200 bg-gray-50 text-center text-xl font-bold text-dark-green transition-colors duration-200 focus:border-primary-green focus:bg-white focus:outline-none sm:h-14 sm:w-12"
         />
       ))}

@@ -23,32 +23,32 @@ export default function About() {
   };
 
   const timeline = [
-    { year: 'Foundation', event: 'Began with a cow gaushala and traditional bilona dairy' },
-    { year: 'Growth', event: 'Scaled to 200 Gir cows producing 2,000 litres of A2 milk daily' },
-    { year: 'Integration', event: 'Added CNG biogas, biofertilizer and panchgavya product lines' },
-    { year: 'Today', event: '1000+ natural products and a transparent investor platform' },
+    { year: 'फाउंडेशन', event: 'बिगन विद अ काउ गौशाला एंड ट्रेडिशनल बिलोना डेयरी' },
+    { year: 'ग्रोथ', event: 'स्केल्ड टू 200 गिर काउज़ प्रोड्यूसिंग 2,000 लीटर्स ऑफ A2 मिल्क डेली' },
+    { year: 'इंटीग्रेशन', event: 'ऐडेड CNG बायोगैस, बायोफर्टिलाइज़र एंड पंचगव्य प्रोडक्ट लाइन्स' },
+    { year: 'टुडे', event: '1000+ नैचुरल प्रोडक्ट्स एंड अ ट्रांसपेरेंट इन्वेस्टर प्लेटफॉर्म' },
   ];
 
   const values = [
     {
       icon: FaLeaf,
-      title: 'Sustainability',
-      description: 'Committed to eco-friendly farming practices'
+      title: 'सस्टेनेबिलिटी',
+      description: 'कमिटेड टू इको-फ्रेंडली फार्मिंग प्रैक्टिसेज'
     },
     {
       icon: FaAward,
-      title: 'Quality',
-      description: 'Premium products meeting highest standards'
+      title: 'क्वालिटी',
+      description: 'प्रीमियम प्रोडक्ट्स मीटिंग हाइएस्ट स्टैंडर्ड्स'
     },
     {
       icon: FaUsers,
-      title: 'Community',
-      description: 'Supporting local farmers and families'
+      title: 'कम्युनिटी',
+      description: 'सपोर्टिंग लोकल फार्मर्स एंड फैमिलीज़'
     },
     {
       icon: FaLightbulb,
-      title: 'Innovation',
-      description: 'Modern techniques for better farming'
+      title: 'इनोवेशन',
+      description: 'मॉडर्न टेक्नीक्स फॉर बेटर फार्मिंग'
     },
   ];
 
@@ -63,10 +63,10 @@ export default function About() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">About Palanhar Farms</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">अबाउट पालनहार फार्म्स</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Gau Seva is our identity — building a sustainable future through pure
-            dairy and organic agriculture
+            गौ सेवा इज़ अवर आइडेंटिटी — बिल्डिंग अ सस्टेनेबल फ्यूचर थ्रू प्योर
+            डेयरी एंड ऑर्गेनिक एग्रीकल्चर
           </p>
         </motion.div>
 
@@ -79,18 +79,18 @@ export default function About() {
           className="grid md:grid-cols-2 gap-8 mb-16"
         >
           <motion.div variants={itemVariants} className="card bg-gradient-to-br from-primary-green/10 to-light-green/10 p-8">
-            <h3 className="text-2xl font-bold text-primary-green mb-4">Our Mission</h3>
+            <h3 className="text-2xl font-bold text-primary-green mb-4">अवर मिशन</h3>
             <p className="text-gray-700 leading-relaxed">
-              Gau seva, gau samvardhan, gau samriddhi — serving and protecting our cows
-              first, and from that care providing healthy dairy products and sustainable
-              agriculture solutions that nourish families and protect our environment.
+              गौ सेवा, गौ संवर्धन, गौ समृद्धि — सर्विंग एंड प्रोटेक्टिंग अवर काउज़
+              फर्स्ट, एंड फ्रॉम दैट केयर प्रोवाइडिंग हेल्दी डेयरी प्रोडक्ट्स एंड सस्टेनेबल
+              एग्रीकल्चर सॉल्यूशंस दैट नरिश फैमिलीज़ एंड प्रोटेक्ट अवर एनवायरनमेंट.
             </p>
           </motion.div>
 
           <motion.div variants={itemVariants} className="card bg-gradient-to-br from-golden/10 to-orange-100/10 p-8">
-            <h3 className="text-2xl font-bold text-dark-green mb-4">Our Vision</h3>
+            <h3 className="text-2xl font-bold text-dark-green mb-4">अवर विज़न</h3>
             <p className="text-gray-700 leading-relaxed">
-              Building a greener and healthier future by advancing sustainable farming practices. We envision a world where every family has access to pure, organic food while protecting our planet for future generations.
+              बिल्डिंग अ ग्रीनर एंड हेल्दियर फ्यूचर बाय एडवांसिंग सस्टेनेबल फार्मिंग प्रैक्टिसेज. वी एनविज़न अ वर्ल्ड वेयर एवरी फैमिली हैज़ एक्सेस टू प्योर, ऑर्गेनिक फूड वाइल प्रोटेक्टिंग अवर प्लैनेट फॉर फ्यूचर जेनरेशन्स.
             </p>
           </motion.div>
         </motion.div>
@@ -103,29 +103,29 @@ export default function About() {
           viewport={{ once: true }}
           className="card bg-white p-8 md:p-12 mb-16 shadow-xl"
         >
-          <h3 className="text-3xl font-bold text-dark-green mb-6">Our Journey</h3>
+          <h3 className="text-3xl font-bold text-dark-green mb-6">अवर जर्नी</h3>
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Palanhar was founded on the principle of &ldquo;one cow, many products, infinite
-                possibilities&rdquo;. From our farm on NH-48 near Rajokri Village, New Delhi, we
-                built a modern gaushala of indigenous cows cared for with natural feed
-                and cruelty-free practices.
+                पालनहार वाज़ फाउंडेड ऑन द प्रिंसिपल ऑफ &ldquo;वन काउ, मेनी प्रोडक्ट्स, इनफिनिट
+                पॉसिबिलिटीज़&rdquo;. फ्रॉम अवर फार्म ऑन NH-48 नियर राजोकरी विलेज, न्यू दिल्ली, वी
+                बिल्ट अ मॉडर्न गौशाला ऑफ इंडिजिनस काउज़ केयर्ड फॉर विद नैचुरल फीड
+                एंड क्रुएल्टी-फ्री प्रैक्टिसेज.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Today our 200 Gir cows produce around 2,000 litres of A2 milk every day —
-                churned into bilona ghee, makkhan, paneer and dahi the traditional way, and
-                trusted by health-conscious families across Delhi NCR.
+                टुडे अवर 200 गिर काउज़ प्रोड्यूस अराउंड 2,000 लीटर्स ऑफ A2 मिल्क एवरी डे —
+                चर्न्ड इनटू बिलोना घी, मक्खन, पनीर एंड दही द ट्रेडिशनल वे, एंड
+                ट्रस्टेड बाय हेल्थ-कॉन्शियस फैमिलीज़ अक्रॉस दिल्ली NCR.
               </p>
             </div>
             <div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Our integrated dairy system turns every output into value: gobar becomes
-                compressed biogas (CBG) and vermi compost, gomutra becomes ayurvedic
-                panchgavya products — over 1000+ natural products from a single ecosystem.
+                अवर इंटीग्रेटेड डेयरी सिस्टम टर्न्स एवरी आउटपुट इनटू वैल्यू: गोबर बिकम्स
+                कम्प्रेस्ड बायोगैस (CBG) एंड वर्मी कम्पोस्ट, गोमूत्र बिकम्स आयुर्वेदिक
+                पंचगव्य प्रोडक्ट्स — ओवर 1000+ नैचुरल प्रोडक्ट्स फ्रॉम अ सिंगल इकोसिस्टम.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Our journey continues as we expand our product range, improve our farming practices, and inspire other farmers to adopt sustainable methods for a greener planet.
+                अवर जर्नी कंटिन्यूज़ ऐज़ वी एक्सपैंड अवर प्रोडक्ट रेंज, इम्प्रूव अवर फार्मिंग प्रैक्टिसेज, एंड इन्स्पायर अदर फार्मर्स टू एडॉप्ट सस्टेनेबल मेथड्स फॉर अ ग्रीनर प्लैनेट.
               </p>
             </div>
           </div>
@@ -139,7 +139,7 @@ export default function About() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h3 className="text-3xl font-bold text-dark-green mb-8 text-center">Our Timeline</h3>
+          <h3 className="text-3xl font-bold text-dark-green mb-8 text-center">अवर टाइमलाइन</h3>
           <div className="grid md:grid-cols-4 gap-4">
             {timeline.map((item, i) => (
               <motion.div
@@ -164,7 +164,7 @@ export default function About() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h3 className="text-3xl font-bold text-dark-green mb-8 text-center">Our Core Values</h3>
+          <h3 className="text-3xl font-bold text-dark-green mb-8 text-center">अवर कोर वैल्यूज़</h3>
           <div className="grid md:grid-cols-4 gap-6">
             {values.map((value, i) => {
               const Icon = value.icon;

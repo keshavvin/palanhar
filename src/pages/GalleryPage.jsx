@@ -11,8 +11,8 @@ export default function GalleryPage() {
         className="pt-20 pb-10 bg-gradient-to-b from-light-green/20 to-transparent"
       >
         <div className="container-custom text-center">
-          <h1 className="text-5xl font-bold text-dark-green mb-4">Gallery</h1>
-          <p className="text-xl text-gray-600">Moments of Gau Seva, care and farm life at Palanhar</p>
+          <h1 className="text-5xl font-bold text-dark-green mb-4">गैलरी</h1>
+          <p className="text-xl text-gray-600">मोमेंट्स ऑफ गौ सेवा, केयर एंड फार्म लाइफ एट पालनहार</p>
         </div>
       </motion.section>
       <Gallery />

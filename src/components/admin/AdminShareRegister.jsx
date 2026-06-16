@@ -11,23 +11,23 @@ export default function AdminShareRegister() {
       aria-labelledby="share-register-heading"
       className="rounded-xl bg-white shadow-lg border border-primary-green/10 p-5 sm:p-6"
     >
-      <span className="section-eyebrow">Shareholding Records</span>
+      <span className="section-eyebrow">शेयरहोल्डिंग रिकॉर्ड्स</span>
       <h2 id="share-register-heading" className="text-xl sm:text-2xl">
-        Share Register
+        शेयर रजिस्टर
       </h2>
       <div className="mt-5 overflow-x-auto">
         <table className="w-full min-w-[760px] text-left text-sm">
           <caption className="caption-bottom pt-4 text-left text-xs text-gray-500">
-            System-maintained share register — Investor IDs and certificate numbers are auto-generated.
+            सिस्टम-मेंटेन्ड शेयर रजिस्टर — इन्वेस्टर आईडीज़ एंड सर्टिफिकेट नंबर्स आर ऑटो-जेनरेटेड.
           </caption>
           <thead>
             <tr className="border-b border-gray-200 text-xs uppercase tracking-wider text-gray-500">
-              <th scope="col" className="px-3 py-3">Investor ID</th>
-              <th scope="col" className="px-3 py-3">Name</th>
-              <th scope="col" className="px-3 py-3">Certificate No</th>
-              <th scope="col" className="px-3 py-3 text-right">Shares</th>
-              <th scope="col" className="px-3 py-3 text-right">Amount</th>
-              <th scope="col" className="px-3 py-3">Issued On</th>
+              <th scope="col" className="px-3 py-3">इन्वेस्टर आईडी</th>
+              <th scope="col" className="px-3 py-3">नेम</th>
+              <th scope="col" className="px-3 py-3">सर्टिफिकेट नं</th>
+              <th scope="col" className="px-3 py-3 text-right">शेयर्स</th>
+              <th scope="col" className="px-3 py-3 text-right">अमाउंट</th>
+              <th scope="col" className="px-3 py-3">इश्यूड ऑन</th>
             </tr>
           </thead>
           <tbody>

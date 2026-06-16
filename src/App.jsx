@@ -18,12 +18,18 @@ const InvestorRegisterPage = lazy(() => import('./pages/InvestorRegisterPage'));
 const InvestorDashboardPage = lazy(() => import('./pages/InvestorDashboardPage'));
 const AdminDashboardPage = lazy(() => import('./pages/AdminDashboardPage'));
 const CowSevaPage = lazy(() => import('./pages/CowSevaPage'));
+const EcosystemPage = lazy(() => import('./pages/EcosystemPage'));
+const DivisionsPage = lazy(() => import('./pages/DivisionsPage'));
+const DivisionPage = lazy(() => import('./pages/DivisionPage'));
+const AppPortalPage = lazy(() => import('./pages/AppPortalPage'));
+const VedicConsultantPage = lazy(() => import('./pages/VedicConsultantPage'));
+const DeckPage = lazy(() => import('./pages/DeckPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
 function PageLoader() {
   return (
     <div className="min-h-[50vh] flex items-center justify-center">
-      <BrandLoader size={110} label="Loading page" showWordmark />
+      <BrandLoader size={110} label="लोडिंग पेज" showWordmark />
     </div>
   );
 }
@@ -60,7 +66,7 @@ function SplashScreen() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
           >
-            <BrandLoader size={180} label="Loading Palanhar" showWordmark />
+            <BrandLoader size={180} label="लोडिंग पालनहार" showWordmark />
           </motion.div>
         </motion.div>
       )}
@@ -89,6 +95,12 @@ function AnimatedRoutes() {
             <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/gau-seva" element={<CowSevaPage />} />
+            <Route path="/ecosystem" element={<EcosystemPage />} />
+            <Route path="/divisions" element={<DivisionsPage />} />
+            <Route path="/divisions/:slug" element={<DivisionPage />} />
+            <Route path="/app" element={<AppPortalPage />} />
+            <Route path="/vedic-consultant" element={<VedicConsultantPage />} />
+            <Route path="/deck" element={<DeckPage />} />
             <Route path="/cow-seva" element={<Navigate to="/gau-seva" replace />} />
             <Route path="/invest" element={<InvestPage />} />
             <Route path="/investor/register" element={<InvestorRegisterPage />} />

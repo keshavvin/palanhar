@@ -1,128 +1,137 @@
-import { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { FaArrowRight } from 'react-icons/fa';
+import { FaUserPlus, FaCartShopping, FaCow } from 'react-icons/fa6';
 
-const bannerImages = ['/hero-banner-1.jpg', '/hero-banner-2.jpg', '/hero-banner-3.jpg'];
-const SLIDE_INTERVAL_MS = 5000;
+// The product lineup that fans out beside the cow — "एक गाय, अनेक आय स्रोत".
+const heroProducts = [
+  { label: 'दूध', icon: '🥛' },
+  { label: 'A2 घी', icon: '🫙' },
+  { label: 'बायो पेस्टिसाइड', icon: '🧴' },
+  { label: 'बायो पेंट', icon: '🪣' },
+  { label: 'CBG', icon: '🛢️' },
+];
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.1 } },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: 'easeOut' } },
+};
 
 export default function Hero() {
-  const [slide, setSlide] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(
-      () => setSlide((s) => (s + 1) % bannerImages.length),
-      SLIDE_INTERVAL_MS
-    );
-    return () => clearInterval(timer);
-  }, []);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3,
-        delayChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: 'easeOut' },
-    },
-  };
-
   return (
-    <section className="relative min-h-[calc(100vh-5rem)] bg-cream-white overflow-hidden">
-      {/* Gau Seva banner slideshow */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <AnimatePresence>
-          <motion.img
-            key={slide}
-            src={bannerImages[slide]}
-            alt=""
-            initial={{ opacity: 0, scale: 1 }}
-            animate={{ opacity: 1, scale: 1.08 }}
-            exit={{ opacity: 0 }}
-            transition={{
-              opacity: { duration: 1.2, ease: 'easeInOut' },
-              scale: { duration: SLIDE_INTERVAL_MS / 1000 + 1.5, ease: 'linear' },
-            }}
-            className="absolute inset-0 h-full w-full object-cover"
-            draggable="false"
-          />
-        </AnimatePresence>
-        {/* Readability overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-cream-white/90 via-cream-white/75 to-white/90" />
+    <section className="relative overflow-hidden bg-cream-white">
+      {/* Soft cow banner wash behind the content */}
+      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+        <img
+          src="/hero-banner-3.jpg"
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover"
+          draggable="false"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-cream-white via-cream-white/90 to-cream-white/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-cream-white/60" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center min-h-[calc(100vh-5rem)] relative z-10 py-12">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="text-center max-w-3xl w-full"
-        >
-          {/* Main Heading */}
-          <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl font-bold text-dark-green mb-4">
-            Gau Seva, Pure Dairy &amp; Organic Agriculture
-            <span className="block text-primary-green">One Cow. Many Blessings.</span>
+      <div className="container-custom relative z-10 grid items-center gap-10 py-14 md:py-20 lg:grid-cols-2 lg:gap-8">
+        {/* Left — headline + CTAs */}
+        <motion.div variants={containerVariants} initial="hidden" animate="visible">
+          <motion.h1
+            variants={itemVariants}
+            className="font-display text-5xl font-extrabold tracking-tight text-dark-green sm:text-6xl lg:text-7xl"
+          >
+            पालनहार
           </motion.h1>
 
-          {/* Subheading */}
           <motion.p
             variants={itemVariants}
-            className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed"
+            className="mt-3 font-display text-2xl font-bold leading-snug text-primary-green sm:text-3xl"
           >
-            Welcome to Palanhar Farms — where serving our desi cows comes first,
-            and pure A2 dairy, panchgavya products and sustainable farming flow from that care.
+            भारत का पारदर्शी
+            <span className="block">गौ-आधारित निवेश एवं उत्पाद मंच</span>
           </motion.p>
 
-          {/* Feature Cards */}
-          <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-            {[
-              { label: 'Gau Seva First', icon: '🐄' },
-              { label: '100% A2 Desi Milk', icon: '🥛' },
-              { label: 'Bilona Desi Ghee', icon: '🧈' },
-              { label: 'Panchgavya Products', icon: '🌿' },
-            ].map((feature, i) => (
-              <div
-                key={i}
-                className="bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
-              >
-                <div className="text-3xl mb-2">{feature.icon}</div>
-                <p className="text-sm font-semibold text-dark-green">{feature.label}</p>
-              </div>
-            ))}
+          <motion.div variants={itemVariants} className="mt-5">
+            <span className="inline-flex items-center rounded-lg bg-primary-green px-5 py-2.5 text-lg font-bold text-white shadow-md">
+              एक गाय &ndash; अनेक आय स्रोत
+            </span>
           </motion.div>
 
-          {/* CTA Buttons */}
-          <motion.div variants={itemVariants} className="flex flex-col md:flex-row gap-4 justify-center">
-            <Link
-              to="/products"
-              className="btn btn-primary group flex items-center justify-center gap-2 text-lg"
-            >
-              Explore Products
-              <FaArrowRight className="group-hover:translate-x-2 transition-transform" />
-            </Link>
+          <motion.p
+            variants={itemVariants}
+            className="mt-6 max-w-xl text-base leading-relaxed text-gray-700 md:text-lg"
+          >
+            हम गाय से जुड़े बहु-उत्पाद मॉडल के माध्यम से निवेशकों, किसानों और ग्राहकों
+            के लिए स्थायी आय और समृद्धि का निर्माण करते हैं।
+          </motion.p>
+
+          <motion.div variants={itemVariants} className="mt-8 flex flex-wrap gap-4">
             <Link
               to="/invest"
-              className="btn btn-golden group flex items-center justify-center gap-2 text-lg"
+              className="btn btn-primary group flex items-center gap-2.5 text-base"
             >
-              Join Gau Seva
-              <FaArrowRight className="group-hover:translate-x-2 transition-transform" />
+              <FaUserPlus aria-hidden="true" />
+              निवेश करें
+            </Link>
+            <Link
+              to="/products"
+              className="btn group flex items-center gap-2.5 bg-[#C0532E] text-base text-white shadow-lg hover:bg-[#a8451f] hover:shadow-xl"
+            >
+              <FaCartShopping aria-hidden="true" />
+              उत्पाद खरीदें
+            </Link>
+            <Link
+              to="/gallery"
+              className="btn btn-outline group flex items-center gap-2.5 text-base"
+            >
+              <FaCow aria-hidden="true" />
+              गाय देखें
             </Link>
           </motion.div>
         </motion.div>
-      </div>
 
-      {/* Scroll Indicator */}
-      
+        {/* Right — cow + product lineup visual */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.94 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
+          className="relative"
+        >
+          <div className="relative overflow-hidden rounded-3xl border-4 border-white shadow-2xl">
+            <img
+              src="/hero-banner-1.jpg"
+              alt="पालनहार की देसी गाय एवं गौ-आधारित उत्पाद"
+              className="h-72 w-full object-cover sm:h-96"
+              draggable="false"
+            />
+            <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-dark-green/70 to-transparent" />
+          </div>
+
+          {/* Floating product lineup card */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="mx-auto -mt-10 w-[92%] rounded-2xl border border-primary-green/10 bg-white/95 p-4 shadow-xl backdrop-blur-sm"
+          >
+            <div className="grid grid-cols-5 gap-2">
+              {heroProducts.map((product) => (
+                <div key={product.label} className="flex flex-col items-center gap-1.5 text-center">
+                  <span className="flex h-11 w-11 items-center justify-center rounded-full bg-cream-white text-2xl shadow-sm">
+                    {product.icon}
+                  </span>
+                  <span className="text-[10px] font-semibold leading-tight text-dark-green sm:text-xs">
+                    {product.label}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </motion.div>
+      </div>
     </section>
   );
 }

@@ -32,30 +32,30 @@ export default function InvestHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="section-eyebrow">Gau Seva Investment</span>
-            <h1 className="mb-5">Invest in Gau Seva. Create Positive Change.</h1>
+            <span className="section-eyebrow">गौ सेवा इन्वेस्टमेंट</span>
+            <h1 className="mb-5">इन्वेस्ट इन गौ सेवा. क्रिएट पॉज़िटिव चेंज.</h1>
             <p className="mb-8 max-w-xl text-lg text-gray-600 md:text-xl">
-              Every contribution supports animal welfare, rural development, and
-              environmental sustainability.
+              एवरी कंट्रिब्यूशन सपोर्ट्स एनिमल वेलफेयर, रूरल डेवलपमेंट, एंड
+              एनवायरनमेंटल सस्टेनेबिलिटी।
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="#plans" className="btn btn-outline">View Plans</a>
-              <Link to="/investor/register" className="btn btn-primary">Start Registration</Link>
+              <a href="#plans" className="btn btn-outline">व्यू प्लान्स</a>
+              <Link to="/investor/register" className="btn btn-primary">स्टार्ट रजिस्ट्रेशन</Link>
             </div>
 
             {/* Compact stats for small screens (snapshot card is lg+) */}
             <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3 lg:hidden">
               <div className="rounded-xl border border-primary-green/10 bg-white px-4 py-3 text-center shadow-sm">
                 <p className="text-lg font-bold text-dark-green">{formatINRCompact(adminStats.totalFundsRaised)}</p>
-                <p className="text-xs text-gray-500">Funds Raised</p>
+                <p className="text-xs text-gray-500">फंड्स रेज़्ड</p>
               </div>
               <div className="rounded-xl border border-primary-green/10 bg-white px-4 py-3 text-center shadow-sm">
                 <p className="text-lg font-bold text-dark-green">{adminStats.totalInvestors.toLocaleString('en-IN')}</p>
-                <p className="text-xs text-gray-500">Investors</p>
+                <p className="text-xs text-gray-500">इन्वेस्टर्स</p>
               </div>
               <div className="rounded-xl border border-primary-green/10 bg-white px-4 py-3 text-center shadow-sm">
                 <p className="text-lg font-bold text-golden">{dividendExample.boardApprovedRatePct}%</p>
-                <p className="text-xs text-gray-500">{dividendExample.financialYear} Dividend</p>
+                <p className="text-xs text-gray-500">{dividendExample.financialYear} डिविडेंड</p>
               </div>
             </div>
           </motion.div>
@@ -75,34 +75,34 @@ export default function InvestHero() {
               className="relative mx-auto max-w-sm rounded-2xl border border-primary-green/10 bg-white p-6 shadow-2xl"
             >
               <div className="mb-5 flex items-center justify-between">
-                <p className="font-bold text-dark-green">Palanhar Gau Seva Pool</p>
+                <p className="font-bold text-dark-green">पालनहार गौ सेवा पूल</p>
                 <span className="badge-status bg-green-100 text-primary-green">
                   <span className="h-2 w-2 animate-pulse rounded-full bg-primary-green" aria-hidden="true" />
-                  Live Snapshot
+                  लाइव स्नैपशॉट
                 </span>
               </div>
               <div className="space-y-3">
                 <CountStat
                   icon={<FaRupeeSign />}
-                  label="Total Funds Raised"
+                  label="टोटल फंड्स रेज़्ड"
                   target={adminStats.totalFundsRaised}
                   format={(v) => formatINRCompact(v)}
                 />
                 <CountStat
                   icon={<FaUsers />}
-                  label="Registered Investors"
+                  label="रजिस्टर्ड इन्वेस्टर्स"
                   target={adminStats.totalInvestors}
                   format={(v) => Math.round(v).toLocaleString('en-IN')}
                 />
                 <CountStat
                   icon={<FaPercentage />}
-                  label={`${dividendExample.financialYear} Dividend Rate`}
+                  label={`${dividendExample.financialYear} डिविडेंड रेट`}
                   target={dividendExample.boardApprovedRatePct}
                   format={(v) => `${v.toFixed(0)}%`}
                 />
               </div>
               <p className="mt-4 text-center text-xs text-gray-400">
-                Board-approved dividend on {formatINRCompact(dividendExample.netProfit)} net profit
+                बोर्ड-अप्रूव्ड डिविडेंड ऑन {formatINRCompact(dividendExample.netProfit)} नेट प्रॉफिट
               </p>
             </motion.div>
           </motion.div>

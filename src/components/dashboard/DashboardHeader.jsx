@@ -18,6 +18,14 @@ const NOTIFICATION_STYLES = {
   kyc: { Icon: FaUserCheck, classes: 'bg-dark-green/10 text-dark-green' },
 };
 
+// Devanagari display labels keyed off the (Latin) KYC status enum.
+const KYC_STATUS_LABELS = {
+  Approved: 'अप्रूव्ड',
+  Pending: 'पेंडिंग',
+  'Under Review': 'अंडर रिव्यू',
+  Rejected: 'रिजेक्टेड',
+};
+
 export default function DashboardHeader() {
   const [panelOpen, setPanelOpen] = useState(false);
   const [unreadCount, setUnreadCount] = useState(investorNotifications.length);
@@ -50,16 +58,16 @@ export default function DashboardHeader() {
     >
       <div className="flex flex-col-reverse sm:flex-row sm:items-start sm:justify-between gap-4">
         <div>
-          <span className="section-eyebrow">Investor Portal</span>
-          <h1 className="text-2xl md:text-3xl mb-3">Welcome back, {currentInvestor.name}</h1>
+          <span className="section-eyebrow">इन्वेस्टर पोर्टल</span>
+          <h1 className="text-2xl md:text-3xl mb-3">वेलकम बैक, {currentInvestor.name}</h1>
           <div className="flex flex-wrap items-center gap-2">
             <span className="badge-status bg-primary-green/10 text-primary-green border border-primary-green/20">
               <FaIdBadge aria-hidden="true" /> {currentInvestor.investorId}
             </span>
             <span className="badge-status bg-primary-green text-white">
-              <FaCheckCircle aria-hidden="true" /> KYC {currentInvestor.kycStatus}
+              <FaCheckCircle aria-hidden="true" /> KYC {KYC_STATUS_LABELS[currentInvestor.kycStatus] ?? currentInvestor.kycStatus}
             </span>
-            <span className="text-sm text-gray-500">Member since {currentInvestor.memberSince}</span>
+            <span className="text-sm text-gray-500">मेंबर सिंस {currentInvestor.memberSince}</span>
           </div>
         </div>
 
@@ -67,7 +75,7 @@ export default function DashboardHeader() {
           <button
             type="button"
             onClick={() => setPanelOpen((open) => !open)}
-            aria-label={`Notifications, ${unreadCount} unread`}
+            aria-label={`नोटिफिकेशन्स, ${unreadCount} अनरीड`}
             aria-expanded={panelOpen}
             aria-haspopup="true"
             className="relative w-11 h-11 flex items-center justify-center rounded-full border border-gray-200 bg-white text-dark-green hover:bg-cream-white hover:border-primary-green/40 transition-colors shadow-sm"
@@ -90,13 +98,13 @@ export default function DashboardHeader() {
                 className="absolute right-0 top-full mt-2 w-80 max-w-[calc(100vw-2rem)] bg-white rounded-xl shadow-2xl border border-gray-100 z-40 overflow-hidden"
               >
                 <div className="flex items-center justify-between px-4 py-2 border-b border-gray-100 bg-cream-white">
-                  <p className="font-semibold text-dark-green text-sm">Notifications</p>
+                  <p className="font-semibold text-dark-green text-sm">नोटिफिकेशन्स</p>
                   <button
                     type="button"
                     onClick={() => setUnreadCount(0)}
                     className="text-xs font-semibold text-primary-green hover:text-dark-green px-2 py-3"
                   >
-                    Mark all as read
+                    मार्क ऑल ऐज़ रीड
                   </button>
                 </div>
                 <motion.ul

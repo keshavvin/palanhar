@@ -50,7 +50,7 @@ export default function DashboardModal({ open, onClose, title, titleId, children
               <button
                 type="button"
                 onClick={onClose}
-                aria-label="Close dialog"
+                aria-label="क्लोज़ डायलॉग"
                 className="w-11 h-11 -mr-2 -mt-2 flex items-center justify-center rounded-full text-gray-500 hover:bg-gray-100 hover:text-dark-green transition-colors shrink-0"
               >
                 <FaTimes aria-hidden="true" />

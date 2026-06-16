@@ -1,20 +1,25 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
-import { FaBars, FaTimes, FaUserCircle } from 'react-icons/fa';
+import { FaBars, FaTimes, FaUserCircle, FaSeedling } from 'react-icons/fa';
 
+// Primary navigation — mirrors the marketing header in the reference design.
+// `hash` items resolve to a section on the home page; the rest are routes.
 const navLinks = [
-  { name: 'Home', path: '/' },
-  { name: 'About', path: '/about' },
-  { name: 'Products', path: '/products' },
-  { name: 'Services', path: '/services' },
-  { name: 'Gallery', path: '/gallery' },
-  { name: 'Gau Seva', path: '/gau-seva' },
-  { name: 'Contact', path: '/contact' },
+  { name: 'होम', path: '/' },
+  { name: 'हमारे बारे में', path: '/about' },
+  { name: 'गौ निवेश योजना', path: '/invest' },
+  { name: 'उत्पाद', path: '/products' },
+  { name: 'हमारा मॉडल', hash: '/#model' },
+  { name: 'गाय देखें', path: '/gallery' },
+  { name: 'इकोसिस्टम', path: '/ecosystem' },
+  { name: 'वैदिक कंसल्टेंट', path: '/vedic-consultant' },
+  { name: 'संपर्क करें', path: '/contact' },
 ];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [logoOk, setLogoOk] = useState(true);
   const { pathname } = useLocation();
 
   // Close the mobile menu whenever the route changes (covers back/forward too).
@@ -35,47 +40,74 @@ export default function Navbar() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isOpen]);
 
+  const closeMenu = () => setIsOpen(false);
+
+  const linkClasses = (isActive) =>
+    `relative block px-2 py-2 text-[13px] font-semibold transition-colors duration-200 ${
+      isActive ? 'text-primary-green' : 'text-gray-700 hover:text-primary-green'
+    }`;
+
   return (
     <nav className="sticky top-0 z-50 bg-white shadow-md border-b-4 border-primary-green">
       <div className="container-custom">
-        <div className="flex h-20 items-center justify-between gap-4">
+        <div className="flex h-20 items-center justify-between gap-3">
           {/* Brand */}
           <Link to="/" className="group flex shrink-0 items-center gap-2.5">
-            <img
-              src="/cow-loader.png"
-              alt=""
-              className="h-10 w-10 sm:h-12 sm:w-12 object-contain transition-transform duration-300 group-hover:scale-110"
-              draggable="false"
-            />
+            {logoOk ? (
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-[#0a1a2f] p-1 shadow-sm transition-transform duration-300 group-hover:scale-110 sm:h-12 sm:w-12">
+                <img
+                  src="/palanhar-logo.png"
+                  onError={() => setLogoOk(false)}
+                  alt="पालनहार"
+                  className="h-full w-full object-contain"
+                  draggable="false"
+                />
+              </span>
+            ) : (
+              <img
+                src="/palanhar-logo.png"
+                alt=""
+                className="h-10 w-10 sm:h-12 sm:w-12 object-contain transition-transform duration-300 group-hover:scale-110"
+                draggable="false"
+              />
+            )}
             <span className="leading-tight">
               <span className="block font-display text-xl sm:text-2xl font-bold text-dark-green">
-                Palanhar
+                पालनहार
               </span>
-              <span className="hidden sm:block text-[11px] font-semibold tracking-wide text-golden">
-                Dairy &amp; Agricultural Farm Pvt. Ltd.
+              <span className="hidden sm:flex items-center gap-1 text-[11px] font-semibold tracking-wide text-golden">
+                <FaSeedling aria-hidden="true" className="text-light-green" />
+                गौ सेवा &bull; कृषि समृद्धि &bull; सतत विकास
               </span>
             </span>
           </Link>
 
           {/* Desktop links */}
-          <ul className="hidden lg:flex items-center gap-1">
+          <ul className="hidden xl:flex items-center gap-0.5">
             {navLinks.map((link) => {
+              if (link.hash) {
+                return (
+                  <li key={link.name}>
+                    <a href={link.hash} className={linkClasses(false)}>
+                      {link.name}
+                    </a>
+                  </li>
+                );
+              }
               const isActive = pathname === link.path;
               return (
-                <li key={link.path}>
+                <li key={link.name}>
                   <Link
                     to={link.path}
                     aria-current={isActive ? 'page' : undefined}
-                    className={`relative block px-3 py-2 text-sm font-semibold transition-colors duration-200 ${
-                      isActive ? 'text-primary-green' : 'text-gray-700 hover:text-primary-green'
-                    }`}
+                    className={linkClasses(isActive)}
                   >
                     {link.name}
                     {isActive && (
                       <motion.span
                         layoutId="nav-underline"
                         transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                        className="absolute inset-x-3 bottom-0 h-0.5 rounded-full bg-primary-green"
+                        className="absolute inset-x-2 bottom-0 h-0.5 rounded-full bg-primary-green"
                       />
                     )}
                   </Link>
@@ -85,16 +117,16 @@ export default function Navbar() {
           </ul>
 
           {/* Desktop CTAs */}
-          <div className="hidden lg:flex items-center gap-3">
-            <Link
-              to="/investor/dashboard"
-              className="flex items-center gap-2 rounded-lg border border-primary-green/30 px-4 py-2.5 text-sm font-semibold text-primary-green transition-colors duration-200 hover:border-primary-green hover:bg-primary-green/5"
-            >
-              <FaUserCircle className="text-lg" aria-hidden="true" />
-              Investor Login
+          <div className="hidden xl:flex items-center gap-3">
+            <Link to="/invest" className="btn btn-primary px-5 py-2.5 text-sm">
+              निवेश करें
             </Link>
-            <Link to="/invest" className="btn btn-golden px-5 py-2.5 text-sm">
-              Invest Now
+            <Link
+              to="/investor/register"
+              className="flex items-center gap-2 rounded-lg border-2 border-primary-green px-4 py-2 text-sm font-semibold text-primary-green transition-colors duration-200 hover:bg-primary-green hover:text-white"
+            >
+              <FaUserCircle className="text-base" aria-hidden="true" />
+              लॉगिन / रजिस्टर
             </Link>
           </div>
 
@@ -102,10 +134,10 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setIsOpen((open) => !open)}
-            aria-label={isOpen ? 'Close menu' : 'Open menu'}
+            aria-label={isOpen ? 'मेन्यू बंद करें' : 'मेन्यू खोलें'}
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
-            className="lg:hidden flex h-11 w-11 items-center justify-center rounded-lg text-primary-green transition-colors duration-200 hover:bg-primary-green/10"
+            className="xl:hidden flex h-11 w-11 items-center justify-center rounded-lg text-primary-green transition-colors duration-200 hover:bg-primary-green/10"
           >
             {isOpen ? <FaTimes size={24} aria-hidden="true" /> : <FaBars size={24} aria-hidden="true" />}
           </button>
@@ -121,16 +153,29 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: 'easeOut' }}
-            className="lg:hidden overflow-hidden border-t border-gray-100 bg-white shadow-lg"
+            className="xl:hidden overflow-hidden border-t border-gray-100 bg-white shadow-lg"
           >
             <ul className="flex flex-col gap-1 px-4 py-3">
               {navLinks.map((link) => {
+                if (link.hash) {
+                  return (
+                    <li key={link.name}>
+                      <a
+                        href={link.hash}
+                        onClick={closeMenu}
+                        className="block rounded-lg border-l-4 border-transparent px-4 py-3 text-base font-semibold text-gray-700 transition-colors duration-200 hover:bg-primary-green/5 hover:text-primary-green"
+                      >
+                        {link.name}
+                      </a>
+                    </li>
+                  );
+                }
                 const isActive = pathname === link.path;
                 return (
-                  <li key={link.path}>
+                  <li key={link.name}>
                     <Link
                       to={link.path}
-                      onClick={() => setIsOpen(false)}
+                      onClick={closeMenu}
                       aria-current={isActive ? 'page' : undefined}
                       className={`block rounded-lg border-l-4 px-4 py-3 text-base font-semibold transition-colors duration-200 ${
                         isActive
@@ -145,20 +190,16 @@ export default function Navbar() {
               })}
             </ul>
             <div className="flex flex-col gap-3 border-t border-gray-100 px-4 pb-5 pt-4">
+              <Link to="/invest" onClick={closeMenu} className="btn btn-primary w-full text-center">
+                निवेश करें
+              </Link>
               <Link
-                to="/investor/dashboard"
-                onClick={() => setIsOpen(false)}
+                to="/investor/register"
+                onClick={closeMenu}
                 className="btn btn-outline flex w-full items-center justify-center gap-2"
               >
                 <FaUserCircle aria-hidden="true" />
-                Investor Login
-              </Link>
-              <Link
-                to="/invest"
-                onClick={() => setIsOpen(false)}
-                className="btn btn-golden w-full text-center"
-              >
-                Invest Now
+                लॉगिन / रजिस्टर
               </Link>
             </div>
           </motion.div>

@@ -4,153 +4,153 @@
 export const dairyProducts = [
   {
     id: 1,
-    name: 'A2 Cow Milk',
-    category: 'Dairy',
-    description: 'Pure A2 milk from our indigenous Desi cows, delivered fresh daily.',
+    name: 'A2 काऊ मिल्क',
+    category: 'डेयरी',
+    description: 'प्योर A2 मिल्क फ्रॉम अवर इंडिजिनस देसी काऊज, डिलीवर्ड फ्रेश डेली।',
     price: '₹90/L',
     image: '🥛',
-    features: ['A2 Protein', 'Desi Cow', 'Fresh Daily']
+    features: ['A2 प्रोटीन', 'देसी काऊ', 'फ्रेश डेली']
   },
   {
     id: 2,
-    name: 'A2 Desi Ghee (Bilona)',
-    category: 'Dairy',
-    description: 'Traditional bilona-method ghee hand-churned from A2 cow milk curd.',
+    name: 'A2 देसी घी (बिलोना)',
+    category: 'डेयरी',
+    description: 'ट्रेडिशनल बिलोना-मेथड घी हैंड-चर्न्ड फ्रॉम A2 काऊ मिल्क कर्ड।',
     price: '₹2,400/L',
     image: '🧈',
-    features: ['Bilona Method', 'A2 Cow Milk', 'Clay-Pot Churned']
+    features: ['बिलोना मेथड', 'A2 काऊ मिल्क', 'क्ले-पॉट चर्न्ड']
   },
   {
     id: 3,
-    name: 'Fresh Makkhan (White Butter)',
-    category: 'Dairy',
-    description: 'Creamy white butter churned fresh from A2 cow milk cream.',
+    name: 'फ्रेश मक्खन (व्हाइट बटर)',
+    category: 'डेयरी',
+    description: 'क्रीमी व्हाइट बटर चर्न्ड फ्रेश फ्रॉम A2 काऊ मिल्क क्रीम।',
     price: '₹600/kg',
     image: '🧈',
-    features: ['A2 Cream', 'Hand Churned', 'No Additives']
+    features: ['A2 क्रीम', 'हैंड चर्न्ड', 'नो एडिटिव्स']
   },
   {
     id: 4,
-    name: 'Paneer',
-    category: 'Dairy',
-    description: 'Soft and delicious cottage cheese made from fresh A2 cow milk.',
+    name: 'पनीर',
+    category: 'डेयरी',
+    description: 'सॉफ्ट एंड डिलीशियस कॉटेज चीज़ मेड फ्रॉम फ्रेश A2 काऊ मिल्क।',
     price: '₹400/kg',
     image: '🧀',
-    features: ['Soft', 'Fresh', 'High Protein']
+    features: ['सॉफ्ट', 'फ्रेश', 'हाई प्रोटीन']
   },
   {
     id: 5,
-    name: 'Fresh Dahi (Curd)',
-    category: 'Dairy',
-    description: 'Creamy curd set with traditional fermentation in earthen pots.',
+    name: 'फ्रेश दही (कर्ड)',
+    category: 'डेयरी',
+    description: 'क्रीमी कर्ड सेट विद ट्रेडिशनल फर्मेंटेशन इन अर्थन पॉट्स।',
     price: '₹120/kg',
     image: '🥣',
-    features: ['Probiotic', 'A2 Milk', 'Earthen-Pot Set']
+    features: ['प्रोबायोटिक', 'A2 मिल्क', 'अर्थन-पॉट सेट']
   },
   {
     id: 6,
-    name: 'Chhachh (Buttermilk)',
-    category: 'Dairy',
-    description: 'Light, refreshing buttermilk — a natural byproduct of bilona churning.',
+    name: 'छाछ (बटरमिल्क)',
+    category: 'डेयरी',
+    description: 'लाइट, रिफ्रेशिंग बटरमिल्क — अ नेचुरल बायप्रोडक्ट ऑफ बिलोना चर्निंग।',
     price: '₹40/L',
     image: '🥛',
-    features: ['Digestive', 'Natural', 'Fresh Daily']
+    features: ['डाइजेस्टिव', 'नेचुरल', 'फ्रेश डेली']
   }
 ];
 
 export const panchgavyaProducts = [
   {
     id: 7,
-    name: 'Gobar Khad (Cow Dung Manure)',
-    category: 'Panchgavya',
-    description: 'Well-decomposed desi cow dung manure — the traditional foundation of fertile, living soil.',
+    name: 'गोबर खाद (काऊ डंग मैन्योर)',
+    category: 'पंचगव्य',
+    description: 'वेल-डीकम्पोज्ड देसी काऊ डंग मैन्योर — द ट्रेडिशनल फाउंडेशन ऑफ फर्टाइल, लिविंग सॉइल।',
     price: '₹10/kg',
     image: '🌱',
-    features: ['100% Natural', 'Soil Revival', 'Chemical Free']
+    features: ['100% नेचुरल', 'सॉइल रिवाइवल', 'केमिकल फ्री']
   },
   {
     id: 8,
-    name: 'Vermi Compost',
-    category: 'Panchgavya',
-    description: 'Nutrient-rich compost from gobar and biogas slurry, processed by earthworms.',
+    name: 'वर्मी कम्पोस्ट',
+    category: 'पंचगव्य',
+    description: 'न्यूट्रिएंट-रिच कम्पोस्ट फ्रॉम गोबर एंड बायोगैस स्लरी, प्रोसेस्ड बाय अर्थवर्म्स।',
     price: '₹15/kg',
     image: '🪱',
-    features: ['Gobar Based', 'Nutrient Rich', 'Organic Certified']
+    features: ['गोबर बेस्ड', 'न्यूट्रिएंट रिच', 'ऑर्गेनिक सर्टिफाइड']
   },
   {
     id: 9,
-    name: 'Gomutra Ark',
-    category: 'Panchgavya',
-    description: 'Distilled desi cow urine ark prepared under hygienic ayurvedic processes.',
+    name: 'गोमूत्र अर्क',
+    category: 'पंचगव्य',
+    description: 'डिस्टिल्ड देसी काऊ यूरिन अर्क प्रिपेयर्ड अंडर हाइजीनिक आयुर्वेदिक प्रोसेसेस।',
     price: '₹120/L',
     image: '🫙',
-    features: ['Ayurvedic', 'Distilled', 'Traditional']
+    features: ['आयुर्वेदिक', 'डिस्टिल्ड', 'ट्रेडिशनल']
   },
   {
     id: 10,
-    name: 'Jaivik Keetnashak (Organic Pesticide)',
-    category: 'Panchgavya',
-    description: 'Gomutra and herbal-extract based crop protection — safe for soil, crops and farmers.',
+    name: 'जैविक कीटनाशक (ऑर्गेनिक पेस्टिसाइड)',
+    category: 'पंचगव्य',
+    description: 'गोमूत्र एंड हर्बल-एक्सट्रैक्ट बेस्ड क्रॉप प्रोटेक्शन — सेफ फॉर सॉइल, क्रॉप्स एंड फार्मर्स।',
     price: '₹150/L',
     image: '🧪',
-    features: ['Gomutra Based', 'Herbal', 'Crop Safe']
+    features: ['गोमूत्र बेस्ड', 'हर्बल', 'क्रॉप सेफ']
   },
   {
     id: 11,
-    name: 'Panchgavya Dhoopbatti',
-    category: 'Panchgavya',
-    description: 'Natural incense handmade from cow dung, ghee and herbal ingredients.',
+    name: 'पंचगव्य धूपबत्ती',
+    category: 'पंचगव्य',
+    description: 'नेचुरल इंसेंस हैंडमेड फ्रॉम काऊ डंग, घी एंड हर्बल इंग्रीडिएंट्स।',
     price: '₹80/pack',
     image: '🪔',
-    features: ['Panchgavya', 'Handmade', 'Natural Aroma']
+    features: ['पंचगव्य', 'हैंडमेड', 'नेचुरल अरोमा']
   },
   {
     id: 12,
-    name: 'Panchgavya Ayurvedic Products',
-    category: 'Panchgavya',
-    description: 'Traditional wellness range prepared from the five gifts of the cow — milk, dahi, ghee, gomutra and gobar.',
+    name: 'पंचगव्य आयुर्वेदिक प्रोडक्ट्स',
+    category: 'पंचगव्य',
+    description: 'ट्रेडिशनल वेलनेस रेंज प्रिपेयर्ड फ्रॉम द फाइव गिफ्ट्स ऑफ द काऊ — मिल्क, दही, घी, गोमूत्र एंड गोबर।',
     price: '₹100-500',
     image: '🌿',
-    features: ['Traditional', 'Ayurvedic', 'Natural']
+    features: ['ट्रेडिशनल', 'आयुर्वेदिक', 'नेचुरल']
   },
   {
     id: 13,
-    name: 'Compressed Biogas (CBG)',
-    category: 'Panchgavya',
-    description: 'Clean renewable energy generated from gobar through our integrated biogas plant.',
-    price: 'On Request',
+    name: 'कम्प्रेस्ड बायोगैस (CBG)',
+    category: 'पंचगव्य',
+    description: 'क्लीन रिन्यूएबल एनर्जी जनरेटेड फ्रॉम गोबर थ्रू अवर इंटीग्रेटेड बायोगैस प्लांट।',
+    price: 'ऑन रिक्वेस्ट',
     image: '🔋',
-    features: ['Clean Energy', 'Gobar Based', 'Sustainable']
+    features: ['क्लीन एनर्जी', 'गोबर बेस्ड', 'सस्टेनेबल']
   },
   {
     id: 14,
-    name: 'Bio Paint',
-    category: 'Panchgavya',
-    description: 'Eco-friendly, gobar-based natural paint — breathable, non-toxic and gentle on homes.',
-    price: 'On Request',
+    name: 'बायो पेंट',
+    category: 'पंचगव्य',
+    description: 'इको-फ्रेंडली, गोबर-बेस्ड नेचुरल पेंट — ब्रीदेबल, नॉन-टॉक्सिक एंड जेंटल ऑन होम्स।',
+    price: 'ऑन रिक्वेस्ट',
     image: '🎨',
-    features: ['Gobar Based', 'Non-Toxic', 'Eco Friendly']
+    features: ['गोबर बेस्ड', 'नॉन-टॉक्सिक', 'इको फ्रेंडली']
   }
 ];
 
 export const agricultureProducts = [
   {
     id: 15,
-    name: 'Fresh Organic Vegetables',
-    category: 'Agriculture',
-    description: 'Seasonal vegetables grown with our own gobar khad and organic fertilizers.',
+    name: 'फ्रेश ऑर्गेनिक वेजिटेबल्स',
+    category: 'एग्रीकल्चर',
+    description: 'सीज़नल वेजिटेबल्स ग्रोन विद अवर ओन गोबर खाद एंड ऑर्गेनिक फर्टिलाइज़र्स।',
     price: '₹40-100/kg',
     image: '🥬',
-    features: ['Seasonal', 'Fresh', 'Pesticide Free']
+    features: ['सीज़नल', 'फ्रेश', 'पेस्टिसाइड फ्री']
   },
   {
     id: 16,
-    name: 'Organic Grains & Pulses',
-    category: 'Agriculture',
-    description: 'Wholesome grains and pulses cultivated through natural, chemical-free farming.',
+    name: 'ऑर्गेनिक ग्रेन्स & पल्सेस',
+    category: 'एग्रीकल्चर',
+    description: 'होलसम ग्रेन्स एंड पल्सेस कल्टीवेटेड थ्रू नेचुरल, केमिकल-फ्री फार्मिंग।',
     price: '₹80-150/kg',
     image: '🌾',
-    features: ['Natural Farming', 'Protein Rich', 'Chemical Free']
+    features: ['नेचुरल फार्मिंग', 'प्रोटीन रिच', 'केमिकल फ्री']
   }
 ];
 

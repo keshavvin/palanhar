@@ -9,7 +9,7 @@ export default function StepEmail({ data, update, errors, setErrors }) {
 
   const verify = () => {
     if (!EMAIL_RE.test(data.email)) {
-      setErrors({ email: 'Enter a valid email address.' });
+      setErrors({ email: 'एंटर अ वैलिड ईमेल एड्रेस.' });
       return;
     }
     setVerifying(true);
@@ -24,7 +24,7 @@ export default function StepEmail({ data, update, errors, setErrors }) {
     <div className="space-y-5">
       <div>
         <label htmlFor="reg-email" className="mb-1.5 block text-sm font-semibold text-gray-700">
-          Email Address
+          ईमेल एड्रेस
         </label>
         <div className="flex flex-wrap items-stretch gap-3">
           <div
@@ -54,7 +54,7 @@ export default function StepEmail({ data, update, errors, setErrors }) {
               className="btn btn-primary inline-flex min-h-11 items-center justify-center gap-2"
             >
               {verifying && <Spinner />}
-              {verifying ? 'Verifying…' : 'Verify'}
+              {verifying ? 'वेरिफाइंग…' : 'वेरिफाई'}
             </button>
           )}
         </div>
@@ -65,16 +65,16 @@ export default function StepEmail({ data, update, errors, setErrors }) {
         <div className="flex items-center gap-3 rounded-xl border border-primary-green/20 bg-green-50 px-4 py-3">
           <FaCheckCircle className="shrink-0 text-xl text-primary-green" aria-hidden="true" />
           <div>
-            <p className="text-sm font-semibold text-dark-green">Email verified</p>
+            <p className="text-sm font-semibold text-dark-green">ईमेल वेरिफाइड</p>
             <p className="text-xs text-gray-500">
-              Statements and dividend alerts will be sent to {data.email}
+              स्टेटमेंट्स एंड डिविडेंड अलर्ट्स विल बी सेंट टू {data.email}
             </p>
           </div>
         </div>
       )}
 
       <p className="text-xs text-gray-400">
-        Demo: verification is simulated — no email will actually be sent.
+        डेमो: वेरिफिकेशन इज़ सिम्युलेटेड — नो ईमेल विल ऐक्चुअली बी सेंट.
       </p>
     </div>
   );

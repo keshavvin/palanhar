@@ -65,10 +65,10 @@ export default function Products() {
           className="text-center mb-12"
         >
           <span className="section-eyebrow">एक गाय – अनेक उत्पाद – अनंत संभावनाएं</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">Our Gau Seva Products</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">अवर गौ सेवा प्रोडक्ट्स</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Everything the cow gives, with gratitude — pure A2 dairy, panchgavya
-            and gau-based natural products, and organic farm produce
+            एवरीथिंग द काउ गिव्स, विद ग्रैटिट्यूड — प्योर A2 डेयरी, पंचगव्य
+            एंड गौ-बेस्ड नैचुरल प्रोडक्ट्स, एंड ऑर्गेनिक फार्म प्रोड्यूस
           </p>
         </motion.div>
 
@@ -81,10 +81,10 @@ export default function Products() {
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {[
-            { id: 'all', label: 'All Products' },
-            { id: 'dairy', label: 'A2 Dairy' },
-            { id: 'panchgavya', label: 'Panchgavya & Gau-Based' },
-            { id: 'agriculture', label: 'Organic Agriculture' },
+            { id: 'all', label: 'ऑल प्रोडक्ट्स' },
+            { id: 'dairy', label: 'A2 डेयरी' },
+            { id: 'panchgavya', label: 'पंचगव्य & गौ-बेस्ड' },
+            { id: 'agriculture', label: 'ऑर्गेनिक एग्रीकल्चर' },
           ].map((btn) => (
             <motion.button
               key={btn.id}
@@ -146,11 +146,11 @@ export default function Products() {
                   <p className="text-lg font-bold text-primary-green">{product.price}</p>
                   <Link
                     to="/contact"
-                    aria-label={`Enquire about ${product.name}`}
+                    aria-label={`एन्क्वायर अबाउट ${product.name}`}
                     className="bg-primary-green text-white px-3 py-2 rounded-lg hover:bg-dark-green hover:scale-105 transition-all flex items-center gap-2"
                   >
                     <FaEnvelope size={16} />
-                    <span className="hidden sm:inline text-sm">Enquire</span>
+                    <span className="hidden sm:inline text-sm">एन्क्वायर</span>
                   </Link>
                 </div>
               </div>
@@ -166,15 +166,15 @@ export default function Products() {
           viewport={{ once: true }}
           className="card bg-gradient-to-r from-primary-green to-dark-green text-white p-8 md:p-12 text-center"
         >
-          <h3 className="text-3xl font-bold mb-4">Ready to Order?</h3>
+          <h3 className="text-3xl font-bold mb-4">रेडी टू ऑर्डर?</h3>
           <p className="text-lg mb-6 opacity-90">
-            Get fresh, organic products delivered to your doorstep. Fast, reliable delivery guaranteed!
+            गेट फ्रेश, ऑर्गेनिक प्रोडक्ट्स डिलीवर्ड टू योर डोरस्टेप. फास्ट, रिलायबल डिलीवरी गारंटीड!
           </p>
           <Link
             to="/contact"
             className="btn btn-golden inline-flex items-center gap-2 justify-center hover:scale-105"
           >
-            Order Now
+            ऑर्डर नाउ
             <FaArrowRight />
           </Link>
         </motion.div>

@@ -29,9 +29,9 @@ export default function AdminCharts() {
         aria-labelledby="funds-raised-heading"
         className={cardClass}
       >
-        <span className="section-eyebrow">Capital Inflow</span>
+        <span className="section-eyebrow">कैपिटल इनफ्लो</span>
         <h2 id="funds-raised-heading" className="text-xl sm:text-2xl">
-          Funds Raised — Monthly
+          फंड्स रेज़्ड — मंथली
         </h2>
         <div className="mt-5">
           <ResponsiveContainer width="100%" height={280}>
@@ -63,9 +63,9 @@ export default function AdminCharts() {
         aria-labelledby="distribution-heading"
         className={cardClass}
       >
-        <span className="section-eyebrow">Plan Mix</span>
+        <span className="section-eyebrow">प्लान मिक्स</span>
         <h2 id="distribution-heading" className="text-xl sm:text-2xl">
-          Investor Distribution
+          इन्वेस्टर डिस्ट्रिब्यूशन
         </h2>
         <div className="mt-5">
           <ResponsiveContainer width="100%" height={280}>
@@ -87,7 +87,7 @@ export default function AdminCharts() {
               </Pie>
               <Tooltip
                 formatter={(value, name) => [
-                  `${value.toLocaleString('en-IN')} investors (${((value / totalInvestorsInPlans) * 100).toFixed(1)}%)`,
+                  `${value.toLocaleString('en-IN')} इन्वेस्टर्स (${((value / totalInvestorsInPlans) * 100).toFixed(1)}%)`,
                   name,
                 ]}
               />
@@ -96,7 +96,7 @@ export default function AdminCharts() {
           </ResponsiveContainer>
         </div>
         <p className="mt-2 text-center text-xs text-gray-500">
-          {totalInvestorsInPlans.toLocaleString('en-IN')} investors across three plans
+          {totalInvestorsInPlans.toLocaleString('en-IN')} इन्वेस्टर्स अक्रॉस थ्री प्लान्स
         </p>
       </motion.section>
     </div>

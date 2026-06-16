@@ -55,7 +55,7 @@ export default function DividendConsole({ onAudit }) {
       setDeclared({ fy, rate });
       onAudit({
         actor: 'CMD',
-        action: `Declared ${rate}% dividend for FY ${fy} (pool ${formatINRCompact(calc.dividendPool)})`,
+        action: `डिक्लेयर्ड ${rate}% डिविडेंड फॉर FY ${fy} (पूल ${formatINRCompact(calc.dividendPool)})`,
       });
     }, 600);
   };
@@ -69,12 +69,12 @@ export default function DividendConsole({ onAudit }) {
       aria-labelledby="declare-dividend-heading"
       className="rounded-xl bg-white shadow-lg border border-primary-green/10 border-t-4 border-t-golden p-5 sm:p-8"
     >
-      <span className="section-eyebrow">Dividend Declaration Console</span>
+      <span className="section-eyebrow">डिविडेंड डिक्लेरेशन कंसोल</span>
       <h2 id="declare-dividend-heading" className="text-xl sm:text-2xl">
-        Declare Dividend — FY {fy}
+        डिक्लेयर डिविडेंड — FY {fy}
       </h2>
       <p className="mt-1 text-sm text-gray-500">
-        Dividend = (Investor Shareholding ÷ Total Shareholding) × Dividend Pool
+        डिविडेंड = (इन्वेस्टर शेयरहोल्डिंग ÷ टोटल शेयरहोल्डिंग) × डिविडेंड पूल
       </p>
 
       <AnimatePresence>
@@ -89,8 +89,8 @@ export default function DividendConsole({ onAudit }) {
           >
             <FaCheckCircle aria-hidden="true" className="mt-0.5 shrink-0 text-primary-green" />
             <p>
-              <strong>{declared.rate}% dividend for FY {declared.fy} declared.</strong>{' '}
-              The decision has been recorded in the audit trail and investors will be notified.
+              <strong>{declared.rate}% डिविडेंड फॉर FY {declared.fy} डिक्लेयर्ड.</strong>{' '}
+              द डिसीज़न हैज़ बीन रिकॉर्डेड इन द ऑडिट ट्रेल एंड इन्वेस्टर्स विल बी नोटिफाइड.
             </p>
           </motion.div>
         )}
@@ -101,7 +101,7 @@ export default function DividendConsole({ onAudit }) {
         <div className="flex flex-col gap-5">
           <div>
             <label htmlFor="dividend-fy" className="mb-1.5 block text-sm font-semibold text-gray-700">
-              Financial Year
+              फाइनेंशियल ईयर
             </label>
             <select
               id="dividend-fy"
@@ -119,7 +119,7 @@ export default function DividendConsole({ onAudit }) {
 
           <div>
             <label htmlFor="dividend-net-profit" className="mb-1.5 block text-sm font-semibold text-gray-700">
-              Net Profit (₹)
+              नेट प्रॉफिट (₹)
             </label>
             <input
               id="dividend-net-profit"
@@ -131,14 +131,14 @@ export default function DividendConsole({ onAudit }) {
               className="input-field"
             />
             <p className="mt-1.5 text-xs font-semibold text-amber-700">
-              = {formatINRCompact(netProfit)} audited net profit
+              = {formatINRCompact(netProfit)} ऑडिटेड नेट प्रॉफिट
             </p>
           </div>
 
           <div>
             <div className="mb-1.5 flex items-center justify-between gap-3">
               <label htmlFor="dividend-rate" className="text-sm font-semibold text-gray-700">
-                Board-Approved Rate (%)
+                बोर्ड-अप्रूव्ड रेट (%)
               </label>
               <input
                 type="number"
@@ -147,7 +147,7 @@ export default function DividendConsole({ onAudit }) {
                 step="0.5"
                 value={rate}
                 onChange={(e) => handleRateChange(e.target.value)}
-                aria-label="Dividend rate percentage"
+                aria-label="डिविडेंड रेट परसेंटेज"
                 className="w-20 rounded-lg border-2 border-gray-200 bg-gray-50 px-2 py-1.5 text-center text-sm font-bold text-dark-green focus:border-primary-green focus:bg-white focus:outline-none"
               />
             </div>
@@ -170,25 +170,25 @@ export default function DividendConsole({ onAudit }) {
 
         {/* Live calculation panel */}
         <div className="flex flex-col gap-4 rounded-xl border border-golden/30 bg-gradient-to-br from-cream-white to-white p-5 sm:p-6">
-          <p className="text-xs font-bold uppercase tracking-widest text-amber-700">Live Calculation</p>
+          <p className="text-xs font-bold uppercase tracking-widest text-amber-700">लाइव कैलकुलेशन</p>
           <div>
             <p className="text-sm text-gray-500">
-              Dividend Pool — {rate}% of {formatINRCompact(netProfit)}
+              डिविडेंड पूल — {rate}% ऑफ {formatINRCompact(netProfit)}
             </p>
             <p className="mt-1 text-3xl font-bold text-dark-green" aria-live="polite">
               {formatINRCompact(calc.dividendPool)}
             </p>
           </div>
           <div className="rounded-lg border border-primary-green/15 bg-primary-green/5 p-4 text-sm">
-            <p className="font-semibold text-gray-600">Worked example</p>
+            <p className="font-semibold text-gray-600">वर्क्ड एग्ज़ांपल</p>
             <p className="mt-1 text-gray-700">
-              A <strong>{formatINR(1_00_000)}</strong> investor receives{' '}
-              <strong className="text-primary-green">{formatINR(calc.dividend)}</strong> this cycle.
+              अ <strong>{formatINR(1_00_000)}</strong> इन्वेस्टर रिसीव्स{' '}
+              <strong className="text-primary-green">{formatINR(calc.dividend)}</strong> दिस साइकल.
             </p>
           </div>
           <p className="inline-flex items-center gap-2 text-sm text-gray-600">
             <FaUsers aria-hidden="true" className="text-primary-green" />
-            {adminStats.totalInvestors.toLocaleString('en-IN')} investors will be affected
+            {adminStats.totalInvestors.toLocaleString('en-IN')} इन्वेस्टर्स विल बी अफेक्टेड
           </p>
           <button
             type="button"
@@ -196,7 +196,7 @@ export default function DividendConsole({ onAudit }) {
             className="btn btn-golden mt-auto inline-flex min-h-11 items-center justify-center gap-2"
           >
             <FaGavel aria-hidden="true" />
-            Declare Dividend
+            डिक्लेयर डिविडेंड
           </button>
         </div>
       </div>
@@ -207,7 +207,7 @@ export default function DividendConsole({ onAudit }) {
           <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
             <motion.button
               type="button"
-              aria-label="Close dialog"
+              aria-label="क्लोज़ डायलॉग"
               onClick={() => setModalOpen(false)}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -225,29 +225,29 @@ export default function DividendConsole({ onAudit }) {
               className="relative w-full max-w-md rounded-xl bg-white p-6 shadow-2xl"
             >
               <h3 id="confirm-dividend-title" className="text-lg sm:text-xl">
-                Confirm Dividend Declaration
+                कन्फर्म डिविडेंड डिक्लेरेशन
               </h3>
               <dl className="mt-4 divide-y divide-gray-100 text-sm">
                 <div className="flex items-center justify-between py-2.5">
-                  <dt className="text-gray-500">Financial Year</dt>
+                  <dt className="text-gray-500">फाइनेंशियल ईयर</dt>
                   <dd className="font-semibold text-dark-green">FY {fy}</dd>
                 </div>
                 <div className="flex items-center justify-between py-2.5">
-                  <dt className="text-gray-500">Net Profit</dt>
+                  <dt className="text-gray-500">नेट प्रॉफिट</dt>
                   <dd className="font-semibold text-dark-green">{formatINRCompact(netProfit)}</dd>
                 </div>
                 <div className="flex items-center justify-between py-2.5">
-                  <dt className="text-gray-500">Dividend Rate</dt>
+                  <dt className="text-gray-500">डिविडेंड रेट</dt>
                   <dd className="font-semibold text-dark-green">{rate}%</dd>
                 </div>
                 <div className="flex items-center justify-between py-2.5">
-                  <dt className="text-gray-500">Dividend Pool</dt>
+                  <dt className="text-gray-500">डिविडेंड पूल</dt>
                   <dd className="font-bold text-amber-700">{formatINRCompact(calc.dividendPool)}</dd>
                 </div>
               </dl>
               <p className="mt-4 flex items-start gap-2 rounded-lg bg-golden/10 p-3 text-xs text-amber-800">
                 <FaInfoCircle aria-hidden="true" className="mt-0.5 shrink-0" />
-                Requires CMD approval — this action is logged in the audit trail.
+                रिक्वायर्स CMD अप्रूवल — दिस एक्शन इज़ लॉग्ड इन द ऑडिट ट्रेल.
               </p>
               <div className="mt-5 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
                 <button
@@ -255,7 +255,7 @@ export default function DividendConsole({ onAudit }) {
                   onClick={() => setModalOpen(false)}
                   className="btn btn-outline min-h-11 px-5 py-2.5 text-sm"
                 >
-                  Cancel
+                  कैंसल
                 </button>
                 <button
                   type="button"
@@ -270,10 +270,10 @@ export default function DividendConsole({ onAudit }) {
                         aria-hidden="true"
                         className="h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent"
                       />
-                      Declaring…
+                      डिक्लेयरिंग…
                     </>
                   ) : (
-                    'Confirm & Declare'
+                    'कन्फर्म & डिक्लेयर'
                   )}
                 </button>
               </div>

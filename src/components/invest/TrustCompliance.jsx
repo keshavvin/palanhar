@@ -4,23 +4,23 @@ import { FaShieldAlt, FaUniversity, FaFileContract, FaClipboardList } from 'reac
 const items = [
   {
     icon: FaShieldAlt,
-    title: 'PAN + Aadhaar KYC',
-    desc: 'Every investor is verified before a single rupee is accepted.',
+    title: 'PAN + आधार KYC',
+    desc: 'एवरी इन्वेस्टर इज़ वेरिफाइड बिफोर अ सिंगल रुपी इज़ एक्सेप्टेड।',
   },
   {
     icon: FaUniversity,
-    title: 'Real Asset-Backed',
-    desc: 'Investments are tied to living dairy and farm operations, with insured cattle.',
+    title: 'रियल एसेट-बैक्ड',
+    desc: 'इन्वेस्टमेंट्स आर टाइड टू लिविंग डेयरी एंड फार्म ऑपरेशन्स, विद इंश्योर्ड कैटल।',
   },
   {
     icon: FaFileContract,
-    title: 'Digital Share Register',
-    desc: 'Numbered certificates recorded in a system-maintained register.',
+    title: 'डिजिटल शेयर रजिस्टर',
+    desc: 'नंबर्ड सर्टिफिकेट्स रिकॉर्डेड इन अ सिस्टम-मेंटेन्ड रजिस्टर।',
   },
   {
     icon: FaClipboardList,
-    title: 'Complete Audit Trail',
-    desc: 'Every approval, declaration and payment is logged for compliance.',
+    title: 'कंप्लीट ऑडिट ट्रेल',
+    desc: 'एवरी अप्रूवल, डिक्लेरेशन एंड पेमेंट इज़ लॉग्ड फॉर कंप्लायंस।',
   },
 ];
 

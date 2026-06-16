@@ -6,6 +6,12 @@ const STATUS_STYLES = {
   Declared: 'bg-golden/15 text-amber-600',
 };
 
+// Devanagari display labels keyed off the (Latin) status enum.
+const STATUS_LABELS = {
+  Paid: 'पेड',
+  Declared: 'डिक्लेयर्ड',
+};
+
 export default function DividendHistoryTable() {
   return (
     <motion.section
@@ -14,33 +20,33 @@ export default function DividendHistoryTable() {
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
       className="bg-white rounded-xl shadow-md border border-gray-100 p-5 sm:p-6"
-      aria-label="Dividend history"
+      aria-label="डिविडेंड हिस्ट्री"
     >
-      <h2 className="text-xl md:text-2xl">Dividend History</h2>
+      <h2 className="text-xl md:text-2xl">डिविडेंड हिस्ट्री</h2>
       <p className="text-sm text-gray-500 mt-1 mb-4">
-        Your dividend = (your shareholding ÷ total pool) × board-approved dividend pool
+        योर डिविडेंड = (योर शेयरहोल्डिंग ÷ टोटल पूल) × बोर्ड-अप्रूव्ड डिविडेंड पूल
       </p>
       <div className="overflow-x-auto">
         <table className="w-full min-w-[640px] text-left text-sm">
           <thead>
             <tr className="border-b-2 border-primary-green/20 text-xs uppercase tracking-wider text-gray-500">
               <th scope="col" className="py-3 pr-4 font-semibold">
-                Financial Year
+                फाइनेंशियल ईयर
               </th>
               <th scope="col" className="py-3 pr-4 font-semibold">
-                Net Profit
+                नेट प्रॉफिट
               </th>
               <th scope="col" className="py-3 pr-4 font-semibold">
-                Rate
+                रेट
               </th>
               <th scope="col" className="py-3 pr-4 font-semibold">
-                Your Dividend
+                योर डिविडेंड
               </th>
               <th scope="col" className="py-3 pr-4 font-semibold">
-                Status
+                स्टेटस
               </th>
               <th scope="col" className="py-3 font-semibold">
-                Paid On
+                पेड ऑन
               </th>
             </tr>
           </thead>
@@ -57,7 +63,7 @@ export default function DividendHistoryTable() {
                   <span
                     className={`badge-status ${STATUS_STYLES[row.status] ?? 'bg-gray-100 text-gray-600'}`}
                   >
-                    {row.status}
+                    {STATUS_LABELS[row.status] ?? row.status}
                   </span>
                 </td>
                 <td className="py-3.5 text-gray-500">{row.paidOn ?? '—'}</td>

@@ -12,58 +12,58 @@ function formatDob(dob) {
 export default function StepReview({ data, update, errors, onEdit }) {
   const groups = [
     {
-      title: 'Mobile',
+      title: 'मोबाइल',
       step: 1,
-      rows: [['Number', `+91 ${data.mobile}`, true]],
+      rows: [['नंबर', `+91 ${data.mobile}`, true]],
     },
     {
-      title: 'Email',
+      title: 'ईमेल',
       step: 2,
-      rows: [['Address', data.email, true]],
+      rows: [['एड्रेस', data.email, true]],
     },
     {
-      title: 'Profile',
+      title: 'प्रोफाइल',
       step: 3,
       rows: [
-        ['Full Name', data.fullName],
-        ['Date of Birth', formatDob(data.dob)],
-        ['Address', `${data.address}, ${data.city}`],
-        ['State / PIN', `${data.state} — ${data.pin}`],
+        ['फुल नेम', data.fullName],
+        ['डेट ऑफ बर्थ', formatDob(data.dob)],
+        ['एड्रेस', `${data.address}, ${data.city}`],
+        ['स्टेट / PIN', `${data.state} — ${data.pin}`],
       ],
     },
     {
       title: 'PAN',
       step: 4,
       rows: [
-        ['Number', data.pan],
-        ['Document', data.panFile, true],
+        ['नंबर', data.pan],
+        ['डॉक्यूमेंट', data.panFile, true],
       ],
     },
     {
-      title: 'Aadhaar',
+      title: 'आधार',
       step: 5,
       rows: [
-        ['Number', data.aadhaar],
-        ['Document', data.aadhaarFile, true],
+        ['नंबर', data.aadhaar],
+        ['डॉक्यूमेंट', data.aadhaarFile, true],
       ],
     },
     {
-      title: 'Bank Account',
+      title: 'बैंक अकाउंट',
       step: 6,
       rows: [
-        ['Holder', data.accountHolder],
-        ['Account No.', data.accountNumber],
+        ['होल्डर', data.accountHolder],
+        ['अकाउंट नं.', data.accountNumber],
         ['IFSC', data.ifsc],
-        ['Bank', data.bankName],
+        ['बैंक', data.bankName],
       ],
     },
     {
-      title: 'Nominee',
+      title: 'नॉमिनी',
       step: 7,
       rows: [
-        ['Name', data.nomineeName],
-        ['Relation', data.nomineeRelation],
-        ['Mobile', `+91 ${data.nomineeMobile}`],
+        ['नेम', data.nomineeName],
+        ['रिलेशन', data.nomineeRelation],
+        ['मोबाइल', `+91 ${data.nomineeMobile}`],
       ],
     },
   ];
@@ -71,8 +71,8 @@ export default function StepReview({ data, update, errors, onEdit }) {
   return (
     <div className="space-y-6">
       <p className="text-sm text-gray-500">
-        Please review your details carefully. Use <span className="font-semibold text-primary-green">Edit</span> to
-        jump back to any section before submitting for KYC approval.
+        प्लीज़ रिव्यू योर डिटेल्स केयरफुली. यूज़ <span className="font-semibold text-primary-green">एडिट</span> टू
+        जंप बैक टू एनी सेक्शन बिफोर सबमिटिंग फॉर KYC अप्रूवल.
       </p>
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -86,11 +86,11 @@ export default function StepReview({ data, update, errors, onEdit }) {
               <button
                 type="button"
                 onClick={() => onEdit(group.step)}
-                aria-label={`Edit ${group.title}`}
+                aria-label={`एडिट ${group.title}`}
                 className="inline-flex min-h-11 items-center gap-1.5 px-2 text-sm font-semibold text-primary-green underline-offset-2 hover:text-dark-green hover:underline"
               >
                 <FaPen className="text-xs" aria-hidden="true" />
-                Edit
+                एडिट
               </button>
             </div>
             <dl className="space-y-1.5">
@@ -100,7 +100,7 @@ export default function StepReview({ data, update, errors, onEdit }) {
                   <dd className="flex min-w-0 items-center gap-1.5 text-right font-semibold text-gray-800">
                     <span className="truncate">{value || '—'}</span>
                     {verified && value && (
-                      <FaCheckCircle className="shrink-0 text-primary-green" aria-hidden="true" title="Verified" />
+                      <FaCheckCircle className="shrink-0 text-primary-green" aria-hidden="true" title="वेरिफाइड" />
                     )}
                   </dd>
                 </div>
@@ -124,9 +124,9 @@ export default function StepReview({ data, update, errors, onEdit }) {
             className="mt-0.5 h-5 w-5 shrink-0 cursor-pointer accent-primary-green"
           />
           <span className="text-sm text-gray-700">
-            I confirm the above details are true and correct, and I authorise Palanhar Dairy &amp;
-            Agricultural Farm Pvt. Ltd. to verify my KYC documents and allot shares against my
-            investment as per the company&rsquo;s investor policy.
+            आई कन्फर्म द अबव डिटेल्स आर ट्रू एंड करेक्ट, एंड आई ऑथराइज़ पालनहार डेयरी &amp;
+            ऐग्रिकल्चरल फार्म Pvt. Ltd. टू वेरिफाई माय KYC डॉक्यूमेंट्स एंड अलॉट शेयर्स अगेंस्ट माय
+            इन्वेस्टमेंट ऐज़ पर द कंपनी&rsquo;ज़ इन्वेस्टर पॉलिसी.
           </span>
         </label>
         <FieldError id="reg-consent-error">{errors.consent}</FieldError>

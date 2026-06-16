@@ -23,13 +23,13 @@ export default function GrowthRoadmap() {
           transition={{ duration: 0.6 }}
           className="mb-12 text-center md:mb-16"
         >
-          <span className="section-eyebrow">Financial Strength &amp; Growth</span>
-          <h2 className="mb-4">Our Growth Roadmap</h2>
+          <span className="section-eyebrow">फाइनेंशियल स्ट्रेंथ &amp; ग्रोथ</span>
+          <h2 className="mb-4">अवर ग्रोथ रोडमैप</h2>
           <p className="mx-auto max-w-2xl text-lg text-gray-600 md:text-xl">
-            A stable dairy unit of {financialTargets.cowCount} cows producing{' '}
-            {financialTargets.dailyMilkLitres.toLocaleString('en-IN')} litres daily —
-            scaling towards {formatINRCompact(financialTargets.fiveYearRevenueTarget)} revenue
-            in five years.
+            अ स्टेबल डेयरी यूनिट ऑफ {financialTargets.cowCount} काउज़ प्रोड्यूसिंग{' '}
+            {financialTargets.dailyMilkLitres.toLocaleString('en-IN')} लीटर्स डेली —
+            स्केलिंग टुवर्ड्स {formatINRCompact(financialTargets.fiveYearRevenueTarget)} रेवेन्यू
+            इन फाइव ईयर्स।
           </p>
         </motion.div>
 
@@ -48,10 +48,10 @@ export default function GrowthRoadmap() {
             >
               <p className="mb-3 text-xs font-bold uppercase tracking-widest text-golden">{p.year}</p>
               <p className="text-3xl font-extrabold text-dark-green">{formatINRCompact(p.revenue)}</p>
-              <p className="mb-3 text-xs uppercase tracking-wide text-gray-500">Projected Revenue</p>
+              <p className="mb-3 text-xs uppercase tracking-wide text-gray-500">प्रोजेक्टेड रेवेन्यू</p>
               <div className="mx-auto mb-3 h-px w-16 bg-primary-green/20" aria-hidden="true" />
               <p className="text-xl font-bold text-primary-green">{formatINRCompact(p.profit)}</p>
-              <p className="text-xs uppercase tracking-wide text-gray-500">Projected Profit</p>
+              <p className="text-xs uppercase tracking-wide text-gray-500">प्रोजेक्टेड प्रॉफिट</p>
             </motion.div>
           ))}
         </motion.div>
@@ -72,7 +72,7 @@ export default function GrowthRoadmap() {
             </div>
             <div>
               <p className="text-2xl font-extrabold">{formatINRCompact(financialTargets.fiveYearRevenueTarget)}</p>
-              <p className="text-sm text-white/85">5-year revenue target — from ₹2 Cr to ₹80 Cr</p>
+              <p className="text-sm text-white/85">5-ईयर रेवेन्यू टारगेट — फ्रॉम ₹2 Cr टू ₹80 Cr</p>
             </div>
           </motion.div>
           <motion.div
@@ -84,13 +84,13 @@ export default function GrowthRoadmap() {
             </div>
             <div>
               <p className="text-2xl font-extrabold text-dark-green">DSCR {financialTargets.dscr}</p>
-              <p className="text-sm text-gray-600">Strong average debt service coverage — high repayment capacity</p>
+              <p className="text-sm text-gray-600">स्ट्रॉन्ग एवरेज डेट सर्विस कवरेज — हाई रीपेमेंट कैपेसिटी</p>
             </div>
           </motion.div>
         </motion.div>
 
         <p className="mt-6 text-center text-xs text-gray-400">
-          Projections are from the company business plan and depend on operational performance.
+          प्रोजेक्शन्स आर फ्रॉम द कंपनी बिज़नेस प्लान एंड डिपेंड ऑन ऑपरेशनल परफॉर्मेंस।
         </p>
       </div>
     </section>

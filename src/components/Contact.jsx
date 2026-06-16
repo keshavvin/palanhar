@@ -33,29 +33,29 @@ export default function Contact() {
   const contactInfo = [
     {
       icon: FaPhone,
-      title: 'Phone',
-      value: '+91 92115 57678 · Customer Care: +91 11 4996 7299',
-      link: 'tel:+919211557678'
+      title: 'फोन',
+      value: '+91 74289 40883 · +91 90648 86175 · +91 77680 62289',
+      link: 'tel:+917428940883'
     },
     {
       icon: FaEnvelope,
-      title: 'Email',
-      value: 'palanharcompany@gmail.com',
-      link: 'mailto:palanharcompany@gmail.com'
+      title: 'ईमेल',
+      value: 'info@palanhar.com · www.palanhar.com',
+      link: 'mailto:info@palanhar.com'
     },
     {
       icon: FaMapMarkerAlt,
-      title: 'Address',
-      value: 'Rajokri Village, NH-48 (Delhi–Gurugram Road), New Delhi – 110038',
-      link: 'https://maps.google.com/?q=Rajokri+Village+NH-48+New+Delhi+110038'
+      title: 'एड्रेस',
+      value: 'हेड ऑफिस: C-773, JJVTS गार्डन, छतरपुर एक्स्ट., न्यू दिल्ली – 110074 · विलेज ऑफिस: आओग्राम, पूर्बा बर्धमान, WB – 713121',
+      link: 'https://maps.google.com/?q=Chhatarpur+Extension+New+Delhi+110074'
     },
   ];
 
   const socialLinks = [
-    { icon: FaFacebook, link: '#', label: 'Facebook' },
-    { icon: FaTwitter, link: '#', label: 'Twitter' },
-    { icon: FaInstagram, link: '#', label: 'Instagram' },
-    { icon: FaLinkedin, link: '#', label: 'LinkedIn' },
+    { icon: FaFacebook, link: '#', label: 'फेसबुक' },
+    { icon: FaTwitter, link: '#', label: 'ट्विटर' },
+    { icon: FaInstagram, link: '#', label: 'इंस्टाग्राम' },
+    { icon: FaLinkedin, link: '#', label: 'लिंक्डइन' },
   ];
 
   return (
@@ -69,8 +69,8 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">Get In Touch</h2>
-          <p className="text-xl text-gray-600">Have questions? We'd love to hear from you!</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">गेट इन टच</h2>
+          <p className="text-xl text-gray-600">हैव क्वेश्चन्स? वी'ड लव टू हियर फ्रॉम यू!</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -110,7 +110,7 @@ export default function Contact() {
             className="card bg-white p-8 md:p-10 shadow-xl rounded-2xl"
           >
             <div className="mb-8">
-              <h3 className="text-3xl font-bold text-dark-green mb-2">Send us a Message</h3>
+              <h3 className="text-3xl font-bold text-dark-green mb-2">सेंड अस अ मैसेज</h3>
               <div className="h-1 w-16 bg-gradient-to-r from-primary-green to-dark-green rounded"></div>
             </div>
 
@@ -127,14 +127,14 @@ export default function Contact() {
                 >
                   ✓
                 </motion.div>
-                <h4 className="text-2xl font-bold text-primary-green mb-2">Thank you!</h4>
-                <p className="text-gray-600">We'll get back to you soon.</p>
+                <h4 className="text-2xl font-bold text-primary-green mb-2">थैंक यू!</h4>
+                <p className="text-gray-600">वी'ल गेट बैक टू यू सून.</p>
               </motion.div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Name */}
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.1 }}>
-                  <label htmlFor="contact-name" className="block text-gray-700 font-semibold mb-3">Full Name</label>
+                  <label htmlFor="contact-name" className="block text-gray-700 font-semibold mb-3">फुल नेम</label>
                   <div className="relative">
                     <input
                       id="contact-name"
@@ -143,7 +143,7 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       className="w-full px-5 py-4 pl-12 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary-green focus:shadow-lg transition-all duration-300 bg-gray-50 hover:bg-white"
-                      placeholder="John Doe"
+                      placeholder="जॉन डो"
                       required
                     />
                     <FaUser className="absolute left-4 top-1/2 -translate-y-1/2 text-primary-green text-lg" />
@@ -152,7 +152,7 @@ export default function Contact() {
 
                 {/* Email */}
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.15 }}>
-                  <label htmlFor="contact-email" className="block text-gray-700 font-semibold mb-3">Email Address</label>
+                  <label htmlFor="contact-email" className="block text-gray-700 font-semibold mb-3">ईमेल एड्रेस</label>
                   <div className="relative">
                     <input
                       id="contact-email"
@@ -170,7 +170,7 @@ export default function Contact() {
 
                 {/* Phone */}
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
-                  <label htmlFor="contact-phone" className="block text-gray-700 font-semibold mb-3">Phone Number</label>
+                  <label htmlFor="contact-phone" className="block text-gray-700 font-semibold mb-3">फोन नंबर</label>
                   <div className="relative">
                     <input
                       id="contact-phone"
@@ -187,14 +187,14 @@ export default function Contact() {
 
                 {/* Message */}
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.25 }}>
-                  <label htmlFor="contact-message" className="block text-gray-700 font-semibold mb-3">Message</label>
+                  <label htmlFor="contact-message" className="block text-gray-700 font-semibold mb-3">मैसेज</label>
                   <textarea
                     id="contact-message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-primary-green focus:shadow-lg transition-all duration-300 resize-none bg-gray-50 hover:bg-white"
-                    placeholder="Tell us what's on your mind..."
+                    placeholder="टेल अस व्हाट्स ऑन योर माइंड..."
                     rows="5"
                     required
                   ></textarea>
@@ -211,7 +211,7 @@ export default function Contact() {
                   className="w-full bg-gradient-to-r from-primary-green to-dark-green text-white font-bold py-4 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg shadow-lg hover:shadow-2xl"
                 >
                   <FaPaperPlane size={20} />
-                  Send Message
+                  सेंड मैसेज
                 </motion.button>
               </form>
             )}
@@ -229,15 +229,15 @@ export default function Contact() {
             <div className="card overflow-hidden shadow-lg h-80 bg-gradient-to-br from-light-green/20 to-primary-green/20 flex items-center justify-center">
               <div className="text-center">
                 <div className="text-6xl mb-4">📍</div>
-                <p className="text-gray-700 font-semibold">Google Map will be integrated here</p>
+                <p className="text-gray-700 font-semibold">गूगल मैप विल बी इंटीग्रेटेड हियर</p>
               </div>
             </div>
 
             {/* Social Links */}
             <div className="card bg-white p-8">
-              <h3 className="text-2xl font-bold text-dark-green mb-6">Follow Us</h3>
+              <h3 className="text-2xl font-bold text-dark-green mb-6">फॉलो अस</h3>
               <p className="text-gray-600 mb-6">
-                Connect with us on social media for updates, tips, and stories from our farm.
+                कनेक्ट विद अस ऑन सोशल मीडिया फॉर अपडेट्स, टिप्स, एंड स्टोरीज़ फ्रॉम अवर फार्म.
               </p>
               <div className="flex gap-4">
                 {socialLinks.map((social, i) => {
@@ -246,7 +246,7 @@ export default function Contact() {
                     <motion.a
                       key={i}
                       href={social.link}
-                      aria-label={`Follow us on ${social.label}`}
+                      aria-label={`फॉलो अस ऑन ${social.label}`}
                       whileHover={{ scale: 1.2 }}
                       whileTap={{ scale: 0.9 }}
                       className="w-12 h-12 bg-gradient-to-br from-primary-green to-dark-green rounded-full flex items-center justify-center text-white hover:shadow-lg transition-shadow"
@@ -260,11 +260,11 @@ export default function Contact() {
 
             {/* Business Hours */}
             <div className="card bg-cream-white/80 p-8 border-l-4 border-primary-green">
-              <h3 className="text-xl font-bold text-dark-green mb-4">Business Hours</h3>
+              <h3 className="text-xl font-bold text-dark-green mb-4">बिज़नेस आवर्स</h3>
               <ul className="space-y-2 text-gray-700">
-                <li><span className="font-semibold">Monday - Friday:</span> 8:00 AM - 6:00 PM</li>
-                <li><span className="font-semibold">Saturday:</span> 9:00 AM - 4:00 PM</li>
-                <li><span className="font-semibold">Sunday:</span> 10:00 AM - 3:00 PM</li>
+                <li><span className="font-semibold">मंडे - फ्राइडे:</span> 8:00 AM - 6:00 PM</li>
+                <li><span className="font-semibold">सैटरडे:</span> 9:00 AM - 4:00 PM</li>
+                <li><span className="font-semibold">संडे:</span> 10:00 AM - 3:00 PM</li>
               </ul>
             </div>
           </motion.div>

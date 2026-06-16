@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 /**
  * Animated brand loader. Shows the Palanhar mother-cow-and-calf logo
- * (public/cow-loader.png) with a gentle breathing pulse inside a rotating
+ * (public/palanhar-logo.png) with a gentle breathing pulse inside a rotating
  * gradient arc. Falls back to an inline SVG mark if the image is missing.
  * Honours prefers-reduced-motion.
  */
@@ -37,6 +37,7 @@ function SpinnerRing() {
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
     >
+      
       <defs>
         <linearGradient id="plb-grad" x1="0" y1="0" x2="1" y2="1">
           <stop offset="0%" stopColor="#2E7D32" />
@@ -109,7 +110,7 @@ function FallbackMark() {
   );
 }
 
-export default function BrandLoader({ size = 120, label = 'Loading…', showWordmark = false }) {
+export default function BrandLoader({ size = 120, label = 'लोडिंग…', showWordmark = false }) {
   const [imageFailed, setImageFailed] = useState(false);
 
   return (
@@ -121,7 +122,7 @@ export default function BrandLoader({ size = 120, label = 'Loading…', showWord
           <FallbackMark />
         ) : (
           <img
-            src="/cow-loader.png"
+            src="/palanhar-logo.png"
             alt=""
             onError={() => setImageFailed(true)}
             className="plb-pulse absolute inset-[7%] h-[86%] w-[86%] select-none object-contain"
@@ -131,7 +132,7 @@ export default function BrandLoader({ size = 120, label = 'Loading…', showWord
       </div>
       {showWordmark && (
         <span className="font-display text-xs font-bold uppercase tracking-[0.3em] text-dark-green">
-          Palanhar
+          पालनहार
         </span>
       )}
       <span className="sr-only">{label}</span>

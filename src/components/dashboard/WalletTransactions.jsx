@@ -14,6 +14,19 @@ const STATUS_STYLES = {
   'Pending Payout': 'bg-golden/15 text-amber-600',
 };
 
+// Devanagari display labels keyed off the (Latin) type/status enums.
+const TYPE_LABELS = {
+  'Dividend Credit': 'डिविडेंड क्रेडिट',
+  'Transfer to Bank': 'ट्रांसफर टू बैंक',
+  Reinvested: 'रीइन्वेस्टेड',
+  'Dividend Declared': 'डिविडेंड डिक्लेयर्ड',
+};
+
+const STATUS_LABELS = {
+  Completed: 'कंप्लीटेड',
+  'Pending Payout': 'पेंडिंग पेआउट',
+};
+
 export default function WalletTransactions() {
   return (
     <motion.section
@@ -22,11 +35,11 @@ export default function WalletTransactions() {
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
       className="bg-white rounded-xl shadow-md border border-gray-100 p-5 sm:p-6 h-full"
-      aria-label="Wallet transactions"
+      aria-label="वॉलेट ट्रांज़ैक्शन्स"
     >
-      <h2 className="text-xl md:text-2xl">Wallet Transactions</h2>
+      <h2 className="text-xl md:text-2xl">वॉलेट ट्रांज़ैक्शन्स</h2>
       <p className="text-sm text-gray-500 mt-1 mb-2">
-        Every credit, payout and reinvestment in one place
+        एवरी क्रेडिट, पेआउट एंड रीइन्वेस्टमेंट इन वन प्लेस
       </p>
       <ul className="divide-y divide-gray-100">
         {walletTransactions.map((tx, index) => {
@@ -47,7 +60,9 @@ export default function WalletTransactions() {
                 <Icon aria-hidden="true" />
               </span>
               <div className="min-w-0 flex-1">
-                <p className="text-sm font-semibold text-gray-800 truncate">{tx.type}</p>
+                <p className="text-sm font-semibold text-gray-800 truncate">
+                  {TYPE_LABELS[tx.type] ?? tx.type}
+                </p>
                 <p className="text-xs text-gray-500">{tx.date}</p>
               </div>
               <div className="text-right shrink-0">
@@ -60,7 +75,7 @@ export default function WalletTransactions() {
                 <span
                   className={`badge-status mt-1 ${STATUS_STYLES[tx.status] ?? 'bg-gray-100 text-gray-600'}`}
                 >
-                  {tx.status}
+                  {STATUS_LABELS[tx.status] ?? tx.status}
                 </span>
               </div>
             </motion.li>

@@ -64,48 +64,48 @@ function validateStep(step, d) {
   const errors = {};
   switch (step) {
     case 1:
-      if (!/^\d{10}$/.test(d.mobile)) errors.mobile = 'Enter a valid 10-digit mobile number.';
-      else if (!d.otpSent) errors.mobile = 'Tap “Send OTP” to verify this number.';
-      else if (!d.mobileVerified) errors.otp = 'Enter all 6 digits of the OTP to verify.';
+      if (!/^\d{10}$/.test(d.mobile)) errors.mobile = 'एंटर अ वैलिड 10-डिजिट मोबाइल नंबर.';
+      else if (!d.otpSent) errors.mobile = 'टैप “Send OTP” टू वेरिफाई दिस नंबर.';
+      else if (!d.mobileVerified) errors.otp = 'एंटर ऑल 6 डिजिट्स ऑफ द OTP टू वेरिफाई.';
       break;
     case 2:
-      if (!EMAIL_RE.test(d.email)) errors.email = 'Enter a valid email address.';
-      else if (!d.emailVerified) errors.email = 'Tap “Verify” to confirm your email.';
+      if (!EMAIL_RE.test(d.email)) errors.email = 'एंटर अ वैलिड ईमेल एड्रेस.';
+      else if (!d.emailVerified) errors.email = 'टैप “Verify” टू कन्फर्म योर ईमेल.';
       break;
     case 3:
-      if (!d.fullName.trim()) errors.fullName = 'Full name is required.';
-      if (!d.dob) errors.dob = 'Date of birth is required.';
-      if (!d.address.trim()) errors.address = 'Address is required.';
-      if (!d.city.trim()) errors.city = 'City / village is required.';
-      if (!d.state) errors.state = 'Please select your state.';
-      if (!/^\d{6}$/.test(d.pin)) errors.pin = 'Enter a valid 6-digit PIN code.';
+      if (!d.fullName.trim()) errors.fullName = 'फुल नेम इज़ रिक्वायर्ड.';
+      if (!d.dob) errors.dob = 'डेट ऑफ बर्थ इज़ रिक्वायर्ड.';
+      if (!d.address.trim()) errors.address = 'एड्रेस इज़ रिक्वायर्ड.';
+      if (!d.city.trim()) errors.city = 'सिटी / विलेज इज़ रिक्वायर्ड.';
+      if (!d.state) errors.state = 'प्लीज़ सेलेक्ट योर स्टेट.';
+      if (!/^\d{6}$/.test(d.pin)) errors.pin = 'एंटर अ वैलिड 6-डिजिट PIN कोड.';
       break;
     case 4:
-      if (!PAN_RE.test(d.pan)) errors.pan = 'Enter a valid PAN (format: ABCDE1234F).';
-      if (!d.panFile) errors.panFile = 'Please upload a copy of your PAN card.';
+      if (!PAN_RE.test(d.pan)) errors.pan = 'एंटर अ वैलिड PAN (फॉर्मेट: ABCDE1234F).';
+      if (!d.panFile) errors.panFile = 'प्लीज़ अपलोड अ कॉपी ऑफ योर PAN कार्ड.';
       break;
     case 5:
       if (d.aadhaar.replace(/\s/g, '').length !== 12)
-        errors.aadhaar = 'Enter your 12-digit Aadhaar number.';
-      if (!d.aadhaarFile) errors.aadhaarFile = 'Please upload a copy of your Aadhaar card.';
+        errors.aadhaar = 'एंटर योर 12-डिजिट Aadhaar नंबर.';
+      if (!d.aadhaarFile) errors.aadhaarFile = 'प्लीज़ अपलोड अ कॉपी ऑफ योर Aadhaar कार्ड.';
       break;
     case 6:
-      if (!d.accountHolder.trim()) errors.accountHolder = 'Account holder name is required.';
+      if (!d.accountHolder.trim()) errors.accountHolder = 'अकाउंट होल्डर नेम इज़ रिक्वायर्ड.';
       if (!/^\d{9,18}$/.test(d.accountNumber))
-        errors.accountNumber = 'Enter a valid account number (9–18 digits).';
+        errors.accountNumber = 'एंटर अ वैलिड अकाउंट नंबर (9–18 डिजिट्स).';
       if (d.confirmAccount !== d.accountNumber || !d.confirmAccount)
-        errors.confirmAccount = 'Account numbers do not match.';
-      if (!IFSC_RE.test(d.ifsc)) errors.ifsc = 'Enter a valid IFSC (e.g. SBIN0001234).';
-      if (!d.bankName.trim()) errors.bankName = 'Bank name is required.';
+        errors.confirmAccount = 'अकाउंट नंबर्स डू नॉट मैच.';
+      if (!IFSC_RE.test(d.ifsc)) errors.ifsc = 'एंटर अ वैलिड IFSC (e.g. SBIN0001234).';
+      if (!d.bankName.trim()) errors.bankName = 'बैंक नेम इज़ रिक्वायर्ड.';
       break;
     case 7:
-      if (!d.nomineeName.trim()) errors.nomineeName = 'Nominee name is required.';
-      if (!d.nomineeRelation) errors.nomineeRelation = 'Please select the relation.';
+      if (!d.nomineeName.trim()) errors.nomineeName = 'नॉमिनी नेम इज़ रिक्वायर्ड.';
+      if (!d.nomineeRelation) errors.nomineeRelation = 'प्लीज़ सेलेक्ट द रिलेशन.';
       if (!/^\d{10}$/.test(d.nomineeMobile))
-        errors.nomineeMobile = 'Enter a valid 10-digit mobile number.';
+        errors.nomineeMobile = 'एंटर अ वैलिड 10-डिजिट मोबाइल नंबर.';
       break;
     case 8:
-      if (!d.consent) errors.consent = 'Please accept the declaration to submit your KYC.';
+      if (!d.consent) errors.consent = 'प्लीज़ एक्सेप्ट द डिक्लेरेशन टू सबमिट योर KYC.';
       break;
     default:
       break;
@@ -209,18 +209,18 @@ export default function InvestorRegisterPage() {
             transition={{ duration: 0.5 }}
             className="mx-auto mb-8 max-w-2xl text-center md:mb-12"
           >
-            <span className="section-eyebrow">Join Gau Seva</span>
-            <h1 className="mb-3">Registration &amp; KYC</h1>
+            <span className="section-eyebrow">जॉइन गौ सेवा</span>
+            <h1 className="mb-3">रजिस्ट्रेशन &amp; KYC</h1>
             <p className="text-gray-600">
-              Eight simple steps to join Gau Seva as a registered Palanhar investor — verified,
-              compliant and dividend-ready.
+              एट सिंपल स्टेप्स टू जॉइन गौ सेवा एज़ अ रजिस्टर्ड पालनहार इन्वेस्टर — वेरिफाइड,
+              कंप्लायंट एंड डिविडेंड-रेडी.
             </p>
             {selectedPlan && !submitted && (
               <p className="mt-4 inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-golden/40 bg-white px-4 py-2 text-sm shadow-sm">
                 <span aria-hidden="true">{selectedPlan.icon}</span>
                 <span className="font-semibold text-dark-green">{selectedPlan.name}</span>
                 <span className="text-gray-400">·</span>
-                <span className="text-gray-500">from {formatINR(selectedPlan.minAmount)}</span>
+                <span className="text-gray-500">फ्रॉम {formatINR(selectedPlan.minAmount)}</span>
               </p>
             )}
           </motion.div>
@@ -261,7 +261,7 @@ export default function InvestorRegisterPage() {
                   >
                     <div className="mb-6 border-b border-gray-100 pb-5">
                       <p className="text-xs font-bold uppercase tracking-widest text-golden">
-                        Step {step} of {TOTAL_STEPS}
+                        स्टेप {step} ऑफ {TOTAL_STEPS}
                       </p>
                       <h2 className="mt-1 text-xl sm:text-2xl">{currentStep.title}</h2>
                       <p className="mt-1 text-sm text-gray-500">{currentStep.desc}</p>
@@ -285,7 +285,7 @@ export default function InvestorRegisterPage() {
                         : 'border-primary-green/30 text-primary-green hover:border-primary-green hover:bg-primary-green/5'
                     }`}
                   >
-                    <FaArrowLeft aria-hidden="true" /> Back
+                    <FaArrowLeft aria-hidden="true" /> बैक
                   </button>
                   <button
                     type="button"
@@ -298,16 +298,16 @@ export default function InvestorRegisterPage() {
                     {step === TOTAL_STEPS ? (
                       submitting ? (
                         <>
-                          <Spinner light={false} /> Submitting…
+                          <Spinner light={false} /> सबमिटिंग…
                         </>
                       ) : (
                         <>
-                          <FaLock aria-hidden="true" /> Submit KYC
+                          <FaLock aria-hidden="true" /> सबमिट KYC
                         </>
                       )
                     ) : (
                       <>
-                        Continue <FaArrowRight aria-hidden="true" />
+                        कंटिन्यू <FaArrowRight aria-hidden="true" />
                       </>
                     )}
                   </button>
@@ -318,8 +318,8 @@ export default function InvestorRegisterPage() {
 
           <p className="mx-auto mt-8 flex max-w-md items-center justify-center gap-2 text-center text-xs text-gray-400">
             <FaLock aria-hidden="true" className="shrink-0" />
-            Demo environment — no real data is stored or transmitted. All verifications are
-            simulated.
+            डेमो एनवायरनमेंट — नो रियल डेटा इज़ स्टोर्ड और ट्रांसमिटेड. ऑल वेरिफिकेशन्स आर
+            सिम्युलेटेड.
           </p>
         </div>
       </section>

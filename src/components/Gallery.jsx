@@ -8,51 +8,87 @@ const galleryImages = [
     id: 1,
     category: 'seva',
     src: '/gallery-seva.jpg',
-    title: 'Community Gau Seva — Feeding Time',
-    desc: 'Families and volunteers offering fresh green fodder to our Gir cows — seva that brings the whole community together.',
+    title: 'कम्युनिटी गौ सेवा — फीडिंग टाइम',
+    desc: 'फैमिलीज़ एंड वॉलंटियर्स ऑफरिंग फ्रेश ग्रीन फॉडर टू अवर गिर काउज़ — सेवा दैट ब्रिंग्स द होल कम्युनिटी टुगेदर.',
   },
   {
     id: 2,
     category: 'care',
     src: '/gallery-care.jpg',
-    title: 'Daily Care & Grooming',
-    desc: 'Every cow is bathed, brushed and cared for daily — cleanliness and comfort are the first duties of our gaushala.',
+    title: 'डेली केयर & ग्रूमिंग',
+    desc: 'एवरी काउ इज़ बेथ्ड, ब्रश्ड एंड केयर्ड फॉर डेली — क्लीनलीनेस एंड कम्फर्ट आर द फर्स्ट ड्यूटीज़ ऑफ अवर गौशाला.',
   },
   {
     id: 3,
     category: 'herd',
     src: '/gallery-herd.jpg',
-    title: 'Evening Return to the Gaushala',
-    desc: 'Our herd walking home at sunset with their caretakers — the timeless rhythm of farm life on NH-48.',
+    title: 'ईवनिंग रिटर्न टू द गौशाला',
+    desc: 'अवर हर्ड वॉकिंग होम एट सनसेट विद देयर केयरटेकर्स — द टाइमलेस रिदम ऑफ फार्म लाइफ ऑन NH-48.',
   },
   {
     id: 4,
     category: 'seva',
     src: '/hero-banner-1.jpg',
-    title: 'Gau Puja with the Family',
-    desc: 'Garlanded cows, smiling faces — generations honouring Gau Mata together.',
+    title: 'गौ पूजा विद द फैमिली',
+    desc: 'गार्लैंडेड काउज़, स्माइलिंग फेसेज़ — जेनरेशन्स ऑनरिंग गौ माता टुगेदर.',
   },
   {
     id: 5,
     category: 'seva',
     src: '/hero-banner-2.jpg',
-    title: 'Generations Together in Seva',
-    desc: 'Parents and children caring for cows and calves side by side — values passed on by doing.',
+    title: 'जेनरेशन्स टुगेदर इन सेवा',
+    desc: 'पेरेंट्स एंड चिल्ड्रन केयरिंग फॉर काउज़ एंड काव्स साइड बाय साइड — वैल्यूज़ पास्ड ऑन बाय डूइंग.',
   },
   {
     id: 6,
     category: 'care',
     src: '/hero-banner-3.jpg',
-    title: 'Love for Gau Mata',
-    desc: 'A gentle embrace at golden hour — the bond at the heart of everything Palanhar does.',
+    title: 'लव फॉर गौ माता',
+    desc: 'अ जेंटल एम्ब्रेस एट गोल्डन आवर — द बॉन्ड एट द हार्ट ऑफ एवरीथिंग पालनहार डज़.',
+  },
+  {
+    id: 7,
+    category: 'naari',
+    src: '/naari/award-ceremony.jpg',
+    title: 'नारी शक्ति — अवॉर्ड सेरेमनी',
+    desc: 'पालनहार नारी शक्ति की प्रशिक्षित बहनों को ट्रॉफी एवं सर्टिफिकेट से सम्मानित किया गया — स्किल से आत्मनिर्भरता की ओर।',
+  },
+  {
+    id: 9,
+    category: 'naari',
+    src: '/naari/group-photo.jpg',
+    title: 'नारी शक्ति परिवार',
+    desc: 'प्रशिक्षण केंद्र के आँगन में पालनहार नारी शक्ति की बहनें एवं मेंटर्स — एक सशक्त समुदाय।',
+  },
+  {
+    id: 10,
+    category: 'naari',
+    src: '/naari/sewing-training.jpg',
+    title: 'सिलाई प्रशिक्षण केंद्र',
+    desc: 'सिलाई-कढ़ाई कौशल प्रशिक्षण के बाद बहनों को सर्टिफिकेट वितरण — स्वरोजगार की नींव।',
+  },
+  {
+    id: 11,
+    category: 'naari',
+    src: '/naari/certificate-distribution.jpg',
+    title: 'सर्टिफिकेट वितरण',
+    desc: 'कौशल प्रशिक्षण पूर्ण करने पर प्रतिभागियों को प्रमाण-पत्र — मेहनत एवं लगन का सम्मान।',
+  },
+  {
+    id: 12,
+    category: 'naari',
+    src: '/naari/skill-class.jpg',
+    title: 'लाइव स्किल क्लास',
+    desc: 'चलते सिलाई-सत्र में सीखती-सिखाती बहनें — पालनहार का जमीनी महिला सशक्तिकरण कार्यक्रम।',
   },
 ];
 
 const categories = [
-  { id: 'all', label: 'All Moments' },
-  { id: 'seva', label: 'Gau Seva' },
-  { id: 'care', label: 'Care & Love' },
-  { id: 'herd', label: 'Herd & Farm' },
+  { id: 'all', label: 'ऑल मोमेंट्स' },
+  { id: 'seva', label: 'गौ सेवा' },
+  { id: 'care', label: 'केयर & लव' },
+  { id: 'herd', label: 'हर्ड & फार्म' },
+  { id: 'naari', label: 'नारी शक्ति' },
 ];
 
 const containerVariants = {
@@ -92,9 +128,9 @@ export default function Gallery() {
           className="text-center mb-12"
         >
           <span className="section-eyebrow">गौ सेवा के पल</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">Gallery</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">गैलरी</h2>
           <p className="text-xl text-gray-600">
-            Moments of seva, care and togetherness from Palanhar Farms
+            मोमेंट्स ऑफ सेवा, केयर एंड टुगेदरनेस फ्रॉम पालनहार फार्म्स
           </p>
         </motion.div>
 
@@ -142,7 +178,7 @@ export default function Gallery() {
                 exit={{ opacity: 0, scale: 0.92 }}
                 transition={{ duration: 0.3 }}
                 onClick={() => setSelectedImage(image)}
-                aria-label={`View ${image.title}`}
+                aria-label={`व्यू ${image.title}`}
                 className={`card group relative cursor-pointer overflow-hidden bg-white text-left ${
                   i === 0 ? 'sm:col-span-2 sm:row-span-2' : ''
                 }`}
@@ -197,7 +233,7 @@ export default function Gallery() {
                 <button
                   type="button"
                   onClick={() => setSelectedImage(null)}
-                  aria-label="Close image"
+                  aria-label="क्लोज़ इमेज"
                   className="absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-black/50 text-white transition-colors hover:bg-black/70"
                 >
                   <FaTimes aria-hidden="true" />
@@ -229,12 +265,12 @@ export default function Gallery() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h3 className="text-3xl font-bold text-dark-green mb-4">Visit Our Gaushala</h3>
+          <h3 className="text-3xl font-bold text-dark-green mb-4">विज़िट अवर गौशाला</h3>
           <p className="text-gray-600 mb-6 text-lg">
-            Experience Gau Seva first-hand — spend a morning with our cows and their caretakers
+            एक्सपीरियंस गौ सेवा फर्स्ट-हैंड — स्पेंड अ मॉर्निंग विद अवर काउज़ एंड देयर केयरटेकर्स
           </p>
           <Link to="/contact" className="btn btn-primary inline-block">
-            Schedule a Farm Visit
+            शेड्यूल अ फार्म विज़िट
           </Link>
         </motion.div>
       </div>

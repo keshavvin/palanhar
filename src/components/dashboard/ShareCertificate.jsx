@@ -21,7 +21,7 @@ export default function ShareCertificate() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      aria-label="Share certificate"
+      aria-label="शेयर सर्टिफिकेट"
     >
       <div className="max-w-3xl mx-auto">
         <div className="bg-white rounded-xl shadow-lg p-2.5 sm:p-3 border-2 border-golden">
@@ -35,41 +35,41 @@ export default function ShareCertificate() {
 
             <div className="relative">
               <span className="section-eyebrow">
-                Palanhar Dairy &amp; Agricultural Farm Pvt. Ltd.
+                पालनहार डेयरी &amp; एग्रीकल्चरल फार्म प्रा. लि.
               </span>
-              <h2 className="text-2xl md:text-3xl">Investment Certificate</h2>
+              <h2 className="text-2xl md:text-3xl">इन्वेस्टमेंट सर्टिफिकेट</h2>
               <p className="text-xs uppercase tracking-widest text-gray-500 mt-2">
-                Certificate No. {certificate.certificateNo}
+                सर्टिफिकेट No. {certificate.certificateNo}
               </p>
 
               <div className="w-24 h-px bg-golden mx-auto my-5" />
 
-              <p className="text-sm text-gray-600">This is to certify that</p>
+              <p className="text-sm text-gray-600">दिस इज़ टू सर्टिफाई दैट</p>
               <p className="font-display text-xl md:text-2xl font-bold text-dark-green mt-1">
                 {currentInvestor.name}
               </p>
               <p className="text-sm text-gray-500 mt-0.5">
-                Investor ID: {currentInvestor.investorId}
+                इन्वेस्टर आईडी: {currentInvestor.investorId}
               </p>
               <p className="text-sm text-gray-600 mt-3">
-                is the registered holder of{' '}
+                इज़ द रजिस्टर्ड होल्डर ऑफ{' '}
                 <span className="font-bold text-dark-green">
-                  {certificate.shares.toLocaleString('en-IN')} equity shares
+                  {certificate.shares.toLocaleString('en-IN')} इक्विटी शेयर्स
                 </span>{' '}
-                of aggregate value{' '}
+                ऑफ एग्रीगेट वैल्यू{' '}
                 <span className="font-bold text-dark-green">{formatINR(certificate.amount)}</span>{' '}
-                under {certificate.plan}.
+                अंडर {certificate.plan}.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-8 pt-5 border-t border-primary-green/20">
                 <div className="text-center sm:text-left">
-                  <p className="text-xs uppercase tracking-wide text-gray-500">Date of Issue</p>
+                  <p className="text-xs uppercase tracking-wide text-gray-500">डेट ऑफ इश्यू</p>
                   <p className="text-sm font-semibold text-gray-800">{certificate.issuedOn}</p>
                 </div>
                 <div className="text-center sm:text-right">
-                  <p className="font-display italic text-dark-green text-lg">Palanhar</p>
+                  <p className="font-display italic text-dark-green text-lg">पालनहार</p>
                   <p className="text-xs uppercase tracking-wide text-gray-500 border-t border-gray-300 pt-1 mt-1">
-                    Authorised Signatory
+                    ऑथराइज़्ड सिग्नेटरी
                   </p>
                 </div>
               </div>
@@ -86,15 +86,15 @@ export default function ShareCertificate() {
           >
             {downloadState === 'idle' && (
               <>
-                <FaDownload aria-hidden="true" /> Download Certificate
+                <FaDownload aria-hidden="true" /> डाउनलोड सर्टिफिकेट
               </>
             )}
             {downloadState === 'loading' && (
               <>
-                <Spinner light /> Preparing PDF…
+                <Spinner light /> प्रिपेयरिंग PDF…
               </>
             )}
-            {downloadState === 'done' && 'Downloaded ✓'}
+            {downloadState === 'done' && 'डाउनलोडेड ✓'}
           </button>
         </div>
       </div>

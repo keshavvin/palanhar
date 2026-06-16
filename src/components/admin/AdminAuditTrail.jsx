@@ -31,9 +31,9 @@ export default function AdminAuditTrail({ entries }) {
           <FaShieldAlt />
         </span>
         <div>
-          <span className="section-eyebrow mb-0">Compliance</span>
+          <span className="section-eyebrow mb-0">कम्प्लायंस</span>
           <h2 id="audit-trail-heading" className="text-xl sm:text-2xl">
-            Audit Trail
+            ऑडिट ट्रेल
           </h2>
         </div>
       </div>
@@ -55,14 +55,14 @@ export default function AdminAuditTrail({ entries }) {
               <span className={`badge-status ${actorChip(entry.actor)}`}>{entry.actor}</span>
               <time className="text-xs text-gray-400">{entry.timestamp}</time>
               {entry.isNew && (
-                <span className="badge-status bg-golden/20 text-amber-800">New</span>
+                <span className="badge-status bg-golden/20 text-amber-800">न्यू</span>
               )}
             </div>
             <p className="mt-1.5 text-sm text-gray-700">{entry.action}</p>
           </motion.li>
         ))}
       </ol>
-      <p className="mt-4 text-xs text-gray-500">Every action is logged for compliance.</p>
+      <p className="mt-4 text-xs text-gray-500">एवरी एक्शन इज़ लॉग्ड फॉर कम्प्लायंस.</p>
     </motion.section>
   );
 }

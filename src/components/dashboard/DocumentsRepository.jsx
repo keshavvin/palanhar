@@ -6,10 +6,24 @@ import { investorDocuments } from '../../data/investorData';
 
 const CATEGORY_ORDER = ['KYC', 'Certificate', 'Statement', 'Financial Report'];
 
+// Devanagari display labels keyed off the (Latin) category/status enums.
+const CATEGORY_LABELS = {
+  KYC: 'KYC',
+  Certificate: 'सर्टिफिकेट',
+  Statement: 'स्टेटमेंट',
+  'Financial Report': 'फाइनेंशियल रिपोर्ट',
+};
+
 const STATUS_STYLES = {
   Verified: 'bg-primary-green/10 text-primary-green',
   Issued: 'bg-golden/15 text-amber-600',
   Available: 'bg-light-green/25 text-dark-green',
+};
+
+const STATUS_LABELS = {
+  Verified: 'वेरिफाइड',
+  Issued: 'इश्यूड',
+  Available: 'अवेलेबल',
 };
 
 export default function DocumentsRepository() {
@@ -30,11 +44,11 @@ export default function DocumentsRepository() {
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
       className="bg-white rounded-xl shadow-md border border-gray-100 p-5 sm:p-6 h-full"
-      aria-label="Documents repository"
+      aria-label="डॉक्यूमेंट्स रिपॉजिटरी"
     >
-      <h2 className="text-xl md:text-2xl">Documents</h2>
+      <h2 className="text-xl md:text-2xl">डॉक्यूमेंट्स</h2>
       <p className="text-sm text-gray-500 mt-1 mb-4">
-        Annual reports, audited balance sheet and P&amp;L are published here every year.
+        एनुअल रिपोर्ट्स, ऑडिटेड बैलेंस शीट एंड P&amp;L आर पब्लिश्ड हियर एवरी ईयर.
       </p>
 
       <div className="space-y-5">
@@ -44,7 +58,7 @@ export default function DocumentsRepository() {
           return (
             <div key={category}>
               <h3 className="text-xs font-bold uppercase tracking-widest text-gray-400 font-sans mb-1">
-                {category}
+                {CATEGORY_LABELS[category] ?? category}
               </h3>
               <ul className="divide-y divide-gray-100">
                 {docs.map((doc) => {
@@ -59,13 +73,13 @@ export default function DocumentsRepository() {
                       <span
                         className={`badge-status shrink-0 hidden sm:inline-flex ${STATUS_STYLES[doc.status] ?? 'bg-gray-100 text-gray-600'}`}
                       >
-                        {doc.status}
+                        {STATUS_LABELS[doc.status] ?? doc.status}
                       </span>
                       <button
                         type="button"
                         onClick={() => handleDownload(doc.id)}
                         aria-label={
-                          state === 'done' ? `${doc.name} downloaded` : `Download ${doc.name}`
+                          state === 'done' ? `${doc.name} डाउनलोडेड` : `डाउनलोड ${doc.name}`
                         }
                         disabled={state === 'loading'}
                         className="w-11 h-11 shrink-0 rounded-full flex items-center justify-center text-primary-green hover:bg-primary-green/10 border border-transparent hover:border-primary-green/20 transition-colors disabled:cursor-wait"

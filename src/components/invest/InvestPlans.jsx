@@ -18,12 +18,12 @@ export default function InvestPlans() {
           transition={{ duration: 0.6 }}
           className="mb-12 text-center md:mb-16"
         >
-          <span className="section-eyebrow">Seva Plans</span>
-          <h2 className="mb-4">Choose Your Seva Plan</h2>
+          <span className="section-eyebrow">सेवा प्लान्स</span>
+          <h2 className="mb-4">चूज़ योर सेवा प्लान</h2>
           <p className="mx-auto max-w-2xl text-lg text-gray-600 md:text-xl">
-            Three simple ways to join Gau Seva — every plan directly supports cow
-            welfare and earns a numbered share certificate with annual dividend
-            eligibility.
+            थ्री सिंपल वेज़ टू जॉइन गौ सेवा — एवरी प्लान डायरेक्टली सपोर्ट्स काउ
+            वेलफेयर एंड अर्न्स अ नंबर्ड शेयर सर्टिफिकेट विद एनुअल डिविडेंड
+            एलिजिबिलिटी।
           </p>
         </motion.div>
 

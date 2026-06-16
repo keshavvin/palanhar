@@ -1,6 +1,6 @@
 import { SelectField, TextField } from './FormFields';
 
-const STATES = ['Rajasthan', 'Gujarat', 'Madhya Pradesh', 'Uttar Pradesh', 'Haryana', 'Other'];
+const STATES = ['राजस्थान', 'गुजरात', 'मध्य प्रदेश', 'उत्तर प्रदेश', 'हरियाणा', 'अदर'];
 
 // Investors must be 18+ — latest permissible date of birth.
 const maxDob = (() => {
@@ -14,8 +14,8 @@ export default function StepProfile({ data, update, errors }) {
     <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
       <TextField
         id="reg-fullname"
-        label="Full Name (as per PAN)"
-        placeholder="e.g. Rajesh Kumar Sharma"
+        label="फुल नेम (ऐज़ पर PAN)"
+        placeholder="e.g. राजेश कुमार शर्मा"
         autoComplete="name"
         value={data.fullName}
         error={errors.fullName}
@@ -23,7 +23,7 @@ export default function StepProfile({ data, update, errors }) {
       />
       <TextField
         id="reg-dob"
-        label="Date of Birth"
+        label="डेट ऑफ बर्थ"
         type="date"
         max={maxDob}
         autoComplete="bday"
@@ -33,8 +33,8 @@ export default function StepProfile({ data, update, errors }) {
       />
       <TextField
         id="reg-address"
-        label="Address"
-        placeholder="House no., street, locality"
+        label="एड्रेस"
+        placeholder="हाउस नं., स्ट्रीट, लोकैलिटी"
         autoComplete="street-address"
         value={data.address}
         error={errors.address}
@@ -43,8 +43,8 @@ export default function StepProfile({ data, update, errors }) {
       />
       <TextField
         id="reg-city"
-        label="City / Village"
-        placeholder="e.g. Jaipur"
+        label="सिटी / विलेज"
+        placeholder="e.g. जयपुर"
         autoComplete="address-level2"
         value={data.city}
         error={errors.city}
@@ -52,8 +52,8 @@ export default function StepProfile({ data, update, errors }) {
       />
       <SelectField
         id="reg-state"
-        label="State"
-        placeholder="Select your state"
+        label="स्टेट"
+        placeholder="सेलेक्ट योर स्टेट"
         options={STATES}
         value={data.state}
         error={errors.state}
@@ -61,9 +61,9 @@ export default function StepProfile({ data, update, errors }) {
       />
       <TextField
         id="reg-pin"
-        label="PIN Code"
+        label="PIN कोड"
         inputMode="numeric"
-        placeholder="6-digit PIN"
+        placeholder="6-डिजिट PIN"
         autoComplete="postal-code"
         value={data.pin}
         error={errors.pin}

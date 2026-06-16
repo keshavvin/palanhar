@@ -34,9 +34,9 @@ export default function Services() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">Our Services</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-dark-green mb-4">अवर सर्विसेज</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Comprehensive solutions for dairy farming and sustainable agriculture
+            कॉम्प्रिहेन्सिव सॉल्यूशंस फॉर डेयरी फार्मिंग एंड सस्टेनेबल एग्रीकल्चर
           </p>
         </motion.div>
 
@@ -84,7 +84,7 @@ export default function Services() {
                   to="/contact"
                   className="text-primary-green font-semibold mt-6 inline-flex items-center group/link hover:text-dark-green transition-colors"
                 >
-                  Enquire
+                  एन्क्वायर
                   <span className="ml-2 group-hover/link:translate-x-2 transition-transform">→</span>
                 </Link>
               </motion.div>
@@ -100,37 +100,37 @@ export default function Services() {
           viewport={{ once: true }}
           className="mt-20 card bg-gradient-to-r from-primary-green/10 to-light-green/10 p-8 md:p-12"
         >
-          <h3 className="text-3xl font-bold text-dark-green mb-8 text-center">Why Choose Palanhar Farms?</h3>
+          <h3 className="text-3xl font-bold text-dark-green mb-8 text-center">व्हाई चूज़ पालनहार फार्म्स?</h3>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: 'Expert Team',
-                description: '20+ years of combined farming experience and expertise',
+                title: 'एक्सपर्ट टीम',
+                description: '20+ इयर्स ऑफ कम्बाइंड फार्मिंग एक्सपीरियंस एंड एक्सपर्टीज़',
                 icon: '👥'
               },
               {
-                title: 'Modern Technology',
-                description: 'Latest farming equipment and sustainable practices',
+                title: 'मॉडर्न टेक्नोलॉजी',
+                description: 'लेटेस्ट फार्मिंग इक्विपमेंट एंड सस्टेनेबल प्रैक्टिसेज',
                 icon: '🔬'
               },
               {
-                title: 'Certified Organic',
-                description: 'Official organic certification and quality assurance',
+                title: 'सर्टिफाइड ऑर्गेनिक',
+                description: 'ऑफिशियल ऑर्गेनिक सर्टिफिकेशन एंड क्वालिटी अश्योरेंस',
                 icon: '✅'
               },
               {
-                title: 'Reliable Service',
-                description: 'On-time delivery with 100% quality guarantee',
+                title: 'रिलायबल सर्विस',
+                description: 'ऑन-टाइम डिलीवरी विद 100% क्वालिटी गारंटी',
                 icon: '🚚'
               },
               {
-                title: 'Fair Pricing',
-                description: 'Competitive prices without compromising quality',
+                title: 'फेयर प्राइसिंग',
+                description: 'कॉम्पिटिटिव प्राइसेज विदाउट कॉम्प्रोमाइज़िंग क्वालिटी',
                 icon: '💰'
               },
               {
-                title: '24/7 Support',
-                description: 'Always available to assist with your needs',
+                title: '24/7 सपोर्ट',
+                description: 'ऑलवेज़ अवेलेबल टू असिस्ट विद योर नीड्स',
                 icon: '☎️'
               },
             ].map((reason, i) => (

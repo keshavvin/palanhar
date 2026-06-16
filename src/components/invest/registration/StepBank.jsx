@@ -7,16 +7,16 @@ export default function StepBank({ data, update, errors }) {
       <div className="flex items-start gap-3 rounded-xl border border-golden/40 bg-golden/10 px-4 py-3">
         <FaInfoCircle className="mt-0.5 shrink-0 text-golden" aria-hidden="true" />
         <p className="text-sm text-gray-700">
-          <span className="font-semibold text-dark-green">Dividends are paid only to this verified account.</span>{' '}
-          Please make sure the account is in your own name.
+          <span className="font-semibold text-dark-green">डिविडेंड्स आर पेड ओनली टू दिस वेरिफाइड अकाउंट.</span>{' '}
+          प्लीज़ मेक श्योर द अकाउंट इज़ इन योर ओन नेम.
         </p>
       </div>
 
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <TextField
           id="reg-holder"
-          label="Account Holder Name"
-          placeholder="As printed on passbook / cheque"
+          label="अकाउंट होल्डर नेम"
+          placeholder="ऐज़ प्रिंटेड ऑन पासबुक / चेक"
           autoComplete="name"
           value={data.accountHolder}
           error={errors.accountHolder}
@@ -25,9 +25,9 @@ export default function StepBank({ data, update, errors }) {
         />
         <TextField
           id="reg-account"
-          label="Account Number"
+          label="अकाउंट नंबर"
           inputMode="numeric"
-          placeholder="9–18 digits"
+          placeholder="9–18 डिजिट्स"
           autoComplete="off"
           value={data.accountNumber}
           error={errors.accountNumber}
@@ -36,9 +36,9 @@ export default function StepBank({ data, update, errors }) {
         />
         <TextField
           id="reg-account-confirm"
-          label="Confirm Account Number"
+          label="कन्फर्म अकाउंट नंबर"
           inputMode="numeric"
-          placeholder="Re-enter account number"
+          placeholder="री-एंटर अकाउंट नंबर"
           autoComplete="off"
           value={data.confirmAccount}
           error={errors.confirmAccount}
@@ -47,9 +47,9 @@ export default function StepBank({ data, update, errors }) {
         />
         <TextField
           id="reg-ifsc"
-          label="IFSC Code"
+          label="IFSC कोड"
           placeholder="e.g. SBIN0001234"
-          hint="11 characters — auto-capitalised"
+          hint="11 कैरेक्टर्स — ऑटो-कैपिटलाइज़्ड"
           autoComplete="off"
           value={data.ifsc}
           error={errors.ifsc}
@@ -65,8 +65,8 @@ export default function StepBank({ data, update, errors }) {
         />
         <TextField
           id="reg-bankname"
-          label="Bank Name"
-          placeholder="e.g. State Bank of India"
+          label="बैंक नेम"
+          placeholder="e.g. स्टेट बैंक ऑफ इंडिया"
           autoComplete="off"
           value={data.bankName}
           error={errors.bankName}

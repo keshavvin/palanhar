@@ -6,6 +6,13 @@ import { Spinner } from './FormFields';
 
 const TIMELINE = KYC_STATUSES.slice(0, 3); // Pending -> Under Review -> Approved
 
+// Devanagari display labels keyed off the (Latin) KYC status enum.
+const STATUS_LABELS = {
+  Pending: 'पेंडिंग',
+  'Under Review': 'अंडर रिव्यू',
+  Approved: 'अप्रूव्ड',
+};
+
 function TimelineNode({ label, index, stage }) {
   const done = index < stage || (index === TIMELINE.length - 1 && stage === TIMELINE.length - 1);
   const active = index === stage;
@@ -28,8 +35,8 @@ function TimelineNode({ label, index, stage }) {
           done ? 'text-primary-green' : active ? 'text-dark-green' : 'text-gray-400'
         }`}
       >
-        {label}
-        {active && !done && <span className="sr-only"> (current status)</span>}
+        {STATUS_LABELS[label] ?? label}
+        {active && !done && <span className="sr-only"> (करेंट स्टेटस)</span>}
       </span>
     </li>
   );
@@ -55,24 +62,24 @@ export default function SuccessPanel({ investorId, certificateNo, stage, approvi
           <FaCheck className="text-3xl text-white" aria-hidden="true" />
         </motion.div>
 
-        <span className="section-eyebrow">KYC Submitted</span>
-        <h2 className="mb-2 text-2xl sm:text-3xl">Welcome to the Palanhar Family</h2>
+        <span className="section-eyebrow">KYC सबमिटेड</span>
+        <h2 className="mb-2 text-2xl sm:text-3xl">वेलकम टू द पालनहार फैमिली</h2>
         <p className="mx-auto mb-6 max-w-md text-sm text-gray-500 sm:text-base">
-          Your registration has been received. Our compliance team typically reviews KYC
-          applications within 24–48 hours.
+          योर रजिस्ट्रेशन हैज़ बीन रिसीव्ड. आवर कम्प्लायंस टीम टिपिकली रिव्यूज़ KYC
+          ऐप्लिकेशन्स विदिन 24–48 आवर्स.
         </p>
 
         <div className="mx-auto mb-8 inline-flex flex-wrap items-center justify-center gap-3 rounded-xl border border-golden/40 bg-cream-white px-5 py-3">
-          <span className="text-sm font-semibold text-gray-500">Your Investor ID</span>
+          <span className="text-sm font-semibold text-gray-500">योर इन्वेस्टर आईडी</span>
           <span className="font-mono text-lg font-bold tracking-wider text-dark-green">{investorId}</span>
         </div>
 
         {/* Status timeline */}
         <div className="mb-8">
           <p className="mb-4 text-xs font-bold uppercase tracking-widest text-gray-400">
-            Application Status
+            ऐप्लिकेशन स्टेटस
           </p>
-          <ol className="relative flex items-start" aria-label="KYC approval timeline">
+          <ol className="relative flex items-start" aria-label="KYC अप्रूवल टाइमलाइन">
             <span
               className="absolute top-5 right-[16.6%] left-[16.6%] h-0.5 bg-gray-200"
               aria-hidden="true"
@@ -99,16 +106,16 @@ export default function SuccessPanel({ investorId, certificateNo, stage, approvi
               >
                 {approving ? (
                   <>
-                    <Spinner light={false} /> Approving…
+                    <Spinner light={false} /> अप्रूविंग…
                   </>
                 ) : (
                   <>
-                    <FaUserShield aria-hidden="true" /> Simulate Admin Approval
+                    <FaUserShield aria-hidden="true" /> सिम्युलेट एडमिन अप्रूवल
                   </>
                 )}
               </button>
               <p className="mt-3 text-xs text-gray-400">
-                Demo only — in production this step is completed by the Palanhar compliance team.
+                डेमो ओनली — इन प्रोडक्शन दिस स्टेप इज़ कम्प्लीटेड बाय द पालनहार कम्प्लायंस टीम.
               </p>
             </motion.div>
           ) : (
@@ -121,20 +128,20 @@ export default function SuccessPanel({ investorId, certificateNo, stage, approvi
               <div className="mb-6 rounded-2xl border-2 border-golden/50 bg-gradient-to-br from-cream-white to-golden/10 p-5 sm:p-6">
                 <FaAward className="mx-auto mb-2 text-3xl text-golden" aria-hidden="true" />
                 <p className="text-sm font-semibold text-gray-600">
-                  KYC approved — your digital share certificate has been generated
+                  KYC अप्रूव्ड — योर डिजिटल शेयर सर्टिफिकेट हैज़ बीन जेनरेटेड
                 </p>
                 <p className="mt-1 font-mono text-lg font-bold tracking-wider text-dark-green sm:text-xl">
                   {certificateNo}
                 </p>
                 <p className="mt-1 text-xs text-gray-400">
-                  Recorded in the Palanhar share register · Downloadable from your dashboard
+                  रिकॉर्डेड इन द पालनहार शेयर रजिस्टर · डाउनलोडेबल फ्रॉम योर डैशबोर्ड
                 </p>
               </div>
               <Link
                 to="/investor/dashboard"
                 className="btn btn-primary inline-flex min-h-11 items-center justify-center gap-2"
               >
-                Go to Dashboard <FaArrowRight aria-hidden="true" />
+                गो टू डैशबोर्ड <FaArrowRight aria-hidden="true" />
               </Link>
             </motion.div>
           )}

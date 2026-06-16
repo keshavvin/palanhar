@@ -31,20 +31,20 @@ export default function InvestPage() {
             transition={{ duration: 0.6 }}
             className="mx-auto max-w-2xl text-center"
           >
-            <h2 className="mb-4 !text-white">Ready to Join Gau Seva?</h2>
+            <h2 className="mb-4 !text-white">रेडी टू जॉइन गौ सेवा?</h2>
             <p className="mb-8 text-lg text-white/85">
-              Complete your registration and KYC in minutes — your seva supports
-              the herd, and your share certificate and dashboard are waiting.
+              कम्प्लीट योर रजिस्ट्रेशन एंड KYC इन मिनट्स — योर सेवा सपोर्ट्स
+              द हर्ड, एंड योर शेयर सर्टिफिकेट एंड डैशबोर्ड आर वेटिंग.
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Link to="/investor/register" className="btn btn-golden">
-                Start Registration
+                स्टार्ट रजिस्ट्रेशन
               </Link>
               <Link
                 to="/contact"
                 className="btn border-2 border-white bg-transparent text-white hover:bg-white hover:text-primary-green"
               >
-                Talk to Us
+                टॉक टू अस
               </Link>
             </div>
           </motion.div>

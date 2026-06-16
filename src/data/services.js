@@ -3,44 +3,44 @@ import { FaLeaf, FaHandshake, FaTruck, FaGraduationCap } from 'react-icons/fa';
 export const services = [
   {
     id: 1,
-    title: 'Dairy Farming',
-    description: 'Modern dairy farming techniques with animal welfare at the core. We maintain healthy livestock for premium milk production.',
+    title: 'डेयरी फार्मिंग',
+    description: 'मॉडर्न डेयरी फार्मिंग टेक्निक्स विद एनिमल वेलफेयर एट द कोर। वी मेंटेन हेल्दी लाइवस्टॉक फॉर प्रीमियम मिल्क प्रोडक्शन।',
     icon: FaLeaf,
-    features: ['Organic Feed', 'Veterinary Care', 'Clean Environment']
+    features: ['ऑर्गेनिक फीड', 'वेटरनरी केयर', 'क्लीन एनवायरनमेंट']
   },
   {
     id: 2,
-    title: 'Organic Agriculture',
-    description: 'Sustainable farming practices without synthetic pesticides. Growing healthy crops for a healthier future.',
+    title: 'ऑर्गेनिक एग्रीकल्चर',
+    description: 'सस्टेनेबल फार्मिंग प्रैक्टिसेस विदाउट सिंथेटिक पेस्टिसाइड्स। ग्रोइंग हेल्दी क्रॉप्स फॉर अ हेल्दियर फ्यूचर।',
     icon: FaLeaf,
-    features: ['No Pesticides', 'Soil Health', 'Crop Rotation']
+    features: ['नो पेस्टिसाइड्स', 'सॉइल हेल्थ', 'क्रॉप रोटेशन']
   },
   {
     id: 3,
-    title: 'Gaushala & Cow Care',
-    description: 'Cruelty-free gaushala management rooted in Gau Seva — health, nutrition and lifelong shelter for every cow.',
+    title: 'गौशाला & काऊ केयर',
+    description: 'क्रुएल्टी-फ्री गौशाला मैनेजमेंट रूटेड इन गौ सेवा — हेल्थ, न्यूट्रिशन एंड लाइफलॉन्ग शेल्टर फॉर एवरी काऊ।',
     icon: FaLeaf,
-    features: ['Health Monitoring', 'Nutrition Planning', 'Lifelong Shelter']
+    features: ['हेल्थ मॉनिटरिंग', 'न्यूट्रिशन प्लानिंग', 'लाइफलॉन्ग शेल्टर']
   },
   {
     id: 4,
-    title: 'Farm Consulting',
-    description: 'Expert consultation for farmers on modern agricultural techniques and sustainability practices.',
+    title: 'फार्म कंसल्टिंग',
+    description: 'एक्सपर्ट कंसल्टेशन फॉर फार्मर्स ऑन मॉडर्न एग्रीकल्चरल टेक्निक्स एंड सस्टेनेबिलिटी प्रैक्टिसेस।',
     icon: FaHandshake,
-    features: ['Expert Advice', 'Best Practices', 'Technical Support']
+    features: ['एक्सपर्ट एडवाइस', 'बेस्ट प्रैक्टिसेस', 'टेक्निकल सपोर्ट']
   },
   {
     id: 5,
-    title: 'Milk Distribution',
-    description: 'Fresh milk delivery directly from farm to door, ensuring quality and hygiene at every step.',
+    title: 'मिल्क डिस्ट्रिब्यूशन',
+    description: 'फ्रेश मिल्क डिलीवरी डायरेक्टली फ्रॉम फार्म टू डोर, एंश्योरिंग क्वालिटी एंड हाइजीन एट एवरी स्टेप।',
     icon: FaTruck,
-    features: ['Daily Delivery', 'Cold Chain', 'On-Time Arrival']
+    features: ['डेली डिलीवरी', 'कोल्ड चेन', 'ऑन-टाइम अराइवल']
   },
   {
     id: 6,
-    title: 'Agricultural Training',
-    description: 'Training programs for farmers on organic farming, animal care, and sustainable agriculture.',
+    title: 'एग्रीकल्चरल ट्रेनिंग',
+    description: 'ट्रेनिंग प्रोग्राम्स फॉर फार्मर्स ऑन ऑर्गेनिक फार्मिंग, एनिमल केयर, एंड सस्टेनेबल एग्रीकल्चर।',
     icon: FaGraduationCap,
-    features: ['Hands-on Training', 'Certification', 'Ongoing Support']
+    features: ['हैंड्स-ऑन ट्रेनिंग', 'सर्टिफिकेशन', 'ऑनगोइंग सपोर्ट']
   }
 ];
