@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { FaHeadset, FaStore, FaHeartbeat, FaBook, FaGift, FaThLarge, FaArrowLeft } from 'react-icons/fa';
+import { Link, useSearchParams } from 'react-router-dom';
+import { FaHeadset, FaStore, FaHeartbeat, FaBook, FaGift, FaThLarge, FaArrowLeft, FaReceipt } from 'react-icons/fa';
 import { FaCow } from 'react-icons/fa6';
 import FarmerSupport from '../components/app/FarmerSupport';
 import MarketLinkage from '../components/app/MarketLinkage';
@@ -9,8 +9,10 @@ import DairyManagement from '../components/app/DairyManagement';
 import HealthNutrition from '../components/app/HealthNutrition';
 import LearningTraining from '../components/app/LearningTraining';
 import SchemesBenefits from '../components/app/SchemesBenefits';
+import MyOrders from '../components/app/MyOrders';
 
 const FEATURES = [
+  { key: 'orders', label: 'मेरे ऑर्डर', desc: 'ऑर्डर एवं भुगतान', icon: FaReceipt, Component: MyOrders },
   { key: 'support', label: 'किसान सहायता', desc: 'सवाल पूछें, टिकट बनाएँ', icon: FaHeadset, Component: FarmerSupport },
   { key: 'market', label: 'बाज़ार संपर्क', desc: 'खरीदें / बेचें', icon: FaStore, Component: MarketLinkage },
   { key: 'dairy', label: 'डेयरी प्रबंधन', desc: 'गाय व दूध रिकॉर्ड', icon: FaCow, Component: DairyManagement },
@@ -56,7 +58,11 @@ function HomeOverview({ onOpen }) {
 }
 
 export default function AppPortalPage() {
-  const [active, setActive] = useState('home');
+  const [searchParams] = useSearchParams();
+  const initialTab = FEATURES.some((f) => f.key === searchParams.get('tab'))
+    ? searchParams.get('tab')
+    : 'home';
+  const [active, setActive] = useState(initialTab);
   const ActiveFeature = FEATURES.find((f) => f.key === active)?.Component;
 
   const navItems = [{ key: 'home', label: 'होम', icon: FaThLarge }, ...FEATURES];

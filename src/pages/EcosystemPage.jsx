@@ -201,22 +201,22 @@ export default function EcosystemPage() {
           </div>
           {/* Phone mock */}
           <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="flex justify-center">
-            <div className="w-60 rounded-[2rem] border-[7px] border-gray-900 bg-gray-900 shadow-2xl">
-              <div className="overflow-hidden rounded-[1.5rem] bg-cream-white">
-                <div className="flex items-center gap-2 bg-primary-green px-4 py-3">
-                  <img src="/palanhar-logo.png" alt="" className="h-7 w-7 object-contain" draggable="false" />
-                  <span className="font-display text-base font-bold text-white">पालनहार</span>
+            <div className="w-full max-w-[17rem] rounded-[2.5rem] border-[10px] border-gray-900 bg-gray-900 shadow-2xl">
+              <div className="overflow-hidden rounded-[1.8rem] bg-cream-white">
+                <div className="flex items-center gap-2.5 bg-primary-green px-4 py-4">
+                  <img src="/palanhar-logo.png" alt="" className="h-8 w-8 object-contain" draggable="false" />
+                  <span className="font-display text-lg font-bold text-white">पालनहार</span>
                 </div>
-                <div className="grid grid-cols-3 gap-2.5 p-4">
+                <div className="grid grid-cols-3 gap-3 p-4">
                   {appFeatures.map((f) => (
-                    <div key={f.label} className="flex flex-col items-center gap-1 rounded-xl bg-white px-1 py-3 shadow-sm">
-                      <f.icon className="text-primary-green" aria-hidden="true" />
-                      <span className="text-center text-[8px] font-semibold leading-tight text-dark-green">{f.label}</span>
+                    <div key={f.label} className="flex aspect-square flex-col items-center justify-center gap-1.5 rounded-2xl bg-white px-1 shadow-sm">
+                      <f.icon size={20} className="text-primary-green" aria-hidden="true" />
+                      <span className="text-center text-[9px] font-semibold leading-tight text-dark-green">{f.label}</span>
                     </div>
                   ))}
                 </div>
-                <div className="px-4 pb-4">
-                  <div className="rounded-xl bg-golden/15 px-3 py-2 text-center text-[11px] font-bold text-amber-700">
+                <div className="px-4 pb-5">
+                  <div className="rounded-xl bg-golden/15 px-3 py-2.5 text-center text-xs font-bold text-amber-700">
                     पालनहार ताज़ा व प्राकृतिक
                   </div>
                 </div>

@@ -22,7 +22,7 @@ const badges = [
   { icon: FaLeaf, label: 'सतत एवं लाभदायक' },
 ];
 
-// The "गौ निवेश योजना" card rows.
+// The "गौ सेवा से समृद्धि" card rows.
 const schemeRows = [
   { icon: FaUser, label: 'न्यूनतम निवेश:', value: '₹10000' },
   { icon: FaChartLine, label: 'मासिक संभावित आय:', value: '₹5,000+' },
@@ -109,7 +109,7 @@ export default function Hero() {
           </motion.p>
         </div>
 
-        {/* RIGHT — गौ निवेश योजना card */}
+        {/* RIGHT — गौ सेवा से समृद्धि card */}
         <motion.div
           variants={item}
           className="w-full max-w-md justify-self-center overflow-hidden rounded-2xl shadow-2xl lg:justify-self-end"
@@ -118,7 +118,7 @@ export default function Hero() {
             <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/15 text-xl text-golden">
               <FaCow aria-hidden="true" />
             </span>
-            <h2 className="!text-white text-xl font-bold">गौ निवेश योजना</h2>
+            <h2 className="!text-white text-xl font-bold">गौ सेवा से समृद्धि</h2>
           </div>
 
           <div className="bg-white p-6">

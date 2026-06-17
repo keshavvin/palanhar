@@ -99,7 +99,7 @@ export default function TransparentModel() {
           </div>
         </motion.div>
 
-        {/* गौ निवेश योजना card */}
+        {/* गौ सेवा से समृद्धि card */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -108,7 +108,7 @@ export default function TransparentModel() {
           className="overflow-hidden rounded-2xl bg-dark-green text-white shadow-xl"
         >
           <div className="bg-primary-green px-6 py-4 text-center">
-            <h3 className="!text-white text-xl">गौ निवेश योजना</h3>
+            <h3 className="!text-white text-xl">गौ सेवा से समृद्धि</h3>
           </div>
           <div className="p-6">
             <p className="mb-5 text-center font-display text-2xl font-bold text-golden">

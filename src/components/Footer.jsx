@@ -17,7 +17,7 @@ const quickLinks = [
   { label: 'हमारे बारे में', to: '/about' },
   { label: 'परितंत्र', to: '/ecosystem' },
   { label: 'पालनहार ऐप', to: '/app' },
-  { label: 'गौ निवेश योजना', to: '/invest' },
+  { label: 'गौ सेवा से समृद्धि', to: '/invest' },
   { label: 'पिच डेक', to: '/deck' },
   { label: 'उत्पाद', to: '/products' },
   { label: 'गाय देखें', to: '/gallery' },

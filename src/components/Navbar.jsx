@@ -8,7 +8,7 @@ import { FaBars, FaTimes, FaUserCircle } from 'react-icons/fa';
 const navLinks = [
   { name: 'होम', path: '/' },
   { name: 'हमारे बारे में', path: '/about' },
-  { name: 'गौ निवेश योजना', path: '/invest' },
+  { name: 'गौ सेवा से समृद्धि', path: '/invest' },
   { name: 'उत्पाद', path: '/products' },
   { name: 'हमारा मॉडल', path: '/model' },
   { name: 'गाय देखें', path: '/gallery' },
