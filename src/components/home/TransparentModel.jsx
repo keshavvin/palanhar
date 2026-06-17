@@ -22,7 +22,7 @@ const deliveryFlow = [
 
 // Highlights of the headline investment plan.
 const planRows = [
-  { icon: FaUserTie, label: 'न्यूनतम निवेश:', value: '₹1,00,000' },
+  { icon: FaUserTie, label: 'न्यूनतम निवेश:', value: '₹10000' },
   { icon: FaChartLine, label: 'मासिक संभावित आय:', value: '₹5,000+' },
   { icon: FaRegClock, label: 'निवेश अवधि:', value: '20 वर्ष' },
   { icon: FaCheck, label: 'पारदर्शी ट्रैकिंग' },

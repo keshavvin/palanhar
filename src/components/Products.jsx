@@ -1,11 +1,13 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { allProducts, dairyProducts, panchgavyaProducts, agricultureProducts } from '../data/products';
-import { FaEnvelope, FaArrowRight } from 'react-icons/fa';
+import { FaEnvelope, FaArrowRight, FaShoppingCart } from 'react-icons/fa';
+import ProductOrderModal from './ProductOrderModal';
 
 export default function Products() {
   const [filter, setFilter] = useState('all');
+  const [orderProduct, setOrderProduct] = useState(null);
 
   const getProducts = () => {
     switch (filter) {
@@ -141,17 +143,28 @@ export default function Products() {
                   ))}
                 </div>
 
-                {/* Price and CTA */}
-                <div className="flex items-center justify-between pt-4 border-t border-light-green/30">
-                  <p className="text-lg font-bold text-primary-green">{product.price}</p>
-                  <Link
-                    to="/contact"
-                    aria-label={`${product.name} के बारे में पूछताछ करें`}
-                    className="bg-primary-green text-white px-3 py-2 rounded-lg hover:bg-dark-green hover:scale-105 transition-all flex items-center gap-2"
-                  >
-                    <FaEnvelope size={16} />
-                    <span className="hidden sm:inline text-sm">पूछताछ करें</span>
-                  </Link>
+                {/* Price and CTAs */}
+                <div className="pt-4 border-t border-light-green/30">
+                  <p className="text-lg font-bold text-primary-green mb-3">{product.price}</p>
+                  <div className="flex gap-2">
+                    <button
+                      type="button"
+                      onClick={() => setOrderProduct(product)}
+                      aria-label={`${product.name} अभी खरीदें`}
+                      className="flex-1 bg-golden text-dark-green font-bold px-3 py-2 rounded-lg hover:bg-amber-500 hover:scale-105 transition-all flex items-center justify-center gap-2"
+                    >
+                      <FaShoppingCart size={15} />
+                      <span className="text-sm">अभी खरीदें</span>
+                    </button>
+                    <Link
+                      to="/contact"
+                      aria-label={`${product.name} के बारे में पूछताछ करें`}
+                      className="flex-1 border-2 border-primary-green text-primary-green font-semibold px-3 py-2 rounded-lg hover:bg-primary-green hover:text-white transition-all flex items-center justify-center gap-2"
+                    >
+                      <FaEnvelope size={15} />
+                      <span className="text-sm">पूछताछ करें</span>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -179,6 +192,13 @@ export default function Products() {
           </Link>
         </motion.div>
       </div>
+
+      {/* Order process modal */}
+      <AnimatePresence>
+        {orderProduct && (
+          <ProductOrderModal product={orderProduct} onClose={() => setOrderProduct(null)} />
+        )}
+      </AnimatePresence>
     </section>
   );
 }

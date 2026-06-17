@@ -1,6 +1,7 @@
 import { lazy, Suspense, useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
+import TopBar from './components/TopBar';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
@@ -17,6 +18,7 @@ const InvestPage = lazy(() => import('./pages/InvestPage'));
 const InvestorRegisterPage = lazy(() => import('./pages/InvestorRegisterPage'));
 const InvestorDashboardPage = lazy(() => import('./pages/InvestorDashboardPage'));
 const AdminDashboardPage = lazy(() => import('./pages/AdminDashboardPage'));
+const ModelPage = lazy(() => import('./pages/ModelPage'));
 const CowSevaPage = lazy(() => import('./pages/CowSevaPage'));
 const EcosystemPage = lazy(() => import('./pages/EcosystemPage'));
 const DivisionsPage = lazy(() => import('./pages/DivisionsPage'));
@@ -101,6 +103,7 @@ function AnimatedRoutes() {
             <Route path="/app" element={<AppPortalPage />} />
             <Route path="/vedic-consultant" element={<VedicConsultantPage />} />
             <Route path="/deck" element={<DeckPage />} />
+            <Route path="/model" element={<ModelPage />} />
             <Route path="/cow-seva" element={<Navigate to="/gau-seva" replace />} />
             <Route path="/invest" element={<InvestPage />} />
             <Route path="/investor/register" element={<InvestorRegisterPage />} />
@@ -120,6 +123,7 @@ function App() {
       <ScrollToTop />
       <SplashScreen />
       <div className="flex flex-col min-h-screen bg-white">
+        <TopBar />
         <Navbar />
         <main className="flex-grow">
           <AnimatedRoutes />

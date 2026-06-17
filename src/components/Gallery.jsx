@@ -198,11 +198,13 @@ export default function Gallery() {
                     />
                   </div>
                   {/* Caption bar */}
-                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4 pt-10">
-                    <h3 className="font-bold text-white">{image.title}</h3>
-                    <p className="text-xs font-semibold uppercase tracking-wide text-golden">
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/45 to-transparent p-5 pt-14 text-left">
+                    <p className="mb-1.5 text-[11px] font-bold uppercase tracking-wider text-golden">
                       {categoryLabel(image.category)}
                     </p>
+                    <h3 className="text-base font-bold leading-snug text-[#d4edd5] sm:text-lg">
+                      {image.title}
+                    </h3>
                   </div>
                 </div>
               </motion.button>

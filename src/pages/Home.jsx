@@ -1,11 +1,17 @@
 import Hero from '../components/Hero';
+import TrustBar from '../components/home/TrustBar';
+import RevenueCircles from '../components/home/RevenueCircles';
+import FarmImpact from '../components/home/FarmImpact';
+import DashboardPreview from '../components/home/DashboardPreview';
 import HomeProducts from '../components/home/HomeProducts';
-import CategorySlider from '../components/home/CategorySlider';
+import ProductsList from '../components/home/ProductsList';
+import WhyInvestMedia from '../components/home/WhyInvestMedia';
+import Recognition from '../components/home/Recognition';
 import TransparentModel from '../components/home/TransparentModel';
+import RevenueModel from '../components/home/RevenueModel';
+import InsuranceSection from '../components/home/InsuranceSection';
 import ModelVideo from '../components/home/ModelVideo';
-import IncomeGrowth from '../components/home/IncomeGrowth';
 import NaariShaktiSection from '../components/home/NaariShaktiSection';
-import Leadership from '../components/Leadership';
 import PublicOpinion from '../components/home/PublicOpinion';
 import AppDownload from '../components/home/AppDownload';
 
@@ -13,13 +19,19 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <TrustBar />
+      <RevenueCircles />
+      <FarmImpact />
+      <DashboardPreview />
       <HomeProducts />
-      <CategorySlider />
+      <ProductsList />
+      <WhyInvestMedia />
       <TransparentModel />
+      <RevenueModel />
+      <InsuranceSection />
+      <Recognition />
       <ModelVideo />
-      <IncomeGrowth />
       <NaariShaktiSection />
-      <Leadership />
       <PublicOpinion />
       <AppDownload />
     </>

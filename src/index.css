@@ -6,8 +6,8 @@
   --color-light-green: #81C784;
   --color-cream-white: #FFFDF5;
   --color-golden: #F9A825;
-  --font-sans: 'Inter', system-ui, sans-serif;
-  --font-display: 'Playfair Display', serif;
+  --font-sans: 'Inter', 'Mukta', system-ui, sans-serif;
+  --font-display: 'Playfair Display', 'Mukta', serif;
 }
 
 :root {
@@ -19,7 +19,7 @@
 }
 
 body {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'Inter', 'Mukta', system-ui, sans-serif;
   color: #333;
   overflow-x: hidden;
 }

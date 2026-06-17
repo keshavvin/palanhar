@@ -10,7 +10,7 @@ const navLinks = [
   { name: 'हमारे बारे में', path: '/about' },
   { name: 'गौ निवेश योजना', path: '/invest' },
   { name: 'उत्पाद', path: '/products' },
-  { name: 'हमारा मॉडल', hash: '/#model' },
+  { name: 'हमारा मॉडल', path: '/model' },
   { name: 'गाय देखें', path: '/gallery' },
   { name: 'इकोसिस्टम', path: '/ecosystem' },
   { name: 'वैदिक कंसल्टेंट', path: '/vedic-consultant' },
