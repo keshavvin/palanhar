@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import Products from '../components/Products';
-import ProductPriceList from '../components/ProductPriceList';
+import ProductCatalog from '../components/ProductCatalog';
 import SamriddhiKit from '../components/SamriddhiKit';
 
 export default function ProductsPage() {
@@ -18,7 +18,7 @@ export default function ProductsPage() {
         </div>
       </motion.section>
       <Products />
-      <ProductPriceList />
+      <ProductCatalog />
       <SamriddhiKit />
     </>
   );
