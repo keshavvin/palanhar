@@ -40,7 +40,7 @@ export default function InvestHero() {
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="#plans" className="btn btn-outline">योजनाएँ देखें</a>
-              <Link to="/investor/register" className="btn btn-primary">पंजीकरण शुरू करें</Link>
+              <Link to="/invest/start" className="btn btn-primary">पंजीकरण शुरू करें</Link>
             </div>
 
             {/* Compact stats for small screens (snapshot card is lg+) */}

@@ -49,7 +49,7 @@ export default function PlanCard({ plan }) {
           </ul>
 
           <Link
-            to={`/investor/register?plan=${plan.id}`}
+            to={`/invest/start?plan=${plan.id}&step=kyc`}
             className={`btn mt-auto w-full text-center ${plan.popular ? 'btn-golden' : 'btn-primary'}`}
           >
             अभी निवेश करें

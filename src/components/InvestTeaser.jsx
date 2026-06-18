@@ -75,7 +75,7 @@ export default function InvestTeaser() {
               निवेश योजनाएँ देखें
             </Link>
             <Link
-              to="/investor/dashboard"
+              to="/invest/start"
               className="btn border-2 border-white bg-transparent text-white hover:bg-white hover:text-primary-green"
             >
               निवेशक लॉगिन

@@ -1,6 +1,6 @@
 import { lazy, Suspense, useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion, MotionConfig } from 'framer-motion';
 import TopBar from './components/TopBar';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -15,6 +15,8 @@ const ServicesPage = lazy(() => import('./pages/ServicesPage'));
 const GalleryPage = lazy(() => import('./pages/GalleryPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const InvestPage = lazy(() => import('./pages/InvestPage'));
+const LoginPage = lazy(() => import('./pages/LoginPage'));
+const InvestFlow = lazy(() => import('./pages/InvestFlow'));
 const InvestorRegisterPage = lazy(() => import('./pages/InvestorRegisterPage'));
 const InvestorDashboardPage = lazy(() => import('./pages/InvestorDashboardPage'));
 const AdminDashboardPage = lazy(() => import('./pages/AdminDashboardPage'));
@@ -106,7 +108,10 @@ function AnimatedRoutes() {
             <Route path="/model" element={<ModelPage />} />
             <Route path="/cow-seva" element={<Navigate to="/gau-seva" replace />} />
             <Route path="/invest" element={<InvestPage />} />
-            <Route path="/investor/register" element={<InvestorRegisterPage />} />
+            <Route path="/investor/login" element={<LoginPage />} />
+            <Route path="/invest/start" element={<InvestFlow />} />
+            {/* Old 8-step KYC page hidden for now — unified flow lives at /invest/start */}
+            <Route path="/investor/register" element={<Navigate to="/invest/start" replace />} />
             <Route path="/investor/dashboard" element={<InvestorDashboardPage />} />
             <Route path="/admin" element={<AdminDashboardPage />} />
             <Route path="*" element={<NotFoundPage />} />
@@ -119,18 +124,20 @@ function AnimatedRoutes() {
 
 function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <SplashScreen />
-      <div className="flex flex-col min-h-screen bg-white">
-        <TopBar />
-        <Navbar />
-        <main className="flex-grow">
-          <AnimatedRoutes />
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <MotionConfig reducedMotion="user">
+      <Router>
+        <ScrollToTop />
+        <SplashScreen />
+        <div className="flex min-h-screen flex-col bg-white">
+          <TopBar />
+          <Navbar />
+          <main className="grow">
+            <AnimatedRoutes />
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </MotionConfig>
   );
 }
 

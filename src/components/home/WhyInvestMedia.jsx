@@ -6,6 +6,7 @@ import {
   FaLeaf,
   FaFlag,
   FaStar,
+  FaNewspaper,
 } from 'react-icons/fa6';
 
 // Reasons to invest, shown in the left dark panel.
@@ -39,13 +40,15 @@ const reasons = [
 
 // Media mentions, shown as styled text badges in the right panel.
 const mediaNames = [
+  'समाचार प्लस',
   'कृषि जागरण',
   'आज तक',
   'The Better India',
   'News18',
   'भारत पीढ़ी',
-  'ज़ी न्यूज़',
 ];
+
+const NEWS_URL = 'https://app.samachar.plus/story/?id=27c16a80-ab91-4364-8d94-391b02b5a8bd';
 
 const container = {
   hidden: {},
@@ -129,7 +132,17 @@ export default function WhyInvestMedia() {
             ))}
           </div>
 
-          <motion.div variants={item} className="mt-6 flex flex-wrap items-center gap-3">
+          <motion.a
+            variants={item}
+            href={NEWS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-flex items-center gap-2 rounded-xl bg-golden px-5 py-3 text-sm font-bold text-dark-green transition-colors hover:bg-amber-500"
+          >
+            <FaNewspaper aria-hidden="true" /> समाचार में पढ़ें
+          </motion.a>
+
+          <motion.div variants={item} className="mt-5 flex flex-wrap items-center gap-3">
             <span className="flex gap-1 text-golden" aria-hidden="true">
               {Array.from({ length: 5 }).map((_, i) => (
                 <FaStar key={i} />

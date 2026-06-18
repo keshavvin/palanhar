@@ -37,7 +37,7 @@ export default function InvestPage() {
               गोवंश का सहारा बनती है, और आपका शेयर प्रमाणपत्र एवं डैशबोर्ड आपका इंतज़ार कर रहे हैं।
             </p>
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
-              <Link to="/investor/register" className="btn btn-golden">
+              <Link to="/invest/start" className="btn btn-golden">
                 पंजीकरण शुरू करें
               </Link>
               <Link

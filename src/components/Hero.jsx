@@ -1,150 +1,206 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
-  FaShieldHalved,
-  FaTowerBroadcast,
-  FaCoins,
-  FaLeaf,
-  FaUser,
-  FaChartLine,
-  FaCalendarDays,
-  FaCow,
-  FaBoxOpen,
-  FaArrowRightLong,
+  FaArrowRightLong, FaChevronLeft, FaChevronRight, FaCow, FaShieldHalved, FaSeedling,
 } from 'react-icons/fa6';
 
-// Four headline value badges shown under the hero copy.
-const badges = [
-  { icon: FaShieldHalved, label: 'पारदर्शी ट्रैकिंग' },
-  { icon: FaTowerBroadcast, label: 'लाइव अपडेट एवं रिकॉर्ड' },
-  { icon: FaCoins, label: 'बहु-स्रोत आय' },
-  { icon: FaLeaf, label: 'सतत एवं लाभदायक' },
+// Emotional story slides — each carries a pillar of the Palanhar movement.
+const slides = [
+  {
+    image: '/banner-hero.jpg',
+    eyebrow: 'गौ सेवा',
+    line1: 'जहाँ हर गाय परिवार है,',
+    line2: 'और हर सेवा एक संकल्प।',
+    sub: 'गौ माता की निःस्वार्थ सेवा — पालनहार की आत्मा। 400+ देशी गायों की देखभाल में भागीदार बनें।',
+  },
+  {
+    image: '/hero-banner-1.jpg',
+    eyebrow: 'भारतीय विरासत',
+    line1: 'हमारी देशी गाय,',
+    line2: 'हमारी पहचान, हमारा गौरव।',
+    sub: 'सदियों पुरानी देशी नस्लों का संरक्षण — आने वाली पीढ़ियों के लिए अमूल्य धरोहर।',
+  },
+  {
+    image: '/hero-banner-2.jpg',
+    eyebrow: 'ग्रामीण सशक्तिकरण',
+    line1: 'हर गाँव समृद्ध,',
+    line2: 'हर परिवार आत्मनिर्भर।',
+    sub: 'रोज़गार, महिला सशक्तिकरण एवं आजीविका — गाँवों की समृद्धि का आंदोलन।',
+  },
+  {
+    image: '/gallery-herd.jpg',
+    eyebrow: 'सतत विकास',
+    line1: 'प्रकृति के साथ,',
+    line2: 'सच्ची एवं सतत समृद्धि।',
+    sub: 'जैविक खेती, पंचगव्य एवं स्वच्छ ऊर्जा — पर्यावरण के साथ संतुलन में।',
+  },
+  {
+    image: '/hero-banner-3.jpg',
+    eyebrow: 'पारदर्शिता एवं भरोसा',
+    line1: 'हर कदम पारदर्शी,',
+    line2: 'हर भरोसा सुरक्षित।',
+    sub: 'लाइव डैशबोर्ड, नियमित रिपोर्ट एवं वास्तविक गौशाला — पूर्ण विश्वास के साथ।',
+  },
+  {
+    image: '/gallery-seva.jpg',
+    eyebrow: 'राष्ट्र निर्माण',
+    line1: 'एक गाय से,',
+    line2: 'आत्मनिर्भर भारत तक।',
+    sub: 'आपका हर योगदान — गायों, गाँवों एवं आने वाली पीढ़ियों के लिए एक बेहतर भारत।',
+  },
+  {
+    image: '/naari/group-photo.jpg',
+    eyebrow: 'नारी शक्ति',
+    line1: 'नारी के हाथों,',
+    line2: 'गाँव की समृद्धि।',
+    sub: 'महिला सशक्तिकरण एवं स्वरोज़गार — आत्मनिर्भर नारी से सशक्त समाज का निर्माण।',
+  },
+  {
+    image: '/gallery-care.jpg',
+    eyebrow: 'देखभाल एवं प्रेम',
+    line1: 'हर गाय को,',
+    line2: 'अपनों जैसा प्रेम।',
+    sub: 'रोज़ की देखभाल, स्वच्छता एवं पशु-चिकित्सा — गौ माता के प्रति हमारा कर्तव्य।',
+  },
+  {
+    image: '/naari/skill-class.jpg',
+    eyebrow: 'कौशल एवं प्रशिक्षण',
+    line1: 'कौशल से जुड़ाव,',
+    line2: 'रोज़गार की राह।',
+    sub: 'ग्रामीण युवाओं एवं महिलाओं के लिए कौशल प्रशिक्षण एवं आत्मनिर्भरता के अवसर।',
+  },
 ];
 
-// The "गौ सेवा से समृद्धि" card rows.
-const schemeRows = [
-  { icon: FaUser, label: 'न्यूनतम निवेश:', value: '₹10000' },
-  { icon: FaChartLine, label: 'मासिक संभावित आय:', value: '₹5,000+' },
-  { icon: FaCalendarDays, label: 'निवेश अवधि:', value: '20 वर्ष' },
-  { icon: FaShieldHalved, label: 'पारदर्शी ट्रैकिंग' },
-  { icon: FaCow, label: 'गाय की लाइव जानकारी' },
-  { icon: FaBoxOpen, label: 'उत्पाद आधारित बहु-स्रोत आय' },
+const trust = [
+  { icon: FaCow, label: '400+ देशी गायें' },
+  { icon: FaShieldHalved, label: 'पूर्ण पारदर्शिता' },
+  { icon: FaSeedling, label: 'वास्तविक गौशाला' },
 ];
 
-const container = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.05 } },
-};
-const item = {
-  hidden: { opacity: 0, y: 22 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
-};
+function SlideBg({ src }) {
+  const [bg, setBg] = useState(src);
+  return (
+    <motion.img
+      key={src}
+      src={bg}
+      alt=""
+      onError={() => setBg('/hero-banner-3.jpg')}
+      initial={{ opacity: 0, scale: 1.08 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1.1, ease: 'easeOut' }}
+      className="absolute inset-0 h-full w-full object-cover object-center"
+      draggable="false"
+    />
+  );
+}
 
 export default function Hero() {
-  const [bgSrc, setBgSrc] = useState('/banner-hero.jpg');
+  const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const slide = slides[index];
+
+  // Any manual control click stops the auto-slide so the user can navigate freely.
+  const go = (dir) => {
+    setPaused(true);
+    setIndex((i) => (i + dir + slides.length) % slides.length);
+  };
+  const goTo = (i) => {
+    setPaused(true);
+    setIndex(i);
+  };
+
+  useEffect(() => {
+    if (paused) return undefined;
+    const t = setTimeout(() => setIndex((i) => (i + 1) % slides.length), 5 * 60 * 1000);
+    return () => clearTimeout(t);
+  }, [index, paused]);
 
   return (
-    <section className="relative overflow-hidden bg-cream-white">
-      {/* Farmer + cows photo, anchored right behind the scheme card */}
-      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-        <img
-          src={bgSrc}
-          alt=""
-          onError={() => setBgSrc('/hero-banner-3.jpg')}
-          className="absolute inset-0 h-full w-full object-cover object-center"
-          draggable="false"
-        />
-        {/* Cream scrim keeps the left copy legible while the photo shows on the right */}
-        <div className="absolute inset-0 bg-gradient-to-r from-cream-white via-cream-white/90 to-cream-white/25" />
-        <div className="absolute inset-0 bg-gradient-to-t from-cream-white/70 via-transparent to-transparent" />
+    <section
+      className="relative flex min-h-[82vh] items-center overflow-hidden bg-black"
+      aria-roledescription="carousel"
+    >
+      {/* Sliding backgrounds */}
+      <div className="absolute inset-0" aria-hidden="true">
+        <AnimatePresence>
+          <SlideBg key={slide.image} src={slide.image} />
+        </AnimatePresence>
       </div>
 
-      <motion.div
-        variants={container}
-        initial="hidden"
-        animate="visible"
-        className="container-custom relative z-10 grid items-center gap-10 py-14 md:py-20 lg:grid-cols-2 lg:gap-12"
-      >
-        {/* LEFT — copy + badges */}
-        <div>
-          <motion.h1
-            variants={item}
-            className="font-display text-4xl font-extrabold leading-tight tracking-tight text-dark-green sm:text-5xl lg:text-6xl"
-          >
-            सेवा गौ माता की।
-            <span className="mt-1 block text-primary-green">समृद्धि हर परिवार की।</span>
-          </motion.h1>
-
-          <motion.p
-            variants={item}
-            className="mt-5 max-w-xl text-base leading-relaxed text-gray-700 md:text-lg"
-          >
-            एक पारदर्शी, तकनीक-संचालित मंच जो गौ-आधारित उत्पादों को दीर्घकालिक समृद्धि में बदलता है।
-          </motion.p>
-
-          {/* Badges bar */}
+      <div className="container-custom relative z-10 max-w-3xl py-20 md:py-28 [&_h1]:[text-shadow:0_2px_10px_rgba(0,0,0,0.55)] [&_p]:[text-shadow:0_1px_8px_rgba(0,0,0,0.55)]">
+        {/* Rotating story content */}
+        <AnimatePresence mode="wait">
           <motion.div
-            variants={item}
-            className="mt-8 grid grid-cols-2 gap-4 rounded-2xl border border-primary-green/10 bg-white/90 p-4 shadow-md backdrop-blur-sm sm:grid-cols-4"
+            key={index}
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -16 }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
           >
-            {badges.map(({ icon: Icon, label }) => (
-              <div key={label} className="flex flex-col items-center gap-2 text-center sm:flex-row sm:text-left">
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary-green/10 text-primary-green">
-                  <Icon aria-hidden="true" />
-                </span>
-                <span className="text-xs font-semibold leading-tight text-dark-green">{label}</span>
-              </div>
-            ))}
+            <span className="inline-flex items-center gap-2 rounded-full border border-golden/40 bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-golden backdrop-blur-sm">
+              <FaSeedling aria-hidden="true" /> {slide.eyebrow}
+            </span>
+            <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.1] text-white sm:text-5xl lg:text-6xl">
+              {slide.line1}
+              <span className="mt-1 block text-golden">{slide.line2}</span>
+            </h1>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-white/85 md:text-lg">{slide.sub}</p>
           </motion.div>
+        </AnimatePresence>
 
-          {/* Trust line */}
-          <motion.p
-            variants={item}
-            className="mt-6 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm font-semibold text-primary-green"
-          >
-            <FaShieldHalved aria-hidden="true" className="text-golden" />
-            विश्वसनीय <span className="text-golden">•</span> पारदर्शी <span className="text-golden">•</span>
-            तकनीक-संचालित <span className="text-golden">•</span> लाभदायक
-          </motion.p>
+        {/* Constant trust + CTAs */}
+        <div className="mt-7 flex flex-wrap gap-3">
+          {trust.map(({ icon: Icon, label }) => (
+            <span key={label} className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white ring-1 ring-white/15 backdrop-blur-sm">
+              <Icon className="text-golden" aria-hidden="true" /> {label}
+            </span>
+          ))}
         </div>
 
-        {/* RIGHT — गौ सेवा से समृद्धि card */}
-        <motion.div
-          variants={item}
-          className="w-full max-w-md justify-self-center overflow-hidden rounded-2xl shadow-2xl lg:justify-self-end"
-        >
-          <div className="flex items-center gap-3 bg-dark-green px-6 py-4">
-            <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/15 text-xl text-golden">
-              <FaCow aria-hidden="true" />
-            </span>
-            <h2 className="!text-white text-xl font-bold">गौ सेवा से समृद्धि</h2>
-          </div>
+        <div className="mt-8 flex flex-wrap gap-4">
+          <Link to="/invest/start" className="btn btn-golden group flex items-center gap-2.5 text-base font-bold shadow-xl">
+            इस सेवा से जुड़ें
+            <FaArrowRightLong className="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
+          </Link>
+          <Link to="/gallery" className="btn group flex items-center gap-2.5 border-2 border-white bg-transparent text-base text-white hover:bg-white hover:text-dark-green">
+            <FaCow aria-hidden="true" /> फार्म देखें
+          </Link>
+        </div>
 
-          <div className="bg-white p-6">
-            <ul className="space-y-4">
-              {schemeRows.map(({ icon: Icon, label, value }) => (
-                <li key={label} className="flex items-center gap-3 text-sm">
-                  <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary-green/10 text-primary-green">
-                    <Icon aria-hidden="true" />
-                  </span>
-                  <span className="text-gray-700">
-                    {label}
-                    {value && <span className="ml-1 font-bold text-dark-green">{value}</span>}
-                  </span>
-                </li>
-              ))}
-            </ul>
+        {/* Dots */}
+        <div className="mt-10 flex items-center gap-2.5">
+          {slides.map((s, i) => (
+            <button
+              key={s.eyebrow}
+              type="button"
+              onClick={() => goTo(i)}
+              aria-label={`स्लाइड ${i + 1}: ${s.eyebrow}`}
+              aria-current={i === index}
+              className={`h-2 rounded-full transition-all duration-300 ${i === index ? 'w-8 bg-golden' : 'w-2 bg-white/40 hover:bg-white/70'}`}
+            />
+          ))}
+        </div>
+      </div>
 
-            <Link
-              to="/invest"
-              className="btn btn-primary mt-6 flex w-full items-center justify-center gap-2 text-base font-bold"
-            >
-              अभी निवेश करें <FaArrowRightLong aria-hidden="true" />
-            </Link>
-          </div>
-        </motion.div>
-      </motion.div>
+      {/* Arrows */}
+      <button
+        type="button"
+        onClick={() => go(-1)}
+        aria-label="पिछली स्लाइड"
+        className="absolute left-3 top-1/2 z-20 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/15 text-white backdrop-blur-sm transition-colors hover:bg-white/30 sm:flex"
+      >
+        <FaChevronLeft aria-hidden="true" />
+      </button>
+      <button
+        type="button"
+        onClick={() => go(1)}
+        aria-label="अगली स्लाइड"
+        className="absolute right-3 top-1/2 z-20 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/15 text-white backdrop-blur-sm transition-colors hover:bg-white/30 sm:flex"
+      >
+        <FaChevronRight aria-hidden="true" />
+      </button>
     </section>
   );
 }

@@ -2,9 +2,14 @@ import Hero from '../components/Hero';
 import TrustBar from '../components/home/TrustBar';
 import RevenueCircles from '../components/home/RevenueCircles';
 import FarmImpact from '../components/home/FarmImpact';
+import GaushalaCare from '../components/home/GaushalaCare';
+import MovementVision from '../components/home/MovementVision';
+import BeyondFarming from '../components/home/BeyondFarming';
+import VisionMission from '../components/home/VisionMission';
+import TrustPillars from '../components/home/TrustPillars';
 import DashboardPreview from '../components/home/DashboardPreview';
-import HomeProducts from '../components/home/HomeProducts';
 import ProductsList from '../components/home/ProductsList';
+import PanchgavyaHealing from '../components/home/PanchgavyaHealing';
 import WhyInvestMedia from '../components/home/WhyInvestMedia';
 import Recognition from '../components/home/Recognition';
 import TransparentModel from '../components/home/TransparentModel';
@@ -12,6 +17,7 @@ import RevenueModel from '../components/home/RevenueModel';
 import InsuranceSection from '../components/home/InsuranceSection';
 import ModelVideo from '../components/home/ModelVideo';
 import NaariShaktiSection from '../components/home/NaariShaktiSection';
+import FounderVision from '../components/home/FounderVision';
 import PublicOpinion from '../components/home/PublicOpinion';
 import AppDownload from '../components/home/AppDownload';
 
@@ -22,9 +28,14 @@ export default function Home() {
       <TrustBar />
       <RevenueCircles />
       <FarmImpact />
+      <GaushalaCare />
+      <MovementVision />
+      <BeyondFarming />
+      <VisionMission />
+      <TrustPillars />
       <DashboardPreview />
-      <HomeProducts />
       <ProductsList />
+      <PanchgavyaHealing />
       <WhyInvestMedia />
       <TransparentModel />
       <RevenueModel />
@@ -32,6 +43,7 @@ export default function Home() {
       <Recognition />
       <ModelVideo />
       <NaariShaktiSection />
+      <FounderVision />
       <PublicOpinion />
       <AppDownload />
     </>

@@ -118,7 +118,7 @@ export default function Navbar() {
               निवेश करें
             </Link>
             <Link
-              to="/investor/register"
+              to="/investor/login"
               className="flex items-center gap-2 rounded-lg border-2 border-primary-green px-4 py-2 text-sm font-semibold text-primary-green transition-colors duration-200 hover:bg-primary-green hover:text-white"
             >
               <FaUserCircle className="text-base" aria-hidden="true" />
@@ -190,7 +190,7 @@ export default function Navbar() {
                 निवेश करें
               </Link>
               <Link
-                to="/investor/register"
+                to="/investor/login"
                 onClick={closeMenu}
                 className="btn btn-outline flex w-full items-center justify-center gap-2"
               >

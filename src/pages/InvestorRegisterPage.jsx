@@ -12,6 +12,7 @@ import { StepPan, StepAadhaar } from '../components/invest/registration/StepDocu
 import StepBank from '../components/invest/registration/StepBank';
 import StepNominee from '../components/invest/registration/StepNominee';
 import StepReview from '../components/invest/registration/StepReview';
+import StepPayment from '../components/invest/registration/StepPayment';
 import SuccessPanel from '../components/invest/registration/SuccessPanel';
 
 const DEMO_INVESTOR_ID = 'PAL-INV-1254';
@@ -29,6 +30,7 @@ const initialWizard = {
   errors: {},
   submitting: false,
   submitted: false,
+  paid: false, // payment (UPI) done after KYC
   approval: 0, // index into Pending -> Under Review -> Approved
   approving: false,
   // Demo environment — every field is pre-filled with sample data (incl. a demo
@@ -127,7 +129,7 @@ export default function InvestorRegisterPage() {
   const cardRef = useRef(null);
   const mountedRef = useRef(false);
 
-  const { step, maxStep, direction, errors, submitting, submitted, approval, approving, data } =
+  const { step, maxStep, direction, errors, submitting, submitted, paid, approval, approving, data } =
     wizard;
   const selectedPlan = investmentPlans.find((p) => p.id === searchParams.get('plan'));
 
@@ -227,7 +229,13 @@ export default function InvestorRegisterPage() {
             )}
           </motion.div>
 
-          {submitted ? (
+          {submitted && !paid ? (
+            <StepPayment
+              plan={selectedPlan}
+              investorId={DEMO_INVESTOR_ID}
+              onPaid={() => setWizard((w) => ({ ...w, paid: true }))}
+            />
+          ) : submitted && paid ? (
             <SuccessPanel
               investorId={DEMO_INVESTOR_ID}
               certificateNo={DEMO_CERTIFICATE_NO}

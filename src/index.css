@@ -4,22 +4,22 @@
   --color-primary-green: #2E7D32;
   --color-dark-green: #1B5E20;
   --color-light-green: #81C784;
-  --color-cream-white: #FFFDF5;
+  --color-cream-white: #FFFFFF;
   --color-golden: #F9A825;
-  --font-sans: 'Inter', 'Mukta', system-ui, sans-serif;
-  --font-display: 'Playfair Display', 'Mukta', serif;
+  --font-sans: 'Hind', 'Mukta', system-ui, sans-serif;
+  --font-display: 'Playfair Display', 'Noto Serif Devanagari', serif;
 }
 
 :root {
   --primary-green: #2E7D32;
   --light-green: #81C784;
-  --cream-white: #FFFDF5;
+  --cream-white: #FFFFFF;
   --dark-green: #1B5E20;
   --golden: #F9A825;
 }
 
 body {
-  font-family: 'Inter', 'Mukta', system-ui, sans-serif;
+  font-family: 'Hind', 'Mukta', system-ui, sans-serif;
   color: #333;
   overflow-x: hidden;
 }
@@ -59,7 +59,7 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', 'Noto Serif Devanagari', serif;
   font-weight: 700;
   color: #1B5E20;
 }
@@ -137,12 +137,13 @@ h3 {
   }
 
   .section {
-    @apply py-12 md:py-20 lg:py-24;
+    padding: 40px 0px;
+    margin: 0 auto;
   }
 
   .section-eyebrow {
     @apply text-sm font-bold uppercase tracking-widest text-golden mb-2 block;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Hind', system-ui, sans-serif;
   }
 
   .stat-card {

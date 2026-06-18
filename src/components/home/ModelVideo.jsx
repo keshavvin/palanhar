@@ -85,7 +85,7 @@ export default function ModelVideo() {
           <div className="relative aspect-video overflow-hidden rounded-2xl border-4 border-white bg-dark-green shadow-xl ring-1 ring-black/10">
             <video
               className="absolute inset-0 h-full w-full object-cover"
-              src="/palanhar-model.mp4"
+              src="/video_1.mp4"
               poster="/hero-banner-1.jpg"
               controls
               preload="metadata"

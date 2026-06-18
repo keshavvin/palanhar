@@ -6,6 +6,7 @@ import ShareCertificate from '../components/dashboard/ShareCertificate';
 import DividendHistoryTable from '../components/dashboard/DividendHistoryTable';
 import WalletTransactions from '../components/dashboard/WalletTransactions';
 import DocumentsRepository from '../components/dashboard/DocumentsRepository';
+import InvestPlans from '../components/invest/InvestPlans';
 
 export default function InvestorDashboardPage() {
   return (
@@ -14,6 +15,11 @@ export default function InvestorDashboardPage() {
         <DashboardHeader />
 
         <PortfolioStats />
+
+        {/* Choose a scheme → KYC → payment flow */}
+        <div className="rounded-2xl border border-primary-green/10 bg-white shadow-sm">
+          <InvestPlans />
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
           <PortfolioGrowthChart />
