@@ -9,7 +9,6 @@ import VisionMission from '../components/home/VisionMission';
 import TrustPillars from '../components/home/TrustPillars';
 import DashboardPreview from '../components/home/DashboardPreview';
 import ProductsList from '../components/home/ProductsList';
-import PanchgavyaHealing from '../components/home/PanchgavyaHealing';
 import WhyInvestMedia from '../components/home/WhyInvestMedia';
 import Recognition from '../components/home/Recognition';
 import TransparentModel from '../components/home/TransparentModel';
@@ -35,7 +34,6 @@ export default function Home() {
       <TrustPillars />
       <DashboardPreview />
       <ProductsList />
-      <PanchgavyaHealing />
       <WhyInvestMedia />
       <TransparentModel />
       <RevenueModel />
