@@ -90,7 +90,7 @@ function SlideBg({ src }) {
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1.1, ease: 'easeOut' }}
-      className="absolute inset-0 h-full w-full object-cover object-center"
+      className="absolute inset-0 h-full w-full object-cover object-[center_30%]"
       draggable="false"
     />
   );
@@ -119,7 +119,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative flex min-h-[82vh] items-center overflow-hidden bg-black"
+      className="relative flex min-h-[60vh] items-center overflow-hidden bg-black sm:min-h-[70vh] lg:min-h-[82vh]"
       aria-roledescription="carousel"
     >
       {/* Sliding backgrounds */}
