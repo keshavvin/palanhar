@@ -49,7 +49,7 @@ function AppPhoneMockup() {
       <div className="overflow-hidden rounded-[1.3rem] bg-cream-white">
         {/* App header */}
         <div className="flex items-center gap-2 bg-primary-green px-3 py-2.5">
-          <img src="/palanhar-logo.png" alt="" className="h-6 w-6 object-contain" draggable="false" />
+          <img src="/logo-palanhar.png" alt="" className="h-6 w-6 object-contain" draggable="false" />
           <span className="font-display text-sm font-bold text-white">पालनहार</span>
         </div>
         {/* Cow record */}

@@ -1,4 +1,5 @@
 import Hero from '../components/Hero';
+import CircularEconomy from '../components/home/CircularEconomy';
 import TrustBar from '../components/home/TrustBar';
 import RevenueCircles from '../components/home/RevenueCircles';
 import FarmImpact from '../components/home/FarmImpact';
@@ -24,6 +25,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <CircularEconomy />
       <TrustBar />
       <RevenueCircles />
       <FarmImpact />

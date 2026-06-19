@@ -52,7 +52,7 @@ export default function LoginPage() {
         <div className="overflow-hidden rounded-2xl border border-primary-green/10 bg-white shadow-2xl">
           {/* Header */}
           <div className="flex flex-col items-center gap-2 bg-primary-green px-6 py-7 text-center text-white">
-            <img src="/palanhar-logo.png" alt="" className="h-12 w-12 object-contain" draggable="false" />
+            <img src="/logo-palanhar.png" alt="" className="h-12 w-12 object-contain" draggable="false" />
             <h1 className="!text-white text-2xl font-bold">निवेशक लॉगिन</h1>
             <p className="text-sm text-white/85">मोबाइल नंबर एवं OTP से सुरक्षित लॉगिन करें</p>
           </div>

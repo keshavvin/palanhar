@@ -266,7 +266,7 @@ export default function DeckPage() {
             </motion.div>
             <motion.div variants={fadeUp} className="mt-10 flex items-center gap-4">
               <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border-2 border-golden/50 bg-white shadow-md sm:h-20 sm:w-20">
-                <img src="/palanhar-logo.png" alt="" className="h-12 w-12 object-contain sm:h-16 sm:w-16" draggable="false" />
+                <img src="/logo-palanhar.png" alt="" className="h-12 w-12 object-contain sm:h-16 sm:w-16" draggable="false" />
               </span>
               <span className="leading-tight">
                 <span className="block text-xs font-bold uppercase tracking-wide text-dark-green sm:text-sm">
@@ -351,7 +351,7 @@ export default function DeckPage() {
             <div className="w-44 rounded-[1.75rem] border-[6px] border-gray-900 bg-gray-900 shadow-2xl">
               <div className="overflow-hidden rounded-[1.3rem] bg-white">
                 <div className="flex items-center gap-2 bg-primary-green px-3 py-2.5">
-                  <img src="/palanhar-logo.png" alt="" className="h-6 w-6 object-contain" draggable="false" />
+                  <img src="/logo-palanhar.png" alt="" className="h-6 w-6 object-contain" draggable="false" />
                   <span className="font-display text-sm font-bold text-white">पालनहार</span>
                 </div>
                 <div className="grid grid-cols-2 gap-2 p-3">
@@ -615,7 +615,7 @@ export default function DeckPage() {
           </motion.div>
           <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} className="text-center">
             <span className="mx-auto flex h-28 w-28 items-center justify-center rounded-full border-4 border-golden/50 bg-white shadow-lg">
-              <img src="/palanhar-logo.png" alt="" className="h-20 w-20 object-contain" draggable="false" />
+              <img src="/logo-palanhar.png" alt="" className="h-20 w-20 object-contain" draggable="false" />
             </span>
             <p className="mt-4 font-display text-3xl font-extrabold text-dark-green">पालनहार</p>
             <p className="mt-1 text-sm font-semibold text-primary-green">

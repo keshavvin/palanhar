@@ -49,7 +49,7 @@ export default function Footer() {
     <footer className="relative overflow-hidden bg-dark-green text-white">
       {/* Faint cow watermark */}
       <img
-        src="/palanhar-logo.png"
+        src="/logo-palanhar.png"
         alt=""
         aria-hidden="true"
         className="pointer-events-none absolute -right-6 bottom-0 w-48 opacity-5"
@@ -69,7 +69,7 @@ export default function Footer() {
             <div className="mb-4 flex items-center gap-3">
               {logoOk ? (
                 <img
-                  src="/palanhar-logo.png"
+                  src="/logo-palanhar.png"
                   onError={() => setLogoOk(false)}
                   alt="पालनहार"
                   className="h-16 w-16 shrink-0 object-contain"
@@ -77,7 +77,7 @@ export default function Footer() {
                 />
               ) : (
                 <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-cream-white p-1">
-                  <img src="/palanhar-logo.png" alt="" className="h-10 w-10 object-contain" draggable="false" />
+                  <img src="/logo-palanhar.png" alt="" className="h-10 w-10 object-contain" draggable="false" />
                 </span>
               )}
               <p className="font-display text-2xl font-bold text-white">पालनहार</p>

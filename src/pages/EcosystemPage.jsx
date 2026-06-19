@@ -94,7 +94,7 @@ export default function EcosystemPage() {
               variants={fadeUp}
               className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-full border-2 border-golden/50 bg-white shadow-lg"
             >
-              <img src="/palanhar-logo.png" alt="" className="h-14 w-14 object-contain" draggable="false" />
+              <img src="/logo-palanhar.png" alt="" className="h-14 w-14 object-contain" draggable="false" />
             </motion.span>
             <motion.h1 variants={fadeUp} className="font-display text-5xl font-extrabold uppercase tracking-tight !text-white sm:text-6xl">
               पालनहार
@@ -204,7 +204,7 @@ export default function EcosystemPage() {
             <div className="w-full max-w-[17rem] rounded-[2.5rem] border-[10px] border-gray-900 bg-gray-900 shadow-2xl">
               <div className="overflow-hidden rounded-[1.8rem] bg-cream-white">
                 <div className="flex items-center gap-2.5 bg-primary-green px-4 py-4">
-                  <img src="/palanhar-logo.png" alt="" className="h-8 w-8 object-contain" draggable="false" />
+                  <img src="/logo-palanhar.png" alt="" className="h-8 w-8 object-contain" draggable="false" />
                   <span className="font-display text-lg font-bold text-white">पालनहार</span>
                 </div>
                 <div className="grid grid-cols-3 gap-3 p-4">

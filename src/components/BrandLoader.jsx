@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 /**
  * Animated brand loader. Shows the Palanhar mother-cow-and-calf logo
- * (public/palanhar-logo.png) with a gentle breathing pulse inside a rotating
+ * (public/logo-palanhar.png) with a gentle breathing pulse inside a rotating
  * gradient arc. Falls back to an inline SVG mark if the image is missing.
  * Honours prefers-reduced-motion.
  */
@@ -122,7 +122,7 @@ export default function BrandLoader({ size = 120, label = 'लोड हो र�
           <FallbackMark />
         ) : (
           <img
-            src="/palanhar-logo.png"
+            src="/logo-palanhar.png"
             alt=""
             onError={() => setImageFailed(true)}
             className="plb-pulse absolute inset-[7%] h-[86%] w-[86%] select-none object-contain"

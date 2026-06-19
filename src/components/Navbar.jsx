@@ -54,9 +54,9 @@ export default function Navbar() {
           {/* Brand */}
           <Link to="/" className="group flex shrink-0 items-center gap-2.5">
             {logoOk ? (
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-[#0a1a2f] p-1 shadow-sm transition-transform duration-300 group-hover:scale-110 sm:h-12 sm:w-12">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center   group-hover:scale-110 sm:h-12 sm:w-12">
                 <img
-                  src="/palanhar-logo.png"
+                  src="/logo-palanhar.png"
                   onError={() => setLogoOk(false)}
                   alt="पालनहार"
                   className="h-full w-full object-contain"
@@ -65,7 +65,7 @@ export default function Navbar() {
               </span>
             ) : (
               <img
-                src="/palanhar-logo.png"
+                src="/logo-palanhar.png"
                 alt=""
                 className="h-10 w-10 sm:h-12 sm:w-12 object-contain transition-transform duration-300 group-hover:scale-110"
                 draggable="false"

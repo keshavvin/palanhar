@@ -66,7 +66,7 @@ export default function DeckCover() {
           <motion.div variants={itemVariants} className="mt-10 flex items-center gap-4">
             <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border-2 border-golden/50 bg-white shadow-md sm:h-20 sm:w-20">
               <img
-                src="/palanhar-logo.png"
+                src="/logo-palanhar.png"
                 alt=""
                 className="h-12 w-12 object-contain sm:h-16 sm:w-16"
                 draggable="false"

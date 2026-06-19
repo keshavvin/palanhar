@@ -73,7 +73,7 @@ export default function AppPortalPage() {
       <div className="sticky top-20 z-30 border-b border-primary-green/10 bg-primary-green text-white shadow-sm">
         <div className="container-custom flex h-14 items-center justify-between gap-3">
           <div className="flex items-center gap-2.5">
-            <img src="/palanhar-logo.png" alt="" className="h-8 w-8 object-contain" draggable="false" />
+            <img src="/logo-palanhar.png" alt="" className="h-8 w-8 object-contain" draggable="false" />
             <span className="font-display text-lg font-bold">पालनहार ऐप</span>
           </div>
           <Link to="/" className="flex items-center gap-2 rounded-lg bg-white/15 px-3 py-1.5 text-sm font-semibold transition-colors hover:bg-white/25">

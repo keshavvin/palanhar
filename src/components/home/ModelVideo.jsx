@@ -38,7 +38,7 @@ function VideoCard({ id, title }) {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-dark-green/80 via-dark-green/10 to-dark-green/25" />
             <span className="absolute left-3 top-2.5 flex items-center gap-1.5">
-              <img src="/palanhar-logo.png" alt="" className="h-6 w-6 object-contain drop-shadow" draggable="false" />
+              <img src="/logo-palanhar.png" alt="" className="h-6 w-6 object-contain drop-shadow" draggable="false" />
               <span className="font-display text-xs font-bold text-white drop-shadow">पालनहार</span>
             </span>
             <span className="absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-red-600 shadow-xl transition-transform duration-300 group-hover:scale-110">

@@ -13,13 +13,13 @@ export default function TopBar() {
         </span>
         <span className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1">
           <span className="inline-flex items-center gap-1.5 text-white/90">
-            <FaLocationDot className="text-golden" aria-hidden="true" /> सतना, मध्य प्रदेश
+            <FaLocationDot className="text-golden" aria-hidden="true" /> A 195 Raju Park (Khanpur, South Delhi), Devli Road, New Delhi – 110062, India
           </span>
           <a href="/contact" className="inline-flex items-center gap-1.5 text-white/90 transition-colors hover:text-golden">
             <FaCalendarCheck className="text-golden" aria-hidden="true" /> फार्म विज़िट
           </a>
-          <a href="tel:+917999309930" className="inline-flex items-center gap-1.5 text-white/90 transition-colors hover:text-golden">
-            <FaPhone className="text-golden" aria-hidden="true" /> हेल्पलाइन: 79993 09930
+          <a href="tel:+917428940883" className="inline-flex items-center gap-1.5 text-white/90 transition-colors hover:text-golden">
+            <FaPhone className="text-golden" aria-hidden="true" /> हेल्पलाइन: +91 74289 40883
           </a>
         </span>
       </div>
