@@ -6,9 +6,11 @@ import { catalog, catalogCount } from '../data/productCatalog';
 import ProductOrderModal from './ProductOrderModal';
 
 // Full searchable, category-filterable product catalogue.
-export default function ProductCatalog() {
+export default function ProductCatalog({ showAllTab = true }) {
   const [query, setQuery] = useState('');
-  const [active, setActive] = useState('all');
+  // With the सभी tab hidden (home), start with nothing selected so products
+  // stay hidden until a category chip is clicked.
+  const [active, setActive] = useState(showAllTab ? 'all' : '');
   const [orderItem, setOrderItem] = useState(null);
 
   const buy = (item, emoji) =>
@@ -61,17 +63,19 @@ export default function ProductCatalog() {
 
         {/* Category chips */}
         <div className="mb-8 flex flex-wrap justify-center gap-2">
-          <button
-            type="button"
-            onClick={() => setActive('all')}
-            className={`rounded-full border-2 px-4 py-1.5 text-xs font-semibold transition-colors ${
-              active === 'all'
-                ? 'border-primary-green bg-primary-green text-white'
-                : 'border-primary-green/30 text-primary-green hover:bg-primary-green/5'
-            }`}
-          >
-            सभी
-          </button>
+          {showAllTab && (
+            <button
+              type="button"
+              onClick={() => setActive('all')}
+              className={`rounded-full border-2 px-4 py-1.5 text-xs font-semibold transition-colors ${
+                active === 'all'
+                  ? 'border-primary-green bg-primary-green text-white'
+                  : 'border-primary-green/30 text-primary-green hover:bg-primary-green/5'
+              }`}
+            >
+              सभी
+            </button>
+          )}
           {catalog.map((g) => (
             <button
               key={g.category}
@@ -167,14 +171,21 @@ export default function ProductCatalog() {
             </motion.div>
           ))}
 
-          {groups.length === 0 && (
-            <p className="py-10 text-center text-gray-500">&ldquo;{query}&rdquo; से मेल खाता कोई उत्पाद नहीं मिला।</p>
-          )}
+          {groups.length === 0 &&
+            (active === '' ? (
+              <p className="py-10 text-center text-gray-500">
+                कृपया ऊपर से कोई श्रेणी चुनें — उत्पाद यहाँ दिखाई देंगे।
+              </p>
+            ) : (
+              <p className="py-10 text-center text-gray-500">&ldquo;{query}&rdquo; से मेल खाता कोई उत्पाद नहीं मिला।</p>
+            ))}
         </div>
 
-        <p className="mt-8 text-center text-xs text-gray-400">
-          {shown} उत्पाद दिखाए जा रहे हैं · कुल {catalogCount} उत्पाद
-        </p>
+        {active !== '' && (
+          <p className="mt-8 text-center text-xs text-gray-400">
+            {shown} उत्पाद दिखाए जा रहे हैं · कुल {catalogCount} उत्पाद
+          </p>
+        )}
       </div>
 
       {/* Order / payment flow */}

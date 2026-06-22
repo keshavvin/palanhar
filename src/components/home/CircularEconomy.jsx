@@ -1,5 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import LeafHeading from './LeafHeading';
+import { REVENUE_STREAMS } from './RevenueCircles';
 
 // Radial cow-based circular-economy diagram. The 1000×760 stage scales to fit
 // width on tablet/desktop; phones get a clean stacked layout.
@@ -159,6 +162,34 @@ export default function CircularEconomy() {
             <span className="h-4 w-6 rounded" style={PLAT_STYLE} />
             <span className="text-sm text-gray-600">Platform &amp; operations · संचालन</span>
           </span>
+        </div>
+
+        {/* एक गाय से अनेक आय स्रोत — revenue streams, at the bottom of this section */}
+        <div className="mt-14">
+          <LeafHeading className="mb-8">एक गाय से अनेक आय स्रोत</LeafHeading>
+          <motion.div
+            variants={{ visible: { transition: { staggerChildren: 0.06 } } }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-60px' }}
+            className="grid grid-cols-3 gap-x-4 gap-y-8 sm:grid-cols-5 lg:grid-cols-10"
+          >
+            {REVENUE_STREAMS.map((stream) => (
+              <motion.div
+                key={stream.label}
+                variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: 'easeOut' } } }}
+              >
+                <Link to="/products" className="group flex flex-col items-center">
+                  <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white text-3xl shadow-sm ring-2 ring-primary-green/20 transition group-hover:scale-105 sm:h-20 sm:w-20">
+                    <span aria-hidden="true">{stream.emoji}</span>
+                  </span>
+                  <span className="mt-2 text-center text-xs font-semibold leading-tight text-dark-green sm:text-sm">
+                    {stream.label}
+                  </span>
+                </Link>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </div>
     </section>

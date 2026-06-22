@@ -1,7 +1,6 @@
 import Hero from '../components/Hero';
 import CircularEconomy from '../components/home/CircularEconomy';
 import TrustBar from '../components/home/TrustBar';
-import RevenueCircles from '../components/home/RevenueCircles';
 import FarmImpact from '../components/home/FarmImpact';
 import GaushalaCare from '../components/home/GaushalaCare';
 import MovementVision from '../components/home/MovementVision';
@@ -12,6 +11,7 @@ import DashboardPreview from '../components/home/DashboardPreview';
 import ProductsList from '../components/home/ProductsList';
 import WhyInvestMedia from '../components/home/WhyInvestMedia';
 import Recognition from '../components/home/Recognition';
+import ProductCatalog from '../components/ProductCatalog';
 import TransparentModel from '../components/home/TransparentModel';
 import RevenueModel from '../components/home/RevenueModel';
 import InsuranceSection from '../components/home/InsuranceSection';
@@ -26,8 +26,10 @@ export default function Home() {
     <>
       <Hero />
       <CircularEconomy />
+      <InsuranceSection />
+      <Recognition />
+      <ProductCatalog showAllTab={false} />
       <TrustBar />
-      <RevenueCircles />
       <FarmImpact />
       <GaushalaCare />
       <MovementVision />
@@ -39,8 +41,6 @@ export default function Home() {
       <WhyInvestMedia />
       <TransparentModel />
       <RevenueModel />
-      <InsuranceSection />
-      <Recognition />
       <ModelVideo />
       <NaariShaktiSection />
       <FounderVision />

@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import LeafHeading from './LeafHeading';
 
 // एक गाय से जुड़ी विभिन्न आय धाराओं को दर्शाने वाली गोलाकार आइकन पट्टी।
-const REVENUE_STREAMS = [
+export const REVENUE_STREAMS = [
   { label: 'A2 दूध', emoji: '🥛' },
   { label: 'A2 घी', emoji: '🫙' },
-  { label: 'पंचगव्य उत्पाद', emoji: '🌿' },
+  { label: 'प्रसंस्करण एवं निर्माण', emoji: '🏭' },
   { label: 'जैविक खाद', emoji: '🌱' },
   { label: 'जैविक खेती', emoji: '🌾' },
   { label: 'बायोगैस', emoji: '🔥' },

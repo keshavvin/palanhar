@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaDna, FaFlask, FaVial, FaDroplet, FaMicroscope, FaEarthAsia, FaCircleCheck } from 'react-icons/fa6';
 
@@ -51,16 +52,57 @@ const stagger = { hidden: {}, visible: { transition: { staggerChildren: 0.08 } }
 const fadeUp = { hidden: { opacity: 0, y: 18 }, visible: { opacity: 1, y: 0, transition: { duration: 0.45 } } };
 
 export default function FounderProfile() {
+  const [imgOk, setImgOk] = useState(true);
+
   return (
     <section className="section bg-white">
       <div className="container-custom">
-        <div className="mx-auto mb-12 max-w-3xl text-center">
-          <span className="section-eyebrow">वैज्ञानिक यात्रा</span>
-          <h2 className="mb-4">डॉ. मृणाल कांति घोष — अनुसंधान एवं नवाचार</h2>
-          <p className="text-base leading-relaxed text-gray-700 md:text-lg">
-            डॉ. मृणाल कांति घोष एक बहु-विषयक वैज्ञानिक, तकनीकविद् एवं उद्यमी हैं, जिनका कार्य आणविक जीवविज्ञान,
-            जैव प्रौद्योगिकी, स्वास्थ्य सेवा, खाद्य तकनीक, जल उपचार एवं औद्योगिक नवाचारों तक विस्तृत है।
-          </p>
+        {/* Founder portrait + intro */}
+        <div className="mb-14 grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            className="mx-auto w-full max-w-md lg:mx-0"
+          >
+            {imgOk ? (
+              <img
+                src="/profile-logo.jpeg"
+                alt="डॉ. मृणाल कांति घोष — संस्थापक एवं सीईओ, पालनहार"
+                onError={() => setImgOk(false)}
+                className="w-full rounded-3xl object-cover shadow-2xl ring-1 ring-primary-green/10"
+                draggable="false"
+              />
+            ) : (
+              <div className="flex aspect-[4/5] w-full items-center justify-center rounded-3xl bg-dark-green text-center shadow-2xl">
+                <span className="px-6 font-display text-2xl text-white">डॉ. मृणाल कांति घोष</span>
+              </div>
+            )}
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            className="text-center lg:text-left"
+          >
+            <span className="section-eyebrow">वैज्ञानिक यात्रा</span>
+            <h2 className="mb-1">डॉ. मृणाल कांति घोष</h2>
+            <p className="mb-4 text-sm font-bold uppercase tracking-widest text-golden">
+              संस्थापक एवं सीईओ · Founder &amp; CEO
+            </p>
+            <p className="text-base leading-relaxed text-gray-700 md:text-lg">
+              डॉ. मृणाल कांति घोष एक बहु-विषयक वैज्ञानिक, तकनीकविद् एवं उद्यमी हैं, जिनका कार्य आणविक जीवविज्ञान,
+              जैव प्रौद्योगिकी, स्वास्थ्य सेवा, खाद्य तकनीक, जल उपचार एवं औद्योगिक नवाचारों तक विस्तृत है।
+            </p>
+          </motion.div>
+        </div>
+
+        <div className="mx-auto mb-10 max-w-3xl text-center">
+          <span className="section-eyebrow">अनुसंधान एवं नवाचार</span>
+          <h3 className="text-dark-green">वैज्ञानिक उपलब्धियाँ</h3>
         </div>
 
         <motion.div
